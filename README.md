@@ -10,7 +10,7 @@ My work lives at the intersection of developer tools, local-first workflows, and
 
 ## For hiring teams
 
-I’m interested in work where reliable software has to cross the boundary between **APIs, databases, integrations, automation, and AI agents**. I like owning the full path from a small, understandable interface through tests, release evidence, and an outcome another person can verify. See the [one-minute work samples](docs/WORK-SAMPLES.md) for the shortest hiring-team walkthrough.
+I’m interested in work where reliable software has to cross the boundary between **APIs, databases, integrations, automation, and AI agents**. I like owning the full path from a small, understandable interface through tests, release evidence, and an outcome another person can verify. See the [one-minute work samples](docs/WORK-SAMPLES.md) and the [engineering evidence map](docs/ENGINEERING-EVIDENCE.md) for the shortest hiring-team walkthrough.
 
 ## Start here
 
