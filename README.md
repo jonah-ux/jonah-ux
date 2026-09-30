@@ -23,7 +23,9 @@ I’m interested in work where reliable software has to cross the boundary betwe
 ### Evidence status
 
 The release signal is intentionally explicit so a visitor can tell what is
-consumer-installable today and what is still being shaped:
+consumer-installable today and what is still being shaped. The full
+[portfolio evidence matrix](docs/PORTFOLIO-EVIDENCE.md) records the clean
+public-main install and demo run for every supporting tool.
 
 | Signal | Projects | What the link proves |
 | --- | --- | --- |
