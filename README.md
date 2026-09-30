@@ -16,6 +16,16 @@ My work lives at the intersection of developer tools, local-first workflows, and
 | [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Retire Git worktrees with a reviewable plan, recoverable archives, and explicit identity checks. | [v0.1.0 release](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.1.0) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) |
 | [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | Lint MCP tool contracts before an agent sees an ambiguous or unsafe interface. | [0.2.0 feature work](https://github.com/jonah-ux/mcp-doctor/commit/9fdfc56fc3e8847d6450a8203802b23968b2b346) · [CI](https://github.com/jonah-ux/mcp-doctor/actions) |
 
+## Now shipping
+
+I’m building a small, connected toolkit rather than a collection of unrelated demos:
+
+- **Recover the context:** [Chatlens](https://github.com/jonah-ux/chatlens) searches local agent sessions when the reasoning behind a task is missing.
+- **Check the interface:** [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) catches ambiguous tool contracts before they reach an agent.
+- **Protect the workspace:** [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) makes Git worktree retirement reviewable and recoverable.
+
+The smaller lab projects extend that same loop into evaluation, evidence, policy, tracing, and recovery.
+
 ## The agent tooling lab
 
 These focused command-line tools explore the rest of the loop:
