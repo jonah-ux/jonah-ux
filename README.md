@@ -4,6 +4,8 @@ I build tools for working with AI coding agents: finding the context behind thei
 
 My open-source focus is small tools with useful command-line interfaces, structured output for agents, reproducible examples, and clear limits.
 
+Find me on [X](https://x.com/AiJonah50511) for build notes and experiments; this profile is the source of truth for the code.
+
 | Project | What it does |
 | --- | --- |
 | [Chatlens](https://github.com/jonah-ux/chatlens) | Reads and searches local Codex, Claude Code, and Hermes sessions; produces work cards that distinguish historical claims from verified outcomes. |
