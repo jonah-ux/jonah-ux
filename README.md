@@ -14,7 +14,7 @@ My work lives at the intersection of developer tools, local-first workflows, and
 | --- | --- | --- |
 | [Chatlens](https://github.com/jonah-ux/chatlens) | Search Codex, Claude Code, and Hermes sessions when the context behind a task is missing. | [v0.1.0 release](https://github.com/jonah-ux/chatlens/releases/tag/v0.1.0) · [CI](https://github.com/jonah-ux/chatlens/actions) |
 | [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Retire Git worktrees with a reviewable plan, recoverable archives, and explicit identity checks. | [v0.1.0 release](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.1.0) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) |
-| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | Lint MCP tool contracts before an agent sees an ambiguous or unsafe interface. | [0.2.0 feature work](https://github.com/jonah-ux/mcp-doctor/commit/9fdfc56fc3e8847d6450a8203802b23968b2b346) · [CI](https://github.com/jonah-ux/mcp-doctor/actions) |
+| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | Lint MCP tool contracts before an agent sees an ambiguous or unsafe interface. | [README + feature head](https://github.com/jonah-ux/mcp-doctor/commit/3417a17) · [CI](https://github.com/jonah-ux/mcp-doctor/actions) |
 
 ## Now shipping
 
