@@ -8,6 +8,10 @@ My work lives at the intersection of developer tools, local-first workflows, and
 
 <a href="https://x.com/jonahhelland">X / build notes</a> · <a href="https://github.com/jonah-ux">GitHub / source</a>
 
+## For hiring teams
+
+I’m interested in work where reliable software has to cross the boundary between **APIs, databases, integrations, automation, and AI agents**. I like owning the full path from a small, understandable interface through tests, release evidence, and an outcome another person can verify.
+
 ## Start here
 
 | Project | Why it exists | Proof |
