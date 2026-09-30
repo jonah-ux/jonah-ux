@@ -1,22 +1,44 @@
+<img src="./docs/profile-hero.svg" alt="Jonah Helland — AI developer tooling" width="1200" />
+
 # Jonah Helland
 
-I build tools for working with AI coding agents: finding the context behind their work, preserving useful state, and making developer workflows easier to inspect and recover.
+I build tools that make **AI coding agents easier to inspect, evaluate, and recover**.
 
-My open-source focus is small tools with useful command-line interfaces, structured output for agents, reproducible examples, and clear limits.
+My work lives at the intersection of developer tools, local-first workflows, and agent reliability. The projects are small enough to install and understand, but practical enough to use in a real engineering loop.
 
-Find me on [X](https://x.com/jonahhelland) for build notes and experiments; this profile is the source of truth for the code.
+<a href="https://x.com/jonahhelland">X / build notes</a> · <a href="https://github.com/jonah-ux">GitHub / source</a>
 
-| Project | What it does |
-| --- | --- |
-| [Chatlens](https://github.com/jonah-ux/chatlens) | Reads and searches local Codex, Claude Code, and Hermes sessions; produces work cards that distinguish historical claims from verified outcomes. |
-| [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Plans Git worktree retirement, preserves recoverable state, and restores archives with explicit identity checks. |
-| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | Lints MCP tool contracts before an agent sees them. |
-| [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit) | Runs provider-neutral command fixtures and scorecards. |
-| [Agent Proof](https://github.com/jonah-ux/agent-proof) | Captures machine-readable evidence for agent work. |
-| [Context Pack](https://github.com/jonah-ux/context-pack) | Builds deterministic, bounded repository context. |
-| [Agent Policy](https://github.com/jonah-ux/agent-policy) | Explains whether an agent action is allowed. |
-| [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) | Turns local JSONL events into a redacted trace. |
-| [Agent Resume](https://github.com/jonah-ux/agent-resume) | Stores portable continuation records for unfinished work. |
-| [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | Runs commands with visible isolation limits. |
+## Start here
 
-The first wave is released; the second wave is now public source under active early development. Every project uses a command-line interface, structured agent output, reproducible examples, and explicit limits. Bug reports with small, sanitized reproductions are welcome.
+| Project | Why it exists | Proof |
+| --- | --- | --- |
+| [Chatlens](https://github.com/jonah-ux/chatlens) | Search Codex, Claude Code, and Hermes sessions when the context behind a task is missing. | [v0.1.0 release](https://github.com/jonah-ux/chatlens/releases/tag/v0.1.0) · [CI](https://github.com/jonah-ux/chatlens/actions) |
+| [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Retire Git worktrees with a reviewable plan, recoverable archives, and explicit identity checks. | [v0.1.0 release](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.1.0) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) |
+| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | Lint MCP tool contracts before an agent sees an ambiguous or unsafe interface. | [README](https://github.com/jonah-ux/mcp-doctor#readme) · [CI](https://github.com/jonah-ux/mcp-doctor/actions) |
+
+## The agent tooling lab
+
+These focused command-line tools explore the rest of the loop:
+
+- [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit) — reproducible command fixtures and scorecards.
+- [Agent Proof](https://github.com/jonah-ux/agent-proof) — machine-readable evidence bundles for agent work.
+- [Context Pack](https://github.com/jonah-ux/context-pack) — deterministic, bounded repository context.
+- [Agent Policy](https://github.com/jonah-ux/agent-policy) — capability and permission decisions.
+- [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) — redacted local traces from JSONL events.
+- [Agent Resume](https://github.com/jonah-ux/agent-resume) — portable continuation records for unfinished tasks.
+- [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) — explicit command limits with honest receipts.
+
+## How I build
+
+- **Agent-friendly by default:** noninteractive commands, stable JSON, meaningful exit codes.
+- **Evidence before claims:** demos and fixtures show what a tool actually observed or enforced.
+- **Small surfaces:** few dependencies, clear boundaries, easy local installation.
+- **Honest limits:** security, isolation, provider behavior, and “user-visible result” claims stay explicit.
+
+Most projects install directly from GitHub while their first releases mature:
+
+```bash
+pip install git+https://github.com/jonah-ux/mcp-doctor.git@main
+```
+
+The profile is the map; each repository contains its own README, demo, tests, security guidance, and release notes.
