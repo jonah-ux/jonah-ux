@@ -15,4 +15,6 @@ Each repository was installed from its public `main` branch into a fresh Python 
 | [agent-resume](https://github.com/jonah-ux/agent-resume) | `agent-resume` | valid `agent-resume/validation/v1` continuation record |
 | [agent-sandbox-run](https://github.com/jonah-ux/agent-sandbox-run) | `agent-sandbox` | `agent-sandbox/v1` receipt with `enforced: false` honestly reported |
 
+All eight repositories now also carry the same reviewed `.github/workflows/release.yml`: a semantic-version tag builds a wheel and source archive, writes `SHA256SUMS`, and creates a GitHub prerelease. The workflow is ready; no tag was pushed as part of this evidence pass.
+
 This proves public installability and runnable demos from `main`; it does not claim that these tools have published GitHub release objects yet.
