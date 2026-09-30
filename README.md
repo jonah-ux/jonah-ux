@@ -50,7 +50,7 @@ The projects are small on purpose, but they fit together around one engineering 
 
 ## Now shipping
 
-I’m building a small, connected toolkit rather than a collection of unrelated demos:
+I’m building a small, connected toolkit rather than a collection of unrelated demos. See the [public roadmap](docs/ROADMAP.md) for the next evidence-backed milestones:
 
 - **Recover the context:** [Chatlens](https://github.com/jonah-ux/chatlens) searches local agent sessions when the reasoning behind a task is missing.
 - **Check the interface:** [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) catches ambiguous tool contracts before they reach an agent.
