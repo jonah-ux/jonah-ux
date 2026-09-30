@@ -20,6 +20,19 @@ I’m interested in work where reliable software has to cross the boundary betwe
 | [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Retire Git worktrees with a reviewable plan, recoverable archives, and explicit identity checks. | [v0.1.0 release](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.1.0) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) |
 | [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | Lint MCP tool contracts before an agent sees an ambiguous or unsafe interface. | [README + feature head](https://github.com/jonah-ux/mcp-doctor/commit/5ec80e4) · [CI](https://github.com/jonah-ux/mcp-doctor/actions) |
 
+### Evidence status
+
+The release signal is intentionally explicit so a visitor can tell what is
+consumer-installable today and what is still being shaped:
+
+| Signal | Projects | What the link proves |
+| --- | --- | --- |
+| Public prerelease + fresh consumer install | [Chatlens](https://github.com/jonah-ux/chatlens), [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Versioned tag, downloadable assets, checksums, and a clean install path |
+| Versioned source + CI + disposable demo | [MCP Doctor](https://github.com/jonah-ux/mcp-doctor), [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit), [Agent Proof](https://github.com/jonah-ux/agent-proof), [Context Pack](https://github.com/jonah-ux/context-pack), [Agent Policy](https://github.com/jonah-ux/agent-policy), [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite), [Agent Resume](https://github.com/jonah-ux/agent-resume), [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | A stranger can inspect the source, run the examples, and see hosted checks before a public release is cut |
+
+I keep the second group visible as working tools rather than presenting them
+as released packages. The profile links to evidence, not activity theater.
+
 ## The loop
 
 The projects are small on purpose, but they fit together around one engineering question: **can an agent’s work be understood, bounded, and continued?**
