@@ -16,6 +16,19 @@ My work lives at the intersection of developer tools, local-first workflows, and
 | [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Retire Git worktrees with a reviewable plan, recoverable archives, and explicit identity checks. | [v0.1.0 release](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.1.0) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) |
 | [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | Lint MCP tool contracts before an agent sees an ambiguous or unsafe interface. | [README + feature head](https://github.com/jonah-ux/mcp-doctor/commit/3417a17) · [CI](https://github.com/jonah-ux/mcp-doctor/actions) |
 
+## The loop
+
+The projects are small on purpose, but they fit together around one engineering question: **can an agent’s work be understood, bounded, and continued?**
+
+| Moment | Tool | Observable result |
+| --- | --- | --- |
+| Recover context | [Chatlens](https://github.com/jonah-ux/chatlens) | Searchable local sessions and bounded work cards |
+| Bound the input | [Context Pack](https://github.com/jonah-ux/context-pack) | Deterministic files, byte budget, and SHA-256 digest |
+| Decide before acting | [Agent Policy](https://github.com/jonah-ux/agent-policy) | Allow or deny decision with a reason |
+| Run and inspect | [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | Receipt naming the backend and enforcement state |
+| Record the outcome | [Agent Proof](https://github.com/jonah-ux/agent-proof) | Hashable evidence envelope with explicit unknowns |
+| Continue later | [Agent Resume](https://github.com/jonah-ux/agent-resume) | Identity-bound continuation record |
+
 ## Now shipping
 
 I’m building a small, connected toolkit rather than a collection of unrelated demos:
@@ -45,10 +58,11 @@ These focused command-line tools explore the rest of the loop:
 - **Small surfaces:** few dependencies, clear boundaries, easy local installation.
 - **Honest limits:** security, isolation, provider behavior, and “user-visible result” claims stay explicit.
 
-Most projects install directly from GitHub while their first releases mature:
+Start with a released flagship or run any project’s disposable demo before connecting it to a real agent loop:
 
 ```bash
-pip install git+https://github.com/jonah-ux/mcp-doctor.git@main
+python -m pip install 'git+https://github.com/jonah-ux/chatlens.git@v0.1.0'
+chatlens --help
 ```
 
-The profile is the map; each repository contains its own README, demo, tests, security guidance, and release notes.
+Every repository has a visible demo, tests, CI, security guidance, and release notes. The profile is the map; the repositories contain the evidence.
