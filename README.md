@@ -6,7 +6,7 @@ I build tools that make **AI coding agents easier to inspect, evaluate, and reco
 
 My work lives at the intersection of developer tools, local-first workflows, and agent reliability. The projects are small enough to install and understand, but practical enough to use in a real engineering loop.
 
-<a href="https://x.com/jonahhelland">X / build notes</a> · <a href="https://github.com/jonah-ux">GitHub / source</a>
+<a href="https://x.com/jonahhelland">X / build notes</a> · <a href="docs/SHIPLOG.md">Ship log / evidence</a> · <a href="https://github.com/jonah-ux">GitHub / source</a>
 
 ## For hiring teams
 
