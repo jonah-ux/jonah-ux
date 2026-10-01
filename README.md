@@ -19,9 +19,9 @@ I’m interested in Applied AI Engineering, AI infrastructure, developer tools, 
 | [Slipstream](https://github.com/jonah-ux/slipstream) | A small JavaScript/SQLite + sqlite-vec index with deterministic inspect, manifest, and verify readback. | `npm ci && npm test` |
 | [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Reviewable Git worktree retirement, verified archives, guarded recovery, and explicit refusal conditions. | `worktree-conservator demo --json` |
 
-The supporting lab includes repeated-trial evaluation, provenance-bound context packs, composable policy layers, trace integrity queries, integrity-bound resumes, and bounded execution receipts. Agent Proof, Chatlens, Slipstream, and Worktree Conservator are the current stable releases; Forgeyard and MCP Doctor remain explicitly labeled prereleases while their next release cycles continue.
+The supporting lab includes repeated-trial evaluation, provenance-bound context packs, composable policy layers, trace integrity queries, integrity-bound resumes, and bounded execution receipts. Agent Proof, Chatlens, Forgeyard, Slipstream, and Worktree Conservator are the current stable releases; MCP Doctor remains explicitly labeled a prerelease while its next release cycle continues.
 
-[Forgeyard](https://github.com/jonah-ux/forgeyard) is the next systems project to inspect: a local-first foundation for reviewable delivery records, explicit evidence contracts, and bounded worktree plans. Its `v0.2.0` public prerelease includes evidence-receipt verification, digest-pinned record validation, wheel/source assets, checksums, and fresh-consumer evidence; planned execution and resume slices are intentionally not presented as shipped.
+[Forgeyard](https://github.com/jonah-ux/forgeyard) is the next systems project to inspect: a local-first foundation for reviewable delivery records, explicit evidence contracts, and bounded worktree plans. Its `v0.2.0` stable release includes evidence-receipt verification, digest-pinned record validation, wheel/source assets, checksums, and fresh-consumer evidence; planned execution and resume slices are intentionally not presented as shipped.
 
 ## The engineering loop
 
