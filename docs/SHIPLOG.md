@@ -186,3 +186,18 @@ returned four indexed items with four matching vector rows.
 Evidence: [merged PR](https://github.com/jonah-ux/slipstream/pull/1) · [main commit](https://github.com/jonah-ux/slipstream/commit/8a862991f8829f6e0115d2d79b15043ced03262a) · [CI](https://github.com/jonah-ux/slipstream/actions) · [v0.1.0 public prerelease](https://github.com/jonah-ux/slipstream/releases/tag/v0.1.0)
 
 The public install surface remains v0.1.0 until the next annotated release tag and asset readback exist.
+
+## 2026-10-01 — Slipstream redacted content manifest
+
+Slipstream main now adds `slipstream/manifest/v1` and `slipstream/verify/v1`.
+The manifest records redacted per-row identity and stored float32 vector-byte
+digests, metadata type and digest summaries, dimension and parity, package
+version, SQLite version, and sqlite-vec runtime identity. Verification
+rebuilds the same summary from a read-only copy and rejects changed rows,
+vectors, metadata, dimensions, or runtime identity. The inspect and manifest
+paths copy the database family into a temporary directory before reading, so
+source `-wal` and `-shm` files are not created by inspection.
+
+Evidence: [merged PR](https://github.com/jonah-ux/slipstream/pull/2) · [main commit](https://github.com/jonah-ux/slipstream/commit/b714d2377542c7ae4a7b457c5100c70edebe86ac) · [hosted CI](https://github.com/jonah-ux/slipstream/actions/runs/36892132065) · fresh consumer operation `slipstream-manifest-consumer-20261001-v2` · package SHA-256 `aec2c666ab6310ac62e0e6b0f2a817f22279dc007309779d95b36659c3fec4aa`
+
+The public install surface remains v0.1.0. The source package is 0.2.0, but no 0.2.0 release object or tag is claimed here.

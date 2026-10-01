@@ -41,11 +41,11 @@ does not imply a stable package or PyPI publication.
 
 **Problem:** a local vector index can return plausible nearest results while its dimension, row parity, or caller-owned metadata state is no longer trustworthy.
 
-**What it shows:** local SQLite + sqlite-vec indexing, atomic rebuilds, read-only integrity readback, stable identity digests, redacted metadata inspection, and a consumer-installable CLI contract.
+**What it shows:** local SQLite + sqlite-vec indexing, atomic rebuilds, read-only integrity readback, stable identity digests, redacted metadata inspection, content-bound row and stored-vector digests, and a consumer-installable CLI contract.
 
-**Proof:** [v0.1.0 public prerelease](https://github.com/jonah-ux/slipstream/releases/tag/v0.1.0) · [inspect readback main](https://github.com/jonah-ux/slipstream/commit/8a862991f8829f6e0115d2d79b15043ced03262a) · [merged PR](https://github.com/jonah-ux/slipstream/pull/1) · [CI](https://github.com/jonah-ux/slipstream/actions)
+**Proof:** [v0.1.0 public prerelease](https://github.com/jonah-ux/slipstream/releases/tag/v0.1.0) · [manifest and verify main](https://github.com/jonah-ux/slipstream/commit/b714d2377542c7ae4a7b457c5100c70edebe86ac) · [merged PR](https://github.com/jonah-ux/slipstream/pull/2) · [CI](https://github.com/jonah-ux/slipstream/actions)
 
-The public `v0.1.0` prerelease remains the released install surface. Current `main` adds `slipstream/inspect/v1`; its `0.2.0` release object has not been claimed.
+The public `v0.1.0` prerelease remains the released install surface. Current `main` adds `slipstream/inspect/v1`, `slipstream/manifest/v1`, and `slipstream/verify/v1`; its `0.2.0` release object has not been claimed.
 
 ## The engineering pattern
 

@@ -21,8 +21,11 @@ registries, memory corpora, credentials, hooks, telemetry, and internal
 adapters out of the public repository.
 
 **Current proof:** public `v0.1.0` prerelease, uploaded package tarball,
-`SHA256SUMS`, green Node 20/22/24 CI, and a clean local `npm test` receipt.
-The release is a prerelease while the independent consumer cycle continues.
+`SHA256SUMS`, green Node 20/22/24 CI, a clean local `npm test` receipt, and a
+fresh `0.2.0` consumer that builds an index, writes a redacted
+`slipstream/manifest/v1`, and verifies the unchanged index with matching
+manifest/current hashes. The release is a prerelease while the independent
+consumer cycle continues.
 
 ## Greenlight after sanitization: BreakTrace Lite
 
