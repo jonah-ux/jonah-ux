@@ -55,3 +55,14 @@ The smaller [agent tooling lab](https://github.com/jonah-ux#the-agent-tooling-la
 - Turning a local or internal workflow into a small, installable developer tool.
 - Making AI-agent behavior inspectable through structured output, evidence records, and safe boundaries.
 - Connecting product needs, databases, integrations, and operational reality without hiding uncertainty.
+
+
+### [Agent Proof](https://github.com/jonah-ux/agent-proof)
+
+**Problem:** a command receipt can be intact while the artifact, source envelope, or claimed outcome has changed or was never observed.
+
+**What it shows:** canonical evidence records, append-only hash chains, repository identity, redacted output digests, schema-aware collection, portable gzip/tar bundle verification, and explicit unknown or partial states.
+
+**Proof:** [v0.1.1 public prerelease](https://github.com/jonah-ux/agent-proof/releases/tag/v0.1.1) · [bundle-verifier PR](https://github.com/jonah-ux/agent-proof/pull/2) · [current main](https://github.com/jonah-ux/agent-proof/commit/b3bb7b6fbcfa5464ad4bb366540bd5043974a275) · [CI](https://github.com/jonah-ux/agent-proof/actions) · [README](https://github.com/jonah-ux/agent-proof#readme)
+
+The public `v0.1.1` prerelease remains the released install surface. The current `main` source adds the portable bundle-verifier and collector work; its next release object has not been claimed.

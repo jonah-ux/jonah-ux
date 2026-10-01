@@ -164,3 +164,12 @@ Evidence: [developer presence plan](DEVELOPER-PRESENCE.md)
 The log records public source and observed behavior. It does not count a commit
 as a release, a demo as production adoption, or a historical claim as current
 truth.
+
+
+## 2026-10-01 — Agent Proof portable evidence readback
+
+Agent Proof now reads its own exported gzip/tar bundles after the original artifact root is gone. The verifier rejects unsafe archive members, checks the manifest and document digests, reconstructs only declared source/artifact bytes, and reuses the v2 record/ledger/run verifier. The same mainline change adds a deterministic collector for recognized sibling envelopes.
+
+Evidence: [merged PR](https://github.com/jonah-ux/agent-proof/pull/2) · [main commit](https://github.com/jonah-ux/agent-proof/commit/b3bb7b6fbcfa5464ad4bb366540bd5043974a275) · [CI](https://github.com/jonah-ux/agent-proof/actions) · [evidence matrix](PORTFOLIO-EVIDENCE.md)
+
+The public install surface remains the earlier v0.1.1 prerelease until the next annotated release tag and asset readback exist.
