@@ -43,9 +43,9 @@ does not imply a stable package or PyPI publication.
 
 **What it shows:** local SQLite + sqlite-vec indexing, atomic rebuilds, read-only integrity readback, stable identity digests, redacted metadata inspection, content-bound row and stored-vector digests, and a consumer-installable CLI contract.
 
-**Proof:** [v0.1.0 public prerelease](https://github.com/jonah-ux/slipstream/releases/tag/v0.1.0) · [manifest and verify main](https://github.com/jonah-ux/slipstream/commit/b714d2377542c7ae4a7b457c5100c70edebe86ac) · [merged PR](https://github.com/jonah-ux/slipstream/pull/2) · [CI](https://github.com/jonah-ux/slipstream/actions)
+**Proof:** [v0.1.0 public prerelease](https://github.com/jonah-ux/slipstream/releases/tag/v0.1.0) · [hardened manifest and verify main](https://github.com/jonah-ux/slipstream/commit/48009934c2cba2ea71ee1e730fc500f03e6ff2af) · [merged PR](https://github.com/jonah-ux/slipstream/pull/3) · [fresh consumer receipt](https://github.com/jonah-ux/slipstream/actions) · [CI](https://github.com/jonah-ux/slipstream/actions)
 
-The public `v0.1.0` prerelease remains the released install surface. Current `main` adds `slipstream/inspect/v1`, `slipstream/manifest/v1`, and `slipstream/verify/v1`; its `0.2.0` release object has not been claimed.
+The public `v0.1.0` prerelease remains the released install surface. Current `main` adds `slipstream/inspect/v1`, `slipstream/manifest/v1`, and `slipstream/verify/v1` with fail-closed tamper and output-collision handling; its `0.2.0` release object has not been claimed.
 
 ## The engineering pattern
 
