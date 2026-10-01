@@ -54,7 +54,7 @@ The public `v0.1.0` prerelease remains the released install surface. Current `ma
 
 **What it shows:** durable JSON task records, explicit pass/fail/unknown evidence, SHA-256 identity, fail-closed review readiness, and bounded worktree planning without hidden command execution.
 
-**Proof:** [public repository](https://github.com/jonah-ux/forgeyard) · [CI](https://github.com/jonah-ux/forgeyard/actions) · [README](https://github.com/jonah-ux/forgeyard#readme)
+**Proof:** [v0.1.0 prerelease](https://github.com/jonah-ux/forgeyard/releases/tag/v0.1.0) · [CI](https://github.com/jonah-ux/forgeyard/actions) · [README](https://github.com/jonah-ux/forgeyard#readme) · fresh wheel/source consumers and checksum readback
 
 Forgeyard is intentionally an early public foundation. Worktree execution, command capture, resume, and cleanup safety are planned slices and remain labeled as planned.
 
