@@ -41,7 +41,7 @@ MCP Doctor has a public v0.3.0 prerelease with downloadable wheel, sdist, and ch
 
 **What it shows:** local SQLite + sqlite-vec indexing, atomic rebuilds, read-only integrity readback, stable identity digests, redacted metadata inspection, content-bound row and stored-vector digests, and a consumer-installable CLI contract.
 
-**Proof:** [v0.2.0 stable release](https://github.com/jonah-ux/slipstream/releases/tag/v0.2.0) · [current main](https://github.com/jonah-ux/slipstream/commit/80691b99337a949a0618393d1444ed38817f9a50) · [release consumer PR](https://github.com/jonah-ux/slipstream/pull/6) · [fresh consumer receipt](https://github.com/jonah-ux/slipstream/actions) · [CI](https://github.com/jonah-ux/slipstream/actions)
+**Proof:** [v0.2.0 stable release](https://github.com/jonah-ux/slipstream/releases/tag/v0.2.0) · [current main](https://github.com/jonah-ux/slipstream/commit/5f455ef781ba7d51ae64fffad4ad4bdf29204f26) · [caller-owned workflow PR](https://github.com/jonah-ux/slipstream/pull/8) · [fresh consumer receipt](https://github.com/jonah-ux/slipstream/actions) · [CI](https://github.com/jonah-ux/slipstream/actions)
 
 The public `v0.2.0` stable release includes `slipstream/inspect/v1`, `slipstream/manifest/v1`, and `slipstream/verify/v1` with fail-closed tamper and output-collision handling. The packed-consumer CI gate and release target point at the hardened main.
 
