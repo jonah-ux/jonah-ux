@@ -8,7 +8,7 @@ future ideas as shipped features.
 
 - Keep [Chatlens](https://github.com/jonah-ux/chatlens) v0.2.0 installable from its public prerelease, and keep [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) v0.2.0 current as a stable public release.
 - Keep [Agent Proof](https://github.com/jonah-ux/agent-proof) v0.2.0 as the stable public install surface, with wheel/source assets, checksums, and fresh consumer proof kept current.
-- Keep [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) v0.2.4 as the public install surface while its merged 0.3.0 baseline-drift candidate receives a release tag.
+- Keep [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) v0.3.0 as the public prerelease install surface, with baseline drift and `--fail-on-drift` evidence kept current.
 - Keep [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit), [Context Pack](https://github.com/jonah-ux/context-pack), [Agent Policy](https://github.com/jonah-ux/agent-policy), [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite), [Agent Resume](https://github.com/jonah-ux/agent-resume), and [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) on their existing public release surfaces while their new source candidates receive independent release readback.
 - Keep [Slipstream](https://github.com/jonah-ux/slipstream) v0.2.0 current as a stable public release, with packed-consumer and offline verify evidence kept current.
 - Keep the eight supporting tools runnable from public `main`, with green CI,
