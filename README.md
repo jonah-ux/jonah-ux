@@ -17,7 +17,7 @@ I’m interested in work where reliable software has to cross the boundary betwe
 | Project | Why it exists | Proof |
 | --- | --- | --- |
 | [Chatlens](https://github.com/jonah-ux/chatlens) | Search Codex, Claude Code, and Hermes sessions when the context behind a task is missing. | [v0.1.0 release](https://github.com/jonah-ux/chatlens/releases/tag/v0.1.0) · [CI](https://github.com/jonah-ux/chatlens/actions) |
-| [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Retire Git worktrees with a reviewable plan, recoverable archives, and explicit identity checks. | [v0.1.0 release](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.1.0) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) |
+| [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Retire Git worktrees with a reviewable plan, recoverable archives, and independent readback. | [v0.2.0 prerelease](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.2.0) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) |
 | [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | Lint MCP tool contracts before an agent sees an ambiguous or unsafe interface. | [v0.2.4 prerelease](https://github.com/jonah-ux/mcp-doctor/releases/tag/v0.2.4) · [CI](https://github.com/jonah-ux/mcp-doctor/actions) |
 
 ### Evidence status
@@ -55,7 +55,7 @@ I’m building a small, connected toolkit rather than a collection of unrelated 
 
 - **Recover the context:** [Chatlens](https://github.com/jonah-ux/chatlens) searches local agent sessions when the reasoning behind a task is missing.
 - **Check the interface:** [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) catches ambiguous tool contracts before they reach an agent.
-- **Protect the workspace:** [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) makes Git worktree retirement reviewable and recoverable.
+- **Protect the workspace:** [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) makes Git worktree retirement reviewable, recoverable, and independently verifiable.
 
 The smaller lab projects extend that same loop into evaluation, evidence, policy, tracing, and recovery.
 
@@ -87,4 +87,4 @@ python -m pip install 'git+https://github.com/jonah-ux/chatlens.git@v0.1.0'
 chatlens --help
 ```
 
-Every repository has a visible demo, tests, CI, security guidance, and release notes. The profile is the map; the repositories contain the evidence.
+Every supporting tool repository has a visible demo, tests, CI, security guidance, and release notes. The profile repository and upstream forks are shown for provenance; the supporting repositories contain the authored tool evidence.
