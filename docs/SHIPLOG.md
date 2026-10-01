@@ -198,6 +198,21 @@ vectors, metadata, dimensions, or runtime identity. The inspect and manifest
 paths copy the database family into a temporary directory before reading, so
 source `-wal` and `-shm` files are not created by inspection.
 
-Evidence: [merged PR](https://github.com/jonah-ux/slipstream/pull/2) · [main commit](https://github.com/jonah-ux/slipstream/commit/b714d2377542c7ae4a7b457c5100c70edebe86ac) · [hosted CI](https://github.com/jonah-ux/slipstream/actions/runs/36892132065) · fresh consumer operation `slipstream-manifest-consumer-20261001-v2` · package SHA-256 `aec2c666ab6310ac62e0e6b0f2a817f22279dc007309779d95b36659c3fec4aa`
+Evidence: [merged PR](https://github.com/jonah-ux/slipstream/pull/2) · [main commit at that stage](https://github.com/jonah-ux/slipstream/commit/b714d2377542c7ae4a7b457c5100c70edebe86ac) · [hosted CI](https://github.com/jonah-ux/slipstream/actions/runs/36892132065) · fresh consumer operation `slipstream-manifest-consumer-20261001-v2` · package SHA-256 `aec2c666ab6310ac62e0e6b0f2a817f22279dc007309779d95b36659c3fec4aa`
+
+The public install surface remains v0.1.0. The source package is 0.2.0, but no 0.2.0 release object or tag is claimed here.
+
+## 2026-10-01 — Slipstream manifest hardening
+
+Slipstream main now carries the follow-up hardening for the manifest contract.
+Manifest rows are canonically ordered by stable identity and item metadata is
+hashed from canonical JSON. Stored vectors are encoded and labeled as
+little-endian float32 bytes; malformed stored lengths and non-finite values are
+rejected. `verify` returns exit 1 on mismatch, `manifest --out` refuses the
+index and SQLite sidecars and writes atomically, missing paths do not create
+parents, symlinked index paths resolve their sidecars, and the package exposes
+the engine entrypoint for library consumers.
+
+Evidence: [merged PR](https://github.com/jonah-ux/slipstream/pull/3) · [public main](https://github.com/jonah-ux/slipstream/commit/48009934c2cba2ea71ee1e730fc500f03e6ff2af) · [Node 20/22/24 hosted CI](https://github.com/jonah-ux/slipstream/actions/runs/36898248473) · fresh consumer operation `slipstream-manifest-public-main-consumer-20261001-v1` · package SHA-256 `eb597a9f29ca16ef25e77eccf4d9c6fdf1f13b463e893bec04dce9887d59d6a1`
 
 The public install surface remains v0.1.0. The source package is 0.2.0, but no 0.2.0 release object or tag is claimed here.

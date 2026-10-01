@@ -8,7 +8,7 @@ future ideas as shipped features.
 
 - Keep [Chatlens](https://github.com/jonah-ux/chatlens) v0.1.0 and [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) v0.2.0 installable from their public prereleases.
 - Keep [Agent Proof](https://github.com/jonah-ux/agent-proof) v0.1.1 as the public install surface while the merged `main` bundle-verifier candidate receives its next annotated release tag.
-- Keep [Slipstream](https://github.com/jonah-ux/slipstream) v0.1.0 as the public install surface while the merged `main` inspect plus redacted manifest candidate receives its next annotated release tag.
+- Keep [Slipstream](https://github.com/jonah-ux/slipstream) v0.1.0 as the public install surface while the merged `main` inspect plus hardened redacted manifest candidate receives its next annotated release tag.
 - Keep the eight supporting tools runnable from public `main`, with green CI,
   disposable demos, and honest release status.
 - Keep release evidence current when a public head or asset changes, with the
