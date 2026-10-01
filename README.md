@@ -21,7 +21,7 @@ I’m interested in Applied AI Engineering, AI infrastructure, developer tools, 
 
 [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) is the supporting project to read next: an offline MCP contract linter with stable diagnostics, strict-mode exit behavior, deterministic contract fingerprints, and baseline drift gates. Agent Proof and Worktree Conservator are the current stable releases; Chatlens and Slipstream remain explicitly labeled prereleases while their next release cycles continue.
 
-[Forgeyard](https://github.com/jonah-ux/forgeyard) is the next systems project to inspect: a local-first foundation for reviewable delivery records, explicit evidence contracts, and bounded worktree plans. Its `v0.1.0` public prerelease includes wheel/source assets and fresh-consumer evidence; planned execution and resume slices are intentionally not presented as shipped.
+[Forgeyard](https://github.com/jonah-ux/forgeyard) is the next systems project to inspect: a local-first foundation for reviewable delivery records, explicit evidence contracts, and bounded worktree plans. Its `v0.1.1` public prerelease includes wheel/source assets, checksums, and fresh-consumer evidence; planned execution and resume slices are intentionally not presented as shipped.
 
 ## The engineering loop
 
