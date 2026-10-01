@@ -24,8 +24,10 @@ adapters out of the public repository.
 `SHA256SUMS`, green Node 20/22/24 CI, a clean local `npm test` receipt, and a
 fresh `0.2.0` consumer that builds an index, writes a redacted
 `slipstream/manifest/v1`, and verifies the unchanged index with matching
-manifest/current hashes. The release is a prerelease while the independent
-consumer cycle continues.
+manifest/current hashes. The hardened main also makes tampered verification
+exit non-zero, keeps output away from the index database, and rejects
+non-finite vectors. The release is a prerelease while the independent consumer
+cycle continues.
 
 ## Greenlight after sanitization: BreakTrace Lite
 
