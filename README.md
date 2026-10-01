@@ -14,12 +14,12 @@ I’m interested in Applied AI Engineering, AI infrastructure, developer tools, 
 
 | Project | What to inspect | Run it |
 | --- | --- | --- |
-| [Agent Proof](https://github.com/jonah-ux/agent-proof) | Hash-linked evidence, provenance graphs, tamper refusal, and the boundary between integrity and outcome. | `python demos/demo.py` |
+| [Agent Proof](https://github.com/jonah-ux/agent-proof) | Stable `v0.2.0` evidence ledger with hash-linked records, provenance graphs, tamper refusal, and an explicit integrity/outcome boundary. | `python -m pip install <release-wheel>` · [`v0.2.0` assets](https://github.com/jonah-ux/agent-proof/releases/tag/v0.2.0) |
 | [Chatlens](https://github.com/jonah-ux/chatlens) | Local search and recovery across Codex, Claude Code, and Hermes sessions through isolated readers. | `chatlens --help` |
 | [Slipstream](https://github.com/jonah-ux/slipstream) | A small JavaScript/SQLite + sqlite-vec index with deterministic inspect, manifest, and verify readback. | `npm ci && npm test` |
 | [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Reviewable Git worktree retirement, verified archives, guarded recovery, and explicit refusal conditions. | `worktree-conservator demo --json` |
 
-[MCP Doctor](https://github.com/jonah-ux/mcp-doctor) is the supporting project to read next: an offline MCP contract linter with stable diagnostics and strict-mode exit behavior.
+[MCP Doctor](https://github.com/jonah-ux/mcp-doctor) is the supporting project to read next: an offline MCP contract linter with stable diagnostics and strict-mode exit behavior. Agent Proof is the current stable release; the other three flagship projects remain explicitly labeled prereleases while their next release cycles continue.
 
 ## The engineering loop
 
