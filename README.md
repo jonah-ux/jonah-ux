@@ -10,6 +10,8 @@ I’m interested in Applied AI Engineering, AI infrastructure, developer tools, 
 
 [Build notes on X](https://x.com/jonahhelland) · [Source](https://github.com/jonah-ux) · [Deeper evidence and roadmap](docs/ENGINEERING-EVIDENCE.md)
 
+![Agent tooling stack: recover context, bound decisions, prove outcomes](docs/toolkit-stack.svg)
+
 ## Start with the 90-second tour
 
 These projects form one inspectable workflow. Choose the lane that matches what
