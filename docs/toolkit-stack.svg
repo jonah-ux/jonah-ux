@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 220" role="img" aria-labelledby="title desc">
+  <title id="title">Agent tooling stack</title>
+  <desc id="desc">Three connected layers: recover context, bound decisions, prove outcomes.</desc>
+  <rect width="1200" height="220" rx="22" fill="#f4f7fc" stroke="#d8e2f2"/>
+  <g font-family="Inter,Arial,sans-serif">
+    <g transform="translate(90 45)"><rect width="290" height="130" rx="16" fill="#dceeff"/><text x="24" y="38" fill="#0a2857" font-size="15" letter-spacing="3">01 / RECOVER</text><text x="24" y="78" fill="#0a2857" font-size="25" font-weight="700">Chatlens</text><text x="24" y="105" fill="#50709d" font-size="14">find the missing context</text></g>
+    <path d="M405 110h95" stroke="#7897c5" stroke-width="3"/><path d="m485 98 18 12-18 12" fill="none" stroke="#7897c5" stroke-width="3"/>
+    <g transform="translate(535 45)"><rect width="290" height="130" rx="16" fill="#e8e5ff"/><text x="24" y="38" fill="#241b65" font-size="15" letter-spacing="3">02 / BOUND</text><text x="24" y="78" fill="#241b65" font-size="25" font-weight="700">Context Pack</text><text x="24" y="105" fill="#6b65a1" font-size="14">make inputs deterministic</text></g>
+    <path d="M850 110h95" stroke="#7897c5" stroke-width="3"/><path d="m930 98 18 12-18 12" fill="none" stroke="#7897c5" stroke-width="3"/>
+    <g transform="translate(980 45)"><rect width="180" height="130" rx="16" fill="#dcf7ed"/><text x="22" y="38" fill="#0b4d42" font-size="15" letter-spacing="3">03 / PROVE</text><text x="22" y="78" fill="#0b4d42" font-size="25" font-weight="700">Agent Proof</text><text x="22" y="105" fill="#4b887e" font-size="14">show the outcome</text></g>
+  </g>
+</svg>

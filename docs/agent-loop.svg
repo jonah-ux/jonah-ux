@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" role="img" aria-labelledby="title desc">
+  <title id="title">Agent reliability loop</title>
+  <desc id="desc">Four connected stages: inspect, evaluate, prove, recover.</desc>
+  <defs>
+    <linearGradient id="line" x1="0" x2="1">
+      <stop stop-color="#9bd7ff"/><stop offset=".5" stop-color="#b9a8ff"/><stop offset="1" stop-color="#a8f0d1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="240" rx="22" fill="#081936"/>
+  <path d="M120 120H1080" stroke="url(#line)" stroke-width="3" stroke-linecap="round"/>
+  <g font-family="Inter,Arial,sans-serif" text-anchor="middle">
+    <g transform="translate(180 120)"><circle r="38" fill="#132c56" stroke="#9bd7ff" stroke-width="3"/><circle r="10" fill="#9bd7ff"/><text y="78" fill="#f5f8ff" font-size="20" letter-spacing="4">INSPECT</text><text y="104" fill="#8ea8cc" font-size="12" letter-spacing="2">SEE WHAT IS REAL</text></g>
+    <g transform="translate(460 120)"><circle r="38" fill="#1b265a" stroke="#b9a8ff" stroke-width="3"/><path d="M-12 12 0-12 12 12" fill="none" stroke="#b9a8ff" stroke-width="5"/><text y="78" fill="#f5f8ff" font-size="20" letter-spacing="4">EVALUATE</text><text y="104" fill="#8ea8cc" font-size="12" letter-spacing="2">FIND THE SIGNAL</text></g>
+    <g transform="translate(740 120)"><circle r="38" fill="#123d52" stroke="#a8f0d1" stroke-width="3"/><path d="m-14 0 10 10 20-24" fill="none" stroke="#a8f0d1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><text y="78" fill="#f5f8ff" font-size="20" letter-spacing="4">PROVE</text><text y="104" fill="#8ea8cc" font-size="12" letter-spacing="2">MAKE IT CHECKABLE</text></g>
+    <g transform="translate(1020 120)"><circle r="38" fill="#132c56" stroke="#9bd7ff" stroke-width="3"/><path d="M-14 0a18 18 0 1 0 8-15" fill="none" stroke="#9bd7ff" stroke-width="5" stroke-linecap="round"/><path d="m-13-17 8 2-3 8" fill="none" stroke="#9bd7ff" stroke-width="4"/><text y="78" fill="#f5f8ff" font-size="20" letter-spacing="4">RECOVER</text><text y="104" fill="#8ea8cc" font-size="12" letter-spacing="2">KEEP GOING</text></g>
+  </g>
+</svg>

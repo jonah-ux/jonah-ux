@@ -1,4 +1,4 @@
-<img src="./docs/profile-hero.svg" alt="Jonah Helland — AI developer tooling" width="1200" />
+<img src="./docs/profile-hero.png" alt="Jonah Helland — AI developer tooling" width="1200" />
 
 # Jonah Helland
 
@@ -36,6 +36,8 @@ The profile links directly to the public release and verification trail so a vis
 
 ## The loop
 
+<img src="./docs/agent-loop.svg" alt="Agent reliability loop: inspect, evaluate, prove, recover" width="1200" />
+
 The projects are small on purpose, but they fit together around one engineering question: **can an agent’s work be understood, bounded, and continued?**
 
 | Moment | Tool | Observable result |
@@ -58,6 +60,8 @@ I’m building a small, connected toolkit rather than a collection of unrelated 
 The smaller lab projects extend that same loop into evaluation, evidence, policy, tracing, and recovery.
 
 ## The agent tooling lab
+
+<img src="./docs/toolkit-stack.svg" alt="Toolkit stack: recover context, bound inputs, prove outcomes" width="1200" />
 
 These focused command-line tools explore the rest of the loop:
 
