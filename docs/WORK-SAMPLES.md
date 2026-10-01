@@ -10,7 +10,7 @@ This is the fastest route through my public engineering work. Each sample has pu
 
 **What it shows:** local-first data discovery, bounded search and rendering, multiple source adapters, privacy boundaries, stable JSON output, and a versioned CLI release.
 
-**Proof:** [v0.2.0 prerelease](https://github.com/jonah-ux/chatlens/releases/tag/v0.2.0) · [snapshot main](https://github.com/jonah-ux/chatlens/commit/cf4b118b7200f5b095d23acb822b5858b848b791) · [CI](https://github.com/jonah-ux/chatlens/actions) · [README](https://github.com/jonah-ux/chatlens#readme)
+**Proof:** [v0.2.0 stable release](https://github.com/jonah-ux/chatlens/releases/tag/v0.2.0) · [snapshot main](https://github.com/jonah-ux/chatlens/commit/cf4b118b7200f5b095d23acb822b5858b848b791) · [CI](https://github.com/jonah-ux/chatlens/actions) · [README](https://github.com/jonah-ux/chatlens#readme)
 
 ```bash
 python -m pip install 'git+https://github.com/jonah-ux/chatlens.git@v0.2.0'
@@ -23,7 +23,7 @@ chatlens --help
 
 **What it shows:** defensive CLI design, deterministic plans, archive verification, explicit refusal states, recovery-oriented workflows, and an independent post-apply readback command.
 
-**Proof:** [v0.2.0 prerelease](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.2.0) · [lifecycle audit main](https://github.com/jonah-ux/worktree-conservator/commit/ca4b38fba36cfb01dca25560627ba1e85da0aa07) · [merged PR](https://github.com/jonah-ux/worktree-conservator/pull/5) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) · [README](https://github.com/jonah-ux/worktree-conservator#readme)
+**Proof:** [v0.2.0 stable release](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.2.0) · [lifecycle audit main](https://github.com/jonah-ux/worktree-conservator/commit/ca4b38fba36cfb01dca25560627ba1e85da0aa07) · [merged PR](https://github.com/jonah-ux/worktree-conservator/pull/5) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) · [README](https://github.com/jonah-ux/worktree-conservator#readme)
 
 ### [MCP Doctor](https://github.com/jonah-ux/mcp-doctor)
 
