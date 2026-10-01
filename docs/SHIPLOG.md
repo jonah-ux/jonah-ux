@@ -15,7 +15,7 @@ public commits; the history is intentionally not backfilled or re-dated.
 | 2026-09-30 | Profile README, hiring samples, evidence map, roadmap, and ship log were published | [profile history](https://github.com/jonah-ux/jonah-ux/commits/main) |
 | 2026-10-01 | Release identity and built-consumer gates were propagated across the support tools | [latest profile evidence](PORTFOLIO-EVIDENCE.md) |
 | 2026-10-01 | Worktree Conservator 0.2.0 stable release shipped with independent archive readback | [release](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.2.0) · [merged PR](https://github.com/jonah-ux/worktree-conservator/pull/1) · [main commit](https://github.com/jonah-ux/worktree-conservator/commit/dc6acf64a3698e4d709b82b3653d4e92031b3021) |
-| 2026-10-01 | Forgeyard 0.1.1 prerelease published with package metadata, wheel/source assets, checksums, and fresh-consumer proof | [release](https://github.com/jonah-ux/forgeyard/releases/tag/v0.1.1) · [repository](https://github.com/jonah-ux/forgeyard) · [CI](https://github.com/jonah-ux/forgeyard/actions) |
+| 2026-10-01 | Forgeyard 0.2.0 prerelease published with digest-pinned record verification, wheel/source assets, checksums, and GitHub consumer gates | [release](https://github.com/jonah-ux/forgeyard/releases/tag/v0.2.0) · [merged PR](https://github.com/jonah-ux/forgeyard/pull/5) · [workflow](https://github.com/jonah-ux/forgeyard/actions/runs/36919769410) |
 
 GitHub contribution history should reflect this actual public work. Earlier
 private or internal development is not presented as public open-source history.
