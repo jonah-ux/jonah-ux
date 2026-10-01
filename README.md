@@ -21,7 +21,7 @@ I’m interested in Applied AI Engineering, AI infrastructure, developer tools, 
 
 [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) is the supporting project to read next: an offline MCP contract linter with stable diagnostics, strict-mode exit behavior, deterministic contract fingerprints, and baseline drift gates. The supporting lab now also includes repeated-trial evaluation, provenance-bound context packs, composable policy layers, trace integrity queries, integrity-bound resumes, and bounded execution receipts. Agent Proof is the current stable release; the other three flagship projects remain explicitly labeled prereleases while their next release cycles continue.
 
-[Forgeyard](https://github.com/jonah-ux/forgeyard) is the next systems project to inspect: a local-first foundation for reviewable delivery records, explicit evidence contracts, and bounded worktree plans. Its `v0.1.1` public prerelease includes evidence-receipt verification, wheel/source assets, and fresh-consumer evidence; planned execution and resume slices are intentionally not presented as shipped.
+[Forgeyard](https://github.com/jonah-ux/forgeyard) is the next systems project to inspect: a local-first foundation for reviewable delivery records, explicit evidence contracts, and bounded worktree plans. Its `v0.1.1` public prerelease includes evidence-receipt verification, while current main carries the 0.2.0 verified-release path with fresh wheel/source consumers; planned execution and resume slices are intentionally not presented as shipped.
 
 ## The engineering loop
 
