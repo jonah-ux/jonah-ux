@@ -149,6 +149,16 @@ internal adapters are excluded.
 
 Evidence: [repository](https://github.com/jonah-ux/slipstream) · [v0.1.0 prerelease](https://github.com/jonah-ux/slipstream/releases/tag/v0.1.0) · [CI run](https://github.com/jonah-ux/slipstream/actions/runs/36815123917) · consumer proof `slipstream-consumer-selftest-20260930`
 
+## 2026-10-01 — developer presence plan
+
+Added a staged signup plan for the public surfaces that fit the portfolio:
+LinkedIn, npm, PyPI, one technical writing home, Hugging Face, Product Hunt,
+Docker Hub, and optional GitHub Sponsors. Each surface has a concrete trigger;
+the plan explicitly avoids empty accounts, duplicate blogs, and package
+publication before a stable release and consumer proof exist.
+
+Evidence: [developer presence plan](DEVELOPER-PRESENCE.md)
+
 ## How to read this log
 
 The log records public source and observed behavior. It does not count a commit

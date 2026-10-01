@@ -4,7 +4,7 @@
 
 I build tools that make **AI coding agents easier to inspect, evaluate, and recover**.
 
-My work lives at the intersection of developer tools, local-first workflows, and agent reliability. The projects are small enough to install and understand, but practical enough to use in a real engineering loop.
+My work lives at the intersection of developer tools, local-first workflows, and agent reliability. The projects are small enough to install and understand, but practical enough to use in a real engineering loop. See the [developer presence plan](docs/DEVELOPER-PRESENCE.md) for the public surfaces I’m building around the same evidence.
 
 <a href="https://x.com/jonahhelland">X / build notes</a> · <a href="docs/SHIPLOG.md">Ship log / evidence</a> · <a href="https://github.com/jonah-ux">GitHub / source</a>
 
@@ -85,11 +85,11 @@ These focused command-line tools explore the rest of the loop:
 - **Small surfaces:** few dependencies, clear boundaries, easy local installation.
 - **Honest limits:** security, isolation, provider behavior, and “user-visible result” claims stay explicit.
 
-Start with a released flagship or run any project’s disposable demo before connecting it to a real agent loop:
+Start with the released flagship or run any project’s disposable demo before connecting it to a real agent loop:
 
 ```bash
-python -m pip install 'git+https://github.com/jonah-ux/chatlens.git@v0.1.0'
-chatlens --help
+npm install --global https://github.com/jonah-ux/slipstream/releases/download/v0.1.0/slipstream-local-index-0.1.0.tgz
+slipstream self-test
 ```
 
 Every supporting tool repository has a visible demo, tests, CI, security guidance, and release notes. The profile repository and upstream forks are shown for provenance; the supporting repositories contain the authored tool evidence.
