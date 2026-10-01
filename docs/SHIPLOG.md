@@ -341,3 +341,14 @@ the engine entrypoint for library consumers.
 Evidence: [merged PR](https://github.com/jonah-ux/slipstream/pull/3) · [public main](https://github.com/jonah-ux/slipstream/commit/48009934c2cba2ea71ee1e730fc500f03e6ff2af) · [Node 20/22/24 hosted CI](https://github.com/jonah-ux/slipstream/actions/runs/36898248473) · fresh consumer operation `slipstream-manifest-public-main-consumer-20261001-v1` · package SHA-256 `eb597a9f29ca16ef25e77eccf4d9c6fdf1f13b463e893bec04dce9887d59d6a1`
 
 The public install surface remains v0.1.0. The source package is 0.2.0, but no 0.2.0 release object or tag is claimed here.
+
+## 2026-10-01 — Slipstream caller-owned vector workflow
+
+Slipstream main now includes a disposable caller-owned vector example that
+builds, queries, inspects, manifests, and verifies a local index through the
+package export. The workflow keeps the vector store and metadata local, then
+reports the inspect and manifest results without claiming a hosted index or
+embedding-provider behavior. The public v0.2.0 stable release remains the
+install surface.
+
+Evidence: [merged PR](https://github.com/jonah-ux/slipstream/pull/8) · [current main](https://github.com/jonah-ux/slipstream/commit/5f455ef781ba7d51ae64fffad4ad4bdf29204f26) · [merge commit](https://github.com/jonah-ux/slipstream/commit/44b56e22c91da7e8db43871db4e3ded2d6f801b0) · hosted Node 20/22/24 checks
