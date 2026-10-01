@@ -10,7 +10,7 @@ This is the fastest route through my public engineering work. Each sample has pu
 
 **What it shows:** local-first data discovery, bounded search and rendering, multiple source adapters, privacy boundaries, stable JSON output, and a versioned CLI release.
 
-**Proof:** [v0.2.0 prerelease](https://github.com/jonah-ux/chatlens/releases/tag/v0.2.0) · [CI](https://github.com/jonah-ux/chatlens/actions) · [README](https://github.com/jonah-ux/chatlens#readme)
+**Proof:** [v0.2.0 prerelease](https://github.com/jonah-ux/chatlens/releases/tag/v0.2.0) · [snapshot main](https://github.com/jonah-ux/chatlens/commit/cf4b118b7200f5b095d23acb822b5858b848b791) · [CI](https://github.com/jonah-ux/chatlens/actions) · [README](https://github.com/jonah-ux/chatlens#readme)
 
 ```bash
 python -m pip install 'git+https://github.com/jonah-ux/chatlens.git@v0.2.0'
@@ -23,7 +23,7 @@ chatlens --help
 
 **What it shows:** defensive CLI design, deterministic plans, archive verification, explicit refusal states, recovery-oriented workflows, and an independent post-apply readback command.
 
-**Proof:** [v0.2.0 stable release](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.2.0) · [merged PR](https://github.com/jonah-ux/worktree-conservator/pull/1) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) · [README](https://github.com/jonah-ux/worktree-conservator#readme)
+**Proof:** [v0.2.0 prerelease](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.2.0) · [lifecycle audit main](https://github.com/jonah-ux/worktree-conservator/commit/ca4b38fba36cfb01dca25560627ba1e85da0aa07) · [merged PR](https://github.com/jonah-ux/worktree-conservator/pull/5) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) · [README](https://github.com/jonah-ux/worktree-conservator#readme)
 
 ### [MCP Doctor](https://github.com/jonah-ux/mcp-doctor)
 
@@ -31,7 +31,7 @@ chatlens --help
 
 **What it shows:** contract validation, stable diagnostic codes, JSON and stdin interfaces, strict CI mode, deterministic contract fingerprints, baseline drift reports, and honest error boundaries.
 
-**Proof:** [v0.2.4 prerelease](https://github.com/jonah-ux/mcp-doctor/releases/tag/v0.2.4) · [hardened main](https://github.com/jonah-ux/mcp-doctor/commit/2fa44b9a5bd15a3fcf8a6776ab133498d9a5990b) · [CI](https://github.com/jonah-ux/mcp-doctor/actions/runs/36908352525) · [README](https://github.com/jonah-ux/mcp-doctor#readme)
+**Proof:** [v0.2.4 prerelease](https://github.com/jonah-ux/mcp-doctor/releases/tag/v0.2.4) · [hardened main](https://github.com/jonah-ux/mcp-doctor/commit/fa3b2f7938172d350d2b878876952fde5775c034) · [CI](https://github.com/jonah-ux/mcp-doctor/actions/runs/36908352525) · [README](https://github.com/jonah-ux/mcp-doctor#readme)
 
 MCP Doctor has a public v0.2.4 prerelease with downloadable artifacts and
 hosted consumer checks. Current main is a 0.3.0 source candidate with fresh
@@ -44,7 +44,7 @@ profile does not imply a stable package or PyPI publication.
 
 **What it shows:** local SQLite + sqlite-vec indexing, atomic rebuilds, read-only integrity readback, stable identity digests, redacted metadata inspection, content-bound row and stored-vector digests, and a consumer-installable CLI contract.
 
-**Proof:** [v0.1.0 public prerelease](https://github.com/jonah-ux/slipstream/releases/tag/v0.1.0) · [hardened manifest and verify main](https://github.com/jonah-ux/slipstream/commit/48009934c2cba2ea71ee1e730fc500f03e6ff2af) · [merged PR](https://github.com/jonah-ux/slipstream/pull/3) · [fresh consumer receipt](https://github.com/jonah-ux/slipstream/actions) · [CI](https://github.com/jonah-ux/slipstream/actions)
+**Proof:** [v0.1.0 public prerelease](https://github.com/jonah-ux/slipstream/releases/tag/v0.1.0) · [current main](https://github.com/jonah-ux/slipstream/commit/81cd364cf6acacb8d96c04da63b0592568920c6a) · [hardened PR](https://github.com/jonah-ux/slipstream/pull/3) · [fresh consumer receipt](https://github.com/jonah-ux/slipstream/actions) · [CI](https://github.com/jonah-ux/slipstream/actions)
 
 The public `v0.1.0` prerelease remains the released install surface. Current `main` adds `slipstream/inspect/v1`, `slipstream/manifest/v1`, and `slipstream/verify/v1` with fail-closed tamper and output-collision handling; its `0.2.0` release object has not been claimed.
 
@@ -57,6 +57,18 @@ The public `v0.1.0` prerelease remains the released install surface. Current `ma
 **Proof:** [v0.1.1 prerelease](https://github.com/jonah-ux/forgeyard/releases/tag/v0.1.1) · [CI](https://github.com/jonah-ux/forgeyard/actions) · [README](https://github.com/jonah-ux/forgeyard#readme) · fresh wheel/source consumers and checksum readback
 
 Forgeyard remains an early public foundation. Worktree execution, command capture, resume, and cleanup safety are planned slices and remain labeled as planned.
+
+### Supporting lab: deeper contracts on public main
+
+- [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit) now compares repeated candidate trials with stable plan and behavior fingerprints, rankings, stability, latency, and structured timeout results at [main `83a443b`](https://github.com/jonah-ux/agent-eval-kit/commit/83a443bf1f347f45359575cd79098e92daf7c892).
+- [Context Pack](https://github.com/jonah-ux/context-pack) now emits and verifies deterministic bounded-source manifests with diff safety at [main `e436a70`](https://github.com/jonah-ux/context-pack/commit/e436a70f4de5aee8a8c0846dc7f882e83b81ebc4).
+- [Agent Policy](https://github.com/jonah-ux/agent-policy) now composes ordered policy layers and binds explanations to normalized policy/request digests at [main `cc5ee7d`](https://github.com/jonah-ux/agent-policy/commit/cc5ee7df8984fb539dfa45089329057388cff192).
+- [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) now exposes strict redacted trace inspection and bounded queries at [main `5660935`](https://github.com/jonah-ux/agent-trace-lite/commit/5660935a86e12173009621cc70c15fe7adead30a).
+- [Agent Resume](https://github.com/jonah-ux/agent-resume) now fingerprints continuation records and diffs handoffs without exposing evidence contents at [main `1f0edf7`](https://github.com/jonah-ux/agent-resume/commit/1f0edf71c64a8b30a9ceb711073529d6f7d6a123).
+- [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) now emits bounded v2 receipts with command, output, and receipt digests at [main `ff1c9b2`](https://github.com/jonah-ux/agent-sandbox-run/commit/ff1c9b2f460ddd2f50a07825cc06406e2217da8b).
+
+These source candidates retain their existing prerelease boundaries until their
+own annotated release and fresh-download readback paths are complete.
 
 ## The engineering pattern
 
@@ -84,6 +96,6 @@ The smaller [agent tooling lab](https://github.com/jonah-ux#the-agent-tooling-la
 
 **What it shows:** canonical evidence records, append-only hash chains, repository identity, redacted output digests, schema-aware collection, portable gzip/tar bundle verification, and explicit unknown or partial states.
 
-**Proof:** [v0.2.0 stable release](https://github.com/jonah-ux/agent-proof/releases/tag/v0.2.0) · [license metadata PR](https://github.com/jonah-ux/agent-proof/pull/4) · [current main](https://github.com/jonah-ux/agent-proof/commit/dad3fdc9d32ee4cf8c5f0b255b7a28e3d17e1038) · [CI](https://github.com/jonah-ux/agent-proof/actions) · [README](https://github.com/jonah-ux/agent-proof#readme)
+**Proof:** [v0.2.0 stable release](https://github.com/jonah-ux/agent-proof/releases/tag/v0.2.0) · [provenance graph main](https://github.com/jonah-ux/agent-proof/commit/71e0d4a23d6b3d9f37432f77b388f3f384956680) · [merged PR](https://github.com/jonah-ux/agent-proof/pull/6) · [CI](https://github.com/jonah-ux/agent-proof/actions) · [README](https://github.com/jonah-ux/agent-proof#readme)
 
 Agent Proof now has a stable `v0.2.0` GitHub release with wheel and source assets, checksums, fresh consumer installs, and a demo that verifies tamper refusal and the provenance graph.
