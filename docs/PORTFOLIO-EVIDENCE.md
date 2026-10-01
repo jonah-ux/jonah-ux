@@ -2,7 +2,7 @@
 
 Verification date: 2026-09-30
 
-Each repository was installed from its public `main` branch into a fresh Python 3.14 virtual environment, then its documented `demos/demo.py` was run. The current-head command ran through `worker-lifecycle` operation `wave2-current-head-demo-matrix-20260930` and completed with exit code 0 and clean descendant cleanup.
+Each repository was installed from its public `main` branch into a fresh Python 3.14 virtual environment, its top-level CLI help was checked, and its documented `demos/demo.py` was run. The final current-head command ran through `worker-lifecycle` operation `wave2-current-head-final-matrix-20260930` and completed with exit code 0 and clean descendant cleanup.
 
 | Repository | Installed CLI | Demo result |
 | --- | --- | --- |
