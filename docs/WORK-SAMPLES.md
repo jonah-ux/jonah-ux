@@ -31,12 +31,9 @@ chatlens --help
 
 **What it shows:** contract validation, stable diagnostic codes, JSON and stdin interfaces, strict CI mode, deterministic contract fingerprints, baseline drift reports, and honest error boundaries.
 
-**Proof:** [v0.2.4 prerelease](https://github.com/jonah-ux/mcp-doctor/releases/tag/v0.2.4) · [hardened main](https://github.com/jonah-ux/mcp-doctor/commit/fa3b2f7938172d350d2b878876952fde5775c034) · [CI](https://github.com/jonah-ux/mcp-doctor/actions/runs/36908352525) · [README](https://github.com/jonah-ux/mcp-doctor#readme)
+**Proof:** [v0.3.0 prerelease](https://github.com/jonah-ux/mcp-doctor/releases/tag/v0.3.0) · [hardened main](https://github.com/jonah-ux/mcp-doctor/commit/fa3b2f7938172d350d2b878876952fde5775c034) · [release workflow](https://github.com/jonah-ux/mcp-doctor/actions/runs/36920607505) · [README](https://github.com/jonah-ux/mcp-doctor#readme)
 
-MCP Doctor has a public v0.2.4 prerelease with downloadable artifacts and
-hosted consumer checks. Current main is a 0.3.0 source candidate with fresh
-wheel and sdist consumer proof; the release remains labeled prerelease, so the
-profile does not imply a stable package or PyPI publication.
+MCP Doctor has a public v0.3.0 prerelease with downloadable wheel, sdist, and checksum assets. Its hosted release workflow verifies annotated-tag identity and a fresh installed consumer; the release remains labeled prerelease and is not presented as a stable package or PyPI publication.
 
 ### [Slipstream](https://github.com/jonah-ux/slipstream)
 
