@@ -10,10 +10,10 @@ This is the fastest route through my public engineering work. Each sample has pu
 
 **What it shows:** local-first data discovery, bounded search and rendering, multiple source adapters, privacy boundaries, stable JSON output, and a versioned CLI release.
 
-**Proof:** [v0.2.0 stable release](https://github.com/jonah-ux/chatlens/releases/tag/v0.2.0) · [snapshot main](https://github.com/jonah-ux/chatlens/commit/cf4b118b7200f5b095d23acb822b5858b848b791) · [CI](https://github.com/jonah-ux/chatlens/actions) · [README](https://github.com/jonah-ux/chatlens#readme)
+**Proof:** [v0.2.2 stable release](https://github.com/jonah-ux/chatlens/releases/tag/v0.2.2) · [snapshot main](https://github.com/jonah-ux/chatlens/commit/9719d7bb6b1a17849c459c2f19ae6d59221d90e9) · [CI](https://github.com/jonah-ux/chatlens/actions) · [README](https://github.com/jonah-ux/chatlens#readme)
 
 ```bash
-python -m pip install 'git+https://github.com/jonah-ux/chatlens.git@v0.2.0'
+python -m pip install 'git+https://github.com/jonah-ux/chatlens.git@v0.2.2'
 chatlens --help
 ```
 
