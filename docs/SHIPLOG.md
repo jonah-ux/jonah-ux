@@ -295,6 +295,16 @@ public v0.2.2 stable release remains the install surface.
 
 Evidence: [merged PR](https://github.com/jonah-ux/chatlens/pull/8) · [current main](https://github.com/jonah-ux/chatlens/commit/442d9f47087630c9c88aaf472af97ea183f86ed1) · synthetic output `valid: true`, `trace_state: matched`, `redaction_proof: true` · 23-test CI matrix
 
+### Worktree Conservator maintainer recovery rehearsal
+
+Worktree Conservator main now includes a disposable maintainer recovery
+example. It runs scan, exact planning, preserve-first apply, archive
+verification, lifecycle audit, and restore in temporary repositories and emits
+stable JSON for every stage. The v0.2.0 stable release boundary remains
+unchanged; the example does not perform live cleanup.
+
+Evidence: [merged PR](https://github.com/jonah-ux/worktree-conservator/pull/8) · [current main](https://github.com/jonah-ux/worktree-conservator/commit/7fd35503b5b07739b81be0697477b63c6d6a0979) · synthetic output `archive_verified: true`, `restored: true`, all workflow steps true · hosted macOS/Linux Python 3.11/3.12 CI
+
 ### Forgeyard portable provenance packets
 
 Forgeyard main `0ad158b` now seals verified records and evidence receipts into

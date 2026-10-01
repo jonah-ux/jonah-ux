@@ -23,7 +23,7 @@ chatlens --help
 
 **What it shows:** defensive CLI design, deterministic plans, archive verification, explicit refusal states, recovery-oriented workflows, and an independent post-apply readback command.
 
-**Proof:** [v0.2.0 stable release](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.2.0) · [current main](https://github.com/jonah-ux/worktree-conservator/commit/a0179316631f9558bee3c0880ecd21401fdad534) · [lifecycle audit PR](https://github.com/jonah-ux/worktree-conservator/pull/5) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) · [README](https://github.com/jonah-ux/worktree-conservator#readme)
+**Proof:** [v0.2.0 stable release](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.2.0) · [current main](https://github.com/jonah-ux/worktree-conservator/commit/7fd35503b5b07739b81be0697477b63c6d6a0979) · [maintainer recovery PR](https://github.com/jonah-ux/worktree-conservator/pull/8) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) · [README](https://github.com/jonah-ux/worktree-conservator#readme)
 
 ### [MCP Doctor](https://github.com/jonah-ux/mcp-doctor)
 
