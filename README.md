@@ -40,6 +40,8 @@ These tools explore one practical question: **can agent work be understood, boun
 
 Each repository contains its own install path, tests, demos, release notes, and security boundary. Start with the disposable demo before connecting a tool to a real workflow. The repositories describe what a check proves and what it cannot prove; a valid digest is not a claim of deployment, adoption, or a user-visible result.
 
+For a runnable cross-project example, see the [public integration walkthrough](docs/INTEGRATION-WALKTHROUGH.md): MCP Doctor checks a contract, Agent Proof seals the observation, and Forgeyard records the review decision.
+
 ## Public provenance
 
 The profile is a current public engineering portfolio, not an attempt to manufacture elapsed time or adoption. Most original projects were built and released recently. I am keeping that history intact and using the next work to show depth: adversarial tests, clean installed-consumer checks, clearer architecture, and maintenance driven by real use.
