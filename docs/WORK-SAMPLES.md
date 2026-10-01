@@ -44,7 +44,7 @@ profile does not imply a stable package or PyPI publication.
 
 **What it shows:** local SQLite + sqlite-vec indexing, atomic rebuilds, read-only integrity readback, stable identity digests, redacted metadata inspection, content-bound row and stored-vector digests, and a consumer-installable CLI contract.
 
-**Proof:** [v0.1.0 public prerelease](https://github.com/jonah-ux/slipstream/releases/tag/v0.1.0) · [current main](https://github.com/jonah-ux/slipstream/commit/81cd364cf6acacb8d96c04da63b0592568920c6a) · [hardened PR](https://github.com/jonah-ux/slipstream/pull/3) · [fresh consumer receipt](https://github.com/jonah-ux/slipstream/actions) · [CI](https://github.com/jonah-ux/slipstream/actions)
+**Proof:** [v0.1.0 public prerelease](https://github.com/jonah-ux/slipstream/releases/tag/v0.1.0) · [current main](https://github.com/jonah-ux/slipstream/commit/80691b99337a949a0618393d1444ed38817f9a50) · [release consumer PR](https://github.com/jonah-ux/slipstream/pull/6) · [fresh consumer receipt](https://github.com/jonah-ux/slipstream/actions) · [CI](https://github.com/jonah-ux/slipstream/actions)
 
 The public `v0.1.0` prerelease remains the released install surface. Current `main` adds `slipstream/inspect/v1`, `slipstream/manifest/v1`, and `slipstream/verify/v1` with fail-closed tamper and output-collision handling; its `0.2.0` release object has not been claimed.
 

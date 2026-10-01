@@ -238,6 +238,14 @@ Evidence: [merged PR](https://github.com/jonah-ux/slipstream/pull/2) · [main co
 
 The public install surface remains v0.1.0. The source package is 0.2.0, but no 0.2.0 release object or tag is claimed here.
 
+## 2026-10-01 — Slipstream packed-consumer release gate
+
+Slipstream main now runs a clean packed-consumer path in CI, rebuilding the
+native dependency before invoking the CLI and keeping source, tag, asset, and
+published-consumer proof separate. The release remains unpublished at 0.2.0.
+
+Evidence: [merged PR](https://github.com/jonah-ux/slipstream/pull/6) · [public main](https://github.com/jonah-ux/slipstream/commit/80691b99337a949a0618393d1444ed38817f9a50) · [hosted CI](https://github.com/jonah-ux/slipstream/actions/runs/36919556239)
+
 ## 2026-10-01 — public toolkit iteration pass
 
 The supporting lab received one deeper public-main pass per project. Agent Eval
