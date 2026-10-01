@@ -27,7 +27,7 @@ The fastest concrete entry points are Agent Proof's [stable release assets](http
 
 The supporting lab includes repeated-trial evaluation, integrity-bound sandbox receipt scoring, loss-aware evidence interop, provenance-bound context packs, composable policy layers, redacted trace export, integrity-bound resumes, and bounded execution receipts. Agent Proof, Chatlens, Forgeyard, Slipstream, and Worktree Conservator are the current stable releases; MCP Doctor remains explicitly labeled a prerelease while its next release cycle continues.
 
-[Forgeyard](https://github.com/jonah-ux/forgeyard) is the next systems project to inspect: a local-first foundation for reviewable delivery records, explicit evidence contracts, and bounded worktree plans. Its `v0.2.6` stable release includes a one-command evidence-to-review demo, evidence-receipt verification, digest-pinned record validation, wheel/source assets, checksums, and fresh-consumer evidence. Public main also carries the unreleased `0.3.0` provenance-packet candidate; planned execution and resume slices are intentionally not presented as shipped.
+[Forgeyard](https://github.com/jonah-ux/forgeyard) is the next systems project to inspect: a local-first foundation for reviewable delivery records, explicit evidence contracts, and bounded worktree plans. Its `v0.2.6` stable release includes a one-command evidence-to-review demo, evidence-receipt verification, digest-pinned record validation, wheel/source assets, checksums, and fresh-consumer evidence. Public main also carries the unreleased `0.3.0` provenance-packet and specialist-report composition candidates; planned execution and resume slices are intentionally not presented as shipped.
 
 ## The engineering loop
 
