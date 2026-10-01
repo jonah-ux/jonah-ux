@@ -14,7 +14,7 @@ public commits; the history is intentionally not backfilled or re-dated.
 | 2026-09-30 | MCP Doctor and the seven supporting tools gained public packaging, demos, CI, and release workflows | [MCP Doctor history](https://github.com/jonah-ux/mcp-doctor/commits/main) · [portfolio evidence](PORTFOLIO-EVIDENCE.md) |
 | 2026-09-30 | Profile README, hiring samples, evidence map, roadmap, and ship log were published | [profile history](https://github.com/jonah-ux/jonah-ux/commits/main) |
 | 2026-10-01 | Release identity and built-consumer gates were propagated across the support tools | [latest profile evidence](PORTFOLIO-EVIDENCE.md) |
-| 2026-10-01 | Worktree Conservator 0.2.0 prerelease shipped with independent archive readback | [release](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.2.0) · [merged PR](https://github.com/jonah-ux/worktree-conservator/pull/1) · [main commit](https://github.com/jonah-ux/worktree-conservator/commit/dc6acf64a3698e4d709b82b3653d4e92031b3021) |
+| 2026-10-01 | Worktree Conservator 0.2.0 stable release shipped with independent archive readback | [release](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.2.0) · [merged PR](https://github.com/jonah-ux/worktree-conservator/pull/1) · [main commit](https://github.com/jonah-ux/worktree-conservator/commit/dc6acf64a3698e4d709b82b3653d4e92031b3021) |
 
 GitHub contribution history should reflect this actual public work. Earlier
 private or internal development is not presented as public open-source history.
@@ -41,13 +41,13 @@ objects were published.
 
 Evidence: [portfolio evidence matrix](PORTFOLIO-EVIDENCE.md)
 
-## 2026-10-01 — Worktree Conservator 0.2.0 prerelease
+## 2026-10-01 — Worktree Conservator 0.2.0 stable release
 
 Added receipt-bound, read-only archive verification to the flagship worktree
 tool. The release includes wheel and source artifacts, checksums, a disposable
 demo that proves `verify` before restore, and fresh wheel/sdist consumer runs.
 
-Evidence: [v0.2.0 prerelease](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.2.0) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) · [release proof](PORTFOLIO-EVIDENCE.md)
+Evidence: [v0.2.0 stable release](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.2.0) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) · [release proof](PORTFOLIO-EVIDENCE.md)
 
 ## 2026-09-30 — public-main install matrix
 
