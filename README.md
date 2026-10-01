@@ -39,5 +39,3 @@ Each repository contains its own install path, tests, demos, release notes, and 
 The profile is a current public engineering portfolio, not an attempt to manufacture elapsed time or adoption. Most original projects were built and released recently. I am keeping that history intact and using the next work to show depth: adversarial tests, clean installed-consumer checks, clearer architecture, and maintenance driven by real use.
 
 [Engineering evidence](docs/ENGINEERING-EVIDENCE.md) · [Work samples](docs/WORK-SAMPLES.md) · [Ship log](docs/SHIPLOG.md)
-
-The [OpenClaw](https://github.com/jonah-ux/openclaw), [Exo](https://github.com/jonah-ux/exo), and [Hermes Agent upstream](https://github.com/jonah-ux/hermes-agent-upstream) repositories are forks and are shown for provenance. They are not presented as authored portfolio projects.
