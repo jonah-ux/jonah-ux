@@ -10,8 +10,8 @@ future ideas as shipped features.
 - Keep [Agent Proof](https://github.com/jonah-ux/agent-proof) v0.2.0 as the stable public install surface, with wheel/source assets, checksums, and fresh consumer proof kept current.
 - Keep [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) v0.2.4 as the public install surface while its merged 0.3.0 baseline-drift candidate receives a release tag.
 - Keep [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit), [Context Pack](https://github.com/jonah-ux/context-pack), [Agent Policy](https://github.com/jonah-ux/agent-policy), [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite), [Agent Resume](https://github.com/jonah-ux/agent-resume), and [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) on their existing public release surfaces while their new source candidates receive independent release readback.
-- Keep [Slipstream](https://github.com/jonah-ux/slipstream) v0.1.0 as the public install surface while the merged `main` inspect plus hardened redacted manifest candidate receives its next annotated release tag.
-- Keep the nine supporting tools runnable from public `main`, with green CI,
+- Keep [Slipstream](https://github.com/jonah-ux/slipstream) v0.2.0 current as a stable public release, with packed-consumer and offline verify evidence kept current.
+- Keep the eight supporting tools runnable from public `main`, with green CI,
   disposable demos, and honest release status.
 - Keep release evidence current when a public head or asset changes, with the
   exact tag, CI run, checksum, and fresh-consumer boundary recorded.
