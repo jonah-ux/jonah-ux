@@ -18,3 +18,12 @@ Each repository was installed from its public `main` branch into a fresh Python 
 All eight repositories now also carry the same reviewed `.github/workflows/release.yml`: a semantic-version tag builds a wheel and source archive, writes `SHA256SUMS`, and creates a GitHub prerelease. The eight workflow files pass `actionlint`; no tag was pushed as part of this evidence pass.
 
 This proves public installability and runnable demos from `main`; it does not claim that these tools have published GitHub release objects yet.
+
+The release payloads have also been built and consumed independently from the
+current public heads: each repository produced a wheel, source archive, and
+`SHA256SUMS`, then installed both artifacts into fresh environments. The
+receipt is worker operation `wave2-artifact-build-install-matrix-20261001`,
+which completed successfully with clean cleanup. The build output includes a
+setuptools warning that the legacy TOML license-table form will be deprecated;
+the warning is recorded for the next packaging cleanup rather than treated as
+a failed release.

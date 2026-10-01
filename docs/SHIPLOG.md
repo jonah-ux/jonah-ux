@@ -42,6 +42,17 @@ from its disposable demo.
 
 Evidence: [fix commit](https://github.com/jonah-ux/agent-eval-kit/commit/5b1ce5f) · [green CI run](https://github.com/jonah-ux/agent-eval-kit/actions/runs/36793852849)
 
+## 2026-10-01 — release payload matrix
+
+Built the wheel and source archive for every supporting tool from its current
+public head, wrote a checksum manifest, and installed both artifacts into
+fresh environments. Every artifact install passed its CLI help check. The
+build output contains a known setuptools warning about the legacy TOML license
+table; it is recorded for packaging cleanup rather than hidden.
+
+Evidence: `wave2-artifact-build-install-matrix-20261001` completed with exit
+code 0 and clean worker cleanup.
+
 ## 2026-09-30 — Chatlens 0.1.0 prerelease
 
 Chatlens now has a public GitHub prerelease with a wheel, source archive, and
