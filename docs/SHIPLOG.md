@@ -228,6 +228,25 @@ Evidence: [merged PR](https://github.com/jonah-ux/slipstream/pull/2) · [main co
 
 The public install surface remains v0.1.0. The source package is 0.2.0, but no 0.2.0 release object or tag is claimed here.
 
+## 2026-10-01 — public toolkit iteration pass
+
+The supporting lab received one deeper public-main pass per project. Agent Eval
+Kit now compares repeated candidate trials with stable matrix fingerprints,
+rankings, stability, latency, and structured timeout results. Context Pack now
+has deterministic provenance manifests, verification, diff safety, atomic output,
+and symlink/hardlink protections. Agent Policy now composes ordered layers and
+binds decisions to normalized policy/request digests. Agent Trace Lite now has
+strict redacted trace integrity inspection and bounded queries. Agent Resume now
+has canonical handoff fingerprints and redacted diffs. Agent Sandbox Run now
+emits bounded v2 receipts with command/output/receipt digests and explicit
+timeout/enforcement state.
+
+Evidence: [Agent Eval main](https://github.com/jonah-ux/agent-eval-kit/commit/83a443bf1f347f45359575cd79098e92daf7c892) · [Context Pack main](https://github.com/jonah-ux/context-pack/commit/e436a70f4de5aee8a8c0846dc7f882e83b81ebc4) · [Agent Policy main](https://github.com/jonah-ux/agent-policy/commit/cc5ee7df8984fb539dfa45089329057388cff192) · [Trace main](https://github.com/jonah-ux/agent-trace-lite/commit/5660935a86e12173009621cc70c15fe7adead30a) · [Resume main](https://github.com/jonah-ux/agent-resume/commit/1f0edf71c64a8b30a9ceb711073529d6f7d6a123) · [Sandbox main](https://github.com/jonah-ux/agent-sandbox-run/commit/ff1c9b2f460ddd2f50a07825cc06406e2217da8b)
+
+The new source candidates remain separate from release adoption. Their current
+public prerelease surfaces are unchanged until each project completes its own
+tag, artifact, checksum, and fresh-download readback.
+
 ## 2026-10-01 — Slipstream manifest hardening
 
 Slipstream main now carries the follow-up hardening for the manifest contract.
