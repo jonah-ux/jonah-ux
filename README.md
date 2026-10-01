@@ -25,9 +25,9 @@ you want to see first, then follow the repository's disposable demo.
 
 The fastest concrete entry points are Agent Proof's [stable release assets](https://github.com/jonah-ux/agent-proof/releases/tag/v0.2.0), Slipstream's [`npm test` path](https://github.com/jonah-ux/slipstream#install-and-run), and Forgeyard's [one-command evidence demo](https://github.com/jonah-ux/forgeyard#quick-start).
 
-The supporting lab includes repeated-trial evaluation, provenance-bound context packs, composable policy layers, trace integrity queries, integrity-bound resumes, and bounded execution receipts. Agent Proof, Chatlens, Forgeyard, Slipstream, and Worktree Conservator are the current stable releases; MCP Doctor remains explicitly labeled a prerelease while its next release cycle continues.
+The supporting lab includes repeated-trial evaluation, integrity-bound sandbox receipt scoring, loss-aware evidence interop, provenance-bound context packs, composable policy layers, redacted trace export, integrity-bound resumes, and bounded execution receipts. Agent Proof, Chatlens, Forgeyard, Slipstream, and Worktree Conservator are the current stable releases; MCP Doctor remains explicitly labeled a prerelease while its next release cycle continues.
 
-[Forgeyard](https://github.com/jonah-ux/forgeyard) is the next systems project to inspect: a local-first foundation for reviewable delivery records, explicit evidence contracts, and bounded worktree plans. Its `v0.2.6` stable release includes a one-command evidence-to-review demo, evidence-receipt verification, digest-pinned record validation, wheel/source assets, checksums, and fresh-consumer evidence; planned execution and resume slices are intentionally not presented as shipped.
+[Forgeyard](https://github.com/jonah-ux/forgeyard) is the next systems project to inspect: a local-first foundation for reviewable delivery records, explicit evidence contracts, and bounded worktree plans. Its `v0.2.6` stable release includes a one-command evidence-to-review demo, evidence-receipt verification, digest-pinned record validation, wheel/source assets, checksums, and fresh-consumer evidence. Public main also carries the unreleased `0.3.0` provenance-packet candidate; planned execution and resume slices are intentionally not presented as shipped.
 
 ## The engineering loop
 
@@ -40,7 +40,7 @@ These tools explore one practical question: **can agent work be understood, boun
 
 Each repository contains its own install path, tests, demos, release notes, and security boundary. Start with the disposable demo before connecting a tool to a real workflow. The repositories describe what a check proves and what it cannot prove; a valid digest is not a claim of deployment, adoption, or a user-visible result.
 
-For a runnable cross-project example, see the [public integration walkthrough](docs/INTEGRATION-WALKTHROUGH.md): MCP Doctor checks a contract, Agent Proof seals the observation, and Forgeyard records the review decision.
+For a runnable cross-project example, see the [public integration walkthrough](docs/INTEGRATION-WALKTHROUGH.md): MCP Doctor checks a contract, Agent Proof seals the observation, and Forgeyard records the review decision. The deeper interoperability pass also covers sandbox receipt scoring, loss-aware evidence envelopes, and Chatlens-to-Agent-Trace export while keeping source, release, and outcome claims separate.
 
 ## Public provenance
 
