@@ -75,6 +75,8 @@ These focused command-line tools explore the rest of the loop:
 
 ## How I build
 
+<img src="./docs/cli-contract.svg" alt="Agent-friendly CLI contract: install, run deterministic JSON, inspect a receipt" width="1200" />
+
 - **Agent-friendly by default:** noninteractive commands, stable JSON, meaningful exit codes.
 - **Evidence before claims:** demos and fixtures show what a tool actually observed or enforced.
 - **Small surfaces:** few dependencies, clear boundaries, easy local installation.

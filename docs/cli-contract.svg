@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 210" role="img" aria-labelledby="title desc">
+  <title id="title">Agent-friendly CLI contract</title>
+  <desc id="desc">Install a tool, run a deterministic command, and receive a machine-readable receipt.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#071a35"/>
+      <stop offset="1" stop-color="#173c67"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop stop-color="#74d7ff"/>
+      <stop offset="1" stop-color="#a8f0d1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="210" rx="22" fill="url(#bg)"/>
+  <circle cx="42" cy="38" r="6" fill="#ff8096"/>
+  <circle cx="64" cy="38" r="6" fill="#ffd37a"/>
+  <circle cx="86" cy="38" r="6" fill="#a8f0d1"/>
+  <text x="120" y="44" fill="#9db9dc" font-family="Inter,Arial,sans-serif" font-size="14" letter-spacing="3">THE CLI CONTRACT</text>
+  <path d="M52 79h1096" stroke="#2c5581" stroke-width="1"/>
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace">
+    <g transform="translate(52 102)">
+      <text fill="#74d7ff" font-size="14">$ pip install chatlens</text>
+      <text y="29" fill="#dcecff" font-size="13">ready in one command</text>
+    </g>
+    <path d="M370 114h78" stroke="url(#accent)" stroke-width="2"/>
+    <path d="m438 106 12 8-12 8" fill="none" stroke="#a8f0d1" stroke-width="2"/>
+    <g transform="translate(500 102)">
+      <text fill="#b9a8ff" font-size="14">$ chatlens search --json</text>
+      <text y="29" fill="#dcecff" font-size="13">stable, bounded output</text>
+    </g>
+    <path d="M840 114h78" stroke="url(#accent)" stroke-width="2"/>
+    <path d="m908 106 12 8-12 8" fill="none" stroke="#a8f0d1" stroke-width="2"/>
+    <g transform="translate(970 102)">
+      <text fill="#a8f0d1" font-size="14">{ receipt: true }</text>
+      <text y="29" fill="#dcecff" font-size="13">evidence you can inspect</text>
+    </g>
+  </g>
+  <g font-family="Inter,Arial,sans-serif" font-size="11" letter-spacing="2">
+    <rect x="52" y="166" width="150" height="25" rx="12" fill="#13385b" stroke="#2b7194"/>
+    <text x="75" y="183" fill="#b9eaff">NONINTERACTIVE</text>
+    <rect x="218" y="166" width="92" height="25" rx="12" fill="#24265d" stroke="#655fb2"/>
+    <text x="246" y="183" fill="#d2ccff">JSON</text>
+    <rect x="326" y="166" width="112" height="25" rx="12" fill="#174b50" stroke="#4c9b87"/>
+    <text x="349" y="183" fill="#c8ffe8">CHECKABLE</text>
+  </g>
+</svg>

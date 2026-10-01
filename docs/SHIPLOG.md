@@ -116,6 +116,16 @@ it did not verify.
 
 Evidence: [profile README](https://github.com/jonah-ux) · [one-minute work samples](WORK-SAMPLES.md)
 
+## 2026-09-30 — profile visual system
+
+Published the selected cool-tone workflow map as the profile hero and added
+three small, accessible graphics that explain the portfolio at a glance:
+the inspect/evaluate/prove/recover loop, the connected toolkit stack, and the
+agent-friendly CLI contract. The images are stored in the repository so the
+profile renders without a third-party design host.
+
+Evidence: [profile README](https://github.com/jonah-ux) · `docs/profile-hero.png` · `docs/agent-loop.svg` · `docs/toolkit-stack.svg` · `docs/cli-contract.svg`
+
 ## How to read this log
 
 The log records public source and observed behavior. It does not count a commit
