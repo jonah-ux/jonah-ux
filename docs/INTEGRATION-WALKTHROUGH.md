@@ -92,3 +92,29 @@ contract shape, Agent Proof proves the integrity of the recorded observation,
 and Forgeyard proves only that the supplied review evidence is ready for human
 review. None of those records claim deployment, adoption, or a user-visible
 outcome.
+
+## Extended interoperability contracts
+
+The same evidence boundary now has three additional synthetic paths on public
+main:
+
+- **Sandbox receipt to evaluation:** Agent Sandbox Run emits an
+  `agent-sandbox/v2` receipt. Agent Eval Kit consumes the saved receipt through
+  `agent-eval/receipt/v1`, checks the receipt digest, exit and timeout state,
+  and selected output fragments, and fails closed when the receipt is changed.
+  Evaluation does not rerun the command or claim that the sandbox is secure.
+- **Recovery trace to bounded query:** Chatlens exports a redacted
+  `chatlens-trace-envelope/v1` JSONL document. Agent Trace Lite imports and
+  inspects that bounded stream after validating the source/session identity,
+  event and envelope digests, row limits, and atomic output ownership. The
+  import proves a portable trace shape, not that the original conversation is
+  complete or that a user-visible result occurred.
+- **Sibling evidence to portable review:** Agent Proof normalizes known policy,
+  sandbox, evaluation, trace, context-pack, resume, and proof envelopes into
+  `agent-proof/interop/v1`. Forgeyard then seals verified records and receipts
+  into `forgeyard-provenance-packet/v1`, binding the exact source bytes and
+  rejecting drift, tampering, unsafe paths, or unknown live source roots.
+
+These contracts are intentionally loss-aware and synthetic. Each downstream
+consumer verifies the bytes it received, while the profile keeps package
+release status and real-world adoption as separate claims.

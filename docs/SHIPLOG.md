@@ -250,6 +250,56 @@ Evidence: [merged PR](https://github.com/jonah-ux/slipstream/pull/2) · [main co
 
 The public install surface remains v0.1.0. The source package is 0.2.0, but no 0.2.0 release object or tag is claimed here.
 
+## 2026-10-01 — advanced interoperability pass
+
+The next pass connected the public reliability tools at their existing evidence
+boundaries. Each lane landed through a reviewed pull request and kept its
+source, release, installed-consumer, and outcome claims separate.
+
+### Agent Eval Kit receipt scoring
+
+Agent Eval Kit main `df736b3` now scores a saved `agent-sandbox/v2` receipt
+without rerunning the command. `agent-eval/receipt/v1` verifies receipt
+integrity, expected exit and timeout state, and selected stdout fragments. The
+source candidate is 0.3.0; the public release remains v0.1.1.
+
+Evidence: [merged PR](https://github.com/jonah-ux/agent-eval-kit/pull/2) · [main](https://github.com/jonah-ux/agent-eval-kit/commit/df736b33581d9314b9a677ec41cda3083068324f) · 9-test operation `agent-eval-receipt-interop-final-20261001-v2` · fresh wheel/sdist consumers · wheel SHA-256 `743805e63ffd6c2a5dd543fdbf0cc720a807e59e5989fd57d7bb8c83d3f9ddf8` · sdist SHA-256 `2094b73ea67ef0a197562dfe32dc1d212a3c4749344a5983e73fb9e4d9c273f4`
+
+### Agent Proof loss-aware sibling envelopes
+
+Agent Proof main `f6dfa05` includes the reviewed `fe8c89b` interop change.
+`agent-proof/interop/v1` normalizes known sibling envelopes without importing
+raw values, while `interop-verify/v1` binds source bytes and fails closed on
+tampering or unsafe paths. The stable v0.2.0 release boundary is unchanged.
+
+Evidence: [merged PR](https://github.com/jonah-ux/agent-proof/pull/8) · [current main](https://github.com/jonah-ux/agent-proof/commit/f6dfa0506eb536cd9590b31a03452e06f2e8ff8b) · 33-test operation `agent-proof-interop-tests-20261001-v8` · demo operation `agent-proof-interop-regression-20261001-v7` · fresh wheel/sdist consumer operation `agent-proof-interop-consumer-20261001-v3` · hosted CI run `36929650619`
+
+### Chatlens trace export
+
+Chatlens main `a94ac1b` now exports a bounded, redacted
+`chatlens-trace-envelope/v1` JSONL stream and validates it through
+`trace-import`. The envelope binds source/session identity, row limits, event
+digests, and the envelope digest; the importer refuses partial, tampered, or
+unsafe output. The v0.2.2 stable release remains the public install surface.
+
+Evidence: [merged PR](https://github.com/jonah-ux/chatlens/pull/7) · [main](https://github.com/jonah-ux/chatlens/commit/a94ac1b47b29219cf90867e7e3dea73f353ab1c6) · 23 synthetic tests · compileall proof · fresh Chatlens 0.2.2 wheel SHA-256 `347f80fc72fd901e156886fef86db16c13147e94549d9c039d394196b58c5865` · fresh Agent Trace Lite consumer with `trace-import ok:true` and `inspect` exit 0 · hosted macOS/Linux Python 3.11/3.12 CI
+
+### Forgeyard portable provenance packets
+
+Forgeyard main `0ad158b` now seals verified records and evidence receipts into
+`forgeyard-provenance-packet/v1`. The packet embeds exact record and receipt
+bytes, binds source freshness, and rejects drift, tampering, unsafe paths, or
+unknown live source roots. The source candidate is 0.3.0; the public v0.2.6
+stable release remains unchanged.
+
+Evidence: [merged PR](https://github.com/jonah-ux/forgeyard/pull/7) · [main](https://github.com/jonah-ux/forgeyard/commit/0ad158bb7c6b9655a0855971cf0df1270e37cd12) · 19-test operation `forgeyard-provenance-tests-20261001-v11` · compileall operation `forgeyard-provenance-compileall-20261001-v2` · fresh wheel/sdist consumer operation `forgeyard-provenance-consumer-20261001-v3` · adversarial refusal operation `forgeyard-provenance-adversarial-20261001-v4` · wheel SHA-256 `76f956fe5b1f0f507c46d5d6787c533c52e1ae8f783d24791b12d4ad97f600bf` · sdist SHA-256 `c566465c93467533b3107b2f0fdaea76157a3d669a424f78e79c8f7470f0d698`
+
+The remaining public projects retain the current boundaries in the
+[advanced-pass roadmap](ROADMAP.md): another feature is held until it has a
+named downstream consumer, a sanitized fixture, adversarial refusal coverage,
+and fresh package readback. No prerelease was relabeled as stable during this
+pass.
+
 ## 2026-10-01 — Slipstream packed-consumer release gate
 
 Slipstream main now runs a clean packed-consumer path in CI, rebuilding the
