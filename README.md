@@ -10,14 +10,18 @@ I’m interested in Applied AI Engineering, AI infrastructure, developer tools, 
 
 [Build notes on X](https://x.com/jonahhelland) · [Source](https://github.com/jonah-ux) · [Deeper evidence and roadmap](docs/ENGINEERING-EVIDENCE.md)
 
-## Start with these four projects
+## Start with the 90-second tour
 
-| Project | What to inspect | Run it |
+These projects form one inspectable workflow. Choose the lane that matches what
+you want to see first, then follow the repository's disposable demo.
+
+| Lane | Start here | What it proves |
 | --- | --- | --- |
-| [Agent Proof](https://github.com/jonah-ux/agent-proof) | Stable `v0.2.0` evidence ledger with hash-linked records, provenance graphs, tamper refusal, and an explicit integrity/outcome boundary. | `python -m pip install <release-wheel>` · [`v0.2.0` assets](https://github.com/jonah-ux/agent-proof/releases/tag/v0.2.0) |
-| [Chatlens](https://github.com/jonah-ux/chatlens) | Local search and recovery across Codex, Claude Code, and Hermes sessions through isolated readers. | `chatlens --help` |
-| [Slipstream](https://github.com/jonah-ux/slipstream) | A small JavaScript/SQLite + sqlite-vec index with deterministic inspect, manifest, and verify readback. | `npm ci && npm test` |
-| [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Reviewable Git worktree retirement, verified archives, guarded recovery, and explicit refusal conditions. | `worktree-conservator demo --json` |
+| **Trust the result** | [Agent Proof](https://github.com/jonah-ux/agent-proof) → [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | Evidence can be tamper-evident, and tool contracts can fail closed before an agent uses them. |
+| **Recover the work** | [Chatlens](https://github.com/jonah-ux/chatlens) → [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Context and Git state can be searched, archived, and restored without pretending recovery is deployment. |
+| **Build locally** | [Slipstream](https://github.com/jonah-ux/slipstream) → [Forgeyard](https://github.com/jonah-ux/forgeyard) | Retrieval and delivery records can stay local, bounded, deterministic, and reviewable. |
+
+The fastest concrete entry points are Agent Proof's [stable release assets](https://github.com/jonah-ux/agent-proof/releases/tag/v0.2.0), Slipstream's [`npm test` path](https://github.com/jonah-ux/slipstream#install-and-run), and Forgeyard's [evidence-record demo](https://github.com/jonah-ux/forgeyard#quick-start).
 
 The supporting lab includes repeated-trial evaluation, provenance-bound context packs, composable policy layers, trace integrity queries, integrity-bound resumes, and bounded execution receipts. Agent Proof, Chatlens, Forgeyard, Slipstream, and Worktree Conservator are the current stable releases; MCP Doctor remains explicitly labeled a prerelease while its next release cycle continues.
 
