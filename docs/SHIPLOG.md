@@ -166,13 +166,19 @@ as a release, a demo as production adoption, or a historical claim as current
 truth.
 
 
+## 2026-10-01 — Agent Proof 0.2.0 stable release
+
+Agent Proof 0.2.0 is the first stable public release in the toolkit. The reviewed release workflow built wheel and source assets, wrote SHA256SUMS, installed both distributions as fresh consumers, and ran the synthetic tamper-refusal and provenance-graph demo. Independent download readback verified both checksums and both consumer installs.
+
+Evidence: [stable release](https://github.com/jonah-ux/agent-proof/releases/tag/v0.2.0) · [release commit](https://github.com/jonah-ux/agent-proof/commit/dad3fdc9d32ee4cf8c5f0b255b7a28e3d17e1038) · [license metadata PR](https://github.com/jonah-ux/agent-proof/pull/4) · [CI](https://github.com/jonah-ux/agent-proof/actions) · [evidence matrix](PORTFOLIO-EVIDENCE.md)
+
 ## 2026-10-01 — Agent Proof portable evidence readback
 
 Agent Proof now reads its own exported gzip/tar bundles after the original artifact root is gone. The verifier rejects unsafe archive members, checks the manifest and document digests, reconstructs only declared source/artifact bytes, and reuses the v2 record/ledger/run verifier. The same mainline change adds a deterministic collector for recognized sibling envelopes.
 
 Evidence: [merged PR](https://github.com/jonah-ux/agent-proof/pull/2) · [main commit](https://github.com/jonah-ux/agent-proof/commit/b3bb7b6fbcfa5464ad4bb366540bd5043974a275) · [CI](https://github.com/jonah-ux/agent-proof/actions) · [evidence matrix](PORTFOLIO-EVIDENCE.md)
 
-The public install surface remains the earlier v0.1.1 prerelease until the next annotated release tag and asset readback exist.
+The stable v0.2.0 release now carries the public install surface; its release assets and fresh-consumer readback are recorded above.
 
 ## 2026-10-01 — Slipstream inspectable index readback
 

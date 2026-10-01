@@ -73,6 +73,6 @@ The smaller [agent tooling lab](https://github.com/jonah-ux#the-agent-tooling-la
 
 **What it shows:** canonical evidence records, append-only hash chains, repository identity, redacted output digests, schema-aware collection, portable gzip/tar bundle verification, and explicit unknown or partial states.
 
-**Proof:** [v0.1.1 public prerelease](https://github.com/jonah-ux/agent-proof/releases/tag/v0.1.1) · [bundle-verifier PR](https://github.com/jonah-ux/agent-proof/pull/2) · [current main](https://github.com/jonah-ux/agent-proof/commit/b3bb7b6fbcfa5464ad4bb366540bd5043974a275) · [CI](https://github.com/jonah-ux/agent-proof/actions) · [README](https://github.com/jonah-ux/agent-proof#readme)
+**Proof:** [v0.2.0 stable release](https://github.com/jonah-ux/agent-proof/releases/tag/v0.2.0) · [license metadata PR](https://github.com/jonah-ux/agent-proof/pull/4) · [current main](https://github.com/jonah-ux/agent-proof/commit/dad3fdc9d32ee4cf8c5f0b255b7a28e3d17e1038) · [CI](https://github.com/jonah-ux/agent-proof/actions) · [README](https://github.com/jonah-ux/agent-proof#readme)
 
-The public `v0.1.1` prerelease remains the released install surface. The current `main` source adds the portable bundle-verifier and collector work; its next release object has not been claimed.
+Agent Proof now has a stable `v0.2.0` GitHub release with wheel and source assets, checksums, fresh consumer installs, and a demo that verifies tamper refusal and the provenance graph.
