@@ -19,7 +19,7 @@ I’m interested in Applied AI Engineering, AI infrastructure, developer tools, 
 | [Slipstream](https://github.com/jonah-ux/slipstream) | A small JavaScript/SQLite + sqlite-vec index with deterministic inspect, manifest, and verify readback. | `npm ci && npm test` |
 | [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Reviewable Git worktree retirement, verified archives, guarded recovery, and explicit refusal conditions. | `worktree-conservator demo --json` |
 
-[MCP Doctor](https://github.com/jonah-ux/mcp-doctor) is the supporting project to read next: an offline MCP contract linter with stable diagnostics and strict-mode exit behavior. Agent Proof is the current stable release; the other three flagship projects remain explicitly labeled prereleases while their next release cycles continue.
+[MCP Doctor](https://github.com/jonah-ux/mcp-doctor) is the supporting project to read next: an offline MCP contract linter with stable diagnostics, strict-mode exit behavior, deterministic contract fingerprints, and baseline drift gates. Agent Proof is the current stable release; the other three flagship projects remain explicitly labeled prereleases while their next release cycles continue.
 
 [Forgeyard](https://github.com/jonah-ux/forgeyard) is the next systems project to inspect: a local-first foundation for reviewable delivery records, explicit evidence contracts, and bounded worktree plans. It is an early public foundation; planned execution and resume slices are intentionally not presented as shipped.
 
