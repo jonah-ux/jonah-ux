@@ -6,17 +6,17 @@ future ideas as shipped features.
 
 ## Now
 
-- Keep [Chatlens](https://github.com/jonah-ux/chatlens) and [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) installable from their public prereleases.
+- Keep [Chatlens](https://github.com/jonah-ux/chatlens) v0.1.0 and [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) v0.2.0 installable from their public prereleases.
 - Keep the eight supporting tools runnable from public `main`, with green CI,
   disposable demos, and honest release status.
-- Publish the next release wave only after each exact head passes tests,
-  packaging, demo, checksum, and fresh-consumer checks.
+- Keep release evidence current when a public head or asset changes, with the
+  exact tag, CI run, checksum, and fresh-consumer boundary recorded.
 
 ## Next
 
-- Publish reviewed prereleases for MCP Doctor, Agent Eval Kit, Agent Proof,
-  Context Pack, Agent Policy, Agent Trace Lite, Agent Resume, and Agent Sandbox
-  Run.
+- Add stable-release candidates only after the prerelease path has another
+  independent consumer cycle and the release status can be stated without
+  qualification.
 - Add sanitized contributor fixtures for new agent-store and MCP-manifest
   shapes.
 - Add cross-tool examples showing a context pack feeding policy, sandbox, and

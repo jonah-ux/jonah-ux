@@ -21,9 +21,9 @@ chatlens --help
 
 **Problem:** removing a Git worktree can destroy useful context when identity, merge state, or recovery evidence is unclear.
 
-**What it shows:** defensive CLI design, deterministic plans, archive verification, explicit refusal states, and recovery-oriented workflows.
+**What it shows:** defensive CLI design, deterministic plans, archive verification, explicit refusal states, recovery-oriented workflows, and an independent post-apply readback command.
 
-**Proof:** [v0.1.0 release](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.1.0) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) · [README](https://github.com/jonah-ux/worktree-conservator#readme)
+**Proof:** [v0.2.0 prerelease](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.2.0) · [merged PR](https://github.com/jonah-ux/worktree-conservator/pull/1) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) · [README](https://github.com/jonah-ux/worktree-conservator#readme)
 
 ### [MCP Doctor](https://github.com/jonah-ux/mcp-doctor)
 
@@ -33,9 +33,9 @@ chatlens --help
 
 **Proof:** [v0.2.4 prerelease](https://github.com/jonah-ux/mcp-doctor/releases/tag/v0.2.4) · [CI](https://github.com/jonah-ux/mcp-doctor/actions) · [README](https://github.com/jonah-ux/mcp-doctor#readme)
 
-MCP Doctor is currently a versioned source release candidate: the public
-repository has packaging, fixtures, CI, and a runnable demo, while the
-downloadable GitHub prerelease step is still intentionally pending review.
+MCP Doctor has a public v0.2.4 prerelease with downloadable artifacts and
+hosted consumer checks. The release remains labeled prerelease, so the profile
+does not imply a stable package or PyPI publication.
 
 ## The engineering pattern
 
