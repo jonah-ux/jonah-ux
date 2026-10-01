@@ -53,6 +53,16 @@ from the build output.
 Evidence: `wave2-artifact-build-install-clean-20261001` completed with exit
 code 0 and clean worker cleanup.
 
+## 2026-10-01 — MCP Doctor release gates
+
+MCP Doctor now refuses malformed, mismatched, lightweight, or moved tags. Its
+release workflow verifies the package version, annotated tag identity, built
+wheel/source payloads, and an installed consumer before publication. The
+installed consumer checks the version, help contract, clean fixture, stable
+MCP002/MCP004 diagnostics, and unreadable-input exit behavior.
+
+Evidence: [release-gate commit](https://github.com/jonah-ux/mcp-doctor/commit/7e73d0d) · [green CI](https://github.com/jonah-ux/mcp-doctor/actions/runs/36795843101)
+
 ## 2026-09-30 — Chatlens 0.1.0 prerelease
 
 Chatlens now has a public GitHub prerelease with a wheel, source archive, and

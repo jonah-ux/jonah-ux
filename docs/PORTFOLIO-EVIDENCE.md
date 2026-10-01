@@ -6,7 +6,7 @@ Each repository was installed from its public `main` branch into a fresh Python 
 
 | Repository | Installed CLI | Demo result |
 | --- | --- | --- |
-| [mcp-doctor](https://github.com/jonah-ux/mcp-doctor) | `mcp-doctor 0.2.0` | clean contract passes; broken fixture emits MCP002/MCP004 findings; artifact matrix clean at `e98a598` |
+| [mcp-doctor](https://github.com/jonah-ux/mcp-doctor) | `mcp-doctor 0.2.0` | clean contract passes; broken fixture emits MCP002/MCP004 findings; tag identity and installed-consumer gates green at `7e73d0d` |
 | [agent-eval-kit](https://github.com/jonah-ux/agent-eval-kit) | `agent-eval` | `agent-eval/v1`, `ok: true`, exit code 0; top-level `--help` succeeds; artifact matrix clean at `6d4a953` |
 | [agent-proof](https://github.com/jonah-ux/agent-proof) | `agent-proof` | `agent-proof/v1` envelope with explicit `observed: false`; artifact matrix clean at `24b5835` |
 | [context-pack](https://github.com/jonah-ux/context-pack) | `context-pack` | bounded file list, byte count, and SHA-256 digest; artifact matrix clean at `ea1c7f9` |
