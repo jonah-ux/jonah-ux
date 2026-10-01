@@ -33,6 +33,15 @@ identity validation, and honest sandbox enforcement state.
 
 Evidence: [wave 2 install matrix](PORTFOLIO-EVIDENCE.md)
 
+## 2026-09-30 — Agent Eval Kit help contract
+
+The top-level `agent-eval --help` path now succeeds without requiring a
+fixture or command. The CLI uses an explicit `run` subcommand, has a focused
+test for the help contract, and still emits the same `agent-eval/v1` scorecard
+from its disposable demo.
+
+Evidence: [fix commit](https://github.com/jonah-ux/agent-eval-kit/commit/5b1ce5f) · [green CI run](https://github.com/jonah-ux/agent-eval-kit/actions/runs/36793852849)
+
 ## 2026-09-30 — Chatlens 0.1.0 prerelease
 
 Chatlens now has a public GitHub prerelease with a wheel, source archive, and
