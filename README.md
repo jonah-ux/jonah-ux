@@ -8,6 +8,8 @@ My work lives at the intersection of developer tools, local-first workflows, and
 
 <a href="https://x.com/jonahhelland">X / build notes</a> · <a href="docs/SHIPLOG.md">Ship log / evidence</a> · <a href="https://github.com/jonah-ux">GitHub / source</a>
 
+**Three-minute tour:** [Slipstream](https://github.com/jonah-ux/slipstream) for local vector retrieval · [Chatlens](https://github.com/jonah-ux/chatlens) for recoverable agent context · [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) for safe Git lifecycle tooling.
+
 ## For hiring teams
 
 I’m interested in work where reliable software has to cross the boundary between **APIs, databases, integrations, automation, and AI agents**. I like owning the full path from a small, understandable interface through tests, release evidence, and an outcome another person can verify. See the [one-minute work samples](docs/WORK-SAMPLES.md) and the [engineering evidence map](docs/ENGINEERING-EVIDENCE.md) for the shortest hiring-team walkthrough.
@@ -17,7 +19,7 @@ I’m interested in work where reliable software has to cross the boundary betwe
 | Project | Why it exists | Proof |
 | --- | --- | --- |
 | [Slipstream](https://github.com/jonah-ux/slipstream) | Build, inspect, and content-verify a local SQLite + sqlite-vec index for fast, inspectable agent retrieval. | [v0.1.0 prerelease](https://github.com/jonah-ux/slipstream/releases/tag/v0.1.0) · [current main](https://github.com/jonah-ux/slipstream/commit/b714d2377542c7ae4a7b457c5100c70edebe86ac) · [CI](https://github.com/jonah-ux/slipstream/actions) |
-| [Chatlens](https://github.com/jonah-ux/chatlens) | Search Codex, Claude Code, and Hermes sessions when the context behind a task is missing. | [v0.1.0 release](https://github.com/jonah-ux/chatlens/releases/tag/v0.1.0) · [CI](https://github.com/jonah-ux/chatlens/actions) |
+| [Chatlens](https://github.com/jonah-ux/chatlens) | Search Codex, Claude Code, and Hermes sessions when the context behind a task is missing. | [v0.1.0 prerelease](https://github.com/jonah-ux/chatlens/releases/tag/v0.1.0) · [CI](https://github.com/jonah-ux/chatlens/actions) |
 | [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Retire Git worktrees with a reviewable plan, recoverable archives, and independent readback. | [v0.2.0 prerelease](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.2.0) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) |
 | [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | Lint MCP tool contracts before an agent sees an ambiguous or unsafe interface. | [v0.2.4 prerelease](https://github.com/jonah-ux/mcp-doctor/releases/tag/v0.2.4) · [CI](https://github.com/jonah-ux/mcp-doctor/actions) |
 
