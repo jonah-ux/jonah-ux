@@ -47,6 +47,16 @@ does not imply a stable package or PyPI publication.
 
 The public `v0.1.0` prerelease remains the released install surface. Current `main` adds `slipstream/inspect/v1`, `slipstream/manifest/v1`, and `slipstream/verify/v1` with fail-closed tamper and output-collision handling; its `0.2.0` release object has not been claimed.
 
+### [Forgeyard](https://github.com/jonah-ux/forgeyard)
+
+**Problem:** coding-agent work is difficult to review when the task, evidence, and readiness decision are scattered across prose and shell history.
+
+**What it shows:** durable JSON task records, explicit pass/fail/unknown evidence, SHA-256 identity, fail-closed review readiness, and bounded worktree planning without hidden command execution.
+
+**Proof:** [public repository](https://github.com/jonah-ux/forgeyard) · [CI](https://github.com/jonah-ux/forgeyard/actions) · [README](https://github.com/jonah-ux/forgeyard#readme)
+
+Forgeyard is intentionally an early public foundation. Worktree execution, command capture, resume, and cleanup safety are planned slices and remain labeled as planned.
+
 ## The engineering pattern
 
 Across the projects, I focus on the full path from a small interface to a result someone else can inspect:
