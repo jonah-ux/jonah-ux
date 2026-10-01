@@ -294,6 +294,16 @@ stable release remains unchanged.
 
 Evidence: [merged PR](https://github.com/jonah-ux/forgeyard/pull/7) · [main](https://github.com/jonah-ux/forgeyard/commit/0ad158bb7c6b9655a0855971cf0df1270e37cd12) · 19-test operation `forgeyard-provenance-tests-20261001-v11` · compileall operation `forgeyard-provenance-compileall-20261001-v2` · fresh wheel/sdist consumer operation `forgeyard-provenance-consumer-20261001-v3` · adversarial refusal operation `forgeyard-provenance-adversarial-20261001-v4` · wheel SHA-256 `76f956fe5b1f0f507c46d5d6787c533c52e1ae8f783d24791b12d4ad97f600bf` · sdist SHA-256 `c566465c93467533b3107b2f0fdaea76157a3d669a424f78e79c8f7470f0d698`
 
+### Forgeyard specialist-report composition
+
+Forgeyard main now also includes `compose`, an offline read-only boundary that
+accepts specialist reports only when they expose a boolean `ok` result. It
+copies bounded schema/result metadata into review evidence, rejects malformed
+reports, and keeps raw specialist payloads out of the review record. The
+public v0.2.6 release remains unchanged.
+
+Evidence: [merged PR](https://github.com/jonah-ux/forgeyard/pull/8) · [current main](https://github.com/jonah-ux/forgeyard/commit/d3fbd317032e903d2c4260e9f21973a90be26b68) · 22-test operation `forgeyard-compose-tests-20261001d` · clean `compose` consumer readback with `status: ready_for_review` and `verify` `reviewable: true`
+
 The remaining public projects retain the current boundaries in the
 [advanced-pass roadmap](ROADMAP.md): another feature is held until it has a
 named downstream consumer, a sanitized fixture, adversarial refusal coverage,
