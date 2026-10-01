@@ -6,7 +6,7 @@ Each repository was installed from its public `main` branch into a fresh Python 
 
 | Repository | Installed CLI | Demo result |
 | --- | --- | --- |
-| [mcp-doctor](https://github.com/jonah-ux/mcp-doctor) | `mcp-doctor 0.2.0` | clean contract passes; broken fixture emits MCP002/MCP004 findings; tag identity and installed-consumer gates green at `7e73d0d` |
+| [mcp-doctor](https://github.com/jonah-ux/mcp-doctor) | `mcp-doctor 0.2.4` · [prerelease](https://github.com/jonah-ux/mcp-doctor/releases/tag/v0.2.4) | clean contract passes; broken fixture emits MCP002/MCP004 findings; annotated tag, wheel/sdist consumer, and release workflow green at `b3e6ab3` |
 | [agent-eval-kit](https://github.com/jonah-ux/agent-eval-kit) | `agent-eval` | `agent-eval/v1`, `ok: true`, exit code 0; top-level `--help` succeeds; release identity gates and CI green at `175dc19` |
 | [agent-proof](https://github.com/jonah-ux/agent-proof) | `agent-proof` | `agent-proof/v1` envelope with explicit `observed: false`; release identity gates and CI green at `3b2743c` |
 | [context-pack](https://github.com/jonah-ux/context-pack) | `context-pack` | bounded file list, byte count, and SHA-256 digest; release identity gates and CI green at `26efe75` |

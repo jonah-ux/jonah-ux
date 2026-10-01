@@ -18,7 +18,7 @@ I’m interested in work where reliable software has to cross the boundary betwe
 | --- | --- | --- |
 | [Chatlens](https://github.com/jonah-ux/chatlens) | Search Codex, Claude Code, and Hermes sessions when the context behind a task is missing. | [v0.1.0 release](https://github.com/jonah-ux/chatlens/releases/tag/v0.1.0) · [CI](https://github.com/jonah-ux/chatlens/actions) |
 | [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Retire Git worktrees with a reviewable plan, recoverable archives, and explicit identity checks. | [v0.1.0 release](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.1.0) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) |
-| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | Lint MCP tool contracts before an agent sees an ambiguous or unsafe interface. | [README + feature head](https://github.com/jonah-ux/mcp-doctor/commit/5ec80e4) · [CI](https://github.com/jonah-ux/mcp-doctor/actions) |
+| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | Lint MCP tool contracts before an agent sees an ambiguous or unsafe interface. | [v0.2.4 prerelease](https://github.com/jonah-ux/mcp-doctor/releases/tag/v0.2.4) · [CI](https://github.com/jonah-ux/mcp-doctor/actions) |
 
 ### Evidence status
 
@@ -30,10 +30,9 @@ public-main install and demo run for every supporting tool.
 | Signal | Projects | What the link proves |
 | --- | --- | --- |
 | Public prerelease + fresh consumer install | [Chatlens](https://github.com/jonah-ux/chatlens), [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Versioned tag, downloadable assets, checksums, and a clean install path |
-| Versioned source + CI + demo + release workflow | [MCP Doctor](https://github.com/jonah-ux/mcp-doctor), [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit), [Agent Proof](https://github.com/jonah-ux/agent-proof), [Context Pack](https://github.com/jonah-ux/context-pack), [Agent Policy](https://github.com/jonah-ux/agent-policy), [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite), [Agent Resume](https://github.com/jonah-ux/agent-resume), [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | A stranger can install the source, run the examples, see hosted checks, and inspect the tag-to-assets path before a public release is cut |
+| Public prerelease + hosted consumer checks | [MCP Doctor](https://github.com/jonah-ux/mcp-doctor), [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit), [Agent Proof](https://github.com/jonah-ux/agent-proof), [Context Pack](https://github.com/jonah-ux/context-pack), [Agent Policy](https://github.com/jonah-ux/agent-policy), [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite), [Agent Resume](https://github.com/jonah-ux/agent-resume), [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | Public prerelease assets, semantic tags, hosted release checks, and install/demo verification are visible for each tool |
 
-I keep the second group visible as working tools rather than presenting them
-as released packages. The profile links to evidence, not activity theater.
+The profile links directly to the public release and verification trail so a visitor can inspect the install path instead of relying on activity signals. The profile links to evidence, not activity theater.
 
 ## The loop
 

@@ -31,7 +31,7 @@ chatlens --help
 
 **What it shows:** contract validation, stable diagnostic codes, JSON and stdin interfaces, strict CI mode, and honest error boundaries.
 
-**Proof:** [current README + feature head](https://github.com/jonah-ux/mcp-doctor/commit/5ec80e4) · [CI](https://github.com/jonah-ux/mcp-doctor/actions) · [README](https://github.com/jonah-ux/mcp-doctor#readme)
+**Proof:** [v0.2.4 prerelease](https://github.com/jonah-ux/mcp-doctor/releases/tag/v0.2.4) · [CI](https://github.com/jonah-ux/mcp-doctor/actions) · [README](https://github.com/jonah-ux/mcp-doctor#readme)
 
 MCP Doctor is currently a versioned source release candidate: the public
 repository has packaging, fixtures, CI, and a runnable demo, while the
