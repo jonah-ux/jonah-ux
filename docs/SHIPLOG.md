@@ -17,6 +17,16 @@ public commits; the history is intentionally not backfilled or re-dated.
 | 2026-10-01 | Worktree Conservator 0.2.0 stable release shipped with independent archive readback | [release](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.2.0) · [merged PR](https://github.com/jonah-ux/worktree-conservator/pull/1) · [main commit](https://github.com/jonah-ux/worktree-conservator/commit/dc6acf64a3698e4d709b82b3653d4e92031b3021) |
 | 2026-10-01 | Forgeyard 0.1.1 prerelease published with package metadata, wheel/source assets, checksums, and fresh-consumer proof | [release](https://github.com/jonah-ux/forgeyard/releases/tag/v0.1.1) · [repository](https://github.com/jonah-ux/forgeyard) · [CI](https://github.com/jonah-ux/forgeyard/actions) |
 
+## 2026-10-01 — Forgeyard verified-release path
+
+Forgeyard main now carries the verified 0.2.0 release path: annotated-tag
+identity gates, wheel/source consumer checks, checksum assets, and explicit
+separation between current source and the still-unpublished release object.
+Worktree execution, command capture, resume, and cleanup remain planned
+slices rather than shipped claims.
+
+Evidence: [merged PR](https://github.com/jonah-ux/forgeyard/pull/5) · [public main](https://github.com/jonah-ux/forgeyard/commit/89cb5747ff9faa524d623ba650f34be7751173d3) · [hosted CI](https://github.com/jonah-ux/forgeyard/actions/runs/36919297244) · fresh consumer operations `forgeyard-verify-cli-tests-20261001d` and `forgeyard-020-consumer-check-20261001b`
+
 GitHub contribution history should reflect this actual public work. Earlier
 private or internal development is not presented as public open-source history.
 
