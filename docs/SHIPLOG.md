@@ -47,10 +47,10 @@ Evidence: [fix commit](https://github.com/jonah-ux/agent-eval-kit/commit/5b1ce5f
 Built the wheel and source archive for every supporting tool from its current
 public head, wrote a checksum manifest, and installed both artifacts into
 fresh environments. Every artifact install passed its CLI help check. The
-build output contains a known setuptools warning about the legacy TOML license
-table; it is recorded for packaging cleanup rather than hidden.
+SPDX license metadata cleanup removed the shared setuptools deprecation warning
+from the build output.
 
-Evidence: `wave2-artifact-build-install-matrix-20261001` completed with exit
+Evidence: `wave2-artifact-build-install-clean-20261001` completed with exit
 code 0 and clean worker cleanup.
 
 ## 2026-09-30 — Chatlens 0.1.0 prerelease
