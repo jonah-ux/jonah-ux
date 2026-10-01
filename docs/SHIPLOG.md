@@ -3,6 +3,21 @@
 This is a short record of public engineering work that another developer can
 verify. Each entry links to source, a release, CI, or a reproducible receipt.
 
+## Verified public history
+
+The public portfolio began on **2026-09-29**. These are the actual dates and
+public commits; the history is intentionally not backfilled or re-dated.
+
+| Date | Milestone | Public proof |
+| --- | --- | --- |
+| 2026-09-29 | Chatlens and Worktree Conservator source extraction began | [Chatlens history](https://github.com/jonah-ux/chatlens/commits/main) · [Worktree Conservator history](https://github.com/jonah-ux/worktree-conservator/commits/main) |
+| 2026-09-30 | MCP Doctor and the seven supporting tools gained public packaging, demos, CI, and release workflows | [MCP Doctor history](https://github.com/jonah-ux/mcp-doctor/commits/main) · [portfolio evidence](PORTFOLIO-EVIDENCE.md) |
+| 2026-09-30 | Profile README, hiring samples, evidence map, roadmap, and ship log were published | [profile history](https://github.com/jonah-ux/jonah-ux/commits/main) |
+| 2026-10-01 | Release identity and built-consumer gates were propagated across the support tools | [latest profile evidence](PORTFOLIO-EVIDENCE.md) |
+
+GitHub contribution history should reflect this actual public work. Earlier
+private or internal development is not presented as public open-source history.
+
 ## 2026-09-30 — release paths ready for the reliability toolkit
 
 Added and linted the same semantic-tag release workflow across the eight
@@ -66,10 +81,10 @@ Evidence: [release-gate commit](https://github.com/jonah-ux/mcp-doctor/commit/7e
 ## 2026-10-01 — release gates propagated
 
 The same tag identity and built-consumer checks now protect Agent Eval Kit,
-Agent Proof, Agent Policy, Agent Trace Lite, Agent Resume, and Agent Sandbox
-Run. Their latest CI runs are green. Context Pack has a separate bounded-source
-branch under review, so its public `main` remains unchanged until that work is
-resolved.
+Agent Proof, Agent Policy, Agent Trace Lite, Agent Resume, Agent Sandbox Run,
+and Context Pack. Their latest CI runs are green. A separate bounded-source
+branch remains preserved for later review and was not mixed into the public
+release-gate change.
 
 Evidence: [portfolio evidence matrix](PORTFOLIO-EVIDENCE.md)
 
