@@ -37,6 +37,16 @@ MCP Doctor has a public v0.2.4 prerelease with downloadable artifacts and
 hosted consumer checks. The release remains labeled prerelease, so the profile
 does not imply a stable package or PyPI publication.
 
+### [Slipstream](https://github.com/jonah-ux/slipstream)
+
+**Problem:** a local vector index can return plausible nearest results while its dimension, row parity, or caller-owned metadata state is no longer trustworthy.
+
+**What it shows:** local SQLite + sqlite-vec indexing, atomic rebuilds, read-only integrity readback, stable identity digests, redacted metadata inspection, and a consumer-installable CLI contract.
+
+**Proof:** [v0.1.0 public prerelease](https://github.com/jonah-ux/slipstream/releases/tag/v0.1.0) · [inspect readback main](https://github.com/jonah-ux/slipstream/commit/8a862991f8829f6e0115d2d79b15043ced03262a) · [merged PR](https://github.com/jonah-ux/slipstream/pull/1) · [CI](https://github.com/jonah-ux/slipstream/actions)
+
+The public `v0.1.0` prerelease remains the released install surface. Current `main` adds `slipstream/inspect/v1`; its `0.2.0` release object has not been claimed.
+
 ## The engineering pattern
 
 Across the projects, I focus on the full path from a small interface to a result someone else can inspect:

@@ -173,3 +173,16 @@ Agent Proof now reads its own exported gzip/tar bundles after the original artif
 Evidence: [merged PR](https://github.com/jonah-ux/agent-proof/pull/2) · [main commit](https://github.com/jonah-ux/agent-proof/commit/b3bb7b6fbcfa5464ad4bb366540bd5043974a275) · [CI](https://github.com/jonah-ux/agent-proof/actions) · [evidence matrix](PORTFOLIO-EVIDENCE.md)
 
 The public install surface remains the earlier v0.1.1 prerelease until the next annotated release tag and asset readback exist.
+
+## 2026-10-01 — Slipstream inspectable index readback
+
+Slipstream main now exposes a read-only `inspect` command with the
+`slipstream/inspect/v1` contract. It checks the vec0 dimension, item/vector
+parity, missing and orphan rows, stable item identity digest, kind counts, and
+redacted metadata digests. The offline self-test requires a successful inspect
+readback, and a fresh npm `0.2.0` tarball consumer built the public fixture and
+returned four indexed items with four matching vector rows.
+
+Evidence: [merged PR](https://github.com/jonah-ux/slipstream/pull/1) · [main commit](https://github.com/jonah-ux/slipstream/commit/8a862991f8829f6e0115d2d79b15043ced03262a) · [CI](https://github.com/jonah-ux/slipstream/actions) · [v0.1.0 public prerelease](https://github.com/jonah-ux/slipstream/releases/tag/v0.1.0)
+
+The public install surface remains v0.1.0 until the next annotated release tag and asset readback exist.

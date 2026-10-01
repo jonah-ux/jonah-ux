@@ -16,7 +16,7 @@ I’m interested in work where reliable software has to cross the boundary betwe
 
 | Project | Why it exists | Proof |
 | --- | --- | --- |
-| [Slipstream](https://github.com/jonah-ux/slipstream) | Build a local SQLite + sqlite-vec index for fast, inspectable agent retrieval. | [v0.1.0 prerelease](https://github.com/jonah-ux/slipstream/releases/tag/v0.1.0) · [CI](https://github.com/jonah-ux/slipstream/actions) |
+| [Slipstream](https://github.com/jonah-ux/slipstream) | Build and inspect a local SQLite + sqlite-vec index for fast, inspectable agent retrieval. | [v0.1.0 prerelease](https://github.com/jonah-ux/slipstream/releases/tag/v0.1.0) · [current main](https://github.com/jonah-ux/slipstream/commit/8a862991f8829f6e0115d2d79b15043ced03262a) · [CI](https://github.com/jonah-ux/slipstream/actions) |
 | [Chatlens](https://github.com/jonah-ux/chatlens) | Search Codex, Claude Code, and Hermes sessions when the context behind a task is missing. | [v0.1.0 release](https://github.com/jonah-ux/chatlens/releases/tag/v0.1.0) · [CI](https://github.com/jonah-ux/chatlens/actions) |
 | [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Retire Git worktrees with a reviewable plan, recoverable archives, and independent readback. | [v0.2.0 prerelease](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.2.0) · [CI](https://github.com/jonah-ux/worktree-conservator/actions) |
 | [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | Lint MCP tool contracts before an agent sees an ambiguous or unsafe interface. | [v0.2.4 prerelease](https://github.com/jonah-ux/mcp-doctor/releases/tag/v0.2.4) · [CI](https://github.com/jonah-ux/mcp-doctor/actions) |
@@ -32,6 +32,7 @@ public-main install and demo run for every supporting tool.
 | --- | --- | --- |
 | Public prerelease + fresh consumer install | [Slipstream](https://github.com/jonah-ux/slipstream), [Chatlens](https://github.com/jonah-ux/chatlens), [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Versioned tag, downloadable assets, checksums, and a clean install path |
 | Public prerelease + hosted consumer checks | [MCP Doctor](https://github.com/jonah-ux/mcp-doctor), [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit), [Agent Proof](https://github.com/jonah-ux/agent-proof), [Context Pack](https://github.com/jonah-ux/context-pack), [Agent Policy](https://github.com/jonah-ux/agent-policy), [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite), [Agent Resume](https://github.com/jonah-ux/agent-resume), [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | Public prerelease assets, semantic tags, hosted release checks, and install/demo verification are visible; Agent Proof’s current `main` also carries a newer unreleased bundle-verifier candidate |
+| Public prerelease + current-main readback | [Slipstream](https://github.com/jonah-ux/slipstream) | `slipstream/inspect/v1` checks dimension, item/vector parity, redacted metadata digests, stable identity, and fresh npm consumer behavior; the next release object is not yet published |
 
 The profile links directly to the public release and verification trail so a visitor can inspect the install path instead of relying on activity signals. The profile links to evidence, not activity theater.
 
@@ -60,7 +61,7 @@ I’m building a small, connected toolkit rather than a collection of unrelated 
 
 The smaller lab projects extend that same loop into evaluation, evidence, policy, tracing, and recovery.
 
-The next public candidates are tracked in the [open-source pipeline](docs/OPEN-SOURCE-PIPELINE.md). Slipstream is now the first extracted candidate with a public prerelease; the sanitized BreakTrace evidence core is next, while private system and customer boundaries stay explicit.
+The next public candidates are tracked in the [open-source pipeline](docs/OPEN-SOURCE-PIPELINE.md). Slipstream is now the first extracted candidate with a public prerelease and a current-main inspect readback; the sanitized BreakTrace evidence core is next, while private system and customer boundaries stay explicit.
 
 ## The agent tooling lab
 
