@@ -7,15 +7,15 @@ Each repository was installed from its public `main` branch into a fresh Python 
 | Repository | Installed CLI | Demo result |
 | --- | --- | --- |
 | [mcp-doctor](https://github.com/jonah-ux/mcp-doctor) | `mcp-doctor 0.2.0` | clean contract passes; broken fixture emits MCP002/MCP004 findings; tag identity and installed-consumer gates green at `7e73d0d` |
-| [agent-eval-kit](https://github.com/jonah-ux/agent-eval-kit) | `agent-eval` | `agent-eval/v1`, `ok: true`, exit code 0; top-level `--help` succeeds; artifact matrix clean at `6d4a953` |
-| [agent-proof](https://github.com/jonah-ux/agent-proof) | `agent-proof` | `agent-proof/v1` envelope with explicit `observed: false`; artifact matrix clean at `24b5835` |
-| [context-pack](https://github.com/jonah-ux/context-pack) | `context-pack` | bounded file list, byte count, and SHA-256 digest; artifact matrix clean at `ea1c7f9` |
-| [agent-policy](https://github.com/jonah-ux/agent-policy) | `agent-policy` | `agent-policy/v1` allow decision with reason; artifact matrix clean at `23576bc` |
-| [agent-trace-lite](https://github.com/jonah-ux/agent-trace-lite) | `agent-trace` | `agent-trace/v1` HTML artifact with two events; artifact matrix clean at `84f9918` |
-| [agent-resume](https://github.com/jonah-ux/agent-resume) | `agent-resume` | valid `agent-resume/validation/v1` continuation record; artifact matrix clean at `7f2c3e1` |
-| [agent-sandbox-run](https://github.com/jonah-ux/agent-sandbox-run) | `agent-sandbox` | `agent-sandbox/v1` receipt with `enforced: false` honestly reported; artifact matrix clean at `2ffad63` |
+| [agent-eval-kit](https://github.com/jonah-ux/agent-eval-kit) | `agent-eval` | `agent-eval/v1`, `ok: true`, exit code 0; top-level `--help` succeeds; release identity gates and CI green at `175dc19` |
+| [agent-proof](https://github.com/jonah-ux/agent-proof) | `agent-proof` | `agent-proof/v1` envelope with explicit `observed: false`; release identity gates and CI green at `3b2743c` |
+| [context-pack](https://github.com/jonah-ux/context-pack) | `context-pack` | bounded file list, byte count, and SHA-256 digest; artifact matrix clean at `ea1c7f9`; release-gate branch under review |
+| [agent-policy](https://github.com/jonah-ux/agent-policy) | `agent-policy` | `agent-policy/v1` allow decision with reason; release identity gates and CI green at `869b009` |
+| [agent-trace-lite](https://github.com/jonah-ux/agent-trace-lite) | `agent-trace` | `agent-trace/v1` HTML artifact with two events; release identity gates and CI green at `fdeca9a` |
+| [agent-resume](https://github.com/jonah-ux/agent-resume) | `agent-resume` | valid `agent-resume/validation/v1` continuation record; release identity gates and CI green at `85a34d1` |
+| [agent-sandbox-run](https://github.com/jonah-ux/agent-sandbox-run) | `agent-sandbox` | `agent-sandbox/v1` receipt with `enforced: false` honestly reported; release identity gates and CI green at `ce87a33` |
 
-All eight repositories now also carry the same reviewed `.github/workflows/release.yml`: a semantic-version tag builds a wheel and source archive, writes `SHA256SUMS`, and creates a GitHub prerelease. The eight workflow files pass `actionlint`; no tag was pushed as part of this evidence pass.
+MCP Doctor and six supporting repositories now carry the strengthened `.github/workflows/release.yml`: a semantic-version tag must match the package version and annotated HEAD, build wheel/source assets, verify both consumers, write `SHA256SUMS`, and only then create a GitHub prerelease. All eight workflow files pass `actionlint`; no tag was pushed as part of this evidence pass.
 
 This proves public installability and runnable demos from `main`; it does not claim that these tools have published GitHub release objects yet.
 
@@ -28,3 +28,5 @@ warnings.
 
 Hosted CI is also green for all eight of those exact heads after the SPDX
 metadata cleanup.
+
+Six supporting repositories now also verify annotated tag identity, package version matching, wheel/source consumer help, and `gh release create --verify-tag` before publication. Context Pack has a separate local bounded-source branch under review; its public `main` remains unchanged until that work is reviewed.

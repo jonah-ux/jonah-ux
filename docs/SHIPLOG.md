@@ -63,6 +63,16 @@ MCP002/MCP004 diagnostics, and unreadable-input exit behavior.
 
 Evidence: [release-gate commit](https://github.com/jonah-ux/mcp-doctor/commit/7e73d0d) · [green CI](https://github.com/jonah-ux/mcp-doctor/actions/runs/36795843101)
 
+## 2026-10-01 — release gates propagated
+
+The same tag identity and built-consumer checks now protect Agent Eval Kit,
+Agent Proof, Agent Policy, Agent Trace Lite, Agent Resume, and Agent Sandbox
+Run. Their latest CI runs are green. Context Pack has a separate bounded-source
+branch under review, so its public `main` remains unchanged until that work is
+resolved.
+
+Evidence: [portfolio evidence matrix](PORTFOLIO-EVIDENCE.md)
+
 ## 2026-09-30 — Chatlens 0.1.0 prerelease
 
 Chatlens now has a public GitHub prerelease with a wheel, source archive, and
