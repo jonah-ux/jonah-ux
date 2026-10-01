@@ -6,6 +6,7 @@ Each repository was installed from its public `main` branch into a fresh Python 
 
 | Repository | Installed CLI | Demo result |
 | --- | --- | --- |
+| [slipstream](https://github.com/jonah-ux/slipstream) | `slipstream 0.1.0` · [prerelease](https://github.com/jonah-ux/slipstream/releases/tag/v0.1.0) | downloaded package tarball, checksum, independent consumer install/self-test, and Node 20/22/24 CI at the reviewed public head |
 | [chatlens](https://github.com/jonah-ux/chatlens) | `chatlens 0.1.0` · [prerelease](https://github.com/jonah-ux/chatlens/releases/tag/v0.1.0) | public tag, wheel/sdist/checksums, and fresh consumer proof at the reviewed release head |
 | [worktree-conservator](https://github.com/jonah-ux/worktree-conservator) | `worktree-conservator 0.2.0` · [prerelease](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.2.0) | merged main `dc6acf6`; public CI, wheel/sdist/checksums, independent `verify` demo readback, and fresh wheel/sdist consumers |
 | [mcp-doctor](https://github.com/jonah-ux/mcp-doctor) | `mcp-doctor 0.2.4` · [prerelease](https://github.com/jonah-ux/mcp-doctor/releases/tag/v0.2.4) | clean contract passes; broken fixture emits MCP002/MCP004 findings; annotated tag, wheel/sdist consumer, and release workflow green at `b3e6ab3` |

@@ -5,7 +5,7 @@ candidate below has a separate extraction, privacy, install, and release gate.
 The labels describe the current boundary; they are not claims that a private
 source tree is already public.
 
-## Greenlight: Slipstream Core
+## Shipped first: Slipstream Core
 
 **What it is:** a local semantic index engine for coding-agent tools and
 documents. Build once into SQLite + `sqlite-vec`, then query locally without a
@@ -20,8 +20,9 @@ an installable CLI, a benchmark command, and an offline self-test. Keep Fleet
 registries, memory corpora, credentials, hooks, telemetry, and internal
 adapters out of the public repository.
 
-**Release bar:** fresh clone → `npm ci` → tests → `slipstream self-test` →
-fixture build/query → benchmark receipt → tagged release with checksums.
+**Current proof:** public `v0.1.0` prerelease, uploaded package tarball,
+`SHA256SUMS`, green Node 20/22/24 CI, and a clean local `npm test` receipt.
+The release is a prerelease while the independent consumer cycle continues.
 
 ## Greenlight after sanitization: BreakTrace Lite
 

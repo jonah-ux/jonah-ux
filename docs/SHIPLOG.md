@@ -136,6 +136,19 @@ customer integrations and operational experiment corpora stay private.
 
 Evidence: [open-source pipeline](OPEN-SOURCE-PIPELINE.md)
 
+## 2026-09-30 — Slipstream Core v0.1.0 prerelease
+
+Extracted the provider-neutral local SQLite + `sqlite-vec` index core from the
+larger private Slipstream work into a standalone public repository. The public
+repo has an agent-friendly CLI, synthetic fixture, atomic build path, offline
+self-test, Node 20/22/24 CI, an uploaded package tarball, and `SHA256SUMS`.
+The uploaded tarball was downloaded by an independent consumer environment,
+installed with its native dependency, and passed `slipstream self-test`.
+Private registries, corpora, hooks, telemetry, credentials, customer data, and
+internal adapters are excluded.
+
+Evidence: [repository](https://github.com/jonah-ux/slipstream) · [v0.1.0 prerelease](https://github.com/jonah-ux/slipstream/releases/tag/v0.1.0) · [CI run](https://github.com/jonah-ux/slipstream/actions/runs/36815123917) · consumer proof `slipstream-consumer-selftest-20260930`
+
 ## How to read this log
 
 The log records public source and observed behavior. It does not count a commit
