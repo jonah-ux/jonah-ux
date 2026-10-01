@@ -5,6 +5,8 @@ verify. Each entry links to source, a release, CI, or a reproducible receipt.
 
 ## Verified public history
 
+| 2026-10-01 | Chatlens 0.2.0 promoted to stable after cross-platform CI and fresh wheel/source consumer proof | [release](https://github.com/jonah-ux/chatlens/releases/tag/v0.2.0) · [CI](https://github.com/jonah-ux/chatlens/actions) · [evidence matrix](PORTFOLIO-EVIDENCE.md) |
+
 | 2026-10-01 | Slipstream 0.2.0 stable release published with inspect/manifest/verify contracts and packed-consumer CI proof | [release](https://github.com/jonah-ux/slipstream/releases/tag/v0.2.0) · [main commit](https://github.com/jonah-ux/slipstream/commit/d8a08b51a9105e341328341f06cac89d1725c812) · [CI](https://github.com/jonah-ux/slipstream/actions) |
 
 | 2026-10-01 | MCP Doctor 0.3.0 prerelease published with deterministic fingerprints, baseline drift gates, wheel/sdist assets, checksums, and installed-consumer verification | [release](https://github.com/jonah-ux/mcp-doctor/releases/tag/v0.3.0) · [workflow](https://github.com/jonah-ux/mcp-doctor/actions/runs/36920607505) |
