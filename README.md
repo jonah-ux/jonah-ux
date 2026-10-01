@@ -59,6 +59,8 @@ I’m building a small, connected toolkit rather than a collection of unrelated 
 
 The smaller lab projects extend that same loop into evaluation, evidence, policy, tracing, and recovery.
 
+The next public candidates are tracked in the [open-source pipeline](docs/OPEN-SOURCE-PIPELINE.md). It starts with the reusable Slipstream local index engine and a sanitized BreakTrace evidence core, while keeping private system and customer boundaries explicit.
+
 ## The agent tooling lab
 
 <img src="./docs/toolkit-stack.svg" alt="Toolkit stack: recover context, bound inputs, prove outcomes" width="1200" />

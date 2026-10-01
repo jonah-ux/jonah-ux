@@ -126,6 +126,16 @@ profile renders without a third-party design host.
 
 Evidence: [profile README](https://github.com/jonah-ux) · `docs/profile-hero.png` · `docs/agent-loop.svg` · `docs/toolkit-stack.svg` · `docs/cli-contract.svg`
 
+## 2026-09-30 — next open-source candidates
+
+Screened existing work for a public-safe extraction path. The first greenlight
+candidate is the reusable Slipstream local index engine; BreakTrace Lite is the
+next candidate after synthetic-fixture and privacy work. Meeting Assistant and
+the generic Agent Protocols edition remain qualified yellow candidates, while
+customer integrations and operational experiment corpora stay private.
+
+Evidence: [open-source pipeline](OPEN-SOURCE-PIPELINE.md)
+
 ## How to read this log
 
 The log records public source and observed behavior. It does not count a commit
