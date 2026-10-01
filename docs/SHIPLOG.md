@@ -185,6 +185,12 @@ Agent Proof 0.2.0 is the first stable public release in the toolkit. The reviewe
 
 Evidence: [stable release](https://github.com/jonah-ux/agent-proof/releases/tag/v0.2.0) · [release commit](https://github.com/jonah-ux/agent-proof/commit/dad3fdc9d32ee4cf8c5f0b255b7a28e3d17e1038) · [license metadata PR](https://github.com/jonah-ux/agent-proof/pull/4) · [CI](https://github.com/jonah-ux/agent-proof/actions) · [evidence matrix](PORTFOLIO-EVIDENCE.md)
 
+## 2026-10-01 — Chatlens 0.2.0 recovery prerelease
+
+Chatlens 0.2.0 promotes the content-addressed recovery snapshot and source-matching verifier from main into a public prerelease. The wheel and source archive were checksum-verified, installed in fresh consumers, and the synthetic demo confirmed its transcript boundary.
+
+Evidence: [v0.2.0 prerelease](https://github.com/jonah-ux/chatlens/releases/tag/v0.2.0) · [CI](https://github.com/jonah-ux/chatlens/actions) · [README](https://github.com/jonah-ux/chatlens#readme) · [evidence matrix](PORTFOLIO-EVIDENCE.md)
+
 ## 2026-10-01 — Agent Proof portable evidence readback
 
 Agent Proof now reads its own exported gzip/tar bundles after the original artifact root is gone. The verifier rejects unsafe archive members, checks the manifest and document digests, reconstructs only declared source/artifact bytes, and reuses the v2 record/ledger/run verifier. The same mainline change adds a deterministic collector for recognized sibling envelopes.
