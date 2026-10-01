@@ -6,7 +6,7 @@ future ideas as shipped features.
 
 ## Now
 
-- Keep [Chatlens](https://github.com/jonah-ux/chatlens) v0.2.0 current as a stable public release, and keep [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) v0.2.0 current as a stable public release.
+- Keep [Chatlens](https://github.com/jonah-ux/chatlens) v0.2.2 current as a stable public release, and keep [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) v0.2.0 current as a stable public release.
 - Keep [Agent Proof](https://github.com/jonah-ux/agent-proof) v0.2.0 as the stable public install surface, with wheel/source assets, checksums, and fresh consumer proof kept current.
 - Keep [Forgeyard](https://github.com/jonah-ux/forgeyard) v0.2.6 as a stable local evidence-record surface, with the one-command demo, digest-pinned verification, and release assets kept current.
 - Keep [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) v0.3.0 as the public prerelease install surface, with baseline drift and `--fail-on-drift` evidence kept current.
