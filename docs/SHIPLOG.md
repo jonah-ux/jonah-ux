@@ -88,6 +88,19 @@ MCP002/MCP004 diagnostics, and unreadable-input exit behavior.
 
 Evidence: [release-gate commit](https://github.com/jonah-ux/mcp-doctor/commit/7e73d0d) · [green CI](https://github.com/jonah-ux/mcp-doctor/actions/runs/36795843101)
 
+## 2026-10-01 — MCP Doctor contract drift baselines
+
+MCP Doctor main now emits a deterministic SHA-256 fingerprint for the tools,
+resources, and prompts it checks. A `--baseline=PATH` comparison reports only
+stable entry names and digests for added, removed, and changed contracts;
+`--fail-on-drift` turns that warning into an exit-1 CI gate. The report keeps
+manifest descriptions and schema contents out of the drift payload, and a
+malformed baseline returns an explicit input error.
+
+Evidence: [merged PR](https://github.com/jonah-ux/mcp-doctor/pull/3) · [public main](https://github.com/jonah-ux/mcp-doctor/commit/2fa44b9a5bd15a3fcf8a6776ab133498d9a5990b) · [hosted CI](https://github.com/jonah-ux/mcp-doctor/actions/runs/36908352525) · fresh consumer operation `mcp-doctor-baseline-consumer-20261001-v1` · wheel SHA-256 `5cabfe8e90b72d5ea792086d3502889f2452294af61c62c07fb96e79646e3796` · sdist SHA-256 `24dbcd3d70f5d79a23aa24f5c16aa89182addeb2bf8ea2b704f7ae621af07865`
+
+The public install surface remains v0.2.4. The source candidate is 0.3.0, but no 0.3.0 release object or tag is claimed here.
+
 ## 2026-10-01 — release gates propagated
 
 The same tag identity and built-consumer checks now protect Agent Eval Kit,

@@ -29,13 +29,14 @@ chatlens --help
 
 **Problem:** an agent cannot make a reliable decision when an MCP tool contract is missing descriptions, schemas, or timeouts.
 
-**What it shows:** contract validation, stable diagnostic codes, JSON and stdin interfaces, strict CI mode, and honest error boundaries.
+**What it shows:** contract validation, stable diagnostic codes, JSON and stdin interfaces, strict CI mode, deterministic contract fingerprints, baseline drift reports, and honest error boundaries.
 
-**Proof:** [v0.2.4 prerelease](https://github.com/jonah-ux/mcp-doctor/releases/tag/v0.2.4) · [CI](https://github.com/jonah-ux/mcp-doctor/actions) · [README](https://github.com/jonah-ux/mcp-doctor#readme)
+**Proof:** [v0.2.4 prerelease](https://github.com/jonah-ux/mcp-doctor/releases/tag/v0.2.4) · [hardened main](https://github.com/jonah-ux/mcp-doctor/commit/2fa44b9a5bd15a3fcf8a6776ab133498d9a5990b) · [CI](https://github.com/jonah-ux/mcp-doctor/actions/runs/36908352525) · [README](https://github.com/jonah-ux/mcp-doctor#readme)
 
 MCP Doctor has a public v0.2.4 prerelease with downloadable artifacts and
-hosted consumer checks. The release remains labeled prerelease, so the profile
-does not imply a stable package or PyPI publication.
+hosted consumer checks. Current main is a 0.3.0 source candidate with fresh
+wheel and sdist consumer proof; the release remains labeled prerelease, so the
+profile does not imply a stable package or PyPI publication.
 
 ### [Slipstream](https://github.com/jonah-ux/slipstream)
 
