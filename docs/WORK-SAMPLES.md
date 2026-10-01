@@ -10,7 +10,7 @@ This is the fastest route through my public engineering work. Each sample has pu
 
 **What it shows:** local-first data discovery, bounded search and rendering, multiple source adapters, privacy boundaries, stable JSON output, and a versioned CLI release.
 
-**Proof:** [v0.2.2 stable release](https://github.com/jonah-ux/chatlens/releases/tag/v0.2.2) · [trace-envelope main](https://github.com/jonah-ux/chatlens/commit/a94ac1b47b29219cf90867e7e3dea73f353ab1c6) · [merged PR](https://github.com/jonah-ux/chatlens/pull/7) · [CI](https://github.com/jonah-ux/chatlens/actions) · [README](https://github.com/jonah-ux/chatlens#readme)
+**Proof:** [v0.2.2 stable release](https://github.com/jonah-ux/chatlens/releases/tag/v0.2.2) · [current main](https://github.com/jonah-ux/chatlens/commit/442d9f47087630c9c88aaf472af97ea183f86ed1) · [trace-envelope PR](https://github.com/jonah-ux/chatlens/pull/7) · [handoff example PR](https://github.com/jonah-ux/chatlens/pull/8) · [CI](https://github.com/jonah-ux/chatlens/actions) · [README](https://github.com/jonah-ux/chatlens#readme)
 
 ```bash
 python -m pip install 'git+https://github.com/jonah-ux/chatlens.git@v0.2.2'
@@ -65,8 +65,9 @@ Forgeyard remains an early public foundation. Worktree execution, command captur
 - [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) remains the receipt producer consumed by Agent Eval Kit, emitting bounded v2 receipts with command, output, and receipt digests at [main `ff1c9b2`](https://github.com/jonah-ux/agent-sandbox-run/commit/ff1c9b2f460ddd2f50a07825cc06406e2217da8b).
 
 Agent Proof's public v0.2.0 release remains stable while its interop adapter is
-source-compatible on current main. Agent Eval Kit and Forgeyard carry new
-0.3.0 source candidates while their public releases remain v0.1.1 and v0.2.6.
+source-compatible on current main. Agent Eval Kit carries a new 0.3.0 source
+candidate while its public release remains v0.1.1; Forgeyard 0.3.0 is now a
+stable public release with specialist composition and provenance packets.
 The other supporting tools retain their existing prerelease boundaries until
 their own annotated release and fresh-download readback paths are complete.
 

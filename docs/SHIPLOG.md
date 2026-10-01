@@ -286,13 +286,22 @@ unsafe output. The v0.2.2 stable release remains the public install surface.
 
 Evidence: [merged PR](https://github.com/jonah-ux/chatlens/pull/7) · [main](https://github.com/jonah-ux/chatlens/commit/a94ac1b47b29219cf90867e7e3dea73f353ab1c6) · 23 synthetic tests · compileall proof · fresh Chatlens 0.2.2 wheel SHA-256 `347f80fc72fd901e156886fef86db16c13147e94549d9c039d394196b58c5865` · fresh Agent Trace Lite consumer with `trace-import ok:true` and `inspect` exit 0 · hosted macOS/Linux Python 3.11/3.12 CI
 
+### Chatlens recovery trace handoff
+
+Chatlens main now includes a synthetic recovery-trace roundtrip that writes a
+bounded JSONL envelope, validates its digests, imports it through the public
+reader, and proves redaction of email, home-path, and query-token fields. The
+public v0.2.2 stable release remains the install surface.
+
+Evidence: [merged PR](https://github.com/jonah-ux/chatlens/pull/8) · [current main](https://github.com/jonah-ux/chatlens/commit/442d9f47087630c9c88aaf472af97ea183f86ed1) · synthetic output `valid: true`, `trace_state: matched`, `redaction_proof: true` · 23-test CI matrix
+
 ### Forgeyard portable provenance packets
 
 Forgeyard main `0ad158b` now seals verified records and evidence receipts into
 `forgeyard-provenance-packet/v1`. The packet embeds exact record and receipt
 bytes, binds source freshness, and rejects drift, tampering, unsafe paths, or
-unknown live source roots. The source candidate is 0.3.0; the public v0.2.6
-stable release remains unchanged.
+unknown live source roots. The later v0.3.0 release now carries this contract
+as a stable public install surface.
 
 Evidence: [merged PR](https://github.com/jonah-ux/forgeyard/pull/7) · [main](https://github.com/jonah-ux/forgeyard/commit/0ad158bb7c6b9655a0855971cf0df1270e37cd12) · 19-test operation `forgeyard-provenance-tests-20261001-v11` · compileall operation `forgeyard-provenance-compileall-20261001-v2` · fresh wheel/sdist consumer operation `forgeyard-provenance-consumer-20261001-v3` · adversarial refusal operation `forgeyard-provenance-adversarial-20261001-v4` · wheel SHA-256 `76f956fe5b1f0f507c46d5d6787c533c52e1ae8f783d24791b12d4ad97f600bf` · sdist SHA-256 `c566465c93467533b3107b2f0fdaea76157a3d669a424f78e79c8f7470f0d698`
 
@@ -302,15 +311,15 @@ Forgeyard main now also includes `compose`, an offline read-only boundary that
 accepts specialist reports only when they expose a boolean `ok` result. It
 copies bounded schema/result metadata into review evidence, rejects malformed
 reports, and keeps raw specialist payloads out of the review record. The
-public v0.2.6 release remains unchanged.
+public v0.3.0 stable release carries this composition path.
 
 Evidence: [merged PR](https://github.com/jonah-ux/forgeyard/pull/8) · [current main](https://github.com/jonah-ux/forgeyard/commit/d3fbd317032e903d2c4260e9f21973a90be26b68) · 22-test operation `forgeyard-compose-tests-20261001d` · clean `compose` consumer readback with `status: ready_for_review` and `verify` `reviewable: true`
 
-The remaining public projects retain the current boundaries in the
+The remaining unreleased projects retain the current boundaries in the
 [advanced-pass roadmap](ROADMAP.md): another feature is held until it has a
 named downstream consumer, a sanitized fixture, adversarial refusal coverage,
-and fresh package readback. No prerelease was relabeled as stable during this
-pass.
+and fresh package readback. Forgeyard's 0.3.0 stable promotion is recorded
+above; the other release boundaries remain unchanged.
 
 ## 2026-10-01 — Slipstream packed-consumer release gate
 
