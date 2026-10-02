@@ -1,0 +1,96 @@
+name: portfolio stack compatibility
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "docs/PORTFOLIO-STACK.md"
+      - "docs/integration/portfolio-stack-demo.sh"
+      - ".github/workflows/portfolio-stack.yml"
+  push:
+    branches: [main]
+    paths:
+      - "docs/PORTFOLIO-STACK.md"
+      - "docs/integration/portfolio-stack-demo.sh"
+      - ".github/workflows/portfolio-stack.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  disposable-stack:
+    name: Python ${{ matrix.python }} / Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12"]
+        node: ["20", "22"]
+    steps:
+      - name: Check out profile
+        uses: actions/checkout@v4
+
+      - name: Check out released consumers
+        uses: actions/checkout@v4
+        with:
+          repository: jonah-ux/chatlens
+          ref: v0.3.0
+          path: chatlens
+
+      - uses: actions/checkout@v4
+        with:
+          repository: jonah-ux/slipstream
+          ref: v0.2.0
+          path: slipstream
+
+      - uses: actions/checkout@v4
+        with:
+          repository: jonah-ux/agent-proof
+          ref: v0.2.0
+          path: agent-proof
+
+      - uses: actions/checkout@v4
+        with:
+          repository: jonah-ux/worktree-conservator
+          ref: v0.2.0
+          path: worktree-conservator
+
+      - uses: actions/checkout@v4
+        with:
+          repository: jonah-ux/forgeyard
+          ref: v0.3.0
+          path: forgeyard
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install released Python consumers
+        run: python -m pip install ./chatlens ./agent-proof ./worktree-conservator ./forgeyard
+
+      - name: Install and build Slipstream consumer
+        working-directory: slipstream
+        run: npm ci && npm rebuild better-sqlite3
+
+      - name: Run disposable stack
+        env:
+          CHATLENS_ROOT: ${{ github.workspace }}/chatlens
+          SLIPSTREAM_ROOT: ${{ github.workspace }}/slipstream
+          AGENT_PROOF_ROOT: ${{ github.workspace }}/agent-proof
+          WORKTREE_ROOT: ${{ github.workspace }}/worktree-conservator
+          FORGEYARD_ROOT: ${{ github.workspace }}/forgeyard
+          PYTHON_BIN: python
+          NODE_BIN: node
+        run: docs/integration/portfolio-stack-demo.sh | tee portfolio-stack-result.json
+
+      - name: Upload stack result
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-stack-${{ matrix.python }}-${{ matrix.node }}
+          path: portfolio-stack-result.json
