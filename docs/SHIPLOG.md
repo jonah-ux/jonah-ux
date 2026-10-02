@@ -38,6 +38,20 @@ from main `ff1c9b2` was scored by Agent Eval Kit main `df736b3` as
 `agent-eval/receipt/v1` with `integrity: verified`, `ok: true`, and
 `stdout_matches: true`.
 
+### Forgeyard public Workbench
+
+Forgeyard main now hosts an interactive GitHub Pages Workbench at
+<https://jonah-ux.github.io/forgeyard/>. The hosted deployment run
+`36943435265` completed successfully. A browser readback loaded the synthetic
+MCP Doctor and Agent Proof reports, composed a sealed `ready_for_review`
+record with `reviewable` status and digest prefix `9339d4ec68792913`, then
+simulated a byte change and visibly returned `REFUSED` with `Record bytes
+changed after sealing`.
+
+The Workbench is synthetic and contains no private or customer data. Its proof
+is a user-facing integrity demonstration, not deployment or external adoption
+proof.
+
 | 2026-10-01 | Forgeyard 0.3.0 stable flagship release shipped with specialist-report composition and portable provenance packets | [release](https://github.com/jonah-ux/forgeyard/releases/tag/v0.3.0) · [workflow](https://github.com/jonah-ux/forgeyard/actions/runs/36932568488) · [merged PR](https://github.com/jonah-ux/forgeyard/pull/8) |
 
 | 2026-10-01 | Chatlens 0.2.2 stable release shipped with checksum portability and snapshot identity-drift refusal | [release](https://github.com/jonah-ux/chatlens/releases/tag/v0.2.2) · [CI](https://github.com/jonah-ux/chatlens/actions) · [evidence matrix](PORTFOLIO-EVIDENCE.md) |

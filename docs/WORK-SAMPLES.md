@@ -51,7 +51,7 @@ The public `v0.2.0` stable release includes `slipstream/inspect/v1`, `slipstream
 
 **What it shows:** durable JSON task records, explicit pass/fail/unknown evidence, SHA-256 identity, fail-closed review readiness, and bounded worktree planning without hidden command execution.
 
-**Proof:** [v0.3.0 stable release](https://github.com/jonah-ux/forgeyard/releases/tag/v0.3.0) · [provenance main](https://github.com/jonah-ux/forgeyard/commit/d3fbd317032e903d2c4260e9f21973a90be26b68) · [compose PR](https://github.com/jonah-ux/forgeyard/pull/8) · [README](https://github.com/jonah-ux/forgeyard#readme) · bounded specialist-report composition, portable provenance packets, the `forgeyard-demo/v1` walkthrough, fresh 0.3.0 wheel/source consumers, checksums, and adversarial verifier readback
+**Proof:** [v0.3.0 stable release](https://github.com/jonah-ux/forgeyard/releases/tag/v0.3.0) · [current main](https://github.com/jonah-ux/forgeyard/commit/2be11c5a7c32dc183b3406a2fa3397eac73d9107) · [public Workbench](https://jonah-ux.github.io/forgeyard/) · [Pages run](https://github.com/jonah-ux/forgeyard/actions/runs/36943435265) · [README](https://github.com/jonah-ux/forgeyard#readme) · bounded specialist-report composition, portable provenance packets, the `forgeyard-demo/v1` walkthrough, fresh 0.3.0 wheel/source consumers, checksums, and adversarial verifier readback
 
 Forgeyard remains an early public foundation. Worktree execution, command capture, resume, and cleanup safety are planned slices and remain labeled as planned.
 
