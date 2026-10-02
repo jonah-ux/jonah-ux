@@ -3,9 +3,9 @@ set -euo pipefail
 
 : "${CHATLENS_ROOT:?Set CHATLENS_ROOT to a Chatlens checkout at a released tag}"
 : "${SLIPSTREAM_ROOT:?Set SLIPSTREAM_ROOT to a Slipstream checkout at a released tag}"
-: "${AGENT_PROOF_ROOT:?Set AGENT_PROOF_ROOT to an Agent Proof checkout at a released tag}"
-: "${WORKTREE_ROOT:?Set WORKTREE_ROOT to a Worktree Conservator checkout at a released tag}"
-: "${FORGEYARD_ROOT:?Set FORGEYARD_ROOT to a Forgeyard checkout at a released tag}"
+: "${AGENT_PROOF_ROOT:?Set AGENT_PROOF_ROOT to an Agent Proof checkout at a released tag; it is installed as the runtime consumer}"
+: "${WORKTREE_ROOT:?Set WORKTREE_ROOT to a Worktree Conservator checkout at a released tag; it is installed as the runtime consumer}"
+: "${FORGEYARD_ROOT:?Set FORGEYARD_ROOT to a Forgeyard checkout at a released tag; it is installed as the runtime consumer}"
 PYTHON_BIN="${PYTHON_BIN:-python3}"
 NODE_BIN="${NODE_BIN:-node}"
 
@@ -18,8 +18,6 @@ chmod 700 "$workdir/artifacts"
 CHATLENS_ROOT="$CHATLENS_ROOT" "$PYTHON_BIN" - "$workdir" <<'PY'
 import json, os, sys
 from pathlib import Path
-root = Path(os.environ["CHATLENS_ROOT"])
-sys.path.insert(0, str(root / "src"))
 from chatlens import build_trace, import_report, read_trace, validate_trace, write_trace
 from chatlens.model import ASSISTANT, USER, Event, Thread
 out = Path(sys.argv[1])
@@ -70,11 +68,11 @@ cat > "$workdir/spec.json" <<JSON
   "notes": ["Synthetic disposable cross-project workflow; no real transcript store or repository is read."]
 }
 JSON
-PYTHONPATH="$AGENT_PROOF_ROOT/src" "$PYTHON_BIN" -m agent_proof.cli record "$workdir/spec.json" --artifact-root "$workdir" --out "$workdir/artifacts/agent-proof.json" > "$workdir/artifacts/agent-proof-record.json"
-PYTHONPATH="$AGENT_PROOF_ROOT/src" "$PYTHON_BIN" -m agent_proof.cli verify "$workdir/artifacts/agent-proof.json" --artifact-root "$workdir" --require-observed --require-artifacts > "$workdir/artifacts/agent-proof-verify.json"
+"$PYTHON_BIN" -m agent_proof.cli record "$workdir/spec.json" --artifact-root "$workdir" --out "$workdir/artifacts/agent-proof.json" > "$workdir/artifacts/agent-proof-record.json"
+"$PYTHON_BIN" -m agent_proof.cli verify "$workdir/artifacts/agent-proof.json" --artifact-root "$workdir" --require-observed --require-artifacts > "$workdir/artifacts/agent-proof-verify.json"
 
 # 4. Worktree Conservator proves archive, independent verification, audit, and restore.
-PYTHONPATH="$WORKTREE_ROOT/src" "$PYTHON_BIN" -m worktree_conservator.cli demo --json > "$workdir/artifacts/worktree.json"
+"$PYTHON_BIN" -m worktree_conservator.cli demo --json > "$workdir/artifacts/worktree.json"
 "$PYTHON_BIN" - "$workdir/artifacts/worktree.json" "$workdir/artifacts/worktree-report.json" <<'PY'
 import json, sys
 raw = json.load(open(sys.argv[1]))
@@ -85,7 +83,7 @@ if not report["ok"]: raise SystemExit("Worktree Conservator verification failed"
 PY
 
 # 5. Forgeyard composes the specialist outputs into a reviewable decision.
-PYTHONPATH="$FORGEYARD_ROOT/src" "$PYTHON_BIN" -m forgeyard.cli compose \
+"$PYTHON_BIN" -m forgeyard.cli compose \
   --task-id portfolio-stack-demo \
   --repository jonah-ux/agent-reliability-stack \
   --request "review disposable recovery and evidence workflow" \
@@ -95,7 +93,7 @@ PYTHONPATH="$FORGEYARD_ROOT/src" "$PYTHON_BIN" -m forgeyard.cli compose \
   --input worktree="$workdir/artifacts/worktree-report.json" \
   --output "$workdir/artifacts/forgeyard.json" > "$workdir/artifacts/forgeyard-compose.json"
 forgeyard_sha="$($PYTHON_BIN -c 'import json,sys; print(json.load(open(sys.argv[1]))["sha256"])' "$workdir/artifacts/forgeyard-compose.json")"
-PYTHONPATH="$FORGEYARD_ROOT/src" "$PYTHON_BIN" -m forgeyard.cli verify "$workdir/artifacts/forgeyard.json" --sha256 "$forgeyard_sha" > "$workdir/artifacts/forgeyard-verify.json"
+"$PYTHON_BIN" -m forgeyard.cli verify "$workdir/artifacts/forgeyard.json" --sha256 "$forgeyard_sha" > "$workdir/artifacts/forgeyard-verify.json"
 
 "$PYTHON_BIN" - "$workdir" <<'PY'
 import json, sys

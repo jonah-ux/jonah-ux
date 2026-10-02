@@ -10,13 +10,13 @@ Check out the released tags beside one another:
 
 ```console
 git clone --branch v0.3.0 https://github.com/jonah-ux/chatlens.git
- git clone --branch v0.2.0 https://github.com/jonah-ux/slipstream.git
- git clone --branch v0.2.0 https://github.com/jonah-ux/agent-proof.git
- git clone --branch v0.2.0 https://github.com/jonah-ux/worktree-conservator.git
- git clone --branch v0.3.0 https://github.com/jonah-ux/forgeyard.git
+git clone --branch v0.2.0 https://github.com/jonah-ux/slipstream.git
+git clone --branch v0.2.0 https://github.com/jonah-ux/agent-proof.git
+git clone --branch v0.2.0 https://github.com/jonah-ux/worktree-conservator.git
+git clone --branch v0.3.0 https://github.com/jonah-ux/forgeyard.git
 ```
 
-Install the Python packages in a virtual environment and build Slipstream's native dependencies according to its README. Then run:
+Install the four Python packages from those checkouts in a virtual environment, run `npm ci` and `npm rebuild better-sqlite3` in the Slipstream checkout, then run:
 
 ```console
 export CHATLENS_ROOT="$PWD/chatlens"
@@ -26,6 +26,8 @@ export WORKTREE_ROOT="$PWD/worktree-conservator"
 export FORGEYARD_ROOT="$PWD/forgeyard"
 ./jonah-ux/docs/integration/portfolio-stack-demo.sh
 ```
+
+The script consumes the installed Python packages. The checkout paths remain explicit inputs so the run is tied to the released source tags used to build the environment.
 
 The final JSON reports the meaningful boundaries:
 
