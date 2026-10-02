@@ -22,6 +22,7 @@ you want to see first, then follow the repository's disposable demo.
 | **Trust the result** | [Agent Proof](https://github.com/jonah-ux/agent-proof) → [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | Evidence can be tamper-evident, and tool contracts can fail closed before an agent uses them. |
 | **Recover the work** | [Chatlens](https://github.com/jonah-ux/chatlens) → [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Context and Git state can be searched, archived, and restored without pretending recovery is deployment. |
 | **Build locally** | [Slipstream](https://github.com/jonah-ux/slipstream) → [Forgeyard](https://github.com/jonah-ux/forgeyard) | Retrieval and delivery records can stay local, bounded, deterministic, and reviewable. |
+| **Admit context safely** | [Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) → [Agent Proof](https://github.com/jonah-ux/agent-proof) | Scope, freshness, citations, refusal states, and evidence boundaries remain visible before an answer is trusted. |
 
 The fastest concrete entry points are Agent Proof's [stable release assets](https://github.com/jonah-ux/agent-proof/releases/tag/v0.2.0), Slipstream's [`npm test` path](https://github.com/jonah-ux/slipstream#install-and-run), and Forgeyard's [one-command evidence demo](https://github.com/jonah-ux/forgeyard#quick-start).
 
@@ -29,7 +30,9 @@ For the flagship product experience, open the public [Forgeyard Workbench](https
 
 Forgeyard is the flagship orchestration surface: it composes specialist reports into reviewable delivery records and portable provenance packets. Agent Proof, Chatlens, Slipstream, and Worktree Conservator supply the surrounding trust, recovery, retrieval, and lifecycle layers; Chatlens `v0.3.0` now carries the trace handoff API in its stable release, while MCP Doctor remains explicitly labeled a prerelease.
 
-[Forgeyard](https://github.com/jonah-ux/forgeyard) is the next systems project to inspect: a local-first foundation for reviewable delivery records, explicit evidence contracts, and bounded worktree plans. Its `v0.3.0` stable release composes MCP Doctor and Agent Proof-style JSON reports into bounded review evidence, adds portable provenance packets and a one-command demo, and ships wheel/source assets, checksums, and fresh-consumer evidence; planned execution and resume slices are intentionally not presented as shipped.
+[Forgeyard](https://github.com/jonah-ux/forgeyard) is the flagship systems project: a local-first foundation for reviewable delivery records, explicit evidence contracts, and bounded worktree plans. Its `v0.3.0` stable release composes MCP Doctor and Agent Proof-style JSON reports into bounded review evidence, adds portable provenance packets and a one-command demo, and ships wheel/source assets, checksums, and fresh-consumer evidence; planned execution and resume slices are intentionally not presented as shipped.
+
+[Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) is the focused admission-boundary example: `v0.1.0` makes scope, freshness, citations, reconciliation, and refusal states inspectable through a deterministic CLI and local browser console over fictional records.
 
 ## The engineering loop
 

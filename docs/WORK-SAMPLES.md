@@ -55,6 +55,16 @@ The public `v0.2.0` stable release includes `slipstream/inspect/v1`, `slipstream
 
 Forgeyard remains an early public foundation. Worktree execution, command capture, resume, and cleanup safety are planned slices and remain labeled as planned.
 
+### [Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab)
+
+**Problem:** an assistant can produce a plausible answer from the wrong person, stale context, unavailable sources, or fresh but irrelevant evidence.
+
+**What it shows:** deterministic person/project scope admission, freshness windows, structured citations, explicit refusal states, duplicate and ambiguous identity holds, and a local browser console over fictional records.
+
+**Proof:** [v0.1.0 stable release](https://github.com/jonah-ux/context-integrity-lab/releases/tag/v0.1.0) · [current main](https://github.com/jonah-ux/context-integrity-lab/commit/c36605abd80bc771bae7ea9bfdc082abb50b32cf) · [CI](https://github.com/jonah-ux/context-integrity-lab/actions/runs/37035736995) · [README](https://github.com/jonah-ux/context-integrity-lab#readme) · wheel `3ff450594f050304578eafdbab07f4a8e7ecc1531906a6f3788a3afda6ae0391` · sdist `d2c9aabfab146888049f7c67699f0d4fef1c08f9706d8c615b1d6e0e39ae4079` · downloaded wheel/sdist consumers exercised cited support, wrong-person refusal, and installed browser health/HTML/reconciliation paths
+
+Context Integrity Lab is synthetic and local-first. It does not claim model accuracy, production deployment, employer-system integration, or external adoption.
+
 ### Supporting lab: deeper contracts on public main
 
 - [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit) now has a `v0.3.0` prerelease and scores saved Agent Sandbox Run receipts without rerunning commands through `agent-eval/receipt/v1` at [main `df736b3`](https://github.com/jonah-ux/agent-eval-kit/commit/df736b33581d9314b9a677ec41cda3083068324f).
