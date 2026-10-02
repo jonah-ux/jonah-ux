@@ -68,6 +68,19 @@ PR #13](https://github.com/jonah-ux/forgeyard/pull/13) documents the loss-aware
 completed successfully. The receipt reports machine-local median/p95 timings and
 does not claim external adoption, deployment, or provider execution.
 
+### Forgeyard versioned Workbench fixture
+
+Forgeyard main `1f51045` now loads Workbench specialist reports from the
+schema-validated `forgeyard-workbench-fixture/v1` artifact. The merged [fixture
+PR #14](https://github.com/jonah-ux/forgeyard/pull/14) keeps presentation data
+separate from the JavaScript while leaving the CLI and provenance contracts
+authoritative. Current-main [CI run `37013984728`](https://github.com/jonah-ux/forgeyard/actions/runs/37013984728)
+and [Pages deployment `37013984822`](https://github.com/jonah-ux/forgeyard/actions/runs/37013984822)
+completed successfully; a browser readback loaded the three-report failing
+fixture and showed `BLOCKED` with the MCP010 drift detail. The fixture is
+synthetic and does not claim provider execution, deployment adoption, or
+customer data.
+
 | 2026-10-01 | Forgeyard 0.3.0 stable flagship release shipped with specialist-report composition and portable provenance packets | [release](https://github.com/jonah-ux/forgeyard/releases/tag/v0.3.0) · [workflow](https://github.com/jonah-ux/forgeyard/actions/runs/36932568488) · [merged PR](https://github.com/jonah-ux/forgeyard/pull/8) |
 
 | 2026-10-01 | Chatlens 0.2.2 stable release shipped with checksum portability and snapshot identity-drift refusal | [release](https://github.com/jonah-ux/chatlens/releases/tag/v0.2.2) · [CI](https://github.com/jonah-ux/chatlens/actions) · [evidence matrix](PORTFOLIO-EVIDENCE.md) |
