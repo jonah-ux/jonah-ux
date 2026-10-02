@@ -51,7 +51,7 @@ The public `v0.2.0` stable release includes `slipstream/inspect/v1`, `slipstream
 
 **What it shows:** durable JSON task records, explicit pass/fail/unknown evidence, SHA-256 identity, fail-closed review readiness, and bounded worktree planning without hidden command execution.
 
-**Proof:** [v0.3.0 stable release](https://github.com/jonah-ux/forgeyard/releases/tag/v0.3.0) · [current main](https://github.com/jonah-ux/forgeyard/commit/1f510457e92b2260d24096214c5979aed14fc883) · [public Workbench](https://jonah-ux.github.io/forgeyard/) · [Pages run](https://github.com/jonah-ux/forgeyard/actions/runs/37013984822) · [Workbench PR #11](https://github.com/jonah-ux/forgeyard/pull/11) · [quality contract PR #13](https://github.com/jonah-ux/forgeyard/pull/13) · [versioned fixture PR #14](https://github.com/jonah-ux/forgeyard/pull/14) · [current-main CI](https://github.com/jonah-ux/forgeyard/actions/runs/37013984728) · [README](https://github.com/jonah-ux/forgeyard#readme) · passing, MCP010 drift-blocked, export, tamper-refusal, bounded benchmark receipt, and runtime-loaded fixture flows; stable 0.3.0 wheel/source consumers, checksums, and adversarial CLI verifier readback
+**Proof:** [v0.3.2 annotated prerelease](https://github.com/jonah-ux/forgeyard/releases/tag/v0.3.2) · [v0.3.0 stable line](https://github.com/jonah-ux/forgeyard/releases/tag/v0.3.0) · [current main](https://github.com/jonah-ux/forgeyard/commit/242a55b635b57a7ac350d5f3b32e22683b26c9ed) · [public Workbench](https://jonah-ux.github.io/forgeyard/) · [Pages deployment](https://github.com/jonah-ux/forgeyard/actions/runs/37072935676) · [interop PR #15](https://github.com/jonah-ux/forgeyard/pull/15) · [patch release PR #16](https://github.com/jonah-ux/forgeyard/pull/16) · [annotated release-path PR #18](https://github.com/jonah-ux/forgeyard/pull/18) · [release workflow](https://github.com/jonah-ux/forgeyard/actions/runs/37075121371) · [current-main CI](https://github.com/jonah-ux/forgeyard/actions/runs/37075121395) · passing, Context Integrity, MCP010 drift-blocked, export, tamper-refusal, bounded benchmark receipt, and runtime-loaded fixture flows; downloaded v0.3.2 wheel/source checksums and fresh consumers read back
 
 Forgeyard remains an early public foundation. Worktree execution, command capture, resume, and cleanup safety are planned slices and remain labeled as planned.
 
@@ -61,7 +61,7 @@ Forgeyard remains an early public foundation. Worktree execution, command captur
 
 **What it shows:** deterministic person/project scope admission, freshness windows, structured citations, explicit refusal states, duplicate and ambiguous identity holds, and a local browser console over fictional records.
 
-**Proof:** [v0.1.0 stable release](https://github.com/jonah-ux/context-integrity-lab/releases/tag/v0.1.0) · [current main](https://github.com/jonah-ux/context-integrity-lab/commit/c36605abd80bc771bae7ea9bfdc082abb50b32cf) · [CI](https://github.com/jonah-ux/context-integrity-lab/actions/runs/37035736995) · [README](https://github.com/jonah-ux/context-integrity-lab#readme) · wheel `3ff450594f050304578eafdbab07f4a8e7ecc1531906a6f3788a3afda6ae0391` · sdist `d2c9aabfab146888049f7c67699f0d4fef1c08f9706d8c615b1d6e0e39ae4079` · downloaded wheel/sdist consumers exercised cited support, wrong-person refusal, and installed browser health/HTML/reconciliation paths
+**Proof:** [v0.2.0 stable release](https://github.com/jonah-ux/context-integrity-lab/releases/tag/v0.2.0) · [current main](https://github.com/jonah-ux/context-integrity-lab/commit/537a42c37603a47db26b6dcdb41e02ee15799229) · [envelope PR #1](https://github.com/jonah-ux/context-integrity-lab/pull/1) · [CI](https://github.com/jonah-ux/context-integrity-lab/actions/runs/37073892096) · [README](https://github.com/jonah-ux/context-integrity-lab#readme) · wheel `0cc846bfe182bcc8ed95bb575135ba86da48b60ffeb01fca8b25603a7cdbeb1f` · sdist `9354dea7ecda5126d0b54b6c7905f8f608042a26b660f1d034d1b14488afcca1` · downloaded wheel/sdist consumers exercised the supported `context-integrity/v1` envelope, citation count, refusal fields, and downstream Agent Proof handoff
 
 Context Integrity Lab is synthetic and local-first. It does not claim model accuracy, production deployment, employer-system integration, or external adoption.
 
@@ -74,11 +74,13 @@ Context Integrity Lab is synthetic and local-first. It does not claim model accu
 - [Agent Resume](https://github.com/jonah-ux/agent-resume) now has a `v0.2.0` prerelease with integrity-bound continuation records and redacted diffs at [main `1f0edf7`](https://github.com/jonah-ux/agent-resume/commit/1f0edf71c64a8b30a9ceb711073529d6f7d6a123).
 - [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) now has a `v0.2.0` prerelease and remains the receipt producer consumed by Agent Eval Kit at [main `ff1c9b2`](https://github.com/jonah-ux/agent-sandbox-run/commit/ff1c9b2f460ddd2f50a07825cc06406e2217da8b).
 
-Agent Proof's public v0.2.0 release remains stable while its interop adapter is
-source-compatible on current main. Agent Eval Kit, Context Pack, Agent Policy,
-Agent Trace Lite, Agent Resume, and Agent Sandbox Run now have annotated
-prereleases with independent downloaded-asset readback. Forgeyard 0.3.0 and
-Chatlens 0.3.0 are stable public releases with their current main features.
+Agent Proof's public v0.2.0 release remains stable while the annotated v0.3.1
+prerelease carries the Context Integrity adapter. Agent Eval Kit, Context Pack,
+Agent Policy, Agent Trace Lite, Agent Resume, and Agent Sandbox Run have
+annotated prereleases with independent downloaded-asset readback. Forgeyard
+v0.3.0 remains the stable line while annotated v0.3.2 carries the Workbench
+interop slice; Chatlens v0.3.0 and Context Integrity Lab v0.2.0 are stable
+public releases.
 External adoption remains unknown until a consumer outside these repository
 workflows is observed.
 
@@ -108,6 +110,6 @@ The smaller [agent tooling lab](https://github.com/jonah-ux#the-agent-tooling-la
 
 **What it shows:** canonical evidence records, append-only hash chains, repository identity, redacted output digests, schema-aware collection, portable gzip/tar bundle verification, and explicit unknown or partial states.
 
-**Proof:** [v0.2.0 stable release](https://github.com/jonah-ux/agent-proof/releases/tag/v0.2.0) · [current main](https://github.com/jonah-ux/agent-proof/commit/f6dfa0506eb536cd9590b31a03452e06f2e8ff8b) · [interop PR](https://github.com/jonah-ux/agent-proof/pull/8) · [CI](https://github.com/jonah-ux/agent-proof/actions) · [README](https://github.com/jonah-ux/agent-proof#readme)
+**Proof:** [v0.3.1 annotated prerelease](https://github.com/jonah-ux/agent-proof/releases/tag/v0.3.1) · [v0.2.0 stable baseline](https://github.com/jonah-ux/agent-proof/releases/tag/v0.2.0) · [current main](https://github.com/jonah-ux/agent-proof/commit/1287b880e02bd979026af96c7466714d224a2080) · [interop PR #10](https://github.com/jonah-ux/agent-proof/pull/10) · [CLI version PR #11](https://github.com/jonah-ux/agent-proof/pull/11) · [annotated release-path PR #12](https://github.com/jonah-ux/agent-proof/pull/12) · [release workflow](https://github.com/jonah-ux/agent-proof/actions/runs/37075015117) · [README](https://github.com/jonah-ux/agent-proof#readme)
 
-Agent Proof now has a stable `v0.2.0` GitHub release with wheel and source assets, checksums, fresh consumer installs, and a demo that verifies tamper refusal and the provenance graph. Current main adds a loss-aware `agent-proof/interop/v1` adapter and `interop-verify/v1` source-binding check; the release boundary remains the stable v0.2.0 object.
+Agent Proof has a stable `v0.2.0` GitHub release and an annotated `v0.3.1` prerelease with wheel/source assets, checksums, fresh consumer installs, and the reviewed `context-integrity/v1` adapter. The release workflow and downloaded readback prove the package and CLI identity; external adoption remains unknown.
