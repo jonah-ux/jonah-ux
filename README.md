@@ -8,6 +8,12 @@ My work sits at the intersection of developer tools, local-first systems, automa
 
 I’m interested in Applied AI Engineering, AI infrastructure, developer tools, automation engineering, forward-deployed engineering, and software engineering roles where a small interface must become a reliable outcome.
 
+## If you are evaluating this work
+
+Start with the [Forgeyard Workbench](https://jonah-ux.github.io/forgeyard/) for a short, interactive proof: it composes synthetic specialist reports, blocks an MCP010 drift case, exports the record, and refuses a post-seal tamper. Then inspect the [stable Forgeyard v0.3.0 release](https://github.com/jonah-ux/forgeyard/releases/tag/v0.3.0) or run the [cross-project integration walkthrough](docs/INTEGRATION-WALKTHROUGH.md).
+
+The Workbench is synthetic and contains no private or customer data. The links show the public behavior and release artifacts; they do not claim deployment, adoption, or production outcomes.
+
 [Build notes on X](https://x.com/jonahhelland) · [Source](https://github.com/jonah-ux) · [Deeper evidence and roadmap](docs/ENGINEERING-EVIDENCE.md)
 
 ![Agent tooling stack: recover context, bound decisions, prove outcomes](docs/toolkit-stack.svg)
