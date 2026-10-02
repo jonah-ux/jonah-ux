@@ -81,6 +81,19 @@ fixture and showed `BLOCKED` with the MCP010 drift detail. The fixture is
 synthetic and does not claim provider execution, deployment adoption, or
 customer data.
 
+### Context Integrity Lab v0.1.0 stable launch
+
+[Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) is now a
+public stable Python CLI and browser-console project at main `c36605a`. The
+[CI run `37035736995`](https://github.com/jonah-ux/context-integrity-lab/actions/runs/37035736995)
+passed on Python 3.10, 3.11, and 3.12. [Release `v0.1.0`](https://github.com/jonah-ux/context-integrity-lab/releases/tag/v0.1.0)
+contains a wheel, source distribution, and filename-only `SHA256SUMS`; the
+downloaded assets matched the independently recorded wheel and sdist hashes.
+Fresh downloaded consumers returned a cited supported answer, a wrong-person
+`unavailable` refusal with exit status `1`, and browser-demo health, HTML, and
+reconciliation readback. The project uses fictional records only and does not
+claim model accuracy, production deployment, or external adoption.
+
 | 2026-10-01 | Forgeyard 0.3.0 stable flagship release shipped with specialist-report composition and portable provenance packets | [release](https://github.com/jonah-ux/forgeyard/releases/tag/v0.3.0) · [workflow](https://github.com/jonah-ux/forgeyard/actions/runs/36932568488) · [merged PR](https://github.com/jonah-ux/forgeyard/pull/8) |
 
 | 2026-10-01 | Chatlens 0.2.2 stable release shipped with checksum portability and snapshot identity-drift refusal | [release](https://github.com/jonah-ux/chatlens/releases/tag/v0.2.2) · [CI](https://github.com/jonah-ux/chatlens/actions) · [evidence matrix](PORTFOLIO-EVIDENCE.md) |
