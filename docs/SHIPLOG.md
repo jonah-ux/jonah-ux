@@ -58,6 +58,16 @@ failure, composes a `BLOCKED` record with MCP010 detail, and keeps the passing
 and tamper-refusal paths available. Pages run `37012396932` succeeded; the
 readback came from browser state, not from source text alone.
 
+### Forgeyard versioned compose quality receipt
+
+Forgeyard main `90f7c1a` now carries `forgeyard-benchmark/v1`, a bounded synthetic
+benchmark over the public `compose` and `verify` path. The merged [quality contract
+PR #13](https://github.com/jonah-ux/forgeyard/pull/13) documents the loss-aware
+`forgeyard-compose/v1` boundary and runs the benchmark in CI; current-main [CI run
+`37013609187`](https://github.com/jonah-ux/forgeyard/actions/runs/37013609187)
+completed successfully. The receipt reports machine-local median/p95 timings and
+does not claim external adoption, deployment, or provider execution.
+
 | 2026-10-01 | Forgeyard 0.3.0 stable flagship release shipped with specialist-report composition and portable provenance packets | [release](https://github.com/jonah-ux/forgeyard/releases/tag/v0.3.0) · [workflow](https://github.com/jonah-ux/forgeyard/actions/runs/36932568488) · [merged PR](https://github.com/jonah-ux/forgeyard/pull/8) |
 
 | 2026-10-01 | Chatlens 0.2.2 stable release shipped with checksum portability and snapshot identity-drift refusal | [release](https://github.com/jonah-ux/chatlens/releases/tag/v0.2.2) · [CI](https://github.com/jonah-ux/chatlens/actions) · [evidence matrix](PORTFOLIO-EVIDENCE.md) |
