@@ -5,6 +5,42 @@ verify. Each entry links to source, a release, CI, or a reproducible receipt.
 
 ## Verified public history
 
+## 2026-10-02 — tenfold interoperability and governed release pass
+
+The next portfolio pass connected Context Integrity Lab, Agent Proof, and
+Forgeyard through a versioned, loss-aware evidence seam. Context Integrity Lab
+main `537a42c` emits `context-integrity/v1` with explicit scope, observation,
+freshness, citation-count, and unknown fields. Agent Proof main `1287b88`
+normalizes that envelope through a reviewed adapter, hashes `person_id` and
+`project_id`, preserves bounded status signals, and source-binds the result.
+Forgeyard main `242a55b` accepts the verified `projection.status.ok` field and
+loads a third Context Integrity report in its public Workbench.
+
+Public source and release proof:
+
+- [Context Integrity Lab v0.2.0 stable](https://github.com/jonah-ux/context-integrity-lab/releases/tag/v0.2.0) · [merged PR #1](https://github.com/jonah-ux/context-integrity-lab/pull/1) · [main `537a42c`](https://github.com/jonah-ux/context-integrity-lab/commit/537a42c37603a47db26b6dcdb41e02ee15799229) · [CI `37073892096`](https://github.com/jonah-ux/context-integrity-lab/actions/runs/37073892096)
+- [Agent Proof v0.3.1 annotated prerelease](https://github.com/jonah-ux/agent-proof/releases/tag/v0.3.1) · [interop PR #10](https://github.com/jonah-ux/agent-proof/pull/10) · [annotated release-path PR #12](https://github.com/jonah-ux/agent-proof/pull/12) · [main `1287b88`](https://github.com/jonah-ux/agent-proof/commit/1287b880e02bd979026af96c7466714d224a2080) · [release run `37075015117`](https://github.com/jonah-ux/agent-proof/actions/runs/37075015117)
+- [Forgeyard v0.3.2 annotated prerelease](https://github.com/jonah-ux/forgeyard/releases/tag/v0.3.2) · [interop PR #15](https://github.com/jonah-ux/forgeyard/pull/15) · [annotated release-path PR #18](https://github.com/jonah-ux/forgeyard/pull/18) · [main `242a55b`](https://github.com/jonah-ux/forgeyard/commit/242a55b635b57a7ac350d5f3b32e22683b26c9ed) · [release run `37075121371`](https://github.com/jonah-ux/forgeyard/actions/runs/37075121371)
+
+Focused source checks recorded 6 Context Integrity tests, 34 Agent Proof
+tests, and 24 Forgeyard tests. The built wheel and source archives were
+installed into fresh consumers; the cross-project consumer emitted a supported
+`context-integrity/v1` result, returned `source_state: verified` from Agent
+Proof, and composed to Forgeyard `ready_for_review` while excluding answer text
+and raw person identifiers from the normalized envelope.
+
+The public Workbench readback loaded three passing reports and composed `READY`
+with a sealed digest; its failing scenario added the synthetic MCP Doctor drift
+report and composed `BLOCKED` while retaining the Context Integrity pass. The
+annotated release workflows completed after the earlier lightweight-tag
+identity attempts failed closed. Downloaded v0.3.1 and v0.3.2 assets matched
+their published checksums and their fresh consumers reported `agent-proof 0.3.1`
+and `forgeyard 0.3.2`.
+
+The seam is synthetic and local-first. It proves package behavior, source-bound
+readback, and a visible Workbench state; it does not prove production
+deployment, third-party adoption, model accuracy, or a user-visible outcome.
+
 ## 2026-10-02 — release and adoption pass
 
 The third portfolio pass advanced the current source candidates through their
