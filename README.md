@@ -27,7 +27,7 @@ The fastest concrete entry points are Agent Proof's [stable release assets](http
 
 For the flagship product experience, open the public [Forgeyard Workbench](https://jonah-ux.github.io/forgeyard/): load synthetic specialist reports, compose a review record, and trigger the fail-closed tamper state in your browser.
 
-Forgeyard is the flagship orchestration surface: it composes specialist reports into reviewable delivery records and portable provenance packets. Agent Proof, Chatlens, Slipstream, and Worktree Conservator supply the surrounding trust, recovery, retrieval, and lifecycle layers; MCP Doctor remains explicitly labeled a prerelease while its next release cycle continues.
+Forgeyard is the flagship orchestration surface: it composes specialist reports into reviewable delivery records and portable provenance packets. Agent Proof, Chatlens, Slipstream, and Worktree Conservator supply the surrounding trust, recovery, retrieval, and lifecycle layers; Chatlens `v0.3.0` now carries the trace handoff API in its stable release, while MCP Doctor remains explicitly labeled a prerelease.
 
 [Forgeyard](https://github.com/jonah-ux/forgeyard) is the next systems project to inspect: a local-first foundation for reviewable delivery records, explicit evidence contracts, and bounded worktree plans. Its `v0.3.0` stable release composes MCP Doctor and Agent Proof-style JSON reports into bounded review evidence, adds portable provenance packets and a one-command demo, and ships wheel/source assets, checksums, and fresh-consumer evidence; planned execution and resume slices are intentionally not presented as shipped.
 

@@ -10,10 +10,10 @@ This is the fastest route through my public engineering work. Each sample has pu
 
 **What it shows:** local-first data discovery, bounded search and rendering, multiple source adapters, privacy boundaries, stable JSON output, and a versioned CLI release.
 
-**Proof:** [v0.2.2 stable release](https://github.com/jonah-ux/chatlens/releases/tag/v0.2.2) · [current main](https://github.com/jonah-ux/chatlens/commit/442d9f47087630c9c88aaf472af97ea183f86ed1) · [trace-envelope PR](https://github.com/jonah-ux/chatlens/pull/7) · [handoff example PR](https://github.com/jonah-ux/chatlens/pull/8) · [CI](https://github.com/jonah-ux/chatlens/actions) · [README](https://github.com/jonah-ux/chatlens#readme)
+**Proof:** [v0.3.0 stable release](https://github.com/jonah-ux/chatlens/releases/tag/v0.3.0) · [current main](https://github.com/jonah-ux/chatlens/commit/0b4ce8e99fe9cfae911c0c73b40e646bb49cce58) · [release candidate PR](https://github.com/jonah-ux/chatlens/pull/10) · [CI](https://github.com/jonah-ux/chatlens/actions) · [README](https://github.com/jonah-ux/chatlens#readme)
 
 ```bash
-python -m pip install 'git+https://github.com/jonah-ux/chatlens.git@v0.2.2'
+python -m pip install 'git+https://github.com/jonah-ux/chatlens.git@v0.3.0'
 chatlens --help
 ```
 
@@ -57,19 +57,20 @@ Forgeyard remains an early public foundation. Worktree execution, command captur
 
 ### Supporting lab: deeper contracts on public main
 
-- [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit) now scores saved Agent Sandbox Run receipts without rerunning commands through `agent-eval/receipt/v1` at [main `df736b3`](https://github.com/jonah-ux/agent-eval-kit/commit/df736b33581d9314b9a677ec41cda3083068324f).
-- [Context Pack](https://github.com/jonah-ux/context-pack) now emits and verifies deterministic bounded-source manifests with diff safety at [main `e436a70`](https://github.com/jonah-ux/context-pack/commit/e436a70f4de5aee8a8c0846dc7f882e83b81ebc4).
-- [Agent Policy](https://github.com/jonah-ux/agent-policy) now composes ordered policy layers and binds explanations to normalized policy/request digests at [main `cc5ee7d`](https://github.com/jonah-ux/agent-policy/commit/cc5ee7df8984fb539dfa45089329057388cff192).
-- [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) remains the bounded downstream consumer for Chatlens `trace-import`; the current source contract exposes strict redacted trace inspection and bounded queries at [main `5660935`](https://github.com/jonah-ux/agent-trace-lite/commit/5660935a86e12173009621cc70c15fe7adead30a).
-- [Agent Resume](https://github.com/jonah-ux/agent-resume) now fingerprints continuation records and diffs handoffs without exposing evidence contents at [main `1f0edf7`](https://github.com/jonah-ux/agent-resume/commit/1f0edf71c64a8b30a9ceb711073529d6f7d6a123).
-- [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) remains the receipt producer consumed by Agent Eval Kit, emitting bounded v2 receipts with command, output, and receipt digests at [main `ff1c9b2`](https://github.com/jonah-ux/agent-sandbox-run/commit/ff1c9b2f460ddd2f50a07825cc06406e2217da8b).
+- [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit) now has a `v0.3.0` prerelease and scores saved Agent Sandbox Run receipts without rerunning commands through `agent-eval/receipt/v1` at [main `df736b3`](https://github.com/jonah-ux/agent-eval-kit/commit/df736b33581d9314b9a677ec41cda3083068324f).
+- [Context Pack](https://github.com/jonah-ux/context-pack) now has a `v0.2.0` prerelease with deterministic bounded-source manifests and diff safety at [main `e436a70`](https://github.com/jonah-ux/context-pack/commit/e436a70f4de5aee8a8c0846dc7f882e83b81ebc4).
+- [Agent Policy](https://github.com/jonah-ux/agent-policy) now has a `v0.2.0` prerelease with ordered policy layers and digest-bound explanations at [main `cc5ee7d`](https://github.com/jonah-ux/agent-policy/commit/cc5ee7df8984fb539dfa45089329057388cff192).
+- [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) now has a `v0.2.0` prerelease and remains the bounded downstream consumer for Chatlens `trace-import` at [main `5660935`](https://github.com/jonah-ux/agent-trace-lite/commit/5660935a86e12173009621cc70c15fe7adead30a).
+- [Agent Resume](https://github.com/jonah-ux/agent-resume) now has a `v0.2.0` prerelease with integrity-bound continuation records and redacted diffs at [main `1f0edf7`](https://github.com/jonah-ux/agent-resume/commit/1f0edf71c64a8b30a9ceb711073529d6f7d6a123).
+- [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) now has a `v0.2.0` prerelease and remains the receipt producer consumed by Agent Eval Kit at [main `ff1c9b2`](https://github.com/jonah-ux/agent-sandbox-run/commit/ff1c9b2f460ddd2f50a07825cc06406e2217da8b).
 
 Agent Proof's public v0.2.0 release remains stable while its interop adapter is
-source-compatible on current main. Agent Eval Kit carries a new 0.3.0 source
-candidate while its public release remains v0.1.1; Forgeyard 0.3.0 is now a
-stable public release with specialist composition and provenance packets.
-The other supporting tools retain their existing prerelease boundaries until
-their own annotated release and fresh-download readback paths are complete.
+source-compatible on current main. Agent Eval Kit, Context Pack, Agent Policy,
+Agent Trace Lite, Agent Resume, and Agent Sandbox Run now have annotated
+prereleases with independent downloaded-asset readback. Forgeyard 0.3.0 and
+Chatlens 0.3.0 are stable public releases with their current main features.
+External adoption remains unknown until a consumer outside these repository
+workflows is observed.
 
 ## The engineering pattern
 

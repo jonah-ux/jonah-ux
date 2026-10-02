@@ -5,6 +5,39 @@ verify. Each entry links to source, a release, CI, or a reproducible receipt.
 
 ## Verified public history
 
+## 2026-10-02 — release and adoption pass
+
+The third portfolio pass advanced the current source candidates through their
+existing annotated-tag workflows and then read the published artifacts back
+from GitHub. Chatlens `v0.3.0` is stable because its new trace API, recovery
+roundtrip, wheel/sdist consumers, checksum proof, and hosted CI were all
+read back. MCP Doctor `v0.3.0` and the six supporting candidates remain
+prereleases.
+
+Published release workflows:
+
+- [Chatlens v0.3.0 stable](https://github.com/jonah-ux/chatlens/releases/tag/v0.3.0) · release run [36945295713](https://github.com/jonah-ux/chatlens/actions/runs/36945295713) · merged source [0b4ce8e](https://github.com/jonah-ux/chatlens/commit/0b4ce8e99fe9cfae911c0c73b40e646bb49cce58)
+- [Agent Eval Kit v0.3.0 prerelease](https://github.com/jonah-ux/agent-eval-kit/releases/tag/v0.3.0) · release run [36944858252](https://github.com/jonah-ux/agent-eval-kit/actions/runs/36944858252) · source `df736b3`
+- [Context Pack v0.2.0 prerelease](https://github.com/jonah-ux/context-pack/releases/tag/v0.2.0) · release run [36944907290](https://github.com/jonah-ux/context-pack/actions/runs/36944907290) · source `e436a70`
+- [Agent Policy v0.2.0 prerelease](https://github.com/jonah-ux/agent-policy/releases/tag/v0.2.0) · release run [36944950940](https://github.com/jonah-ux/agent-policy/actions/runs/36944950940) · source `cc5ee7d`
+- [Agent Trace Lite v0.2.0 prerelease](https://github.com/jonah-ux/agent-trace-lite/releases/tag/v0.2.0) · release run [36944964250](https://github.com/jonah-ux/agent-trace-lite/actions/runs/36944964250) · source `5660935`
+- [Agent Resume v0.2.0 prerelease](https://github.com/jonah-ux/agent-resume/releases/tag/v0.2.0) · release run [36944977065](https://github.com/jonah-ux/agent-resume/actions/runs/36944977065) · source `1f0edf7`
+- [Agent Sandbox Run v0.2.0 prerelease](https://github.com/jonah-ux/agent-sandbox-run/releases/tag/v0.2.0) · release run [36944992291](https://github.com/jonah-ux/agent-sandbox-run/actions/runs/36944992291) · source `ff1c9b2`
+
+Independent downloaded-asset readback ran through
+`portfolio-release-download-consumers-20261002-v3`: all eight release objects
+provided wheel, source archive, and `SHA256SUMS`; every checksum matched, and
+both distributions installed in fresh Python 3.12 environments with the
+declared CLI help contract. The readback proves artifact usability. It does
+not prove PyPI publication, third-party adoption, or production deployment.
+
+The same pass also ran `portfolio-current-main-consumers-20261002-v5` across
+the seven prerelease/source-candidate heads and
+`agent-sandbox-eval-cross-20261002-v1`, where an `agent-sandbox/v2` receipt
+from main `ff1c9b2` was scored by Agent Eval Kit main `df736b3` as
+`agent-eval/receipt/v1` with `integrity: verified`, `ok: true`, and
+`stdout_matches: true`.
+
 | 2026-10-01 | Forgeyard 0.3.0 stable flagship release shipped with specialist-report composition and portable provenance packets | [release](https://github.com/jonah-ux/forgeyard/releases/tag/v0.3.0) · [workflow](https://github.com/jonah-ux/forgeyard/actions/runs/36932568488) · [merged PR](https://github.com/jonah-ux/forgeyard/pull/8) |
 
 | 2026-10-01 | Chatlens 0.2.2 stable release shipped with checksum portability and snapshot identity-drift refusal | [release](https://github.com/jonah-ux/chatlens/releases/tag/v0.2.2) · [CI](https://github.com/jonah-ux/chatlens/actions) · [evidence matrix](PORTFOLIO-EVIDENCE.md) |
@@ -262,8 +295,9 @@ source, release, installed-consumer, and outcome claims separate.
 
 Agent Eval Kit main `df736b3` now scores a saved `agent-sandbox/v2` receipt
 without rerunning the command. `agent-eval/receipt/v1` verifies receipt
-integrity, expected exit and timeout state, and selected stdout fragments. The
-source candidate is 0.3.0; the public release remains v0.1.1.
+integrity, expected exit and timeout state, and selected stdout fragments. At
+the source-candidate stage the public release was v0.1.1; the candidate later
+advanced through the annotated v0.3.0 prerelease workflow recorded above.
 
 Evidence: [merged PR](https://github.com/jonah-ux/agent-eval-kit/pull/2) · [main](https://github.com/jonah-ux/agent-eval-kit/commit/df736b33581d9314b9a677ec41cda3083068324f) · 9-test operation `agent-eval-receipt-interop-final-20261001-v2` · fresh wheel/sdist consumers · wheel SHA-256 `743805e63ffd6c2a5dd543fdbf0cc720a807e59e5989fd57d7bb8c83d3f9ddf8` · sdist SHA-256 `2094b73ea67ef0a197562dfe32dc1d212a3c4749344a5983e73fb9e4d9c273f4`
 
@@ -278,20 +312,22 @@ Evidence: [merged PR](https://github.com/jonah-ux/agent-proof/pull/8) · [curren
 
 ### Chatlens trace export
 
-Chatlens main `a94ac1b` now exports a bounded, redacted
+Chatlens main `a94ac1b` exported a bounded, redacted
 `chatlens-trace-envelope/v1` JSONL stream and validates it through
 `trace-import`. The envelope binds source/session identity, row limits, event
 digests, and the envelope digest; the importer refuses partial, tampered, or
-unsafe output. The v0.2.2 stable release remains the public install surface.
+unsafe output. At that source stage the v0.2.2 stable release remained the
+public install surface; v0.3.0 later promoted this API with its own assets.
 
 Evidence: [merged PR](https://github.com/jonah-ux/chatlens/pull/7) · [main](https://github.com/jonah-ux/chatlens/commit/a94ac1b47b29219cf90867e7e3dea73f353ab1c6) · 23 synthetic tests · compileall proof · fresh Chatlens 0.2.2 wheel SHA-256 `347f80fc72fd901e156886fef86db16c13147e94549d9c039d394196b58c5865` · fresh Agent Trace Lite consumer with `trace-import ok:true` and `inspect` exit 0 · hosted macOS/Linux Python 3.11/3.12 CI
 
 ### Chatlens recovery trace handoff
 
-Chatlens main now includes a synthetic recovery-trace roundtrip that writes a
+Chatlens main then included a synthetic recovery-trace roundtrip that writes a
 bounded JSONL envelope, validates its digests, imports it through the public
 reader, and proves redaction of email, home-path, and query-token fields. The
-public v0.2.2 stable release remains the install surface.
+public v0.2.2 stable release remained the install surface at that point; the
+v0.3.0 release now contains the roundtrip.
 
 Evidence: [merged PR](https://github.com/jonah-ux/chatlens/pull/8) · [current main](https://github.com/jonah-ux/chatlens/commit/442d9f47087630c9c88aaf472af97ea183f86ed1) · synthetic output `valid: true`, `trace_state: matched`, `redaction_proof: true` · 23-test CI matrix
 
@@ -354,9 +390,9 @@ timeout/enforcement state.
 
 Evidence: [Agent Eval main](https://github.com/jonah-ux/agent-eval-kit/commit/83a443bf1f347f45359575cd79098e92daf7c892) · [Context Pack main](https://github.com/jonah-ux/context-pack/commit/e436a70f4de5aee8a8c0846dc7f882e83b81ebc4) · [Agent Policy main](https://github.com/jonah-ux/agent-policy/commit/cc5ee7df8984fb539dfa45089329057388cff192) · [Trace main](https://github.com/jonah-ux/agent-trace-lite/commit/5660935a86e12173009621cc70c15fe7adead30a) · [Resume main](https://github.com/jonah-ux/agent-resume/commit/1f0edf71c64a8b30a9ceb711073529d6f7d6a123) · [Sandbox main](https://github.com/jonah-ux/agent-sandbox-run/commit/ff1c9b2f460ddd2f50a07825cc06406e2217da8b)
 
-The new source candidates remain separate from release adoption. Their current
-public prerelease surfaces are unchanged until each project completes its own
-tag, artifact, checksum, and fresh-download readback.
+At that earlier source-candidate point, the public prerelease surfaces were
+unchanged. The current release and downloaded-asset readback are recorded in
+the 2026-10-02 release-and-adoption entry above.
 
 ## 2026-10-01 — Slipstream manifest hardening
 

@@ -6,16 +6,20 @@ future ideas as shipped features.
 
 ## Now
 
-- Keep [Chatlens](https://github.com/jonah-ux/chatlens) v0.2.2 current as a stable public release, and keep [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) v0.2.0 current as a stable public release.
+- Keep [Chatlens](https://github.com/jonah-ux/chatlens) v0.3.0 current as a stable public release, and keep [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) v0.2.0 current as a stable public release.
 - Keep [Agent Proof](https://github.com/jonah-ux/agent-proof) v0.2.0 as the stable public install surface, with wheel/source assets, checksums, fresh consumer proof, and the current interop adapter kept separately visible.
 - Keep [Forgeyard](https://github.com/jonah-ux/forgeyard) v0.3.0 as the stable flagship orchestration surface, with specialist composition, portable provenance packets, the one-command demo, and release assets kept current.
 - Keep [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) v0.3.0 as the public prerelease install surface, with baseline drift and `--fail-on-drift` evidence kept current.
-- Keep [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit) on its v0.1.1 public release surface while the 0.3.0 receipt-scoring candidate receives independent release readback. Keep [Context Pack](https://github.com/jonah-ux/context-pack), [Agent Policy](https://github.com/jonah-ux/agent-policy), [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite), [Agent Resume](https://github.com/jonah-ux/agent-resume), and [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) on their existing public release surfaces while their source candidates receive independent release readback.
+- Keep [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit) v0.3.0, [Context Pack](https://github.com/jonah-ux/context-pack) v0.2.0, [Agent Policy](https://github.com/jonah-ux/agent-policy) v0.2.0, [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) v0.2.0, [Agent Resume](https://github.com/jonah-ux/agent-resume) v0.2.0, and [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) v0.2.0 as public prerelease surfaces with fresh downloaded-asset readback kept current.
 - Keep [Slipstream](https://github.com/jonah-ux/slipstream) v0.2.0 current as a stable public release, with packed-consumer and offline verify evidence kept current.
 - Keep the eight supporting tools runnable from public `main`, with green CI,
   disposable demos, and honest release status.
 - Keep release evidence current when a public head or asset changes, with the
   exact tag, CI run, checksum, and fresh-consumer boundary recorded.
+
+- Keep external adoption explicitly unknown until a consumer outside the
+  repository's own hosted workflow is observed; downloaded-asset readback is
+  artifact usability proof, not evidence of a third-party adopter.
 
 ## Next
 
@@ -38,14 +42,16 @@ point instead of a speculative feature claim:
 | Project | Current boundary after this pass | Next advancement gate |
 | --- | --- | --- |
 | [Slipstream](https://github.com/jonah-ux/slipstream) | v0.2.0 stable main now includes the caller-owned vector workflow plus inspect/manifest/verify and packed-consumer proof. | A new storage or provider adapter needs a caller-owned fixture and a fresh packed-consumer readback before another public feature is promoted. |
+| [Chatlens](https://github.com/jonah-ux/chatlens) | v0.3.0 stable now carries the trace envelope, recovery roundtrip, and downloaded wheel/sdist readback. | Future source changes need a new versioned release candidate; the stable tag must never point at an older command surface than main documents. |
 | [Forgeyard](https://github.com/jonah-ux/forgeyard) | v0.3.0 stable now covers archive, receipt, lifecycle-audit, specialist-report composition, and portable provenance packets. | Any execution or mutation slice needs a disposable restore fixture and independent post-apply evidence; the stable release still does not claim command execution or resume. |
-| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | v0.3.0 remains a prerelease with deterministic contract fingerprints, baseline drift, and `--fail-on-drift`. | Another independent consumer cycle and stable-release qualification are required before expanding the contract surface. |
+| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | v0.3.0 remains a prerelease with deterministic contract fingerprints, baseline drift, `--fail-on-drift`, and independent downloaded-asset consumer proof. | Stable promotion still requires an intentional stable-release path and a documented support boundary. |
 | [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | v0.2.0 stable covers archive, receipt, lifecycle-audit, recovery readback, and a disposable maintainer rehearsal. | Any live execution or mutation slice needs a disposable restore fixture and independent post-apply evidence; the example remains temporary-only. |
-| [Context Pack](https://github.com/jonah-ux/context-pack) | The 0.2.0 source candidate is bounded to deterministic manifests, verification, and diff safety. | A new adapter must ship with a sanitized source fixture, integrity refusal cases, and a fresh wheel/sdist consumer. |
-| [Agent Policy](https://github.com/jonah-ux/agent-policy) | The 0.2.0 source candidate is bounded to ordered composition and digest-bound explain receipts. | Policy-provider expansion waits for conflict fixtures, deterministic decision readback, and an independently installed consumer. |
-| [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) | The 0.2.0 source candidate is the strict redacted trace inspector consumed by Chatlens `trace-import`. | A new event family needs a synthetic redaction fixture and cross-consumer import proof before changing the schema. |
-| [Agent Resume](https://github.com/jonah-ux/agent-resume) | The 0.2.0 source candidate is bounded to integrity-checked continuation records and redacted diffs. | Resume orchestration needs an explicit fixture for stale state, identity drift, and clean restart readback. |
-| [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | The 0.2.0 source candidate emits bounded, enforcement-aware v2 receipts consumed by Agent Eval Kit. | New isolation or output modes wait for a disposable adversarial fixture and a downstream receipt consumer proof. |
+| [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit) | v0.3.0 prerelease scores integrity-bound sandbox receipts and has independent wheel/sdist readback plus a downstream cross-tool proof. | Stable promotion needs a second independent consumer cycle and a documented support boundary for receipt expectations. |
+| [Context Pack](https://github.com/jonah-ux/context-pack) | v0.2.0 is a prerelease with deterministic manifests, verification, diff safety, and independent wheel/sdist readback. | A stable promotion needs an intentional support boundary and a second independent consumer cycle; a new adapter still needs a sanitized source fixture. |
+| [Agent Policy](https://github.com/jonah-ux/agent-policy) | v0.2.0 is a prerelease with ordered composition, digest-bound explain receipts, and independent wheel/sdist readback. | Stable promotion needs cross-platform policy fixtures and a second independent consumer cycle. |
+| [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) | v0.2.0 is a prerelease with strict redacted trace inspection, bounded queries, and independent wheel/sdist readback. | Stable promotion needs a synthetic event-family support boundary and a second independent consumer cycle. |
+| [Agent Resume](https://github.com/jonah-ux/agent-resume) | v0.2.0 is a prerelease with integrity-bound continuation records, redacted diffs, and independent wheel/sdist readback. | Stable promotion needs stale-state and clean-restart fixtures plus a second independent consumer cycle. |
+| [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | v0.2.0 is a prerelease with enforcement-aware v2 receipts, independent wheel/sdist readback, and Agent Eval downstream scoring. | Stable promotion needs an explicit isolation support boundary and a second independent consumer cycle. |
 
 These boundaries are current public evidence boundaries. They do not imply
 that a future implementation is impossible; they define the proof required
