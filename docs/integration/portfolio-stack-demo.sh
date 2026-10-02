@@ -39,6 +39,9 @@ if not valid or errors or report["trace_state"] != "matched": raise SystemExit("
 PY
 
 # 2. Slipstream indexes facts extracted from the recovery envelope and verifies the index.
+# Rebuild the native binding for the consumer's active Node runtime; a downloaded
+# release is not portable across Node ABI versions without this explicit step.
+(cd "$SLIPSTREAM_ROOT" && "$NODE_BIN" -e 'process.exit(0)' && npm rebuild better-sqlite3 >/dev/null)
 cat > "$workdir/items.json" <<'JSON'
 [
   {"id":"release-check","kind":"recovery","name":"Release check completed","meta":{"source":"chatlens"},"vector":[1,0,0,0]},
