@@ -93,6 +93,15 @@ receipt for `/bin/echo hello` with `ok=true`, `exit_code=0`, `backend=fallback`,
 `enforced=false`. This proves the packaged fallback path and its receipt boundary; it does not
 prove bubblewrap isolation, a published release, or adoption.
 
+Sourcemark at `ed2e070296ad995797ea092e6e56ec18d1a1f2fd` was built in the same isolated temporary
+environment. Its strict audit returned `artifact_audit=pass` for one wheel and one sdist with
+wheel SHA-256 `4f282f6c3c7c66e74926d047001f2e6b8d8e17ce2c4cb46f69ea4ca3db52f598`,
+sdist SHA-256 `f2fbfcb119412ca426adc338a88358e765677ef8250dcb8704c785987f4b0668`, and
+`SHA256SUMS` SHA-256 `9a19d8a41b6c4465b3e4b19cfbe03c4746d91756bede03d3b88a647ce0a188be`.
+The wheel installed in a disposable Python 3.14.6 environment and reported `sourcemark 0.5.1`;
+the supported CLI help also read back. This is local build/install evidence, not a published
+release or adoption claim.
+
 ## Fifteen-minute review
 
 1. Read the [architecture](AGENT-SYSTEMS-LAB-ARCHITECTURE.md) and
