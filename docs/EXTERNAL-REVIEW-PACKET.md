@@ -149,6 +149,15 @@ The wheel installed in a disposable Python 3.14.6 environment; both `context-int
 and `context-integrity-demo --help` read back successfully. This is local build/install
 evidence, not a published release or adoption claim.
 
+Forgeyard at `90bbc9685f320d4d1c8272f36483b91bdf8707ed` was built in the same isolated temporary
+environment. Its strict audit returned `artifact_audit=pass` for one wheel and one sdist with
+wheel SHA-256 `066d2f6bed399ec470a1bbabcce447c39f5e8e5ab408d10420225d693f7e992f`,
+sdist SHA-256 `3a646d4439cfbff202900eeca79811d842285c36080b472f9ec59b46f1e1f873`, and
+`SHA256SUMS` SHA-256 `f2b85475bccb58a8c259bb59dbd8284c6e908bd635b9e52b6fcd03d956b5fd16`.
+The wheel installed in a disposable Python 3.14.6 environment and reported `forgeyard 0.5.0`;
+supported CLI help also read back. This is current-head local build/install evidence, not a
+published release, outside-adoption, deployment, or production claim.
+
 ## Fifteen-minute review
 
 1. Read the [architecture](AGENT-SYSTEMS-LAB-ARCHITECTURE.md) and

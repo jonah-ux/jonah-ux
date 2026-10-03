@@ -9,8 +9,25 @@
   "owners": [
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
-        "state": "unavailable"
+        "artifacts": [
+          {
+            "name": "forgeyard-0.5.0-py3-none-any.whl",
+            "sha256": "066d2f6bed399ec470a1bbabcce447c39f5e8e5ab408d10420225d693f7e992f"
+          },
+          {
+            "name": "forgeyard-0.5.0.tar.gz",
+            "sha256": "3a646d4439cfbff202900eeca79811d842285c36080b472f9ec59b46f1e1f873"
+          }
+        ],
+        "checksum_manifest_sha256": "f2b85475bccb58a8c259bb59dbd8284c6e908bd635b9e52b6fcd03d956b5fd16",
+        "consumer_cli_help": "pass",
+        "consumer_install": "pass",
+        "consumer_python": "3.14.6",
+        "consumer_version": "forgeyard 0.5.0",
+        "local_build": "pass",
+        "local_packed_audit": "pass",
+        "package_version": "0.5.0",
+        "state": "verified"
       },
       "audit_schema": "forgeyard-public-audit/v1",
       "audit_state": "verified-at-head",
@@ -349,9 +366,9 @@
     }
   ],
   "profile": {
-    "lock_published_head": "786f7274d31f288dfa5c579df1b48c7b4d0525b0",
+    "lock_published_head": "41f6c7bccc7dcc7c2e94a375227e31ebb23543c3",
     "repository": "jonah-ux/jonah-ux",
-    "snapshot_base_head": "786f7274d31f288dfa5c579df1b48c7b4d0525b0"
+    "snapshot_base_head": "41f6c7bccc7dcc7c2e94a375227e31ebb23543c3"
   },
   "purpose": "Freeze a clean-machine review snapshot from a known profile source baseline; the containing profile commit is recorded separately.",
   "review_route": {
