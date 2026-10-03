@@ -3,6 +3,32 @@
 This is a short record of public engineering work that another developer can
 verify. Each entry links to source, a release, CI, or a reproducible receipt.
 
+## 2026-10-03 — Agent Systems Lab cold-review surface
+
+Forgeyard's public Workbench now carries a 15-class
+`forgeyard-workbench-adversarial/v1` refusal matrix. The merged [PR #30](https://github.com/jonah-ux/forgeyard/pull/30)
+expanded stale, denied, unenforced, partial, queued, and tampered examples with
+path traversal, symlink escape, prompt/secret leakage, schema drift, duplicate
+delivery, stale source identity, malformed input, unbounded output, and false
+completion. Current-main [CI](https://github.com/jonah-ux/forgeyard/actions/runs/37096855437)
+and [Pages deployment](https://github.com/jonah-ux/forgeyard/actions/runs/37096855436)
+completed successfully; browser readback loaded 15 reports and composed
+`BLOCKED` / `SEALED` with a digest.
+
+The merged [reference-flow PR #28](https://github.com/jonah-ux/forgeyard/pull/28)
+and [benchmark PR #31](https://github.com/jonah-ux/forgeyard/pull/31) add an
+offline three-outcome flow and `forgeyard-lab-benchmark/v1`. The benchmark's
+default local receipt used a fixed nine-report dataset, 20 iterations, three
+warmups, six operations, `packet_ok: true`, and
+`private_payloads_exported: false`. Its timing values are machine-local
+observations.
+
+The [cold-review checklist](COLD-REVIEW-CHECKLIST.md) now gives a reviewer a
+single route from this profile to a fresh install, the CLI success/refusal flows,
+the benchmark receipt, the hosted adversarial matrix, owner boundaries, and the
+limits of each proof. It does not claim third-party adoption, production
+deployment, model quality, or provider performance.
+
 ## 2026-10-02 — independent visual field guides
 
 The authored public tools each have an independent first-run route and visual guide.
