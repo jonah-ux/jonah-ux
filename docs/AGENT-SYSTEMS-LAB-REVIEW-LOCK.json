@@ -8,7 +8,7 @@
   "owners": [
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed matrix run",
+        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
         "state": "unavailable"
       },
       "audit_schema": "forgeyard-public-audit/v1",
@@ -27,128 +27,128 @@
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed matrix run",
+        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
         "state": "unavailable"
       },
       "audit_schema": "agent-proof-public-audit/v1",
       "audit_state": "verified-at-head",
       "owner": "agent-proof",
       "repository": "jonah-ux/agent-proof",
-      "source_head": "abb3631fea816a0832001acf75a32fd5d2e61ec0"
+      "source_head": "c0b75d77b53af8593ca73bdc23a59ee31b0962dd"
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed matrix run",
+        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
         "state": "unavailable"
       },
       "audit_schema": "chatlens-public-audit/v1",
       "audit_state": "verified-at-head",
       "owner": "chatlens",
       "repository": "jonah-ux/chatlens",
-      "source_head": "850cddffbb8b6b931c3a8a1c42d714c0afa68cb1"
+      "source_head": "d335e4209bfff81592e46163062f7074a2b3cb10"
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed matrix run",
+        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
         "state": "unavailable"
       },
       "audit_schema": "atlas-public-audit/v1",
       "audit_state": "verified-at-head",
       "owner": "atlas-agent-runtime",
       "repository": "jonah-ux/atlas-agent-runtime",
-      "source_head": "f956f89b889aedebf44b7d7e660fa94bf4903633"
+      "source_head": "e3b19d7857273b4b549325d2f807bc2e47ded92d"
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed matrix run",
+        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
         "state": "unavailable"
       },
       "audit_schema": "context-integrity-public-audit/v1",
       "audit_state": "verified-at-head",
       "owner": "context-integrity-lab",
       "repository": "jonah-ux/context-integrity-lab",
-      "source_head": "536a200f2397851e4d5d75e0801896886c236ea2"
+      "source_head": "6119ca6d507b1ae203b8422fa733d9363229d5e8"
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed matrix run",
+        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
         "state": "unavailable"
       },
       "audit_schema": "agent-policy-public-audit/v1",
       "audit_state": "verified-at-head",
       "owner": "agent-policy",
       "repository": "jonah-ux/agent-policy",
-      "source_head": "604694258453ad58590aba9101e833cc9d262bf7"
+      "source_head": "99a35f58ec9cf9547f559a94ec5a1de0ba5c3df3"
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed matrix run",
+        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
         "state": "unavailable"
       },
       "audit_schema": "agent-sandbox-public-audit/v1",
       "audit_state": "verified-at-head",
       "owner": "agent-sandbox-run",
       "repository": "jonah-ux/agent-sandbox-run",
-      "source_head": "04eed9c288734ab42e9161d2bc2216ccd5a7bf20"
+      "source_head": "77d25690f76bbed9093fe9dca09cde7cd76d2b49"
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed matrix run",
+        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
         "state": "unavailable"
       },
       "audit_schema": "agent-resume-public-audit/v1",
       "audit_state": "verified-at-head",
       "owner": "agent-resume",
       "repository": "jonah-ux/agent-resume",
-      "source_head": "2ccac304ef8845846181db233d718f79f3e18e3a"
+      "source_head": "f9b7c936c807c3f090eb8d93b9c2d61bc86d525e"
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed matrix run",
+        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
         "state": "unavailable"
       },
       "audit_schema": "agent-trace-public-audit/v1",
       "audit_state": "verified-at-head",
       "owner": "agent-trace-lite",
       "repository": "jonah-ux/agent-trace-lite",
-      "source_head": "c610364486410a5a5141f0837361d7f5e7f94494"
+      "source_head": "45f17bf55d6617415b43bf27c95ea1d4730e52aa"
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed matrix run",
+        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
         "state": "unavailable"
       },
       "audit_schema": "sourcemark-public-audit/v1",
       "audit_state": "verified-at-head",
       "owner": "sourcemark",
       "repository": "jonah-ux/sourcemark",
-      "source_head": "59b79c8368862635d76aa099eb085920fdb02b70"
+      "source_head": "ed2e070296ad995797ea092e6e56ec18d1a1f2fd"
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed matrix run",
+        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
         "state": "unavailable"
       },
       "audit_schema": "mcp-doctor-public-audit/v1",
       "audit_state": "verified-at-head",
       "owner": "mcp-doctor",
       "repository": "jonah-ux/mcp-doctor",
-      "source_head": "6f893998213e1cf3e38a43540d5f11445e471db4"
+      "source_head": "8129e159e428f639fead5e9a96b4c84396ca0688"
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed matrix run",
+        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
         "state": "unavailable"
       },
       "audit_schema": "worktree-conservator-public-audit/v1",
       "audit_state": "verified-at-head",
       "owner": "worktree-conservator",
       "repository": "jonah-ux/worktree-conservator",
-      "source_head": "419f40f393e443673b998c8fa61b5eba9ef37556"
+      "source_head": "278e27fd335142d08288e5499e80ab01f140a455"
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed matrix run",
+        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
         "state": "unavailable"
       },
       "audit_schema": "slipstream-public-audit/v1",
@@ -159,9 +159,9 @@
     }
   ],
   "profile": {
-    "lock_published_head": "95dea43c0fd215ce90fcc806b5cd8c49170429d6",
+    "lock_published_head": "584d845536e54243d9ad34b0244b2472f54560e9",
     "repository": "jonah-ux/jonah-ux",
-    "snapshot_base_head": "95dea43c0fd215ce90fcc806b5cd8c49170429d6"
+    "snapshot_base_head": "584d845536e54243d9ad34b0244b2472f54560e9"
   },
   "purpose": "Freeze a clean-machine review snapshot from a known profile source baseline; the containing profile commit is recorded separately.",
   "review_route": {

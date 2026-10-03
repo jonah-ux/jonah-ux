@@ -7,24 +7,24 @@ profile or to infer adoption from activity.
 
 ## Review target
 
-The review snapshot was generated from profile base head `95dea43c0fd215ce90fcc806b5cd8c49170429d6` on
+The review snapshot was generated from profile base head `584d845536e54243d9ad34b0244b2472f54560e9` on
 2026-10-03. The owner heads below are source-identity observations from `refs/heads/main` made
 while preparing this packet; they are freshness anchors, not release claims:
 
 | Owner | Main head | Native responsibility |
 | --- | --- | --- |
 | [Forgeyard](https://github.com/jonah-ux/forgeyard) | `883c290239b1ee2650b19109a3ff0d2a2c913168` | review composition, packets, evaluation, public audit |
-| [Agent Proof](https://github.com/jonah-ux/agent-proof) | `abb3631fea816a0832001acf75a32fd5d2e61ec0` | tamper-evident ledger, graph, interop, public audit |
-| [ChatLens](https://github.com/jonah-ux/chatlens) | `850cddffbb8b6b931c3a8a1c42d714c0afa68cb1` | local trace discovery and redacted handoff |
-| [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) | `f956f89b889aedebf44b7d7e660fa94bf4903633` | durable lifecycle and approval state |
-| [Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) | `536a200f2397851e4d5d75e0801896886c236ea2` | scope, freshness, citations, admission/refusal |
-| [Agent Policy](https://github.com/jonah-ux/agent-policy) | `604694258453ad58590aba9101e833cc9d262bf7` | capability decisions and policy receipts |
-| [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | `04eed9c288734ab42e9161d2bc2216ccd5a7bf20` | bounded execution receipt |
-| [Agent Resume](https://github.com/jonah-ux/agent-resume) | `2ccac304ef8845846181db233d718f79f3e18e3a` | continuation and handoff state |
-| [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) | `c610364486410a5a5141f0837361d7f5e7f94494` | bounded trace representation |
-| [Sourcemark](https://github.com/jonah-ux/sourcemark) | `59b79c8368862635d76aa099eb085920fdb02b70` | citation checks and source-bound export |
-| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | `6f893998213e1cf3e38a43540d5f11445e471db4` | tool-contract diagnostics |
-| [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | `419f40f393e443673b998c8fa61b5eba9ef37556` | preservation and recovery planning |
+| [Agent Proof](https://github.com/jonah-ux/agent-proof) | `c0b75d77b53af8593ca73bdc23a59ee31b0962dd` | tamper-evident ledger, graph, interop, public audit |
+| [ChatLens](https://github.com/jonah-ux/chatlens) | `d335e4209bfff81592e46163062f7074a2b3cb10` | local trace discovery and redacted handoff |
+| [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) | `e3b19d7857273b4b549325d2f807bc2e47ded92d` | durable lifecycle and approval state |
+| [Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) | `6119ca6d507b1ae203b8422fa733d9363229d5e8` | scope, freshness, citations, admission/refusal |
+| [Agent Policy](https://github.com/jonah-ux/agent-policy) | `99a35f58ec9cf9547f559a94ec5a1de0ba5c3df3` | capability decisions and policy receipts |
+| [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | `77d25690f76bbed9093fe9dca09cde7cd76d2b49` | bounded execution receipt |
+| [Agent Resume](https://github.com/jonah-ux/agent-resume) | `f9b7c936c807c3f090eb8d93b9c2d61bc86d525e` | continuation and handoff state |
+| [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) | `45f17bf55d6617415b43bf27c95ea1d4730e52aa` | bounded trace representation |
+| [Sourcemark](https://github.com/jonah-ux/sourcemark) | `ed2e070296ad995797ea092e6e56ec18d1a1f2fd` | citation checks and source-bound export |
+| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | `8129e159e428f639fead5e9a96b4c84396ca0688` | tool-contract diagnostics |
+| [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | `278e27fd335142d08288e5499e80ab01f140a455` | preservation and recovery planning |
 | [Slipstream](https://github.com/jonah-ux/slipstream) | `27bb2f6d51909e9752c087792a8e02af0e2c2998` | local retrieval indexes |
 
 The current clean-machine Forgeyard route was rerun at `883c290239b1ee2650b19109a3ff0d2a2c913168`:
