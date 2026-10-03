@@ -135,6 +135,19 @@ The current public Python owners use standard-library runtime dependencies in th
 packages. This command records the actual project metadata; it is not a substitute for a complete
 license audit or a platform-attested build provenance record.
 
+The four flagship owners also expose a bounded, owner-native public audit. Run it from each clean
+checkout and keep the receipt with the source head:
+
+```bash
+python scripts/audit_public_surface.py --json
+```
+
+Use this command in Forgeyard, Agent Proof, Atlas Agent Runtime, and ChatLens. A static `pass`
+means the named dependency, license, release-marker, and high-signal privacy checks passed. An
+artifact result of `unavailable` is expected when no `--dist-dir` was supplied. The audits do not
+claim complete DLP, security certification, reproducible builds across machines, deployment,
+adoption, or production readiness.
+
 ### Secret, private-path, and synthetic-data scan
 
 Run the scan from the repository root and inspect every match. The patterns are intentionally
