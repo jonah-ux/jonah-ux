@@ -205,8 +205,10 @@ and receipt boundary.
    `python3 scripts/audit_public_surface.py --json`. Keep each JSON receipt
    with the corresponding source head; `artifact_audit=unavailable` is expected when no `dist/` was
    supplied.
-6. Change one graph edge or source byte, keep the old digest, and confirm the relevant verifier
-   refuses the mutation.
+6. Run the [failure-analysis walkthrough](FAILURE-WALKTHROUGH.md). It resolves the graph and packet
+   owners from this lock, verifies a baseline, then records native refusals for changed bytes,
+   a resealed orphan edge, required missing inputs, and a changed live artifact. The same runnable
+   blocks are exercised by the profile's hosted Linux/macOS × Python 3.11/3.14 workflow.
 
 The [cold-review checklist](COLD-REVIEW-CHECKLIST.md) contains the full commands and expected
 states. Use a disposable checkout and synthetic fixtures only.

@@ -97,6 +97,11 @@ Review the system like an outsider with the [threat model](docs/AGENT-SYSTEMS-LA
 and [external review request draft](docs/EXTERNAL-REVIEW-REQUEST.md) link the public contracts,
 exact source heads, reproducible commands, and known evidence limits.
 
+Use the [failure-analysis walkthrough](docs/FAILURE-WALKTHROUGH.md) to follow a graph and packet
+through their native verifiers, then inspect deliberate byte, orphan-edge, missing-input, and
+stale-artifact refusals. Its runnable blocks use the existing review lock and are exercised by
+the hosted review workflow.
+
 Validate the lock and packet from a clean checkout with the dependency-free reviewer command:
 
 ```console

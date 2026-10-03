@@ -4,6 +4,26 @@ Use this runbook when changing a public owner, an adapter, a fixture, or the pro
 The goal is to keep one semantic owner per protocol and leave a reviewer a short, reproducible
 proof trail.
 
+## Contribute a reproducer
+
+Start with the [public protocol map](AGENT-SYSTEMS-LAB-CONFORMANCE.md) and select the native owner.
+Protocol behavior belongs in that repository; profile navigation, teaching routes, and packet
+metadata belong here. Follow the owner's README environment setup and contributing guide. The
+[Agent Proof guide](https://github.com/jonah-ux/agent-proof/blob/main/CONTRIBUTING.md) and
+[Forgeyard guide](https://github.com/jonah-ux/forgeyard/blob/main/CONTRIBUTING.md) are the two entry
+points for this lab's graph and review boundaries.
+
+Before proposing a fix, preserve a public synthetic reproducer with the owner source head,
+runtime/package version, exact command, input digest, expected result, actual result, and exit
+status. The [failure walkthrough](FAILURE-WALKTHROUGH.md) supplies an example with complete native
+reports. A missing input, skipped check, unknown state, or changed source must remain visible.
+Security concerns should use the native owner's `SECURITY.md` reporting route.
+
+Keep a change focused on the owning layer, add a regression for a behavior change, and include
+the checks actually run plus remaining gaps in the PR. A source test, wheel install, hosted fixture,
+and outside consumer are separate evidence classes. Do not include secrets, transcripts, customer
+data, private paths, or employer-specific rules in the reproducer or its reports.
+
 ## Before editing
 
 1. Identify the native owner and read its current contract, release notes, and security boundary.

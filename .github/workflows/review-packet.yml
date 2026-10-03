@@ -6,6 +6,9 @@ on:
       - "README.md"
       - "docs/COLD-REVIEW-CHECKLIST.md"
       - "docs/AGENT-SYSTEMS-LAB-MAINTENANCE.md"
+      - "docs/AGENT-SYSTEMS-LAB-CONFORMANCE.md"
+      - "docs/MAINTAINER-RUNBOOK.md"
+      - "docs/FAILURE-WALKTHROUGH.md"
       - "docs/AGENT-SYSTEMS-LAB-REVIEW-LOCK.json"
       - "docs/EXTERNAL-REVIEW-PACKET.md"
       - "scripts/validate_review_packet.py"
@@ -17,6 +20,9 @@ on:
       - "README.md"
       - "docs/COLD-REVIEW-CHECKLIST.md"
       - "docs/AGENT-SYSTEMS-LAB-MAINTENANCE.md"
+      - "docs/AGENT-SYSTEMS-LAB-CONFORMANCE.md"
+      - "docs/MAINTAINER-RUNBOOK.md"
+      - "docs/FAILURE-WALKTHROUGH.md"
       - "docs/AGENT-SYSTEMS-LAB-REVIEW-LOCK.json"
       - "docs/EXTERNAL-REVIEW-PACKET.md"
       - "scripts/validate_review_packet.py"
@@ -45,3 +51,80 @@ jobs:
         run: python3 -m unittest discover -s tests -v
       - name: Validate lock and packet
         run: python3 scripts/validate_review_packet.py --json
+      - name: Run the documented failure walkthrough
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import os
+          import re
+          document = Path("docs/FAILURE-WALKTHROUGH.md").read_text()
+          blocks = re.findall(r"(?ms)^```bash\n(.*?)^```\s*$", document)
+          if not blocks:
+              raise SystemExit("no runnable walkthrough blocks found")
+          script = Path(os.environ["RUNNER_TEMP"]) / "failure-walkthrough.sh"
+          script.write_text("\n\n".join(blocks) + "\n")
+          PY
+          source "$RUNNER_TEMP/failure-walkthrough.sh"
+          export LAB_WALKTHROUGH_ROOT="$work_dir"
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          root = Path(os.environ["LAB_WALKTHROUGH_ROOT"]).resolve()
+          output = Path(os.environ["RUNNER_TEMP"]) / "failure-walkthrough-evidence"
+          output.mkdir()
+          reports = output / "reports"
+          reports.mkdir()
+          names = (
+              "graph-bound", "packet-verify", "attachment-bound", "graph-changed",
+              "attachment-changed-graph", "graph-orphan", "graph-unbound",
+              "graph-required-input", "attachment-missing-inputs",
+              "graph-stale-artifact", "packet-stale-artifact",
+          )
+          def redact(value):
+              if isinstance(value, str):
+                  return value.replace(str(root), "<walkthrough>")
+              if isinstance(value, list):
+                  return [redact(item) for item in value]
+              if isinstance(value, dict):
+                  return {key: redact(item) for key, item in value.items()}
+              return value
+          for name in names:
+              payload = json.loads((root / "reports" / f"{name}.json").read_text())
+              (reports / f"{name}.json").write_text(
+                  json.dumps(redact(payload), indent=2, sort_keys=True) + "\n"
+              )
+          original = output / "fixtures" / "original"
+          changed = output / "fixtures" / "changed"
+          original.mkdir(parents=True)
+          changed.mkdir()
+          for name in ("proof", "graph", "packet", "attachment", "policy", "spec"):
+              (original / f"{name}.json").write_bytes(
+                  (root / "artifacts" / f"{name}.json").read_bytes()
+              )
+          (original / "probe.txt").write_bytes(
+              (root / "artifacts" / "probe-original.txt").read_bytes()
+          )
+          (changed / "probe.txt").write_bytes(
+              (root / "artifacts" / "probe.txt").read_bytes()
+          )
+          for name in ("graph-changed", "graph-orphan"):
+              (changed / f"{name}.json").write_bytes(
+                  (root / "artifacts" / f"{name}.json").read_bytes()
+              )
+          lock = json.loads((Path(os.environ["GITHUB_WORKSPACE"]) /
+              "docs/AGENT-SYSTEMS-LAB-REVIEW-LOCK.json").read_text())
+          revisions = {item["repository"]: item["source_head"] for item in lock["owners"]
+              if item["owner"] in {"agent-proof", "forgeyard"}}
+          (output / "source-heads.json").write_text(
+              json.dumps(revisions, indent=2, sort_keys=True) + "\n"
+          )
+          PY
+      - name: Preserve walkthrough reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: failure-walkthrough-${{ matrix.os }}-${{ matrix.python }}
+          path: ${{ runner.temp }}/failure-walkthrough-evidence
+          if-no-files-found: error
+          retention-days: 14
