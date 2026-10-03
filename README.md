@@ -18,27 +18,35 @@ delivery through explicit owners rather than a monolithic runtime.
 
 ![Agent tooling stack: recover context, bound decisions, prove outcomes](docs/toolkit-stack.svg)
 
-## Start with the 90-second tour
+## Choose your own 90-second proof
 
-These projects form one inspectable workflow. Choose the lane that matches what
-you want to see first, then follow the repository's disposable demo.
+Every project below is a standalone product. Install one, run its own disposable demo, inspect its
+machine-readable result, and decide whether it is useful before you ever look at another repository.
+The broader suite is an optional map for people who want to connect the outputs later.
 
-| Lane | Start here | What it proves |
+![Standalone proof grid: install, demo, inspect](docs/standalone-proof-grid.svg)
+
+| Project | Start here | The moment to watch |
 | --- | --- | --- |
-| **Trust the result** | [Agent Proof](https://github.com/jonah-ux/agent-proof) → [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | Evidence can be tamper-evident, and tool contracts can fail closed before an agent uses them. |
-| **Recover the work** | [Chatlens](https://github.com/jonah-ux/chatlens) → [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | Context and Git state can be searched, archived, and restored without pretending recovery is deployment. |
-| **Build locally** | [Slipstream](https://github.com/jonah-ux/slipstream) → [Forgeyard](https://github.com/jonah-ux/forgeyard) | Retrieval and delivery records can stay local, bounded, deterministic, and reviewable. |
-| **Admit context safely** | [Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) → [Agent Proof](https://github.com/jonah-ux/agent-proof) | Scope, freshness, citations, refusal states, and evidence boundaries remain visible before an answer is trusted. |
+| [Forgeyard](https://github.com/jonah-ux/forgeyard) | [one-minute quickstart](https://github.com/jonah-ux/forgeyard/blob/main/docs/quickstart.md) | A review record seals, then refuses a tampered byte boundary. |
+| [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) | [standalone lifecycle](https://github.com/jonah-ux/atlas-agent-runtime/blob/main/docs/quickstart.md) | A task pauses for approval, recovers from its event log, and emits a receipt. |
+| [Chatlens](https://github.com/jonah-ux/chatlens) | [quick start](https://github.com/jonah-ux/chatlens#quick-start) | A lost session becomes a searchable work card without a hosted service. |
+| [Agent Proof](https://github.com/jonah-ux/agent-proof) | [synthetic demo](https://github.com/jonah-ux/agent-proof#quick-start) | A proof bundle binds artifacts, graph edges, and tamper refusal together. |
+| [Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) | [reviewer walkthrough](https://github.com/jonah-ux/context-integrity-lab/blob/main/DEMO.md) | Supported, stale, and out-of-scope context split into visible admission states. |
+| [Sourcemark](https://github.com/jonah-ux/sourcemark) | [30-second demo](https://github.com/jonah-ux/sourcemark#install) | A citation keeps its anchor or gets called out when its source moves. |
+| [Slipstream](https://github.com/jonah-ux/slipstream) | [local vector demo](https://github.com/jonah-ux/slipstream#install-and-run) | A nearest-neighbor query runs locally and leaves a manifest you can verify. |
+| [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | [preservation demo](https://github.com/jonah-ux/worktree-conservator#quick-start) | A cleanup plan can be refused, archived, verified, and restored without guessing. |
+| [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit) | [scorecard demo](https://github.com/jonah-ux/agent-eval-kit#quick-start) | Repeated trials become a bounded comparison instead of a vibes-based ranking. |
+| [Context Pack](https://github.com/jonah-ux/context-pack) | [deterministic pack demo](https://github.com/jonah-ux/context-pack#quick-start) | A byte budget and digest make the exact context set inspectable. |
+| [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) | [redacted trace demo](https://github.com/jonah-ux/agent-trace-lite#quick-start) | A trace becomes a readable artifact while sensitive fields stay redacted. |
+| [Agent Policy](https://github.com/jonah-ux/agent-policy) | [policy quickstart](https://github.com/jonah-ux/agent-policy#quick-start) | A decision explains which rule matched and why the default is deny. |
+| [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | [capability demo](https://github.com/jonah-ux/agent-sandbox-run#quick-start) | The receipt says exactly what was enforced and what remained a fallback. |
+| [Agent Resume](https://github.com/jonah-ux/agent-resume) | [continuation demo](https://github.com/jonah-ux/agent-resume#quick-start) | A broken handoff turns into a validated next step with an explicit diff. |
+| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | [contract check](https://github.com/jonah-ux/mcp-doctor#quick-start) | A missing description or timeout fails closed with a stable diagnostic code. |
 
-The fastest concrete entry points are Agent Proof's [annotated v0.3.1 prerelease assets](https://github.com/jonah-ux/agent-proof/releases/tag/v0.3.1), Context Integrity Lab's [stable v0.2.0 envelope release](https://github.com/jonah-ux/context-integrity-lab/releases/tag/v0.2.0), Slipstream's [`npm test` path](https://github.com/jonah-ux/slipstream#install-and-run), and Forgeyard's [one-command evidence demo](https://github.com/jonah-ux/forgeyard#quick-start).
-
-For the flagship product experience, open the public [Forgeyard Workbench](https://jonah-ux.github.io/forgeyard/): load synthetic specialist reports, compose a review record, and trigger the fail-closed tamper state in your browser.
-
-Forgeyard is the flagship orchestration surface: it composes specialist reports into reviewable delivery records and portable provenance packets. Its annotated `v0.3.2` prerelease consumes verified Agent Proof interoperability projections and carries a Context Integrity Lab report in the public Workbench fixture. Agent Proof, Chatlens, Slipstream, and Worktree Conservator supply the surrounding trust, recovery, retrieval, and lifecycle layers; Chatlens `v0.3.0` carries the trace handoff API in its stable release, while MCP Doctor remains explicitly labeled a prerelease.
-
-[Forgeyard](https://github.com/jonah-ux/forgeyard) is the flagship systems project: a local-first foundation for reviewable delivery records, explicit evidence contracts, and bounded worktree plans. Its `v0.3.0` stable line established specialist composition, portable provenance packets, and the one-command demo; the annotated `v0.3.2` prerelease adds verified Agent Proof projection intake and the Context Integrity Lab Workbench report, with wheel/source assets, checksums, and fresh-consumer evidence. Planned execution and resume slices are intentionally not presented as shipped.
-
-[Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) is the focused admission-boundary example: stable `v0.2.0` makes scope, freshness, citations, refusal states, and the versioned `context-integrity/v1` envelope inspectable through a deterministic CLI and local browser console over fictional records. Agent Proof consumes the envelope without copying answer text or raw scope identifiers.
+For the optional multi-repo story, see the [portfolio suite map](docs/PORTFOLIO-SUITE-V2.md). It
+connects outputs after each repository already works on its own; it is never an installation
+prerequisite.
 
 ## The engineering loop
 
