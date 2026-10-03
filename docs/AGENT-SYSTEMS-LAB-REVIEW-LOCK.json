@@ -259,8 +259,25 @@
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
-        "state": "unavailable"
+        "artifacts": [
+          {
+            "name": "mcp_doctor-0.3.0-py3-none-any.whl",
+            "sha256": "b6065a983e87c02ff6095e28e4a153c7be343a73ad601c0ac6af4a505204d6e8"
+          },
+          {
+            "name": "mcp_doctor-0.3.0.tar.gz",
+            "sha256": "d61d63d75427996d1bc4adaea16d9d0532004ddff07b926f25bd8dd9cd4bd535"
+          }
+        ],
+        "checksum_manifest_sha256": "c5ae308ea7d210f8ea15430e5e94bae116a5bc6542c7af92db30c0b449e49b7a",
+        "consumer_cli_help": "pass",
+        "consumer_install": "pass",
+        "consumer_python": "3.14.6",
+        "consumer_version": "mcp-doctor 0.3.0",
+        "local_build": "pass",
+        "local_packed_audit": "pass",
+        "package_version": "0.3.0",
+        "state": "verified"
       },
       "audit_schema": "mcp-doctor-public-audit/v1",
       "audit_state": "verified-at-head",
@@ -315,9 +332,9 @@
     }
   ],
   "profile": {
-    "lock_published_head": "72815390c6733289c321612f2f77a00862670359",
+    "lock_published_head": "ed52753dedc84cc573a7decd9dff20c9b5a2649c",
     "repository": "jonah-ux/jonah-ux",
-    "snapshot_base_head": "72815390c6733289c321612f2f77a00862670359"
+    "snapshot_base_head": "ed52753dedc84cc573a7decd9dff20c9b5a2649c"
   },
   "purpose": "Freeze a clean-machine review snapshot from a known profile source baseline; the containing profile commit is recorded separately.",
   "review_route": {
