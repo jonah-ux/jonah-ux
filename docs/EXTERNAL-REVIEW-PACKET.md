@@ -7,7 +7,7 @@ profile or to infer adoption from activity.
 
 ## Review target
 
-The public profile main was read back at `0bbbd5c86f41b4978f511ea75f703dca67a2952c` on
+The public profile main was read back at `580fdfcfe5c3f2edbeedc6afb36fd107ed87dec5` on
 2026-10-03. The owner heads below are source-identity observations from `refs/heads/main` made
 while preparing this packet; they are freshness anchors, not release claims:
 
@@ -15,7 +15,7 @@ while preparing this packet; they are freshness anchors, not release claims:
 | --- | --- | --- |
 | [Forgeyard](https://github.com/jonah-ux/forgeyard) | `bc2eb6996e64b71399f5ba0e1f406783762a910f` | review composition, packets, evaluation, public audit |
 | [Agent Proof](https://github.com/jonah-ux/agent-proof) | `2c8767257d4da2e78da73e93a82f7d066f3f1b8e` | tamper-evident ledger, graph, interop, public audit |
-| [ChatLens](https://github.com/jonah-ux/chatlens) | `6af40e0cda32e32d2dc652461b8d178f13b07f70` | local trace discovery and redacted handoff |
+| [ChatLens](https://github.com/jonah-ux/chatlens) | `e53c0f38806bb77624998755bd68dac8176205dd` | local trace discovery and redacted handoff |
 | [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) | `e10a829020bbbd2ef1307c3e2b1471a723b719b6` | durable lifecycle and approval state |
 | [Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) | `78744b2e01ec5ce72bdde9ff85e9b83a9c88dc66` | scope, freshness, citations, admission/refusal |
 | [Agent Policy](https://github.com/jonah-ux/agent-policy) | `6c65bc9c9a889989fd24cd4ef3bba539c96e8e28` | capability decisions and policy receipts |
