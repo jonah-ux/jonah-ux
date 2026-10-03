@@ -31,6 +31,23 @@ provider, and customer systems untouched.
 5. Record any independent reviewer response in the feedback format from
    `docs/EXTERNAL-REVIEW-REQUEST.md`.
 
+## Packet consistency gate
+
+Run `python3 scripts/validate_review_packet.py --json` after editing the lock or packet, and
+`python3 -m unittest discover -s tests -v` after changing the validator. The gate binds each
+repository to its source-head table row and requires complete recorded checksum, artifact-set,
+build/audit, runtime, and consumer-install metadata before counting an artifact as verified.
+It checks the profile base named in the packet; the optional `--published-head` argument checks
+the recorded containing profile parent.
+
+Blocked inputs return exit `2` and stable error codes. The regressions cover malformed roots,
+duplicate JSON keys, invalid UTF-8, duplicate/swapped identities, incomplete artifact records,
+invalid digests, wrong artifact sets, failed consumers, stale profile bases, and unavailable Git
+identity. Inputs are limited to one MiB each and symlinked input files/directories are refused.
+Load failures omit local paths from diagnostics. The gate validates recorded metadata only;
+use the owner-native audit and disposable-install routes to verify actual artifact bytes and
+behavior. Hosted CI runs the gate and refusal suite on Linux/macOS with Python 3.11 and 3.14.
+
 ## Evidence boundaries
 
 This route proves only the commands and inputs it actually runs. It does not prove deployment,

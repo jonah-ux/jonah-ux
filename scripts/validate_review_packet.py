@@ -17,11 +17,38 @@ LOCK_PATH = ROOT / "docs" / "AGENT-SYSTEMS-LAB-REVIEW-LOCK.json"
 PACKET_PATH = ROOT / "docs" / "EXTERNAL-REVIEW-PACKET.md"
 SCHEMA = "agent-systems-lab/review-validation/v1"
 SHA = re.compile(r"^[0-9a-f]{40}$")
+SHA256 = re.compile(r"^[0-9a-f]{64}$")
+OWNER = re.compile(r"^[a-z0-9][a-z0-9-]{0,99}$")
+REPOSITORY = re.compile(r"^jonah-ux/[a-z0-9][a-z0-9-]{0,99}$")
+VERSION = re.compile(r"^[0-9]+\.[0-9]+\.[0-9]+$")
+ARTIFACT_NAME = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.+-]*$")
+PACKET_OWNER = re.compile(
+    r"^\|\s*\[[^\]\r\n]+\]\(https://github\.com/"
+    r"(jonah-ux/[a-z0-9-]+)\)\s*\|\s*`([0-9a-f]{40})`\s*\|",
+    re.MULTILINE,
+)
+MAX_INPUT_BYTES = 1024 * 1024
+LIMITS = [
+    "this validator checks profile source and packet consistency only",
+    "recorded artifact metadata is checked; "
+    "artifact bytes and installs are not replayed",
+    "it does not fetch owner repositories or establish deployment, adoption, "
+    "or production outcomes",
+]
+
+
+def _matches(pattern: re.Pattern[str], value: Any) -> bool:
+    return isinstance(value, str) and pattern.fullmatch(value) is not None
 
 
 def _git_head() -> str:
     result = subprocess.run(
-        ["git", "rev-parse", "HEAD"], cwd=ROOT, check=False, capture_output=True, text=True
+        ["git", "rev-parse", "HEAD"],
+        cwd=ROOT,
+        check=False,
+        capture_output=True,
+        text=True,
+        timeout=5,
     )
     value = result.stdout.strip()
     if result.returncode or not SHA.fullmatch(value):
@@ -29,18 +56,124 @@ def _git_head() -> str:
     return value
 
 
-def _load() -> tuple[dict[str, Any], str]:
-    lock = json.loads(LOCK_PATH.read_text(encoding="utf-8"))
-    packet = PACKET_PATH.read_text(encoding="utf-8")
+def _read_text(path: Path) -> str:
+    if path.is_symlink() or path.parent.is_symlink():
+        raise ValueError("symlink_input")
+    if not path.is_file():
+        raise ValueError("invalid_input")
+    with path.open("rb") as source:
+        raw = source.read(MAX_INPUT_BYTES + 1)
+    if len(raw) > MAX_INPUT_BYTES:
+        raise ValueError("input_too_large")
+    return raw.decode("utf-8")
+
+
+def _unique_keys(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
+    result: dict[str, Any] = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError("duplicate_json_key")
+        result[key] = value
+    return result
+
+
+def _load() -> tuple[Any, str]:
+    lock = json.loads(_read_text(LOCK_PATH), object_pairs_hook=_unique_keys)
+    packet = _read_text(PACKET_PATH)
     return lock, packet
+
+
+def _artifact_errors(artifact: Any, owner: str, packet: str) -> list[str]:
+    if not isinstance(artifact, dict) or artifact.get("state") != "verified":
+        return ["artifact_not_verified"]
+
+    errors: list[str] = []
+    digests = [artifact.get("checksum_manifest_sha256")]
+    if owner == "slipstream":
+        digests.append(artifact.get("artifact_sha256"))
+        if not _matches(VERSION, str(artifact.get("release", "")).removeprefix("v")):
+            errors.append("artifact_version_invalid")
+        runtime = artifact.get("consumer_node")
+        if (
+            not isinstance(runtime, str)
+            or not _matches(VERSION, runtime.removeprefix("v"))
+            or artifact.get("consumer_self_test") != "pass"
+        ):
+            errors.append("artifact_consumer_not_verified")
+    else:
+        assets = artifact.get("artifacts")
+        assets = assets if isinstance(assets, list) else []
+        names = [item.get("name") for item in assets if isinstance(item, dict)]
+        valid_names = all(_matches(ARTIFACT_NAME, name) for name in names)
+        if (
+            len(assets) != 2
+            or len(names) != 2
+            or not valid_names
+            or len(set(names)) != 2
+            or sum(name.endswith(".whl") for name in names) != 1
+            or sum(name.endswith(".tar.gz") for name in names) != 1
+        ):
+            errors.append("artifact_set_invalid")
+        digests.extend(
+            item.get("sha256") if isinstance(item, dict) else None for item in assets
+        )
+        if not _matches(VERSION, artifact.get("package_version")):
+            errors.append("artifact_version_invalid")
+        if artifact.get("local_build") != "pass":
+            errors.append("artifact_build_not_verified")
+        if not _matches(VERSION, artifact.get("consumer_python")):
+            errors.append("artifact_consumer_not_verified")
+
+    if not all(_matches(SHA256, digest) for digest in digests):
+        errors.append("artifact_digest_invalid")
+    elif any(digest not in packet for digest in digests):
+        errors.append("artifact_digest_missing_from_packet")
+    if artifact.get("local_packed_audit") != "pass":
+        errors.append("artifact_audit_not_verified")
+    if artifact.get("consumer_install") != "pass":
+        errors.append("artifact_consumer_not_verified")
+    for field in (
+        "consumer_cli_help",
+        "consumer_check_help",
+        "consumer_demo_help",
+        "consumer_demo",
+    ):
+        if field in artifact and artifact[field] != "pass":
+            errors.append("artifact_consumer_not_verified")
+    if "consumer_demo" in artifact and (
+        artifact.get("consumer_demo_reviewable") is not True
+        or not _matches(SHA256, artifact.get("consumer_demo_record_sha256"))
+        or artifact["consumer_demo_record_sha256"] not in packet
+    ):
+        errors.append("artifact_demo_not_verified")
+    return list(dict.fromkeys(errors))
 
 
 def validate(expected_published_head: str | None = None) -> dict[str, Any]:
     errors: list[str] = []
     try:
         lock, packet = _load()
-    except (OSError, json.JSONDecodeError) as exc:
-        return {"schema": SCHEMA, "result": "blocked", "errors": [f"load_failed:{exc}"]}
+    except UnicodeDecodeError:
+        return {
+            "schema": SCHEMA,
+            "result": "blocked",
+            "errors": ["load_failed:invalid_utf8"],
+        }
+    except (OSError, json.JSONDecodeError, ValueError, RecursionError) as exc:
+        code = str(exc) if type(exc) is ValueError else "invalid_input"
+        if code not in {"duplicate_json_key", "input_too_large", "symlink_input"}:
+            code = "invalid_input"
+        return {
+            "schema": SCHEMA,
+            "result": "blocked",
+            "errors": [f"load_failed:{code}"],
+        }
+    if not isinstance(lock, dict):
+        return {
+            "schema": SCHEMA,
+            "result": "blocked",
+            "errors": ["lock_not_object"],
+        }
 
     if lock.get("schema") != "agent-systems-lab-review-lock/v1":
         errors.append("lock_schema_invalid")
@@ -49,28 +182,58 @@ def validate(expected_published_head: str | None = None) -> dict[str, Any]:
         errors.append("owner_count_must_equal_13")
         owners = owners if isinstance(owners, list) else []
 
-    repositories = [owner.get("repository") for owner in owners if isinstance(owner, dict)]
-    heads = [owner.get("source_head") for owner in owners if isinstance(owner, dict)]
+    repositories = [
+        owner["repository"]
+        for owner in owners
+        if isinstance(owner, dict) and _matches(REPOSITORY, owner.get("repository"))
+    ]
+    heads = [
+        owner["source_head"]
+        for owner in owners
+        if isinstance(owner, dict) and _matches(SHA, owner.get("source_head"))
+    ]
     if len(set(repositories)) != len(repositories):
         errors.append("owner_repositories_not_unique")
     if len(set(heads)) != len(heads):
         errors.append("owner_source_heads_not_unique")
 
+    packet_heads: dict[str, str] = {}
+    for repository, head in PACKET_OWNER.findall(packet):
+        if repository in packet_heads:
+            errors.append("packet_owner_rows_not_unique")
+        packet_heads[repository] = head
+    if set(packet_heads) != set(repositories):
+        errors.append("packet_owner_set_does_not_match_lock")
+
     verified_artifacts = 0
-    for owner in owners:
+    for index, owner in enumerate(owners):
         if not isinstance(owner, dict):
             errors.append("owner_entry_not_object")
             continue
+        repository = owner.get("repository")
+        label = repository if _matches(REPOSITORY, repository) else f"owner_{index}"
+        if not _matches(REPOSITORY, repository):
+            errors.append(f"owner_repository_invalid:{label}")
+        owner_id = owner.get("owner")
+        if not _matches(OWNER, owner_id):
+            errors.append(f"owner_id_invalid:{label}")
+        elif repository != f"jonah-ux/{owner_id}":
+            errors.append(f"owner_repository_mismatch:{label}")
         if owner.get("audit_state") != "verified-at-head":
-            errors.append(f"audit_not_verified:{owner.get('repository')}")
+            errors.append(f"audit_not_verified:{label}")
         source_head = owner.get("source_head")
-        if not isinstance(source_head, str) or not SHA.fullmatch(source_head):
-            errors.append(f"source_head_invalid:{owner.get('repository')}")
+        if not _matches(SHA, source_head):
+            errors.append(f"source_head_invalid:{label}")
         if isinstance(source_head, str) and source_head not in packet:
-            errors.append(f"source_head_missing_from_packet:{owner.get('repository')}")
-        artifact = owner.get("artifact")
-        if not isinstance(artifact, dict) or artifact.get("state") != "verified":
-            errors.append(f"artifact_not_verified:{owner.get('repository')}")
+            errors.append(f"source_head_missing_from_packet:{label}")
+        if (
+            _matches(REPOSITORY, repository)
+            and packet_heads.get(repository) != source_head
+        ):
+            errors.append(f"source_head_does_not_match_packet:{label}")
+        artifact_errors = _artifact_errors(owner.get("artifact"), owner_id, packet)
+        if artifact_errors:
+            errors.extend(f"{code}:{label}" for code in artifact_errors)
         else:
             verified_artifacts += 1
 
@@ -79,10 +242,15 @@ def validate(expected_published_head: str | None = None) -> dict[str, Any]:
         errors.append("profile_block_missing")
         profile = {}
     for field in ("snapshot_base_head", "lock_published_head"):
-        if not isinstance(profile.get(field), str) or not SHA.fullmatch(profile[field]):
+        if not _matches(SHA, profile.get(field)):
             errors.append(f"profile_{field}_invalid")
+    if profile.get("repository") != "jonah-ux/jonah-ux":
+        errors.append("profile_repository_invalid")
+    packet_bases = re.findall(r"profile base head\s+`([0-9a-f]{40})`", packet)
+    if packet_bases != [profile.get("snapshot_base_head")]:
+        errors.append("profile_snapshot_base_missing_from_packet")
     if expected_published_head is not None:
-        if not SHA.fullmatch(expected_published_head):
+        if not _matches(SHA, expected_published_head):
             errors.append("expected_published_head_invalid")
         elif profile.get("lock_published_head") != expected_published_head:
             errors.append("lock_published_head_does_not_match_expected_parent")
@@ -100,18 +268,28 @@ def validate(expected_published_head: str | None = None) -> dict[str, Any]:
     if "outside adoption" not in packet.lower():
         errors.append("packet_adoption_limit_missing")
 
+    revision = None
+    try:
+        revision = _git_head()
+    except (OSError, ValueError, subprocess.TimeoutExpired):
+        errors.append("current_git_head_unavailable")
+
+    public_profile = {}
+    if profile.get("repository") == "jonah-ux/jonah-ux":
+        public_profile["repository"] = profile["repository"]
+    for field in ("snapshot_base_head", "lock_published_head"):
+        if _matches(SHA, profile.get(field)):
+            public_profile[field] = profile[field]
+
     return {
         "schema": SCHEMA,
         "result": "pass" if not errors else "blocked",
-        "source": {"revision": _git_head()},
+        "source": {"revision": revision},
         "owners": len(owners),
         "verified_artifacts": verified_artifacts,
-        "profile": profile,
+        "profile": public_profile,
         "errors": errors,
-        "limits": [
-            "this validator checks profile source and packet consistency only",
-            "it does not fetch owner repositories or establish deployment, adoption, or production outcomes",
-        ],
+        "limits": LIMITS,
     }
 
 

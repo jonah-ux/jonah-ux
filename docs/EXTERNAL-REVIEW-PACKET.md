@@ -72,8 +72,10 @@ The wheel installed in a disposable Python 3.14.6 environment and reported `0.2.
 is local build/install evidence, not a published release or adoption claim.
 A bounded Python wheel probe for Agent Proof at its locked head `c0b75d77b53af8593ca73bdc23a59ee31b0962dd`
 was retried with the clean helper capacity and failed at PEP 517 because the runtime could not import
-`setuptools.build_meta`; hosted CI published no downloadable artifact. The Python artifact state therefore
-remains `unavailable` rather than being inferred from a green test run.
+`setuptools.build_meta`; hosted CI published no downloadable artifact for that probe. This is an
+earlier setup failure. The later isolated builds and disposable installs recorded in this packet
+provide local artifact evidence; they do not establish a hosted artifact at every locked source
+head, and no artifact claim is inferred from a green test run.
 
 Agent Policy at `99a35f58ec9cf9547f559a94ec5a1de0ba5c3df3` was built in the same isolated temporary
 environment. Its strict audit returned `artifact_audit=pass` for one wheel and one sdist with
