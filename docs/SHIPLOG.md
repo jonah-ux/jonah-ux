@@ -3,6 +3,25 @@
 This is a short record of public engineering work that another developer can
 verify. Each entry links to source, a release, CI, or a reproducible receipt.
 
+## 2026-10-03 — installed reference flow
+
+Forgeyard [PR #33](https://github.com/jonah-ux/forgeyard/pull/33) added the opt-in
+`forgeyard-installed-reference-flow/v1` path to the existing reference harness.
+The merged head `63f9aef` landed as main merge `d1b76e4`; hosted checks passed.
+The runner invokes ChatLens `trace-import`/`evidence-export`, Atlas `evidence`,
+Agent Proof `normalize`/`verify-interop`, and Forgeyard `compose`/`verify` through
+an explicit command map. It records package versions, exit codes, and output
+digests while keeping owner payloads out of its receipt. Missing commands or
+artifacts produce `unavailable` without substituting fixture reports.
+
+A fresh editable consumer observation used ChatLens 0.4.0, Atlas 0.2.0, Agent
+Proof 0.4.1, and Forgeyard 0.5.0. The passing scenario reached
+`ready_for_review` with digest verification `reviewable=true`; the blocked
+scenario preserved an unknown Atlas status and reached `blocked` with
+`reviewable=false`; the tampered scenario returned exit 2 with a record digest
+mismatch. These are local artifact and boundary observations, not deployment,
+production, or outside-adoption claims.
+
 ## 2026-10-03 — Agent Systems Lab cold-review surface
 
 Forgeyard's public Workbench now carries a 15-class
