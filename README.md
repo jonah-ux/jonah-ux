@@ -24,25 +24,29 @@ Every project below is a standalone product. Install one, run its own disposable
 machine-readable result, and decide whether it is useful before you ever look at another repository.
 The broader suite is an optional map for people who want to connect the outputs later.
 
+Open a visual guide to see the shape of the tool. Its synthetic browser state is clearly labeled;
+run the repo’s own CLI demo when you want actual local evidence. Every guide is hosted from its
+own repository and remains a self-contained local HTML file.
+
 ![Standalone proof grid: install, demo, inspect](docs/standalone-proof-grid.svg)
 
-| Project | Start here | The moment to watch |
-| --- | --- | --- |
-| [Forgeyard](https://github.com/jonah-ux/forgeyard) | [one-minute quickstart](https://github.com/jonah-ux/forgeyard/blob/main/docs/quickstart.md) | A review record seals, then refuses a tampered byte boundary. |
-| [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) | [standalone lifecycle](https://github.com/jonah-ux/atlas-agent-runtime/blob/main/docs/quickstart.md) | A task pauses for approval, recovers from its event log, and emits a receipt. |
-| [Chatlens](https://github.com/jonah-ux/chatlens) | [quick start](https://github.com/jonah-ux/chatlens#quick-start) | A lost session becomes a searchable work card without a hosted service. |
-| [Agent Proof](https://github.com/jonah-ux/agent-proof) | [synthetic demo](https://github.com/jonah-ux/agent-proof#try-the-complete-workflow) | A proof bundle binds artifacts, graph edges, and tamper refusal together. |
-| [Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) | [reviewer walkthrough](https://github.com/jonah-ux/context-integrity-lab/blob/main/DEMO.md) | Supported, stale, and out-of-scope context split into visible admission states. |
-| [Sourcemark](https://github.com/jonah-ux/sourcemark) | [30-second demo](https://github.com/jonah-ux/sourcemark#install) | A citation keeps its anchor or gets called out when its source moves. |
-| [Slipstream](https://github.com/jonah-ux/slipstream) | [local vector demo](https://github.com/jonah-ux/slipstream#install-and-run) | A nearest-neighbor query runs locally and leaves a manifest you can verify. |
-| [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | [preservation demo](https://github.com/jonah-ux/worktree-conservator#quick-start) | A cleanup plan can be refused, archived, verified, and restored without guessing. |
-| [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit) | [scorecard demo](https://github.com/jonah-ux/agent-eval-kit#try-it-in-30-seconds) | Repeated trials become a bounded comparison instead of a vibes-based ranking. |
-| [Context Pack](https://github.com/jonah-ux/context-pack) | [deterministic pack demo](https://github.com/jonah-ux/context-pack#try-it-in-30-seconds) | A byte budget and digest make the exact context set inspectable. |
-| [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) | [redacted trace demo](https://github.com/jonah-ux/agent-trace-lite#try-it-in-30-seconds) | A trace becomes a readable artifact while sensitive fields stay redacted. |
-| [Agent Policy](https://github.com/jonah-ux/agent-policy) | [policy quickstart](https://github.com/jonah-ux/agent-policy#quick-start) | A decision explains which rule matched and why the default is deny. |
-| [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | [capability demo](https://github.com/jonah-ux/agent-sandbox-run#try-it-in-30-seconds) | The receipt says exactly what was enforced and what remained a fallback. |
-| [Agent Resume](https://github.com/jonah-ux/agent-resume) | [continuation demo](https://github.com/jonah-ux/agent-resume#try-it-in-30-seconds) | A broken handoff turns into a validated next step with an explicit diff. |
-| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | [contract check](https://github.com/jonah-ux/mcp-doctor#try-it-in-30-seconds) | A missing description or timeout fails closed with a stable diagnostic code. |
+| Project | Open the visual guide | Run it locally | The moment to watch |
+| --- | --- | --- | --- |
+| [Forgeyard](https://github.com/jonah-ux/forgeyard) | [Workbench](https://jonah-ux.github.io/forgeyard/) | [one-minute quickstart](https://github.com/jonah-ux/forgeyard/blob/main/docs/quickstart.md) | A review record seals, then refuses a tampered byte boundary. |
+| [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) | [flight deck](https://jonah-ux.github.io/atlas-agent-runtime/flight-deck.html) | [standalone lifecycle](https://github.com/jonah-ux/atlas-agent-runtime/blob/main/docs/quickstart.md) | A task pauses for approval, recovers from its event log, and emits a receipt. |
+| [Chatlens](https://github.com/jonah-ux/chatlens) | [session guide](https://jonah-ux.github.io/chatlens/walkthrough.html) | [quick start](https://github.com/jonah-ux/chatlens#quick-start) | A lost session becomes a searchable work card without a hosted service. |
+| [Agent Proof](https://github.com/jonah-ux/agent-proof) | [proof chain](https://jonah-ux.github.io/agent-proof/walkthrough/) | [synthetic demo](https://github.com/jonah-ux/agent-proof#try-the-complete-workflow) | A proof bundle binds artifacts, graph edges, and tamper refusal together. |
+| [Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) | [admission explorer](https://jonah-ux.github.io/context-integrity-lab/admission-explorer.html) | [reviewer walkthrough](https://github.com/jonah-ux/context-integrity-lab/blob/main/DEMO.md) | Supported, stale, and out-of-scope context split into visible admission states. |
+| [Sourcemark](https://github.com/jonah-ux/sourcemark) | [citation survival](https://jonah-ux.github.io/sourcemark/walkthrough.html) | [30-second demo](https://github.com/jonah-ux/sourcemark#install) | A citation keeps its anchor or gets called out when its source moves. |
+| [Slipstream](https://github.com/jonah-ux/slipstream) | [vector inspector](https://jonah-ux.github.io/slipstream/inspector.html) | [local vector demo](https://github.com/jonah-ux/slipstream#install-and-run) | A nearest-neighbor query runs locally and leaves a manifest you can verify. |
+| [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | [preservation desk](https://jonah-ux.github.io/worktree-conservator/plan-explorer.html) | [preservation demo](https://github.com/jonah-ux/worktree-conservator#quick-start) | A cleanup plan can be refused, archived, verified, and restored without guessing. |
+| [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit) | [trial scorecard](https://jonah-ux.github.io/agent-eval-kit/walkthrough.html) | [scorecard demo](https://github.com/jonah-ux/agent-eval-kit#try-it-in-30-seconds) | Repeated trials become a bounded comparison instead of a vibes-based ranking. |
+| [Context Pack](https://github.com/jonah-ux/context-pack) | [budget inspector](https://jonah-ux.github.io/context-pack/walkthrough.html) | [deterministic pack demo](https://github.com/jonah-ux/context-pack#try-it-in-30-seconds) | A byte budget and digest make the exact context set inspectable. |
+| [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) | [redaction guide](https://jonah-ux.github.io/agent-trace-lite/walkthrough.html) | [redacted trace demo](https://github.com/jonah-ux/agent-trace-lite#try-it-in-30-seconds) | A trace becomes a readable artifact while sensitive fields stay redacted. |
+| [Agent Policy](https://github.com/jonah-ux/agent-policy) | [policy explanations](https://jonah-ux.github.io/agent-policy/walkthrough.html) | [policy quickstart](https://github.com/jonah-ux/agent-policy#quick-start) | A decision explains which rule matched and why the default is deny. |
+| [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | [capability matrix](https://jonah-ux.github.io/agent-sandbox-run/walkthrough.html) | [capability demo](https://github.com/jonah-ux/agent-sandbox-run#try-it-in-30-seconds) | The receipt says exactly what was enforced and what remained a fallback. |
+| [Agent Resume](https://github.com/jonah-ux/agent-resume) | [handoff explorer](https://jonah-ux.github.io/agent-resume/walkthrough.html) | [continuation demo](https://github.com/jonah-ux/agent-resume#try-it-in-30-seconds) | A broken handoff turns into a validated next step with an explicit diff. |
+| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | [manifest doctor](https://jonah-ux.github.io/mcp-doctor/walkthrough.html) | [contract check](https://github.com/jonah-ux/mcp-doctor#try-it-in-30-seconds) | A missing description or timeout fails closed with a stable diagnostic code. |
 
 For the optional multi-repo story, see the [portfolio suite map](docs/PORTFOLIO-SUITE-V2.md). It
 connects outputs after each repository already works on its own; it is never an installation
@@ -63,6 +67,6 @@ For a runnable cross-project example, see the [public integration walkthrough](d
 
 ## Public provenance
 
-The profile is a current public engineering portfolio, not an attempt to manufacture elapsed time or adoption. Most original projects were built and released recently. I am keeping that history intact and using the next work to show depth: adversarial tests, clean installed-consumer checks, clearer architecture, and maintenance driven by real use.
+I publish the source, runnable fixtures, release information, and engineering notes so you can inspect the work. The ship log tracks source and release milestones. Small tools, big paper trails: I want the first run to be easy and the failure modes to be obvious.
 
 [Engineering evidence](docs/ENGINEERING-EVIDENCE.md) · [Work samples](docs/WORK-SAMPLES.md) · [Ship log](docs/SHIPLOG.md)
