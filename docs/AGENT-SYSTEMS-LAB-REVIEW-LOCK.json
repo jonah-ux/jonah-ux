@@ -199,8 +199,25 @@
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
-        "state": "unavailable"
+        "artifacts": [
+          {
+            "name": "sourcemark-0.5.1-py3-none-any.whl",
+            "sha256": "4f282f6c3c7c66e74926d047001f2e6b8d8e17ce2c4cb46f69ea4ca3db52f598"
+          },
+          {
+            "name": "sourcemark-0.5.1.tar.gz",
+            "sha256": "f2fbfcb119412ca426adc338a88358e765677ef8250dcb8704c785987f4b0668"
+          }
+        ],
+        "checksum_manifest_sha256": "9a19d8a41b6c4465b3e4b19cfbe03c4746d91756bede03d3b88a647ce0a188be",
+        "consumer_cli_help": "pass",
+        "consumer_install": "pass",
+        "consumer_python": "3.14.6",
+        "consumer_version": "sourcemark 0.5.1",
+        "local_build": "pass",
+        "local_packed_audit": "pass",
+        "package_version": "0.5.1",
+        "state": "verified"
       },
       "audit_schema": "sourcemark-public-audit/v1",
       "audit_state": "verified-at-head",
@@ -249,9 +266,9 @@
     }
   ],
   "profile": {
-    "lock_published_head": "3f7589b7cdaf12193c11af605775f629399caef4",
+    "lock_published_head": "acd64eb3f9a6c123e92fffd74dbf79292965da05",
     "repository": "jonah-ux/jonah-ux",
-    "snapshot_base_head": "3f7589b7cdaf12193c11af605775f629399caef4"
+    "snapshot_base_head": "acd64eb3f9a6c123e92fffd74dbf79292965da05"
   },
   "purpose": "Freeze a clean-machine review snapshot from a known profile source baseline; the containing profile commit is recorded separately.",
   "review_route": {
