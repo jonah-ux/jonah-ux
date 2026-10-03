@@ -209,6 +209,11 @@ Record the exact command, source head, receipt, and refusal result. A green fixt
 fixture boundary; it does not prove production security, deployment, adoption, or resistance to
 unseen inputs.
 
+For a complete graph/packet reproducer, run the [failure-analysis walkthrough](FAILURE-WALKTHROUGH.md).
+It uses the existing lock and native CLIs, keeps each refusal report, and distinguishes an intact
+unbound graph from a source-bound verification. Hosted CI runs its runnable blocks and preserves
+the native verification reports with generic runner paths redacted.
+
 ### Adoption and maintenance boundary
 
 Read the public repository observations separately from functional proof:
