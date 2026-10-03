@@ -153,7 +153,10 @@
         "checksum_manifest_sha256": "ab2130ffa8cf22c8038284a116b56c935c012918e43e6b95353163ce9df8596f",
         "local_packed_audit": "pass",
         "release": "v0.2.0",
-        "state": "verified"
+        "state": "verified",
+        "consumer_install": "pass",
+        "consumer_node": "v26.7.0",
+        "consumer_self_test": "pass"
       },
       "audit_schema": "slipstream-public-audit/v1",
       "audit_state": "verified-at-head",
@@ -163,9 +166,9 @@
     }
   ],
   "profile": {
-    "lock_published_head": "e52d083fca354c300cd4876f0892cce2f13ae9c1",
+    "lock_published_head": "c935863ebef6f6a4837545fa3b9f5fde990a8cfd",
     "repository": "jonah-ux/jonah-ux",
-    "snapshot_base_head": "e52d083fca354c300cd4876f0892cce2f13ae9c1"
+    "snapshot_base_head": "c935863ebef6f6a4837545fa3b9f5fde990a8cfd"
   },
   "purpose": "Freeze a clean-machine review snapshot from a known profile source baseline; the containing profile commit is recorded separately.",
   "review_route": {
