@@ -73,6 +73,16 @@ was retried with the clean helper capacity and failed at PEP 517 because the run
 `setuptools.build_meta`; hosted CI published no downloadable artifact. The Python artifact state therefore
 remains `unavailable` rather than being inferred from a green test run.
 
+Agent Policy at `99a35f58ec9cf9547f559a94ec5a1de0ba5c3df3` was built in the same isolated temporary
+environment. Its strict audit returned `artifact_audit=pass` for one wheel and one sdist with
+wheel SHA-256 `d451c68a6ca94a66d6286149a8b983d1a54763b21e62c44e8d70cf1bc63dd251`,
+sdist SHA-256 `6a239a029160672c3c6414e3bcb2a4d29131a0a3f12c58cb5783c569e640d227`, and
+`SHA256SUMS` SHA-256 `f944d96d7eed1825f5a8e7c378d9fb4a4ca7067e982495b78924e1627e97f815`.
+The wheel installed in a disposable Python 3.14.6 environment; supported top-level and
+`check` help read back successfully. The first unsupported `--version` probe returned the
+CLI-required-command error and was not treated as a pass. This is local build/install evidence,
+not a published release or adoption claim.
+
 ## Fifteen-minute review
 
 1. Read the [architecture](AGENT-SYSTEMS-LAB-ARCHITECTURE.md) and
