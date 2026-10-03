@@ -18,6 +18,10 @@ The [Agent Systems Lab architecture](docs/AGENT-SYSTEMS-LAB-ARCHITECTURE.md) map
 optional connections between context admission, policy, bounded execution, proof, continuation,
 retrieval, and reviewable delivery. Each repository keeps ownership of its core behavior.
 
+For an outside engineer, the [cold-review checklist](docs/COLD-REVIEW-CHECKLIST.md) gives the
+shortest path from profile to fresh install, passing/blocked/tampered CLI flows, the fixed lab
+benchmark, the hosted 15-class refusal matrix, and the exact limits of each proof.
+
 ![Optional tool connections: recover context, bound decisions, prove outcomes](docs/toolkit-stack.svg)
 
 ## Choose your own 90-second proof
