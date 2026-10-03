@@ -7,7 +7,7 @@ profile or to infer adoption from activity.
 
 ## Review target
 
-The review snapshot was generated from profile base head `41f6c7bccc7dcc7c2e94a375227e31ebb23543c3` on
+The review snapshot was generated from profile base head `185ea91ebbaf34cff05ccca225121ae3ef9311c6` on
 2026-10-03. The owner heads below are source-identity observations from `refs/heads/main` made
 while preparing this packet; they are freshness anchors, not release claims:
 
@@ -159,6 +159,10 @@ sdist SHA-256 `3a646d4439cfbff202900eeca79811d842285c36080b472f9ec59b46f1e1f873`
 The wheel installed in a disposable Python 3.14.6 environment and reported `forgeyard 0.5.0`;
 supported CLI help also read back. This is current-head local build/install evidence, not a
 published release, outside-adoption, deployment, or production claim.
+The installed wheel also ran `forgeyard demo` successfully: it returned `reviewable=true`,
+`status=ready_for_review`, two passing evidence entries, and record SHA-256
+`ac5a2d8801ef4de9594a28345b089238e0783979e2dceae437de68e2785ca2e2`. This is a disposable
+consumer observation at the same local artifact boundary.
 
 ## Fifteen-minute review
 
