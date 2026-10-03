@@ -111,6 +111,16 @@ The wheel installed in a disposable Python 3.14.6 environment and reported
 `worktree-conservator 0.3.0`; supported CLI help also read back. This is local build/install
 evidence, not a published release or adoption claim.
 
+Agent Resume at `f9b7c936c807c3f090eb8d93b9c2d61bc86d525e` was built in the same isolated temporary
+environment. Its strict audit returned `artifact_audit=pass` for one wheel and one sdist with
+wheel SHA-256 `d68d266dd55f340677cd35185cf6b48edd8a2300b784b0358dc42ae1cb6e8654`,
+sdist SHA-256 `c443bffa194740ad4446b8e7888729b7ef99093db8ef25fa68727115e8746fe9`, and
+`SHA256SUMS` SHA-256 `f79bb4e3e466a5471a7adde8a8f6aa115ab47d8ca00459b1daac13909a472807`.
+The wheel installed in a disposable Python 3.14.6 environment; supported top-level and
+`validate --help` readbacks succeeded. The initial `--version` probe returned the required
+subcommand error and was not treated as a pass. This is local build/install evidence, not a
+published release or adoption claim.
+
 ## Fifteen-minute review
 
 1. Read the [architecture](AGENT-SYSTEMS-LAB-ARCHITECTURE.md) and
