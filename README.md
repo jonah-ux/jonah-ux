@@ -4,12 +4,12 @@
 
 I run a business on a fleet of AI coding agents: Claude and Codex sessions, cheap open models for grunt work, and orchestrators handing work between them, around the clock on seven machines.
 
-For months they lied to me. Workers reported fixes "shipped" when the PR held one JSON file. A verdict table that looked healthy turned out to be 87.5% heartbeat rows. Cleanup jobs deleted work mid-push. My own dashboards called outages that never happened.
+For months they told me work was done when it wasn't. Workers reported fixes "shipped" when the PR held one JSON file. A verdict table that looked healthy turned out to be 87.5% heartbeat rows. Cleanup jobs deleted work mid-push. My own dashboards called outages that never happened.
 
 These repos are what I built so that stopped. Each one is small, standalone, MIT-licensed, and has a demo you can run in about a minute.
 
 <!-- WRITING: uncomment once published
-**Read the story:** [My AI agents lied to me for six months](LINK) · [the position paper behind it](LINK)
+**Read the story:** [My AI agents kept telling me the work was done](LINK) · [the position paper behind it](LINK)
 -->
 
 [Build notes on X](https://x.com/jonahhelland)
