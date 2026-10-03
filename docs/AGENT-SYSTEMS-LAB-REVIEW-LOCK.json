@@ -148,8 +148,11 @@
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
-        "state": "unavailable"
+        "artifact_sha256": "d8b17994cae2ca828e9c4a4a93ee560fe607edd4de0113c88a9ee80c377610ff",
+        "checksum_manifest_sha256": "ab2130ffa8cf22c8038284a116b56c935c012918e43e6b95353163ce9df8596f",
+        "local_packed_audit": "pass",
+        "release": "v0.2.0",
+        "state": "verified"
       },
       "audit_schema": "slipstream-public-audit/v1",
       "audit_state": "verified-at-head",
@@ -159,9 +162,9 @@
     }
   ],
   "profile": {
-    "lock_published_head": "8661b3507527a4725e3b543b93151a7e635a66f4",
+    "lock_published_head": "e52d083fca354c300cd4876f0892cce2f13ae9c1",
     "repository": "jonah-ux/jonah-ux",
-    "snapshot_base_head": "8661b3507527a4725e3b543b93151a7e635a66f4"
+    "snapshot_base_head": "e52d083fca354c300cd4876f0892cce2f13ae9c1"
   },
   "purpose": "Freeze a clean-machine review snapshot from a known profile source baseline; the containing profile commit is recorded separately.",
   "review_route": {
