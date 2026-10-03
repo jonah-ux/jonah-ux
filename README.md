@@ -96,3 +96,15 @@ Review the system like an outsider with the [threat model](docs/AGENT-SYSTEMS-LA
 [audit matrix](docs/AGENT-SYSTEMS-LAB-AUDIT-MATRIX.md), [maintenance route](docs/AGENT-SYSTEMS-LAB-MAINTENANCE.md),
 and [external review request draft](docs/EXTERNAL-REVIEW-REQUEST.md) link the public contracts,
 exact source heads, reproducible commands, and known evidence limits.
+
+Validate the lock and packet from a clean checkout with the dependency-free reviewer command:
+
+```console
+python3 scripts/validate_review_packet.py --json
+# When updating the lock itself, also bind its published-head field to the containing parent:
+python3 scripts/validate_review_packet.py --published-head <containing-profile-parent> --json
+```
+
+The validator checks the 13-owner count, unique source heads, packet/source-head matches, verified
+artifact states, profile snapshot semantics, and the explicit outside-review/adoption limitations.
+It does not fetch owner repositories or claim deployment, adoption, or production outcomes.
