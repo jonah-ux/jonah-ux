@@ -7,13 +7,13 @@ profile or to infer adoption from activity.
 
 ## Review target
 
-The review snapshot was generated from profile base head `584d845536e54243d9ad34b0244b2472f54560e9` on
+The review snapshot was generated from profile base head `8661b3507527a4725e3b543b93151a7e635a66f4` on
 2026-10-03. The owner heads below are source-identity observations from `refs/heads/main` made
 while preparing this packet; they are freshness anchors, not release claims:
 
 | Owner | Main head | Native responsibility |
 | --- | --- | --- |
-| [Forgeyard](https://github.com/jonah-ux/forgeyard) | `883c290239b1ee2650b19109a3ff0d2a2c913168` | review composition, packets, evaluation, public audit |
+| [Forgeyard](https://github.com/jonah-ux/forgeyard) | `90bbc9685f320d4d1c8272f36483b91bdf8707ed` | review composition, packets, evaluation, public audit |
 | [Agent Proof](https://github.com/jonah-ux/agent-proof) | `c0b75d77b53af8593ca73bdc23a59ee31b0962dd` | tamper-evident ledger, graph, interop, public audit |
 | [ChatLens](https://github.com/jonah-ux/chatlens) | `d335e4209bfff81592e46163062f7074a2b3cb10` | local trace discovery and redacted handoff |
 | [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) | `e3b19d7857273b4b549325d2f807bc2e47ded92d` | durable lifecycle and approval state |
@@ -27,14 +27,14 @@ while preparing this packet; they are freshness anchors, not release claims:
 | [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | `278e27fd335142d08288e5499e80ab01f140a455` | preservation and recovery planning |
 | [Slipstream](https://github.com/jonah-ux/slipstream) | `27bb2f6d51909e9752c087792a8e02af0e2c2998` | local retrieval indexes |
 
-The current clean-machine Forgeyard route was rerun at `883c290239b1ee2650b19109a3ff0d2a2c913168`:
+The current clean-machine Forgeyard route was rerun at `90bbc9685f320d4d1c8272f36483b91bdf8707ed`:
 `passing` reached `reviewable`, `blocked` preserved `reviewable=false`, `tampered` refused with exit 2,
 the public audit returned `pass`, and the evaluation receipt returned `pass`; artifact state remained
 `unavailable` without a supplied distribution directory.
 
 The heads above are source-identity observations only; they do not assert deployment, adoption, or
 that every owner has published a downloadable artifact. The Forgeyard installed reference-flow
-observation below was run at the same `883c290239b1ee2650b19109a3ff0d2a2c913168`
+observation below was run at the same `90bbc9685f320d4d1c8272f36483b91bdf8707ed`
 boundary as the current matrix audit and evaluation. The [owner-native audit matrix](AGENT-SYSTEMS-LAB-AUDIT-MATRIX.md) records
 which repositories expose `*-public-audit/v1`, which checks are rerunnable, and where artifact state
 remains `unavailable` without an explicit distribution directory.
