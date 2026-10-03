@@ -37,7 +37,11 @@ that every owner has published a downloadable artifact. The Forgeyard installed 
 observation below was run at the same `90bbc9685f320d4d1c8272f36483b91bdf8707ed`
 boundary as the current matrix audit and evaluation. The [owner-native audit matrix](AGENT-SYSTEMS-LAB-AUDIT-MATRIX.md) records
 which repositories expose `*-public-audit/v1`, which checks are rerunnable, and where artifact state
-remains `unavailable` without an explicit distribution directory.
+remains `unavailable` without an explicit distribution directory. A same-head local pack of Slipstream `v0.2.0` at `27bb2f6d51909e9752c087792a8e02af0e2c2998`
+returned `artifact_audit=pass` for `slipstream-local-index-0.2.0.tgz` with artifact SHA-256
+`d8b17994cae2ca828e9c4a4a93ee560fe607edd4de0113c88a9ee80c377610ff` and `SHA256SUMS`
+SHA-256 `ab2130ffa8cf22c8038284a116b56c935c012918e43e6b95353163ce9df8596f`. This is a
+local packed-artifact observation; it does not prove a published release or consumer install.
 
 ## Fifteen-minute review
 
