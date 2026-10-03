@@ -148,8 +148,26 @@
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
-        "state": "unavailable"
+        "artifacts": [
+          {
+            "name": "agent_sandbox_run-0.2.0-py3-none-any.whl",
+            "sha256": "89f080e326226268a285e667b2343797af13663d4ced083abfbd82d7a600ddcd"
+          },
+          {
+            "name": "agent_sandbox_run-0.2.0.tar.gz",
+            "sha256": "f72ed47afabb9c65bff98e91ee50e64c2d045c22c379d35e2b0a055426cde80a"
+          }
+        ],
+        "checksum_manifest_sha256": "833c891db29ecbcc3d14b37510c4aeba323b25d211fc06f78dc82ac42fc06f8e",
+        "consumer_backend": "fallback",
+        "consumer_enforced": false,
+        "consumer_exit_code": 0,
+        "consumer_install": "pass",
+        "consumer_python": "3.14.6",
+        "local_build": "pass",
+        "local_packed_audit": "pass",
+        "package_version": "0.2.0",
+        "state": "verified"
       },
       "audit_schema": "agent-sandbox-public-audit/v1",
       "audit_state": "verified-at-head",
@@ -231,9 +249,9 @@
     }
   ],
   "profile": {
-    "lock_published_head": "cc1ab16bd7625f150da904d9bcb3606a77e8d1d7",
+    "lock_published_head": "3f7589b7cdaf12193c11af605775f629399caef4",
     "repository": "jonah-ux/jonah-ux",
-    "snapshot_base_head": "cc1ab16bd7625f150da904d9bcb3606a77e8d1d7"
+    "snapshot_base_head": "3f7589b7cdaf12193c11af605775f629399caef4"
   },
   "purpose": "Freeze a clean-machine review snapshot from a known profile source baseline; the containing profile commit is recorded separately.",
   "review_route": {
