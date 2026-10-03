@@ -42,6 +42,10 @@ returned `artifact_audit=pass` for `slipstream-local-index-0.2.0.tgz` with artif
 `d8b17994cae2ca828e9c4a4a93ee560fe607edd4de0113c88a9ee80c377610ff` and `SHA256SUMS`
 SHA-256 `ab2130ffa8cf22c8038284a116b56c935c012918e43e6b95353163ce9df8596f`. This is a
 local packed-artifact observation; it does not prove a published release or consumer install.
+A bounded Python wheel probe for Agent Proof at its locked head `c0b75d77b53af8593ca73bdc23a59ee31b0962dd`
+was retried with the clean helper capacity and failed at PEP 517 because the runtime could not import
+`setuptools.build_meta`; hosted CI published no downloadable artifact. The Python artifact state therefore
+remains `unavailable` rather than being inferred from a green test run.
 
 ## Fifteen-minute review
 
