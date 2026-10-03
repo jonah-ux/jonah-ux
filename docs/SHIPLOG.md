@@ -29,6 +29,14 @@ the benchmark receipt, the hosted adversarial matrix, owner boundaries, and the
 limits of each proof. It does not claim third-party adoption, production
 deployment, model quality, or provider performance.
 
+The maintenance pass also exercised the published [Worktree Conservator v0.2.0
+wheel](https://github.com/jonah-ux/worktree-conservator/releases/tag/v0.2.0) in a
+fresh Python 3.14 environment. The release checksum matched, the installed CLI
+reported `worktree-conservator 0.2.0`, and `demo --json` returned
+`worktree-conservator.result/v1` with `ok=true`. This is artifact usability
+and a disposable self-demo, not evidence of outside adoption or production
+cleanup.
+
 ## 2026-10-02 — independent visual field guides
 
 The authored public tools each have an independent first-run route and visual guide.
