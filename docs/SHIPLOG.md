@@ -37,6 +37,14 @@ reported `worktree-conservator 0.2.0`, and `demo --json` returned
 and a disposable self-demo, not evidence of outside adoption or production
 cleanup.
 
+The same maintenance pass exercised the published [Agent Proof v0.3.1
+prerelease](https://github.com/jonah-ux/agent-proof/releases/tag/v0.3.1) from a
+fresh Python 3.14 wheel consumer. The wheel checksum matched and the demo
+returned `agent-proof/demo/v2` with `ok=true`, `verified=true`,
+`bundle_verified=true`, `graph_verified=true`, `interop_verified=true`,
+`tamper_refused=true`, and `graph_tamper_refused=true`. This is release
+artifact and self-demo evidence; external adoption remains unknown.
+
 ## 2026-10-02 — independent visual field guides
 
 The authored public tools each have an independent first-run route and visual guide.
