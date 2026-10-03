@@ -166,30 +166,46 @@ The installed wheel also ran `forgeyard demo` successfully: it returned `reviewa
 `ac5a2d8801ef4de9594a28345b089238e0783979e2dceae437de68e2785ca2e2`. This is a disposable
 consumer observation at the same local artifact boundary.
 
-## Fifteen-minute review
+## Fifteen-minute first run
 
 1. Read the [architecture](AGENT-SYSTEMS-LAB-ARCHITECTURE.md) and
    [threat model](AGENT-SYSTEMS-LAB-THREAT-MODEL.md). Confirm that native ownership is explicit.
 2. Clone [Forgeyard](https://github.com/jonah-ux/forgeyard), install its local package, and run
    `forgeyard demo`.
-3. Run its checked-in `scripts/run_reference_flow.py` for `passing`, `blocked`, and `tampered`.
-4. Run `scripts/evaluate_lab.py --iterations 2 --warmup 0 --json` and inspect dataset hashes,
+3. Run `python3 scripts/run_reference_flow.py --scenario passing`, then repeat with
+   `--scenario blocked` and `--scenario tampered`.
+4. Run `python3 scripts/evaluate_lab.py --iterations 2 --warmup 0 --json` and inspect dataset hashes,
    refusal states, machine-local timings, and `unavailable` artifact/install fields.
-5. Clone [Agent Proof](https://github.com/jonah-ux/agent-proof) and run
+5. From a clone of this profile, run `python3 scripts/validate_review_packet.py --json`. Confirm
+   the source identity, owner table, recorded artifact metadata, and explicit evidence limits.
+6. Follow the compatibility, graph, and release-lock links in the evidence ledger below. The
+   [cold-review checklist](COLD-REVIEW-CHECKLIST.md) contains the install and fixture commands.
+
+The first run is a standalone Forgeyard exercise with synthetic fixtures. The installed four-owner
+handoff and full owner matrix are separate deeper reviews; each package keeps its native install
+and receipt boundary.
+
+## Extended owner review
+
+1. Clone [Agent Proof](https://github.com/jonah-ux/agent-proof) and run
    `python3 scripts/audit_public_surface.py --json` plus
    `PYTHONPATH=src python3 -m unittest discover -s tests -v`.
-6. Clone [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) and run
-   `python3 scripts/audit_public_surface.py --json` plus `python3 -m atlas.cli --version`.
-7. Clone [ChatLens](https://github.com/jonah-ux/chatlens) and run
+2. Clone [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) and run
    `python3 scripts/audit_public_surface.py --json` plus
-   `python3 -m unittest discover -s tests -v`.
-8. Clone [Agent Policy](https://github.com/jonah-ux/agent-policy) and run
-   `python3 scripts/audit_public_surface.py --json` plus `python3 -m agent_policy.cli --help`.
-9. Run the owner-native audit matrix for Agent Policy, Agent Sandbox Run, Sourcemark, Agent Resume,
-   Agent Trace Lite, MCP Doctor, Worktree Conservator, and Context Integrity Lab. Keep each JSON receipt
+   `PYTHONPATH=src python3 -m atlas.cli --version`.
+3. Clone [ChatLens](https://github.com/jonah-ux/chatlens) and run
+   `python3 scripts/audit_public_surface.py --json` plus
+   `PYTHONPATH=src python3 -m unittest discover -s tests -v`.
+4. Clone [Agent Policy](https://github.com/jonah-ux/agent-policy) and run
+   `python3 scripts/audit_public_surface.py --json` plus
+   `PYTHONPATH=src python3 -m agent_policy.cli --help`.
+5. Run the owner-native audit matrix for Agent Sandbox Run, Sourcemark, Agent Resume,
+   Agent Trace Lite, MCP Doctor, Worktree Conservator, Context Integrity Lab, and Slipstream.
+   Slipstream uses `node scripts/audit_public_surface.js --json`; the other listed owners use
+   `python3 scripts/audit_public_surface.py --json`. Keep each JSON receipt
    with the corresponding source head; `artifact_audit=unavailable` is expected when no `dist/` was
    supplied.
-10. Change one graph edge or source byte, keep the old digest, and confirm the relevant verifier
+6. Change one graph edge or source byte, keep the old digest, and confirm the relevant verifier
    refuses the mutation.
 
 The [cold-review checklist](COLD-REVIEW-CHECKLIST.md) contains the full commands and expected

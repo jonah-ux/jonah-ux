@@ -18,12 +18,16 @@ outcomes.
 Forgeyard is the shortest entry point because it has both a local CLI and a hosted
 Workbench:
 
+Use Python 3.11 or later. Keep `git rev-parse HEAD` with the command output and compare it with
+the [review lock](AGENT-SYSTEMS-LAB-REVIEW-LOCK.json) before attributing a current-main run to the
+frozen snapshot.
+
 ```bash
 git clone https://github.com/jonah-ux/forgeyard.git
 cd forgeyard
 python3 -m venv .venv
 . .venv/bin/activate
-python -m pip install -e .
+python3 -m pip install -e .
 forgeyard demo
 ```
 
@@ -37,9 +41,9 @@ The reference harness uses only checked-in synthetic reports and calls the publi
 Forgeyard CLI:
 
 ```bash
-python scripts/run_reference_flow.py --scenario passing
-python scripts/run_reference_flow.py --scenario blocked
-python scripts/run_reference_flow.py --scenario tampered
+python3 scripts/run_reference_flow.py --scenario passing
+python3 scripts/run_reference_flow.py --scenario blocked
+python3 scripts/run_reference_flow.py --scenario tampered
 ```
 
 Expected outcomes are `reviewable`, `blocked`, and `refused`, respectively. The
@@ -49,7 +53,7 @@ the nested compose/verification exits must be read together.
 Then run the fixed-dataset lab benchmark:
 
 ```bash
-python scripts/benchmark_lab.py --iterations 20 --warmup 3 --json
+python3 scripts/benchmark_lab.py --iterations 20 --warmup 3 --json
 ```
 
 Check for `forgeyard-lab-benchmark/v1`, nine reports, six operation names
@@ -110,9 +114,19 @@ repository release page, then verify the downloaded files before installation:
 
 ```bash
 gh release view TAG --repo OWNER/REPO --json tagName,targetCommitish,assets
-sha256sum PACKAGE.whl PACKAGE.tar.gz
-python -m pip install --no-index --no-deps PACKAGE.whl
-python -m pip check
+```
+
+Before installation, verify the downloaded bytes against the release's `SHA256SUMS` using the
+owner-native audit with `--dist-dir` and `--require-dist`, as described in the
+[audit matrix](AGENT-SYSTEMS-LAB-AUDIT-MATRIX.md). Keep the wheel, sdist, and checksum manifest
+together in that directory. An omitted or incomplete directory must not be treated as release
+evidence.
+
+After the artifact audit passes, install into the disposable environment:
+
+```bash
+python3 -m pip install --no-index --no-deps PACKAGE.whl
+python3 -m pip check
 ```
 
 Record the package version, tag, target commit, asset names, and checksum as one observation. A
@@ -124,7 +138,7 @@ Check the source boundary directly:
 ```bash
 test -f LICENSE
 test -f SECURITY.md
-python - <<'PY'
+python3 - <<'PY'
 import pathlib, tomllib
 data = tomllib.loads(pathlib.Path("pyproject.toml").read_text())
 print(data.get("project", {}).get("dependencies", []))
@@ -139,12 +153,18 @@ Every current flagship owner exposes a bounded, owner-native public audit. Run i
 checkout and keep the receipt with the source head:
 
 ```bash
-python scripts/audit_public_surface.py --json
+python3 scripts/audit_public_surface.py --json
 ```
 
 Use this command in Forgeyard, Agent Proof, Atlas Agent Runtime, ChatLens, Agent Policy, Agent Sandbox Run,
-Sourcemark, Slipstream, Worktree Conservator, Agent Resume, Agent Trace Lite, MCP Doctor, and Context
-Integrity Lab. A static `pass`
+Sourcemark, Worktree Conservator, Agent Resume, Agent Trace Lite, MCP Doctor, and Context
+Integrity Lab. Slipstream owns a Node command instead; run it from its checkout:
+
+```bash
+node scripts/audit_public_surface.js --json
+```
+
+A static `pass`
 means the named dependency, license, release-marker, and high-signal privacy checks passed. An
 artifact result of `unavailable` is expected when no `--dist-dir` was supplied. The audits do not
 claim complete DLP, security certification, reproducible builds across machines, deployment,
@@ -160,9 +180,13 @@ conservative; a fixture that contains a documented synthetic marker must be clas
 silently ignored:
 
 ```bash
-rg -n --hidden --glob '!.git/**' \
+rg -n --hidden --glob '!.git/**' --glob '!.venv/**' -e \
   '-----BEGIN (RSA|OPENSSH|EC|PGP) PRIVATE KEY-----|sk-[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{20,}|/Users/|/home/|jonahsnorthstar|customer|EIN|api[_-]?key' .
 ```
+
+Ripgrep returns exit `0` for matches, `1` for no matches, and `2` for a command error. An error is
+an incomplete scan and must be repaired before interpreting the output. The `-e` keeps the leading
+hyphens in the private-key pattern from being parsed as command options.
 
 The expected outcome for a public fixture tree is zero unclassified hits. A clean search is not a
 secret-scanning service and does not prove that a provider-side history is clean. Keep transcript

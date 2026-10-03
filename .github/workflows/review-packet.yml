@@ -3,6 +3,9 @@ name: review packet consistency
 on:
   pull_request:
     paths:
+      - "README.md"
+      - "docs/COLD-REVIEW-CHECKLIST.md"
+      - "docs/AGENT-SYSTEMS-LAB-MAINTENANCE.md"
       - "docs/AGENT-SYSTEMS-LAB-REVIEW-LOCK.json"
       - "docs/EXTERNAL-REVIEW-PACKET.md"
       - "scripts/validate_review_packet.py"
@@ -11,6 +14,9 @@ on:
   push:
     branches: [main]
     paths:
+      - "README.md"
+      - "docs/COLD-REVIEW-CHECKLIST.md"
+      - "docs/AGENT-SYSTEMS-LAB-MAINTENANCE.md"
       - "docs/AGENT-SYSTEMS-LAB-REVIEW-LOCK.json"
       - "docs/EXTERNAL-REVIEW-PACKET.md"
       - "scripts/validate_review_packet.py"
