@@ -2,90 +2,43 @@
 
 # Jonah Helland
 
-I build **inspectable, recoverable tools for AI-assisted software engineering**.
+I run a business on a fleet of AI coding agents: Claude and Codex sessions, cheap open models for grunt work, and orchestrators handing work between them, around the clock on seven machines.
 
-Most of my work starts with a messy workflow and ends with a small system that makes the important parts easier to see: APIs, automation, local-first tools, and AI-agent infrastructure with clear failure modes and a way back. I use coding agents heavily, but the result still needs to be understandable, bounded, testable, and recoverable by a human.
+For months they lied to me. Workers reported fixes "shipped" when the PR held one JSON file. A verdict table that looked healthy turned out to be 87.5% heartbeat rows. Cleanup jobs deleted work mid-push. My own dashboards called outages that never happened.
 
-[Build notes on X](https://x.com/jonahhelland) · [Source](https://github.com/jonah-ux) · [Deeper evidence and roadmap](docs/ENGINEERING-EVIDENCE.md)
+These repos are what I built so that stopped. Each one is small, standalone, MIT-licensed, and has a demo you can run in about a minute.
 
-## Independent tools, optional connections
+<!-- WRITING: uncomment once published
+**Read the story:** [My AI agents lied to me for six months](LINK) · [the position paper behind it](LINK)
+-->
 
-Every product has its own install, demo, and useful core workflow. Pick the tool that solves your problem; connecting it to another project is an optional next step.
+[Build notes on X](https://x.com/jonahhelland)
 
-One optional integration follows a three-tool evidence lifecycle: [ChatLens v0.4.0](https://github.com/jonah-ux/chatlens/releases/tag/v0.4.0) exports a redacted local trace, [Atlas v0.2.0](https://github.com/jonah-ux/atlas-agent-runtime/releases/tag/v0.2.0) records a durable approval-gated task, and [Forgeyard v0.5.0](https://github.com/jonah-ux/forgeyard/releases/tag/v0.5.0) composes both into a reviewable record through `ai-work-evidence/v1`. [Read the reviewer map](docs/PORTFOLIO-SUITE-V2.md).
+## The tools
 
-Forgeyard also exposes an opt-in [installed reference flow](https://github.com/jonah-ux/forgeyard/blob/main/docs/contracts/forgeyard-reference-flow-v1.md): it invokes the installed ChatLens, Atlas, Agent Proof, and Forgeyard CLIs against owner-produced artifacts, source-verifies the handoff, and returns reviewable, blocked, tampered, or unavailable outcomes. A fresh local consumer observation used ChatLens 0.4.0, Atlas 0.2.0, Agent Proof 0.4.1, and Forgeyard 0.5.0; it is a reproducible handoff observation, not a deployment or adoption claim.
+| If your agents… | Use | Try it |
+| --- | --- | --- |
+| lose sessions and context | [**Chatlens**](https://github.com/jonah-ux/chatlens): search Codex, Claude Code, and Hermes sessions offline | [guide](https://jonah-ux.github.io/chatlens/walkthrough.html) |
+| cite things they never read | [**Sourcemark**](https://github.com/jonah-ux/sourcemark): citations that survive edits, checked against what the agent actually read | [guide](https://jonah-ux.github.io/sourcemark/walkthrough.html) |
+| claim work they didn't do | [**Agent Proof**](https://github.com/jonah-ux/agent-proof): proof bundles that refuse tampering | [guide](https://jonah-ux.github.io/agent-proof/walkthrough/) |
+| leave no reviewable record | [**Forgeyard**](https://github.com/jonah-ux/forgeyard): sealed review records for agent work | [workbench](https://jonah-ux.github.io/forgeyard/) |
+| trust stale or out-of-scope context | [**Context Integrity Lab**](https://github.com/jonah-ux/context-integrity-lab): admission gates for context | [explorer](https://jonah-ux.github.io/context-integrity-lab/admission-explorer.html) |
+| destroy work during cleanup | [**Worktree Conservator**](https://github.com/jonah-ux/worktree-conservator): reclaims a worktree only after the remote proves it's safe | [desk](https://jonah-ux.github.io/worktree-conservator/plan-explorer.html) |
+| need approval before acting | [**Atlas**](https://github.com/jonah-ux/atlas-agent-runtime): a durable, approval-gated task runtime | [flight deck](https://jonah-ux.github.io/atlas-agent-runtime/flight-deck.html) |
+| keep permissions in the prompt | [**Agent Policy**](https://github.com/jonah-ux/agent-policy) · [**Agent Sandbox Run**](https://github.com/jonah-ux/agent-sandbox-run) | [policy](https://jonah-ux.github.io/agent-policy/walkthrough.html) · [sandbox](https://jonah-ux.github.io/agent-sandbox-run/walkthrough.html) |
+| get graded on vibes | [**Agent Eval Kit**](https://github.com/jonah-ux/agent-eval-kit): repeated trials, bounded comparisons | [scorecard](https://jonah-ux.github.io/agent-eval-kit/walkthrough.html) |
+| drop the handoff between sessions | [**Agent Resume**](https://github.com/jonah-ux/agent-resume) · [**Context Pack**](https://github.com/jonah-ux/context-pack) | [resume](https://jonah-ux.github.io/agent-resume/walkthrough.html) · [pack](https://jonah-ux.github.io/context-pack/walkthrough.html) |
+| ship sloppy MCP tools | [**MCP Doctor**](https://github.com/jonah-ux/mcp-doctor): an MCP manifest contract linter | [guide](https://jonah-ux.github.io/mcp-doctor/walkthrough.html) |
+| produce unreadable traces | [**Agent Trace Lite**](https://github.com/jonah-ux/agent-trace-lite): offline, redacted trace viewer | [guide](https://jonah-ux.github.io/agent-trace-lite/walkthrough.html) |
+| need fast local retrieval | [**Slipstream**](https://github.com/jonah-ux/slipstream): SQLite + sqlite-vec, inspectable | [inspector](https://jonah-ux.github.io/slipstream/inspector.html) |
 
-The [Agent Systems Lab architecture](docs/AGENT-SYSTEMS-LAB-ARCHITECTURE.md) maps additional
-optional connections between context admission, policy, bounded execution, proof, continuation,
-retrieval, and reviewable delivery. Each repository keeps ownership of its core behavior.
+None of them depends on another. If you want to wire them together, the [suite map](docs/PORTFOLIO-SUITE-V2.md) and [cold-review checklist](docs/COLD-REVIEW-CHECKLIST.md) show how.
 
-For an outside engineer, the [cold-review checklist](docs/COLD-REVIEW-CHECKLIST.md) gives the
-shortest path from profile to fresh install, passing/blocked/tampered CLI flows, the fixed lab
-benchmark, the hosted 15-class refusal matrix, and the exact limits of each proof.
+## What I believe
 
-The [conformance matrix](docs/AGENT-SYSTEMS-LAB-CONFORMANCE.md) lists every current owner,
-native schema, public manifest, and refusal/readback boundary in one place.
+- **A report is a claim, not a fact.** A confident status message isn't the state of the world, whether it comes from an agent, a cron, or a dashboard.
+- **Permissions live outside the model.** No agent gets access because it asked convincingly.
+- **Tests should mostly be refusals.** The tools I trust prove what they won't do.
+- **Delegate coordination, keep control.** People set the purpose and the risk; software enforces the boundaries; evidence decides what can be claimed.
 
-![Optional tool connections: recover context, bound decisions, prove outcomes](docs/toolkit-stack.svg)
-
-## Choose your own 90-second proof
-
-Every project below is a standalone product. Install one, run its own disposable demo, inspect its
-machine-readable result, and decide whether it is useful before you ever look at another repository.
-The broader suite is an optional map for people who want to connect the outputs later.
-
-Open a visual guide to see the shape of the tool. Its synthetic browser state is clearly labeled;
-run the repo’s own CLI demo when you want actual local evidence. Every guide is hosted from its
-own repository and remains a self-contained local HTML file.
-
-![Standalone proof grid: install, demo, inspect](docs/standalone-proof-grid.svg)
-
-| Project | Open the visual guide | Run it locally | The moment to watch |
-| --- | --- | --- | --- |
-| [Forgeyard](https://github.com/jonah-ux/forgeyard) | [Workbench](https://jonah-ux.github.io/forgeyard/) | [one-minute quickstart](https://github.com/jonah-ux/forgeyard/blob/main/docs/quickstart.md) | A review record seals, then refuses a tampered byte boundary. |
-| [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) | [flight deck](https://jonah-ux.github.io/atlas-agent-runtime/flight-deck.html) | [standalone lifecycle](https://github.com/jonah-ux/atlas-agent-runtime/blob/main/docs/quickstart.md) | A task pauses for approval, recovers from its event log, and emits a receipt. |
-| [Chatlens](https://github.com/jonah-ux/chatlens) | [session guide](https://jonah-ux.github.io/chatlens/walkthrough.html) | [quick start](https://github.com/jonah-ux/chatlens#quick-start) | A lost session becomes a searchable work card without a hosted service. |
-| [Agent Proof](https://github.com/jonah-ux/agent-proof) | [proof chain](https://jonah-ux.github.io/agent-proof/walkthrough/) | [synthetic demo](https://github.com/jonah-ux/agent-proof#try-the-complete-workflow) | A proof bundle binds artifacts, graph edges, and tamper refusal together. |
-| [Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) | [admission explorer](https://jonah-ux.github.io/context-integrity-lab/admission-explorer.html) | [reviewer walkthrough](https://github.com/jonah-ux/context-integrity-lab/blob/main/DEMO.md) | Supported, stale, and out-of-scope context split into visible admission states. |
-| [Sourcemark](https://github.com/jonah-ux/sourcemark) | [citation survival](https://jonah-ux.github.io/sourcemark/walkthrough.html) | [30-second demo](https://github.com/jonah-ux/sourcemark#install) | A citation keeps its anchor or gets called out when its source moves. |
-| [Slipstream](https://github.com/jonah-ux/slipstream) | [vector inspector](https://jonah-ux.github.io/slipstream/inspector.html) | [local vector demo](https://github.com/jonah-ux/slipstream#install-and-run) | A nearest-neighbor query runs locally and leaves a manifest you can verify. |
-| [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | [preservation desk](https://jonah-ux.github.io/worktree-conservator/plan-explorer.html) | [preservation demo](https://github.com/jonah-ux/worktree-conservator#quick-start) | A cleanup plan can be refused, archived, verified, and restored without guessing. |
-| [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit) | [trial scorecard](https://jonah-ux.github.io/agent-eval-kit/walkthrough.html) | [scorecard demo](https://github.com/jonah-ux/agent-eval-kit#try-it-in-30-seconds) | Repeated trials become a bounded comparison instead of a vibes-based ranking. |
-| [Context Pack](https://github.com/jonah-ux/context-pack) | [budget inspector](https://jonah-ux.github.io/context-pack/walkthrough.html) | [deterministic pack demo](https://github.com/jonah-ux/context-pack#try-it-in-30-seconds) | A byte budget and digest make the exact context set inspectable. |
-| [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) | [redaction guide](https://jonah-ux.github.io/agent-trace-lite/walkthrough.html) | [redacted trace demo](https://github.com/jonah-ux/agent-trace-lite#try-it-in-30-seconds) | A trace becomes a readable artifact while sensitive fields stay redacted. |
-| [Agent Policy](https://github.com/jonah-ux/agent-policy) | [policy explanations](https://jonah-ux.github.io/agent-policy/walkthrough.html) | [policy quickstart](https://github.com/jonah-ux/agent-policy#quick-start) | A decision explains which rule matched and why the default is deny. |
-| [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | [capability matrix](https://jonah-ux.github.io/agent-sandbox-run/walkthrough.html) | [capability demo](https://github.com/jonah-ux/agent-sandbox-run#try-it-in-30-seconds) | The receipt says exactly what was enforced and what remained a fallback. |
-| [Agent Resume](https://github.com/jonah-ux/agent-resume) | [handoff explorer](https://jonah-ux.github.io/agent-resume/walkthrough.html) | [continuation demo](https://github.com/jonah-ux/agent-resume#try-it-in-30-seconds) | A broken handoff turns into a validated next step with an explicit diff. |
-| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | [manifest doctor](https://jonah-ux.github.io/mcp-doctor/walkthrough.html) | [contract check](https://github.com/jonah-ux/mcp-doctor#try-it-in-30-seconds) | A missing description or timeout fails closed with a stable diagnostic code. |
-
-For the optional multi-repo story, see the [portfolio suite map](docs/PORTFOLIO-SUITE-V2.md). It
-connects outputs after each repository already works on its own; it is never an installation
-prerequisite.
-
-For a terminal-level integration proof, run Forgeyard's
-[reference-flow contract](https://github.com/jonah-ux/forgeyard/blob/main/docs/contracts/forgeyard-reference-flow-v1.md):
-one local command exercises context admission, policy, bounded sandboxing, Atlas lifecycle, proof,
-resume, and digest verification across passing, unknown-status, and tampered scenarios. The hosted
-[Forgeyard Workbench](https://jonah-ux.github.io/forgeyard/) also exposes a 15-class adversarial
-matrix covering stale, denied, unenforced, partial, malformed, traversal, leakage, drift, duplicate,
-unbounded, false-completion, and tampered signals.
-
-## The engineering loop
-
-These tools explore one practical question: **can agent work be understood, bounded, proved, and continued?**
-
-- **Recover context:** Chatlens turns local session stores into searchable, bounded work cards.
-- **Check the interface:** MCP Doctor catches ambiguous tool contracts before an agent sees them.
-- **Bound and run:** Context Pack, Agent Policy, and Agent Sandbox Run make inputs, permissions, and execution limits explicit.
-- **Record and continue:** Agent Proof, Agent Trace Lite, and Agent Resume preserve evidence and continuation state.
-
-Each repository contains its own install path, tests, demos, release notes, and security boundary. Start with the disposable demo before connecting a tool to a real workflow. The repositories describe what a check proves and what it cannot prove; a valid digest is not a claim of deployment, adoption, or a user-visible result.
-
-For a runnable cross-project example, see the [public integration walkthrough](docs/INTEGRATION-WALKTHROUGH.md): Context Integrity Lab admits scoped, fresh context, Agent Proof normalizes and source-binds the result, and Forgeyard records the bounded review decision. The same walkthrough covers MCP Doctor contract checks, sandbox receipt scoring, loss-aware evidence envelopes, and Chatlens-to-Agent-Trace export while keeping source, release, and outcome claims separate.
-
-## Public provenance
-
-I publish the source, runnable fixtures, release information, and engineering notes so you can inspect the work. The ship log tracks source and release milestones. Small tools, big paper trails: I want the first run to be easy and the failure modes to be obvious.
-
-[Engineering evidence](docs/ENGINEERING-EVIDENCE.md) · [Work samples](docs/WORK-SAMPLES.md) · [Ship log](docs/SHIPLOG.md)
+[Engineering evidence](docs/ENGINEERING-EVIDENCE.md) · [Ship log](docs/SHIPLOG.md) · [Roadmap](docs/ROADMAP.md)
