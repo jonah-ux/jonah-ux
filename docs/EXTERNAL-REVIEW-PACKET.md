@@ -83,6 +83,16 @@ The wheel installed in a disposable Python 3.14.6 environment; supported top-lev
 CLI-required-command error and was not treated as a pass. This is local build/install evidence,
 not a published release or adoption claim.
 
+Agent Sandbox Run at `77d25690f76bbed9093fe9dca09cde7cd76d2b49` was built in the same isolated
+temporary environment. Its strict audit returned `artifact_audit=pass` for one wheel and one
+sdist with wheel SHA-256 `89f080e326226268a285e667b2343797af13663d4ced083abfbd82d7a600ddcd`,
+sdist SHA-256 `f72ed47afabb9c65bff98e91ee50e64c2d045c22c379d35e2b0a055426cde80a`, and
+`SHA256SUMS` SHA-256 `833c891db29ecbcc3d14b37510c4aeba323b25d211fc06f78dc82ac42fc06f8e`.
+The wheel installed in a disposable Python 3.14.6 environment and emitted an `agent-sandbox/v2`
+receipt for `/bin/echo hello` with `ok=true`, `exit_code=0`, `backend=fallback`, and
+`enforced=false`. This proves the packaged fallback path and its receipt boundary; it does not
+prove bubblewrap isolation, a published release, or adoption.
+
 ## Fifteen-minute review
 
 1. Read the [architecture](AGENT-SYSTEMS-LAB-ARCHITECTURE.md) and
