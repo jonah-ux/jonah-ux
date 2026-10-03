@@ -7,7 +7,7 @@ profile or to infer adoption from activity.
 
 ## Review target
 
-The review snapshot was generated from profile base head `8661b3507527a4725e3b543b93151a7e635a66f4` on
+The review snapshot was generated from profile base head `41f6c7bccc7dcc7c2e94a375227e31ebb23543c3` on
 2026-10-03. The owner heads below are source-identity observations from `refs/heads/main` made
 while preparing this packet; they are freshness anchors, not release claims:
 
@@ -27,17 +27,19 @@ while preparing this packet; they are freshness anchors, not release claims:
 | [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | `278e27fd335142d08288e5499e80ab01f140a455` | preservation and recovery planning |
 | [Slipstream](https://github.com/jonah-ux/slipstream) | `27bb2f6d51909e9752c087792a8e02af0e2c2998` | local retrieval indexes |
 
-The current clean-machine Forgeyard route was rerun at `90bbc9685f320d4d1c8272f36483b91bdf8707ed`:
+The current clean-machine Forgeyard static route was rerun at `90bbc9685f320d4d1c8272f36483b91bdf8707ed`:
 `passing` reached `reviewable`, `blocked` preserved `reviewable=false`, `tampered` refused with exit 2,
-the public audit returned `pass`, and the evaluation receipt returned `pass`; artifact state remained
-`unavailable` without a supplied distribution directory.
+the public audit returned `pass`, and the evaluation receipt returned `pass`. That route omitted
+`--dist-dir`, so its artifact field is `unavailable`; the supplied same-head wheel/sdist receipt
+and disposable install are recorded separately below.
 
 The heads above are source-identity observations only; they do not assert deployment, adoption, or
 that every owner has published a downloadable artifact. The Forgeyard installed reference-flow
 observation below was run at the same `90bbc9685f320d4d1c8272f36483b91bdf8707ed`
 boundary as the current matrix audit and evaluation. The [owner-native audit matrix](AGENT-SYSTEMS-LAB-AUDIT-MATRIX.md) records
-which repositories expose `*-public-audit/v1`, which checks are rerunnable, and where artifact state
-remains `unavailable` without an explicit distribution directory. A same-head local pack of Slipstream `v0.2.0` at `27bb2f6d51909e9752c087792a8e02af0e2c2998`
+which repositories expose `*-public-audit/v1`, which checks are rerunnable, and where the static
+route leaves artifact state `unavailable` without an explicit distribution directory. The lock
+separately records supplied same-head artifact and disposable-consumer observations. A same-head local pack of Slipstream `v0.2.0` at `27bb2f6d51909e9752c087792a8e02af0e2c2998`
 returned `artifact_audit=pass` for `slipstream-local-index-0.2.0.tgz` with artifact SHA-256
 `d8b17994cae2ca828e9c4a4a93ee560fe607edd4de0113c88a9ee80c377610ff` and `SHA256SUMS`
 SHA-256 `ab2130ffa8cf22c8038284a116b56c935c012918e43e6b95353163ce9df8596f`. This is a
