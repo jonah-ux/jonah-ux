@@ -55,6 +55,13 @@ six operations. The release remains a prerelease; these checks prove artifact
 usability and synthetic behavior, not outside adoption or production
 deployment.
 
+The [conformance matrix](AGENT-SYSTEMS-LAB-CONFORMANCE.md) now covers every
+named public owner in the lab: Forgeyard, ChatLens, Atlas, Agent Proof, Context
+Integrity Lab, Agent Policy, Agent Sandbox Run, Agent Resume, Agent Trace Lite,
+MCP Doctor, Worktree Conservator, and Slipstream. Each owner retains its native
+schema and test runner; downstream interop is delegated to Agent Proof's existing
+registry where applicable.
+
 ## 2026-10-02 — independent visual field guides
 
 The authored public tools each have an independent first-run route and visual guide.
