@@ -109,8 +109,25 @@
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
-        "state": "unavailable"
+        "artifacts": [
+          {
+            "name": "context_integrity_lab-0.2.0-py3-none-any.whl",
+            "sha256": "eaa18b41131e3b6c576f3279c769c27a5fbef67c0429ee6b029fb0b6e31618b2"
+          },
+          {
+            "name": "context_integrity_lab-0.2.0.tar.gz",
+            "sha256": "dba6759b1839dca339659aec08f190a5932172ef7109200386d4a3bef6a19e52"
+          }
+        ],
+        "checksum_manifest_sha256": "1aa1d23a792a4705fb2dee5580a0f9238b6d6f85d4fa15b096b165504cc325ea",
+        "consumer_cli_help": "pass",
+        "consumer_demo_help": "pass",
+        "consumer_install": "pass",
+        "consumer_python": "3.14.6",
+        "local_build": "pass",
+        "local_packed_audit": "pass",
+        "package_version": "0.2.0",
+        "state": "verified"
       },
       "audit_schema": "context-integrity-public-audit/v1",
       "audit_state": "verified-at-head",
@@ -332,9 +349,9 @@
     }
   ],
   "profile": {
-    "lock_published_head": "ed52753dedc84cc573a7decd9dff20c9b5a2649c",
+    "lock_published_head": "786f7274d31f288dfa5c579df1b48c7b4d0525b0",
     "repository": "jonah-ux/jonah-ux",
-    "snapshot_base_head": "ed52753dedc84cc573a7decd9dff20c9b5a2649c"
+    "snapshot_base_head": "786f7274d31f288dfa5c579df1b48c7b4d0525b0"
   },
   "purpose": "Freeze a clean-machine review snapshot from a known profile source baseline; the containing profile commit is recorded separately.",
   "review_route": {

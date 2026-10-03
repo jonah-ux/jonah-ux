@@ -140,6 +140,15 @@ The wheel installed in a disposable Python 3.14.6 environment and reported `mcp-
 supported CLI help also read back. This is local build/install evidence, not a published
 release or adoption claim.
 
+Context Integrity Lab at `6119ca6d507b1ae203b8422fa733d9363229d5e8` was built in the same isolated
+temporary environment. Its strict audit returned `artifact_audit=pass` for one wheel and one
+sdist with wheel SHA-256 `eaa18b41131e3b6c576f3279c769c27a5fbef67c0429ee6b029fb0b6e31618b2`,
+sdist SHA-256 `dba6759b1839dca339659aec08f190a5932172ef7109200386d4a3bef6a19e52`, and
+`SHA256SUMS` SHA-256 `1aa1d23a792a4705fb2dee5580a0f9238b6d6f85d4fa15b096b165504cc325ea`.
+The wheel installed in a disposable Python 3.14.6 environment; both `context-integrity --help`
+and `context-integrity-demo --help` read back successfully. This is local build/install
+evidence, not a published release or adoption claim.
+
 ## Fifteen-minute review
 
 1. Read the [architecture](AGENT-SYSTEMS-LAB-ARCHITECTURE.md) and
