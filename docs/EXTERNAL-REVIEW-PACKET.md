@@ -7,7 +7,7 @@ profile or to infer adoption from activity.
 
 ## Review target
 
-The public profile main was read back at `ce3fd144e3809fbcbafbef4a9e15803504ad236b` on
+The public profile main was read back at `51283391a4f0878ef37385f6b7c7a9ac2ed13cb2` on
 2026-10-03. The owner heads below are source-identity observations from `refs/heads/main` made
 while preparing this packet; they are freshness anchors, not release claims:
 
@@ -17,17 +17,20 @@ while preparing this packet; they are freshness anchors, not release claims:
 | [Agent Proof](https://github.com/jonah-ux/agent-proof) | `2c8767257d4da2e78da73e93a82f7d066f3f1b8e` | tamper-evident ledger, graph, interop, public audit |
 | [ChatLens](https://github.com/jonah-ux/chatlens) | `e53c0f38806bb77624998755bd68dac8176205dd` | local trace discovery and redacted handoff |
 | [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) | `14fd14dd88c4bae979fef5d3a9c3448b0a15a456` | durable lifecycle and approval state |
-| [Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) | `78744b2e01ec5ce72bdde9ff85e9b83a9c88dc66` | scope, freshness, citations, admission/refusal |
+| [Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) | `6db7831cc70854ade5ff75daba957b432d8b5ea8` | scope, freshness, citations, admission/refusal |
 | [Agent Policy](https://github.com/jonah-ux/agent-policy) | `b8b29029c9f89196c250ba413e499091848f2e26` | capability decisions and policy receipts |
-| [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | `0014550f43149b3186303a73706a92d8bf26c4c9` | bounded execution receipt |
-| [Agent Resume](https://github.com/jonah-ux/agent-resume) | `ba1372955c063aa6c8d02b5324946cc4809aa407` | continuation and handoff state |
-| [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) | `ad7065a61a42a9dfc12a7027047688f5bc660312` | bounded trace representation |
-| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | `29170f43a5e9ddfcc40585fa6651ffce08132c7b` | tool-contract diagnostics |
-| [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | `8690ffa2d3958b0130b6780e9f006322395b1cbd` | preservation and recovery planning |
-| [Slipstream](https://github.com/jonah-ux/slipstream) | `1d73de7b031e3f7362360dde056e16ea942fb0eb` | local retrieval indexes |
+| [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | `b29a28fdeb0f1517a48431365ed28277b4d6effd` | bounded execution receipt |
+| [Agent Resume](https://github.com/jonah-ux/agent-resume) | `bd9a111e2354ba1eefb32dfbd1f228ce8f2cd9ae` | continuation and handoff state |
+| [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) | `48b05ce74a9f2ac5367fa8a280b1676fceabfef9` | bounded trace representation |
+| [Sourcemark](https://github.com/jonah-ux/sourcemark) | `dab05d290b22f58379677f561397030590357631` | citation checks and source-bound export |
+| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | `b1b4521e1acfbb1fd812f006f63c17b1f36c1a04` | tool-contract diagnostics |
+| [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | `8888726c12594610abb8c9c9322d00c9e2542a48` | preservation and recovery planning |
+| [Slipstream](https://github.com/jonah-ux/slipstream) | `a910fda74b717cc6a7f034f611919bfe337559cf` | local retrieval indexes |
 
-The line for Agent Sandbox Run above is intentionally a source-head observation only; it does not
-assert that every owner has completed the same public-audit milestone.
+The heads above are source-identity observations only; they do not assert deployment, adoption, or
+that every owner has published a downloadable artifact. The [owner-native audit matrix](AGENT-SYSTEMS-LAB-AUDIT-MATRIX.md) records
+which repositories expose `*-public-audit/v1`, which checks are rerunnable, and where artifact state
+remains `unavailable` without an explicit distribution directory.
 
 ## Fifteen-minute review
 
@@ -48,7 +51,11 @@ assert that every owner has completed the same public-audit milestone.
    `python -m unittest discover -s tests -v`.
 8. Clone [Agent Policy](https://github.com/jonah-ux/agent-policy) and run
    `python scripts/audit_public_surface.py --json` plus `python -m agent_policy.cli --help`.
-9. Change one graph edge or source byte, keep the old digest, and confirm the relevant verifier
+9. Run the owner-native audit matrix for Agent Policy, Agent Sandbox Run, Sourcemark, Agent Resume,
+   Agent Trace Lite, MCP Doctor, Worktree Conservator, and Context Integrity Lab. Keep each JSON receipt
+   with the corresponding source head; `artifact_audit=unavailable` is expected when no `dist/` was
+   supplied.
+10. Change one graph edge or source byte, keep the old digest, and confirm the relevant verifier
    refuses the mutation.
 
 The [cold-review checklist](COLD-REVIEW-CHECKLIST.md) contains the full commands and expected
@@ -62,7 +69,7 @@ states. Use a disposable checkout and synthetic fixtures only.
 | Installed reference flow | [Forgeyard contract](https://github.com/jonah-ux/forgeyard/blob/main/docs/contracts/forgeyard-reference-flow-v1.md) | A fresh local consumer can call the named installed CLIs and preserve passing, blocked, tampered, and unavailable states. | A hosted service, production workflow, or outside adoption. |
 | Semantic graph | [Agent Proof graph implementation](https://github.com/jonah-ux/agent-proof/blob/main/src/agent_proof/graph.py) | Bound graph and packet inputs can be verified and tampering/orphan edges can be refused. | Trust in an input before the verifier sees it. |
 | Evaluation lab | [Forgeyard evaluation script](https://github.com/jonah-ux/forgeyard/blob/main/scripts/evaluate_lab.py) | Fixed correctness/refusal fixtures, hashes, and local performance observations are rerunnable. | A universal performance ranking or model-quality claim. |
-| Public audits | [Forgeyard audit](https://github.com/jonah-ux/forgeyard/blob/main/scripts/audit_public_surface.py), [Agent Proof audit](https://github.com/jonah-ux/agent-proof/blob/main/scripts/audit_public_surface.py), [Atlas audit](https://github.com/jonah-ux/atlas-agent-runtime/blob/main/scripts/audit_public_surface.py), [ChatLens audit](https://github.com/jonah-ux/chatlens/blob/main/scripts/audit_public_surface.py), and [Agent Policy audit](https://github.com/jonah-ux/agent-policy/blob/main/scripts/audit_public_surface.py) | Dependency/license declarations, release markers, high-signal privacy scans, and optional checksums are inspectable across five flagship owners. | Complete DLP, security certification, reproducible builds, or provider controls. |
+| Public audits | Owner-native `*-public-audit/v1` receipts across Forgeyard, Agent Proof, Atlas, ChatLens, Agent Policy, Agent Sandbox Run, Sourcemark, Slipstream, Worktree Conservator, Agent Resume, Agent Trace Lite, MCP Doctor, and Context Integrity Lab | Dependency/license declarations, release markers, high-signal privacy scans, checksum refusal behavior, and explicit artifact availability are inspectable from clean public clones. | Complete DLP, security certification, reproducible builds across machines, provider controls, or adoption. |
 
 ## Reviewer questions
 
