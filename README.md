@@ -105,6 +105,11 @@ python3 scripts/validate_review_packet.py --json
 python3 scripts/validate_review_packet.py --published-head <containing-profile-parent> --json
 ```
 
-The validator checks the 13-owner count, unique source heads, packet/source-head matches, verified
-artifact states, profile snapshot semantics, and the explicit outside-review/adoption limitations.
-It does not fetch owner repositories or claim deployment, adoption, or production outcomes.
+The validator checks the 13-owner count, repository identities, source heads bound to each packet
+table row, recorded artifact digests and install outcomes, profile snapshot semantics, and the
+explicit outside-review/adoption limitations. Malformed inputs return JSON with stable refusal
+codes and exit `2`; valid inputs return exit `0`. Run the refusal regressions with
+`python3 -m unittest discover -s tests -v` on Python 3.11 or later.
+
+This command checks the recorded evidence metadata. It does not download artifact bytes, replay
+installs, fetch owner repositories, or establish deployment, adoption, or production outcomes.

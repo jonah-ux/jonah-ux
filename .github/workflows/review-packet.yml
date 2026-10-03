@@ -6,6 +6,7 @@ on:
       - "docs/AGENT-SYSTEMS-LAB-REVIEW-LOCK.json"
       - "docs/EXTERNAL-REVIEW-PACKET.md"
       - "scripts/validate_review_packet.py"
+      - "tests/test_review_packet.py"
       - ".github/workflows/review-packet.yml"
   push:
     branches: [main]
@@ -13,6 +14,7 @@ on:
       - "docs/AGENT-SYSTEMS-LAB-REVIEW-LOCK.json"
       - "docs/EXTERNAL-REVIEW-PACKET.md"
       - "scripts/validate_review_packet.py"
+      - "tests/test_review_packet.py"
       - ".github/workflows/review-packet.yml"
 
 permissions:
@@ -20,8 +22,20 @@ permissions:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    name: ${{ matrix.os }} / Python ${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ["3.11", "3.14"]
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Test refusal behavior
+        run: python3 -m unittest discover -s tests -v
       - name: Validate lock and packet
         run: python3 scripts/validate_review_packet.py --json
