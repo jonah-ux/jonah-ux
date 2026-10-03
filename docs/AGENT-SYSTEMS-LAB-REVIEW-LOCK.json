@@ -23,7 +23,7 @@
       },
       "owner": "forgeyard",
       "repository": "jonah-ux/forgeyard",
-      "source_head": "9d772f72e7af11e47e3762c3c97bbdebda595f72"
+      "source_head": "883c290239b1ee2650b19109a3ff0d2a2c913168"
     },
     {
       "artifact": {
@@ -159,9 +159,9 @@
     }
   ],
   "profile": {
-    "lock_published_head": "695fd4de6777f25e82e5912726ee98570c33c86f",
+    "lock_published_head": "95dea43c0fd215ce90fcc806b5cd8c49170429d6",
     "repository": "jonah-ux/jonah-ux",
-    "snapshot_base_head": "695fd4de6777f25e82e5912726ee98570c33c86f"
+    "snapshot_base_head": "95dea43c0fd215ce90fcc806b5cd8c49170429d6"
   },
   "purpose": "Freeze a clean-machine review snapshot from a known profile source baseline; the containing profile commit is recorded separately.",
   "review_route": {
