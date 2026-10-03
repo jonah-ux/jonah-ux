@@ -102,6 +102,15 @@ The wheel installed in a disposable Python 3.14.6 environment and reported `sour
 the supported CLI help also read back. This is local build/install evidence, not a published
 release or adoption claim.
 
+Worktree Conservator at `278e27fd335142d08288e5499e80ab01f140a455` was built in the same isolated
+temporary environment. Its strict audit returned `artifact_audit=pass` for one wheel and one
+sdist with wheel SHA-256 `122ca264bd6d66af8a7a2e332af9aa878b4571ac9f279620f9352943baaf5832`,
+sdist SHA-256 `62c125b5679830beaa0c12e9e6387a3d3440b7838d7643288995bffa55a242ae`, and
+`SHA256SUMS` SHA-256 `72cc7d5127d4ace952ac55102f1064a48298a1de7532976a40c1dd138f722f9c`.
+The wheel installed in a disposable Python 3.14.6 environment and reported
+`worktree-conservator 0.3.0`; supported CLI help also read back. This is local build/install
+evidence, not a published release or adoption claim.
+
 ## Fifteen-minute review
 
 1. Read the [architecture](AGENT-SYSTEMS-LAB-ARCHITECTURE.md) and

@@ -238,8 +238,25 @@
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
-        "state": "unavailable"
+        "artifacts": [
+          {
+            "name": "worktree_conservator-0.3.0-py3-none-any.whl",
+            "sha256": "122ca264bd6d66af8a7a2e332af9aa878b4571ac9f279620f9352943baaf5832"
+          },
+          {
+            "name": "worktree_conservator-0.3.0.tar.gz",
+            "sha256": "62c125b5679830beaa0c12e9e6387a3d3440b7838d7643288995bffa55a242ae"
+          }
+        ],
+        "checksum_manifest_sha256": "72cc7d5127d4ace952ac55102f1064a48298a1de7532976a40c1dd138f722f9c",
+        "consumer_cli_help": "pass",
+        "consumer_install": "pass",
+        "consumer_python": "3.14.6",
+        "consumer_version": "worktree-conservator 0.3.0",
+        "local_build": "pass",
+        "local_packed_audit": "pass",
+        "package_version": "0.3.0",
+        "state": "verified"
       },
       "audit_schema": "worktree-conservator-public-audit/v1",
       "audit_state": "verified-at-head",
@@ -266,9 +283,9 @@
     }
   ],
   "profile": {
-    "lock_published_head": "acd64eb3f9a6c123e92fffd74dbf79292965da05",
+    "lock_published_head": "1944a27089488ac3bc35415b39d36964e71acf9b",
     "repository": "jonah-ux/jonah-ux",
-    "snapshot_base_head": "acd64eb3f9a6c123e92fffd74dbf79292965da05"
+    "snapshot_base_head": "1944a27089488ac3bc35415b39d36964e71acf9b"
   },
   "purpose": "Freeze a clean-machine review snapshot from a known profile source baseline; the containing profile commit is recorded separately.",
   "review_route": {
