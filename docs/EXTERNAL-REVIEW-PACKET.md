@@ -54,6 +54,13 @@ sdist SHA-256 `5868daeb8522d965abc591d62d9971584bbe2cd4fb03bea45b69177bdb3ca073`
 `SHA256SUMS` SHA-256 `a1e491bebb5429cff54f62393f1cf254d8bed1a1e11fd9f4c57f24908b09aad5`.
 The wheel installed in a disposable Python 3.14.6 environment and reported `agent-proof 0.4.1`;
 this is local build/install evidence, not a published release or adoption claim.
+ChatLens at `d335e4209bfff81592e46163062f7074a2b3cb10` was built in the same isolated temporary
+environment. Its strict audit returned `artifact_audit=pass` for one wheel and one sdist with
+wheel SHA-256 `7813522a95d0afb4d2590355ce32e101769d7120ba681ff9e9111509406738e7`,
+sdist SHA-256 `e60d90af5a898481d7138229e7f1242304b1908abc2802d771dd8cb9212c08a6`, and
+`SHA256SUMS` SHA-256 `f886aff80fccb1d6dd3b15b466456a3898e408222713a85e83d6a5dd9df8732d`.
+The wheel installed in a disposable Python 3.14.6 environment and reported `chatlens 0.4.0`;
+this is local build/install evidence, not a published release or adoption claim.
 Atlas at `e3b19d7857273b4b549325d2f807bc2e47ded92d` was built in the same isolated temporary
 environment. Its strict audit returned `artifact_audit=pass` for one wheel and one sdist with
 wheel SHA-256 `5c82d50b7d5fc005670cd3ad99dc9173ad9a0ae49b6159d83c19568c3545bdfa`,
