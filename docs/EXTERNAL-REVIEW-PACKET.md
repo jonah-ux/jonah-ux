@@ -47,6 +47,13 @@ rebuilt with `npm rebuild better-sqlite3`, and ran the packaged `slipstream self
 `v26.7.0`; it returned `pass=true`, `inspect_ok=true`, `manifest_verified=true`,
 `manifest_deterministic=true`, and `db_removed=true`. This is a local consumer observation,
 not proof of outside adoption or production deployment.
+Agent Proof at `c0b75d77b53af8593ca73bdc23a59ee31b0962dd` was also built in an isolated temporary
+environment. Its strict public audit returned `artifact_audit=pass` for one wheel and one sdist
+with wheel SHA-256 `779982df5d59f0105f308c9ae0212a5a3031be47961e8dc69f9afe415cef218e`,
+sdist SHA-256 `5868daeb8522d965abc591d62d9971584bbe2cd4fb03bea45b69177bdb3ca073`, and
+`SHA256SUMS` SHA-256 `a1e491bebb5429cff54f62393f1cf254d8bed1a1e11fd9f4c57f24908b09aad5`.
+The wheel installed in a disposable Python 3.14.6 environment and reported `agent-proof 0.4.1`;
+this is local build/install evidence, not a published release or adoption claim.
 A bounded Python wheel probe for Agent Proof at its locked head `c0b75d77b53af8593ca73bdc23a59ee31b0962dd`
 was retried with the clean helper capacity and failed at PEP 517 because the runtime could not import
 `setuptools.build_meta`; hosted CI published no downloadable artifact. The Python artifact state therefore
