@@ -31,18 +31,18 @@ The broader suite is an optional map for people who want to connect the outputs 
 | [Forgeyard](https://github.com/jonah-ux/forgeyard) | [one-minute quickstart](https://github.com/jonah-ux/forgeyard/blob/main/docs/quickstart.md) | A review record seals, then refuses a tampered byte boundary. |
 | [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) | [standalone lifecycle](https://github.com/jonah-ux/atlas-agent-runtime/blob/main/docs/quickstart.md) | A task pauses for approval, recovers from its event log, and emits a receipt. |
 | [Chatlens](https://github.com/jonah-ux/chatlens) | [quick start](https://github.com/jonah-ux/chatlens#quick-start) | A lost session becomes a searchable work card without a hosted service. |
-| [Agent Proof](https://github.com/jonah-ux/agent-proof) | [synthetic demo](https://github.com/jonah-ux/agent-proof#quick-start) | A proof bundle binds artifacts, graph edges, and tamper refusal together. |
+| [Agent Proof](https://github.com/jonah-ux/agent-proof) | [synthetic demo](https://github.com/jonah-ux/agent-proof#try-the-complete-workflow) | A proof bundle binds artifacts, graph edges, and tamper refusal together. |
 | [Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) | [reviewer walkthrough](https://github.com/jonah-ux/context-integrity-lab/blob/main/DEMO.md) | Supported, stale, and out-of-scope context split into visible admission states. |
 | [Sourcemark](https://github.com/jonah-ux/sourcemark) | [30-second demo](https://github.com/jonah-ux/sourcemark#install) | A citation keeps its anchor or gets called out when its source moves. |
 | [Slipstream](https://github.com/jonah-ux/slipstream) | [local vector demo](https://github.com/jonah-ux/slipstream#install-and-run) | A nearest-neighbor query runs locally and leaves a manifest you can verify. |
 | [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | [preservation demo](https://github.com/jonah-ux/worktree-conservator#quick-start) | A cleanup plan can be refused, archived, verified, and restored without guessing. |
-| [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit) | [scorecard demo](https://github.com/jonah-ux/agent-eval-kit#quick-start) | Repeated trials become a bounded comparison instead of a vibes-based ranking. |
-| [Context Pack](https://github.com/jonah-ux/context-pack) | [deterministic pack demo](https://github.com/jonah-ux/context-pack#quick-start) | A byte budget and digest make the exact context set inspectable. |
-| [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) | [redacted trace demo](https://github.com/jonah-ux/agent-trace-lite#quick-start) | A trace becomes a readable artifact while sensitive fields stay redacted. |
+| [Agent Eval Kit](https://github.com/jonah-ux/agent-eval-kit) | [scorecard demo](https://github.com/jonah-ux/agent-eval-kit#try-it-in-30-seconds) | Repeated trials become a bounded comparison instead of a vibes-based ranking. |
+| [Context Pack](https://github.com/jonah-ux/context-pack) | [deterministic pack demo](https://github.com/jonah-ux/context-pack#try-it-in-30-seconds) | A byte budget and digest make the exact context set inspectable. |
+| [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) | [redacted trace demo](https://github.com/jonah-ux/agent-trace-lite#try-it-in-30-seconds) | A trace becomes a readable artifact while sensitive fields stay redacted. |
 | [Agent Policy](https://github.com/jonah-ux/agent-policy) | [policy quickstart](https://github.com/jonah-ux/agent-policy#quick-start) | A decision explains which rule matched and why the default is deny. |
-| [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | [capability demo](https://github.com/jonah-ux/agent-sandbox-run#quick-start) | The receipt says exactly what was enforced and what remained a fallback. |
-| [Agent Resume](https://github.com/jonah-ux/agent-resume) | [continuation demo](https://github.com/jonah-ux/agent-resume#quick-start) | A broken handoff turns into a validated next step with an explicit diff. |
-| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | [contract check](https://github.com/jonah-ux/mcp-doctor#quick-start) | A missing description or timeout fails closed with a stable diagnostic code. |
+| [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | [capability demo](https://github.com/jonah-ux/agent-sandbox-run#try-it-in-30-seconds) | The receipt says exactly what was enforced and what remained a fallback. |
+| [Agent Resume](https://github.com/jonah-ux/agent-resume) | [continuation demo](https://github.com/jonah-ux/agent-resume#try-it-in-30-seconds) | A broken handoff turns into a validated next step with an explicit diff. |
+| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | [contract check](https://github.com/jonah-ux/mcp-doctor#try-it-in-30-seconds) | A missing description or timeout fails closed with a stable diagnostic code. |
 
 For the optional multi-repo story, see the [portfolio suite map](docs/PORTFOLIO-SUITE-V2.md). It
 connects outputs after each repository already works on its own; it is never an installation
