@@ -120,8 +120,25 @@
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
-        "state": "unavailable"
+        "artifacts": [
+          {
+            "name": "agent_policy-0.2.0-py3-none-any.whl",
+            "sha256": "d451c68a6ca94a66d6286149a8b983d1a54763b21e62c44e8d70cf1bc63dd251"
+          },
+          {
+            "name": "agent_policy-0.2.0.tar.gz",
+            "sha256": "6a239a029160672c3c6414e3bcb2a4d29131a0a3f12c58cb5783c569e640d227"
+          }
+        ],
+        "checksum_manifest_sha256": "f944d96d7eed1825f5a8e7c378d9fb4a4ca7067e982495b78924e1627e97f815",
+        "consumer_cli_help": "pass",
+        "consumer_check_help": "pass",
+        "consumer_install": "pass",
+        "consumer_python": "3.14.6",
+        "local_build": "pass",
+        "local_packed_audit": "pass",
+        "package_version": "0.2.0",
+        "state": "verified"
       },
       "audit_schema": "agent-policy-public-audit/v1",
       "audit_state": "verified-at-head",
@@ -214,9 +231,9 @@
     }
   ],
   "profile": {
-    "lock_published_head": "fa113199a03abc43c12821dc959eec807be74f0f",
+    "lock_published_head": "cc1ab16bd7625f150da904d9bcb3606a77e8d1d7",
     "repository": "jonah-ux/jonah-ux",
-    "snapshot_base_head": "fa113199a03abc43c12821dc959eec807be74f0f"
+    "snapshot_base_head": "cc1ab16bd7625f150da904d9bcb3606a77e8d1d7"
   },
   "purpose": "Freeze a clean-machine review snapshot from a known profile source baseline; the containing profile commit is recorded separately.",
   "review_route": {
