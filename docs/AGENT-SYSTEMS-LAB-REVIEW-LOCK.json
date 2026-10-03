@@ -204,8 +204,24 @@
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
-        "state": "unavailable"
+        "artifacts": [
+          {
+            "name": "agent_trace_lite-0.2.0-py3-none-any.whl",
+            "sha256": "a9256e82d90d6b6abfd2847929b5996982409230ea8776b1a2cd45042c49282b"
+          },
+          {
+            "name": "agent_trace_lite-0.2.0.tar.gz",
+            "sha256": "eed40348ee35059ae89ff753d73fe7e4118d7145ce923f11a2db5acec9298772"
+          }
+        ],
+        "checksum_manifest_sha256": "07e7c6b86b0e8da8b281a284b97b21a34965be35f0631e56efd5cc00d286940a",
+        "consumer_cli_help": "pass",
+        "consumer_install": "pass",
+        "consumer_python": "3.14.6",
+        "local_build": "pass",
+        "local_packed_audit": "pass",
+        "package_version": "0.2.0",
+        "state": "verified"
       },
       "audit_schema": "agent-trace-public-audit/v1",
       "audit_state": "verified-at-head",
@@ -299,9 +315,9 @@
     }
   ],
   "profile": {
-    "lock_published_head": "0c5d5ceb873f02ab94385dfef1bf260d214e92cb",
+    "lock_published_head": "72815390c6733289c321612f2f77a00862670359",
     "repository": "jonah-ux/jonah-ux",
-    "snapshot_base_head": "0c5d5ceb873f02ab94385dfef1bf260d214e92cb"
+    "snapshot_base_head": "72815390c6733289c321612f2f77a00862670359"
   },
   "purpose": "Freeze a clean-machine review snapshot from a known profile source baseline; the containing profile commit is recorded separately.",
   "review_route": {

@@ -121,6 +121,16 @@ The wheel installed in a disposable Python 3.14.6 environment; supported top-lev
 subcommand error and was not treated as a pass. This is local build/install evidence, not a
 published release or adoption claim.
 
+Agent Trace Lite at `45f17bf55d6617415b43bf27c95ea1d4730e52aa` was built in the same isolated
+temporary environment. Its strict audit returned `artifact_audit=pass` for one wheel and one
+sdist with wheel SHA-256 `a9256e82d90d6b6abfd2847929b5996982409230ea8776b1a2cd45042c49282b`,
+sdist SHA-256 `eed40348ee35059ae89ff753d73fe7e4118d7145ce923f11a2db5acec9298772`, and
+`SHA256SUMS` SHA-256 `07e7c6b86b0e8da8b281a284b97b21a34965be35f0631e56efd5cc00d286940a`.
+The wheel installed in a disposable Python 3.14.6 environment; supported top-level and
+`inspect --help` readbacks succeeded. The initial `--version` probe returned the required
+subcommand error and was not treated as a pass. This is local build/install evidence, not a
+published release or adoption claim.
+
 ## Fifteen-minute review
 
 1. Read the [architecture](AGENT-SYSTEMS-LAB-ARCHITECTURE.md) and
