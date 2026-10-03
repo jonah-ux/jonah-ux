@@ -12,6 +12,10 @@ Most of my work starts with a messy workflow and ends with a small system that m
 
 The newest portfolio slice is a three-tool evidence lifecycle: [ChatLens v0.4.0](https://github.com/jonah-ux/chatlens/releases/tag/v0.4.0) exports a redacted local trace, [Atlas v0.2.0](https://github.com/jonah-ux/atlas-agent-runtime/releases/tag/v0.2.0) records a durable approval-gated task, and [Forgeyard v0.4.0](https://github.com/jonah-ux/forgeyard/releases/tag/v0.4.0) composes both into a reviewable record through `ai-work-evidence/v1`. [Read the reviewer map](docs/PORTFOLIO-SUITE-V2.md).
 
+The larger [Agent Systems Lab architecture](docs/AGENT-SYSTEMS-LAB-ARCHITECTURE.md) connects
+context admission, policy, bounded execution, proof, continuation, retrieval, and reviewable
+delivery through explicit owners rather than a monolithic runtime.
+
 ![Agent tooling stack: recover context, bound decisions, prove outcomes](docs/toolkit-stack.svg)
 
 ## Start with the 90-second tour
