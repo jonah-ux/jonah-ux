@@ -66,8 +66,24 @@
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
-        "state": "unavailable"
+        "artifacts": [
+          {
+            "name": "atlas_agent_runtime-0.2.0-py3-none-any.whl",
+            "sha256": "5c82d50b7d5fc005670cd3ad99dc9173ad9a0ae49b6159d83c19568c3545bdfa"
+          },
+          {
+            "name": "atlas_agent_runtime-0.2.0.tar.gz",
+            "sha256": "4742bf9b08c5d2d19029ded3227b2f9bad2d135ee54789fc240d0b1e337567bf"
+          }
+        ],
+        "checksum_manifest_sha256": "68b7ab2f88042f38d8bcfc09c274632bb39e8d6f7fa20df12e4269c33535de0e",
+        "consumer_install": "pass",
+        "consumer_python": "3.14.6",
+        "consumer_version": "0.2.0",
+        "local_build": "pass",
+        "local_packed_audit": "pass",
+        "package_version": "0.2.0",
+        "state": "verified"
       },
       "audit_schema": "atlas-public-audit/v1",
       "audit_state": "verified-at-head",
@@ -182,9 +198,9 @@
     }
   ],
   "profile": {
-    "lock_published_head": "9de2e4c29d6e802bc77c4cbb8f20408e5f7d0723",
+    "lock_published_head": "c7a70750f98152c721cab9623191192508f4b004",
     "repository": "jonah-ux/jonah-ux",
-    "snapshot_base_head": "9de2e4c29d6e802bc77c4cbb8f20408e5f7d0723"
+    "snapshot_base_head": "c7a70750f98152c721cab9623191192508f4b004"
   },
   "purpose": "Freeze a clean-machine review snapshot from a known profile source baseline; the containing profile commit is recorded separately.",
   "review_route": {

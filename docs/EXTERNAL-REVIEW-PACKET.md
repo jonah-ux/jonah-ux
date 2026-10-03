@@ -54,6 +54,13 @@ sdist SHA-256 `5868daeb8522d965abc591d62d9971584bbe2cd4fb03bea45b69177bdb3ca073`
 `SHA256SUMS` SHA-256 `a1e491bebb5429cff54f62393f1cf254d8bed1a1e11fd9f4c57f24908b09aad5`.
 The wheel installed in a disposable Python 3.14.6 environment and reported `agent-proof 0.4.1`;
 this is local build/install evidence, not a published release or adoption claim.
+Atlas at `e3b19d7857273b4b549325d2f807bc2e47ded92d` was built in the same isolated temporary
+environment. Its strict audit returned `artifact_audit=pass` for one wheel and one sdist with
+wheel SHA-256 `5c82d50b7d5fc005670cd3ad99dc9173ad9a0ae49b6159d83c19568c3545bdfa`,
+sdist SHA-256 `4742bf9b08c5d2d19029ded3227b2f9bad2d135ee54789fc240d0b1e337567bf`, and
+`SHA256SUMS` SHA-256 `68b7ab2f88042f38d8bcfc09c274632bb39e8d6f7fa20df12e4269c33535de0e`.
+The wheel installed in a disposable Python 3.14.6 environment and reported `0.2.0`; this
+is local build/install evidence, not a published release or adoption claim.
 A bounded Python wheel probe for Agent Proof at its locked head `c0b75d77b53af8593ca73bdc23a59ee31b0962dd`
 was retried with the clean helper capacity and failed at PEP 517 because the runtime could not import
 `setuptools.build_meta`; hosted CI published no downloadable artifact. The Python artifact state therefore
