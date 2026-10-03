@@ -13,10 +13,18 @@
         "state": "verified"
       },
       "audit_schema": "forgeyard-public-audit/v1",
-      "audit_state": "needs-rerun",
+      "audit_state": "verified-at-head",
+      "clean_route": {
+        "artifact_state": "unavailable",
+        "audit": "pass",
+        "blocked": "reviewable=false",
+        "evaluation": "pass",
+        "passing": "reviewable",
+        "tampered": "refused"
+      },
       "owner": "forgeyard",
       "repository": "jonah-ux/forgeyard",
-      "source_head": "ebdb4f102e46f0de548b90d55585fb66e1de9004"
+      "source_head": "4daf0ff01ebe8da99cc92867e9035ec2d93bd222"
     },
     {
       "artifact": {
@@ -153,7 +161,7 @@
     }
   ],
   "profile": {
-    "main_head": "3adc0f9fb15a7c63ae0dbeafee753f7edd5e8775",
+    "main_head": "3edd6896473fe7cfeaaacc234083fbee9c6be4a2",
     "repository": "jonah-ux/jonah-ux"
   },
   "purpose": "Freeze a clean-machine review snapshot without implying deployment, adoption, or provider-side control.",

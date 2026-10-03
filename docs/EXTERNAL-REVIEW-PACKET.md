@@ -7,13 +7,13 @@ profile or to infer adoption from activity.
 
 ## Review target
 
-The public profile main was read back at `c557274740b36783028b7673a447ddceb9cd34c9` on
+The public profile main was read back at `3edd6896473fe7cfeaaacc234083fbee9c6be4a2` on
 2026-10-03. The owner heads below are source-identity observations from `refs/heads/main` made
 while preparing this packet; they are freshness anchors, not release claims:
 
 | Owner | Main head | Native responsibility |
 | --- | --- | --- |
-| [Forgeyard](https://github.com/jonah-ux/forgeyard) | `ebdb4f102e46f0de548b90d55585fb66e1de9004` | review composition, packets, evaluation, public audit |
+| [Forgeyard](https://github.com/jonah-ux/forgeyard) | `4daf0ff01ebe8da99cc92867e9035ec2d93bd222` | review composition, packets, evaluation, public audit |
 | [Agent Proof](https://github.com/jonah-ux/agent-proof) | `73dcf49abb892a002f938d3d5f5a5bfd247ccd33` | tamper-evident ledger, graph, interop, public audit |
 | [ChatLens](https://github.com/jonah-ux/chatlens) | `d842b4cd10c284604505a77880bda03e8b2849d0` | local trace discovery and redacted handoff |
 | [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) | `164de985d67ec5b6fccc340b0c94d96511d05fdf` | durable lifecycle and approval state |
@@ -26,6 +26,11 @@ while preparing this packet; they are freshness anchors, not release claims:
 | [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | `b1b4521e1acfbb1fd812f006f63c17b1f36c1a04` | tool-contract diagnostics |
 | [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | `8888726c12594610abb8c9c9322d00c9e2542a48` | preservation and recovery planning |
 | [Slipstream](https://github.com/jonah-ux/slipstream) | `a910fda74b717cc6a7f034f611919bfe337559cf` | local retrieval indexes |
+
+The current clean-machine Forgeyard route was rerun at `4daf0ff01ebe8da99cc92867e9035ec2d93bd222`:
+`passing` reached `reviewable`, `blocked` preserved `reviewable=false`, `tampered` refused with exit 2,
+the public audit returned `pass`, and the evaluation receipt returned `pass`; artifact state remained
+`unavailable` without a supplied distribution directory.
 
 The heads above are source-identity observations only; they do not assert deployment, adoption, or
 that every owner has published a downloadable artifact. The [owner-native audit matrix](AGENT-SYSTEMS-LAB-AUDIT-MATRIX.md) records
