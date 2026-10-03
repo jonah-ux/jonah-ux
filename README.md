@@ -22,6 +22,9 @@ For an outside engineer, the [cold-review checklist](docs/COLD-REVIEW-CHECKLIST.
 shortest path from profile to fresh install, passing/blocked/tampered CLI flows, the fixed lab
 benchmark, the hosted 15-class refusal matrix, and the exact limits of each proof.
 
+The [conformance matrix](docs/AGENT-SYSTEMS-LAB-CONFORMANCE.md) lists every current owner,
+native schema, public manifest, and refusal/readback boundary in one place.
+
 ![Optional tool connections: recover context, bound decisions, prove outcomes](docs/toolkit-stack.svg)
 
 ## Choose your own 90-second proof
