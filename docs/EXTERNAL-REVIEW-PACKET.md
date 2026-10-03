@@ -7,7 +7,7 @@ profile or to infer adoption from activity.
 
 ## Review target
 
-The public profile main was read back at `3edd6896473fe7cfeaaacc234083fbee9c6be4a2` on
+The review snapshot was generated from profile base head `3edd6896473fe7cfeaaacc234083fbee9c6be4a2` on
 2026-10-03. The owner heads below are source-identity observations from `refs/heads/main` made
 while preparing this packet; they are freshness anchors, not release claims:
 

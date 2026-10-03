@@ -161,10 +161,11 @@
     }
   ],
   "profile": {
-    "main_head": "3edd6896473fe7cfeaaacc234083fbee9c6be4a2",
-    "repository": "jonah-ux/jonah-ux"
+    "lock_published_head": "136f3c4847e3dbeea8c5a54069fa9d17bbcfe5f8",
+    "repository": "jonah-ux/jonah-ux",
+    "snapshot_base_head": "3edd6896473fe7cfeaaacc234083fbee9c6be4a2"
   },
-  "purpose": "Freeze a clean-machine review snapshot without implying deployment, adoption, or provider-side control.",
+  "purpose": "Freeze a clean-machine review snapshot from a known profile source baseline; the containing profile commit is recorded separately.",
   "review_route": {
     "adoption": "unknown",
     "artifact_rule": "unavailable is preserved unless a supplied artifact directory and checksum manifest verify",
