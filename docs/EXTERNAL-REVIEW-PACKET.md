@@ -131,6 +131,15 @@ The wheel installed in a disposable Python 3.14.6 environment; supported top-lev
 subcommand error and was not treated as a pass. This is local build/install evidence, not a
 published release or adoption claim.
 
+MCP Doctor at `8129e159e428f639fead5e9a96b4c84396ca0688` was built in the same isolated temporary
+environment. Its strict audit returned `artifact_audit=pass` for one wheel and one sdist with
+wheel SHA-256 `b6065a983e87c02ff6095e28e4a153c7be343a73ad601c0ac6af4a505204d6e8`,
+sdist SHA-256 `d61d63d75427996d1bc4adaea16d9d0532004ddff07b926f25bd8dd9cd4bd535`, and
+`SHA256SUMS` SHA-256 `c5ae308ea7d210f8ea15430e5e94bae116a5bc6542c7af92db30c0b449e49b7a`.
+The wheel installed in a disposable Python 3.14.6 environment and reported `mcp-doctor 0.3.0`;
+supported CLI help also read back. This is local build/install evidence, not a published
+release or adoption claim.
+
 ## Fifteen-minute review
 
 1. Read the [architecture](AGENT-SYSTEMS-LAB-ARCHITECTURE.md) and
