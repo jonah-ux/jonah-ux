@@ -177,8 +177,24 @@
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
-        "state": "unavailable"
+        "artifacts": [
+          {
+            "name": "agent_resume-0.2.0-py3-none-any.whl",
+            "sha256": "d68d266dd55f340677cd35185cf6b48edd8a2300b784b0358dc42ae1cb6e8654"
+          },
+          {
+            "name": "agent_resume-0.2.0.tar.gz",
+            "sha256": "c443bffa194740ad4446b8e7888729b7ef99093db8ef25fa68727115e8746fe9"
+          }
+        ],
+        "checksum_manifest_sha256": "f79bb4e3e466a5471a7adde8a8f6aa115ab47d8ca00459b1daac13909a472807",
+        "consumer_cli_help": "pass",
+        "consumer_install": "pass",
+        "consumer_python": "3.14.6",
+        "local_build": "pass",
+        "local_packed_audit": "pass",
+        "package_version": "0.2.0",
+        "state": "verified"
       },
       "audit_schema": "agent-resume-public-audit/v1",
       "audit_state": "verified-at-head",
@@ -283,9 +299,9 @@
     }
   ],
   "profile": {
-    "lock_published_head": "1944a27089488ac3bc35415b39d36964e71acf9b",
+    "lock_published_head": "0c5d5ceb873f02ab94385dfef1bf260d214e92cb",
     "repository": "jonah-ux/jonah-ux",
-    "snapshot_base_head": "1944a27089488ac3bc35415b39d36964e71acf9b"
+    "snapshot_base_head": "0c5d5ceb873f02ab94385dfef1bf260d214e92cb"
   },
   "purpose": "Freeze a clean-machine review snapshot from a known profile source baseline; the containing profile commit is recorded separately.",
   "review_route": {
