@@ -14,6 +14,8 @@ Every product has its own install, demo, and useful core workflow. Pick the tool
 
 One optional integration follows a three-tool evidence lifecycle: [ChatLens v0.4.0](https://github.com/jonah-ux/chatlens/releases/tag/v0.4.0) exports a redacted local trace, [Atlas v0.2.0](https://github.com/jonah-ux/atlas-agent-runtime/releases/tag/v0.2.0) records a durable approval-gated task, and [Forgeyard v0.5.0](https://github.com/jonah-ux/forgeyard/releases/tag/v0.5.0) composes both into a reviewable record through `ai-work-evidence/v1`. [Read the reviewer map](docs/PORTFOLIO-SUITE-V2.md).
 
+Forgeyard also exposes an opt-in [installed reference flow](https://github.com/jonah-ux/forgeyard/blob/main/docs/contracts/forgeyard-reference-flow-v1.md): it invokes the installed ChatLens, Atlas, Agent Proof, and Forgeyard CLIs against owner-produced artifacts, source-verifies the handoff, and returns reviewable, blocked, tampered, or unavailable outcomes. A fresh local consumer observation used ChatLens 0.4.0, Atlas 0.2.0, Agent Proof 0.4.1, and Forgeyard 0.5.0; it is a reproducible handoff observation, not a deployment or adoption claim.
+
 The [Agent Systems Lab architecture](docs/AGENT-SYSTEMS-LAB-ARCHITECTURE.md) maps additional
 optional connections between context admission, policy, bounded execution, proof, continuation,
 retrieval, and reviewable delivery. Each repository keeps ownership of its core behavior.
