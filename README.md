@@ -48,6 +48,13 @@ For the optional multi-repo story, see the [portfolio suite map](docs/PORTFOLIO-
 connects outputs after each repository already works on its own; it is never an installation
 prerequisite.
 
+For a terminal-level integration proof, run Forgeyard's
+[reference-flow contract](https://github.com/jonah-ux/forgeyard/blob/main/docs/contracts/forgeyard-reference-flow-v1.md):
+one local command exercises context admission, policy, bounded sandboxing, Atlas lifecycle, proof,
+resume, and digest verification across passing, unknown-status, and tampered scenarios. The hosted
+[Forgeyard Workbench](https://jonah-ux.github.io/forgeyard/) also exposes a six-report adversarial
+matrix for stale, denied, unenforced, partial, queued, and tampered signals.
+
 ## The engineering loop
 
 These tools explore one practical question: **can agent work be understood, bounded, proved, and continued?**
