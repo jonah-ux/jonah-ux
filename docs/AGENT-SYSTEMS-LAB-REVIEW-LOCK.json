@@ -3,7 +3,8 @@
   "limitations": [
     "A current source head can advance after an audit receipt; rerun the matrix before treating it as verified.",
     "Provider-side controls, deployment, production security, outside review response, and adoption are not established by this lock.",
-    "The lock records public source and artifact observations only; it contains no credentials, private paths, customer data, or transcripts."
+    "The lock records public source and artifact observations only; it contains no credentials, private paths, customer data, or transcripts.",
+    "A clean Python 3.14 wheel probe for Agent Proof at its locked public head failed after the bounded helper retry because the PEP 517 backend could not import setuptools.build_meta; hosted CI did not publish a downloadable artifact, so no Python artifact state is upgraded from unavailable."
   ],
   "owners": [
     {
