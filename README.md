@@ -89,3 +89,8 @@ For a runnable cross-project example, see the [public integration walkthrough](d
 I publish the source, runnable fixtures, release information, and engineering notes so you can inspect the work. The ship log tracks source and release milestones. Small tools, big paper trails: I want the first run to be easy and the failure modes to be obvious.
 
 [Engineering evidence](docs/ENGINEERING-EVIDENCE.md) · [Work samples](docs/WORK-SAMPLES.md) · [Ship log](docs/SHIPLOG.md)
+
+Review the system like an outsider with the [threat model](docs/AGENT-SYSTEMS-LAB-THREAT-MODEL.md),
+[external review packet](docs/EXTERNAL-REVIEW-PACKET.md), and
+[maintainer runbook](docs/MAINTAINER-RUNBOOK.md). They link the public contracts, exact source
+heads, reproducible commands, and known evidence limits.
