@@ -32,7 +32,8 @@ capabilities connect without requiring one installation to trust all the others.
 The current Forgeyard integration proof is deliberately offline: its
 [reference-flow contract](https://github.com/jonah-ux/forgeyard/blob/main/docs/contracts/forgeyard-reference-flow-v1.md)
 checks a reviewable path, preserves an unknown status as blocked, and refuses digest-tampered
-record bytes. The hosted [Workbench](https://jonah-ux.github.io/forgeyard/) adds a six-report
-adversarial matrix for stale, denied, unenforced, partial, queued, and tampered signals. These are
+record bytes. The hosted [Workbench](https://jonah-ux.github.io/forgeyard/) adds a 15-class
+adversarial matrix for stale, denied, unenforced, partial, malformed, traversal, leakage, drift,
+duplicate, unbounded, false-completion, and tampered signals. These are
 synthetic fixtures that make the boundaries inspectable; they do not claim adoption or production
 deployment by the surrounding repositories.

@@ -56,8 +56,9 @@ For a terminal-level integration proof, run Forgeyard's
 [reference-flow contract](https://github.com/jonah-ux/forgeyard/blob/main/docs/contracts/forgeyard-reference-flow-v1.md):
 one local command exercises context admission, policy, bounded sandboxing, Atlas lifecycle, proof,
 resume, and digest verification across passing, unknown-status, and tampered scenarios. The hosted
-[Forgeyard Workbench](https://jonah-ux.github.io/forgeyard/) also exposes a six-report adversarial
-matrix for stale, denied, unenforced, partial, queued, and tampered signals.
+[Forgeyard Workbench](https://jonah-ux.github.io/forgeyard/) also exposes a 15-class adversarial
+matrix covering stale, denied, unenforced, partial, malformed, traversal, leakage, drift, duplicate,
+unbounded, false-completion, and tampered signals.
 
 ## The engineering loop
 
