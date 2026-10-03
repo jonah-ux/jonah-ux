@@ -45,6 +45,16 @@ returned `agent-proof/demo/v2` with `ok=true`, `verified=true`,
 `tamper_refused=true`, and `graph_tamper_refused=true`. This is release
 artifact and self-demo evidence; external adoption remains unknown.
 
+Forgeyard v0.5.0 is now the current public prerelease. Its annotated tag points
+to the reviewed main merge, release workflow
+`37100089253` published wheel, sdist, and `SHA256SUMS`, and fresh wheel/sdist
+consumers read `0.5.0`. The tagged reference flow returned
+`reviewable` and `blocked` for its passing and unknown-status scenarios, and
+the tagged `forgeyard-lab-benchmark/v1` receipt returned `result=pass` with
+six operations. The release remains a prerelease; these checks prove artifact
+usability and synthetic behavior, not outside adoption or production
+deployment.
+
 ## 2026-10-02 — independent visual field guides
 
 The authored public tools each have an independent first-run route and visual guide.
