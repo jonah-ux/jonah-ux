@@ -3,6 +3,36 @@
 This is a short record of public engineering work that another developer can
 verify. Each entry links to source, a release, CI, or a reproducible receipt.
 
+## 2026-10-02 — independent visual field guides
+
+The authored public tools each have an independent first-run route and visual guide.
+Each guide is a self-contained HTML document hosted from its own repository, with synthetic
+browser data identified explicitly. The CLI remains the route for real local evidence; companion
+repositories are optional consumers, never installation prerequisites.
+
+New guides cover approval/event recovery, session cards, provenance chains, admission refusal,
+citation movement, vector neighbors, worktree preservation, repeated trials, context budgets,
+redaction, policy explanations, sandbox capability limits, continuation identity, and MCP diagnostics.
+The profile links the guides beside each repository's local quickstart.
+
+This is a docs/onboarding deployment; it does not claim new binary releases or production adoption.
+
+Evidence: [Atlas flight deck PR](https://github.com/jonah-ux/atlas-agent-runtime/pull/6) ·
+[ChatLens guide PR](https://github.com/jonah-ux/chatlens/pull/16) ·
+[Agent Proof guide PR](https://github.com/jonah-ux/agent-proof/pull/14) ·
+[Context Integrity guide PR](https://github.com/jonah-ux/context-integrity-lab/pull/2) ·
+[Sourcemark guide PR](https://github.com/jonah-ux/sourcemark/pull/79) ·
+[Slipstream guide PR](https://github.com/jonah-ux/slipstream/pull/10) ·
+[Preservation desk PR](https://github.com/jonah-ux/worktree-conservator/pull/9) ·
+[Eval guide PR](https://github.com/jonah-ux/agent-eval-kit/pull/3) ·
+[Context Pack guide PR](https://github.com/jonah-ux/context-pack/pull/3) ·
+[Trace guide PR](https://github.com/jonah-ux/agent-trace-lite/pull/2) ·
+[Policy guide PR](https://github.com/jonah-ux/agent-policy/pull/3) ·
+[Sandbox guide PR](https://github.com/jonah-ux/agent-sandbox-run/pull/2) ·
+[Resume guide PR](https://github.com/jonah-ux/agent-resume/pull/2) ·
+[MCP guide PR](https://github.com/jonah-ux/mcp-doctor/pull/5) ·
+[Forgeyard standalone quickstart PR](https://github.com/jonah-ux/forgeyard/pull/24).
+
 ## Verified public history
 
 ## 2026-10-02 — tenfold interoperability and governed release pass
