@@ -13,16 +13,16 @@ while preparing this packet; they are freshness anchors, not release claims:
 
 | Owner | Main head | Native responsibility |
 | --- | --- | --- |
-| [Forgeyard](https://github.com/jonah-ux/forgeyard) | `bc2eb6996e64b71399f5ba0e1f406783762a910f` | review composition, packets, evaluation, public audit |
-| [Agent Proof](https://github.com/jonah-ux/agent-proof) | `2c8767257d4da2e78da73e93a82f7d066f3f1b8e` | tamper-evident ledger, graph, interop, public audit |
-| [ChatLens](https://github.com/jonah-ux/chatlens) | `e53c0f38806bb77624998755bd68dac8176205dd` | local trace discovery and redacted handoff |
-| [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) | `14fd14dd88c4bae979fef5d3a9c3448b0a15a456` | durable lifecycle and approval state |
+| [Forgeyard](https://github.com/jonah-ux/forgeyard) | `ebdb4f102e46f0de548b90d55585fb66e1de9004` | review composition, packets, evaluation, public audit |
+| [Agent Proof](https://github.com/jonah-ux/agent-proof) | `73dcf49abb892a002f938d3d5f5a5bfd247ccd33` | tamper-evident ledger, graph, interop, public audit |
+| [ChatLens](https://github.com/jonah-ux/chatlens) | `d842b4cd10c284604505a77880bda03e8b2849d0` | local trace discovery and redacted handoff |
+| [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) | `164de985d67ec5b6fccc340b0c94d96511d05fdf` | durable lifecycle and approval state |
 | [Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) | `6db7831cc70854ade5ff75daba957b432d8b5ea8` | scope, freshness, citations, admission/refusal |
-| [Agent Policy](https://github.com/jonah-ux/agent-policy) | `b8b29029c9f89196c250ba413e499091848f2e26` | capability decisions and policy receipts |
+| [Agent Policy](https://github.com/jonah-ux/agent-policy) | `daaeab061692cb3991d99a6b7a8f2f87d33706b3` | capability decisions and policy receipts |
 | [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | `b29a28fdeb0f1517a48431365ed28277b4d6effd` | bounded execution receipt |
 | [Agent Resume](https://github.com/jonah-ux/agent-resume) | `bd9a111e2354ba1eefb32dfbd1f228ce8f2cd9ae` | continuation and handoff state |
 | [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) | `48b05ce74a9f2ac5367fa8a280b1676fceabfef9` | bounded trace representation |
-| [Sourcemark](https://github.com/jonah-ux/sourcemark) | `dab05d290b22f58379677f561397030590357631` | citation checks and source-bound export |
+| [Sourcemark](https://github.com/jonah-ux/sourcemark) | `5eb0ce16e36639c2b3665671e35871cf92e75a37` | citation checks and source-bound export |
 | [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | `b1b4521e1acfbb1fd812f006f63c17b1f36c1a04` | tool-contract diagnostics |
 | [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | `8888726c12594610abb8c9c9322d00c9e2542a48` | preservation and recovery planning |
 | [Slipstream](https://github.com/jonah-ux/slipstream) | `a910fda74b717cc6a7f034f611919bfe337559cf` | local retrieval indexes |
