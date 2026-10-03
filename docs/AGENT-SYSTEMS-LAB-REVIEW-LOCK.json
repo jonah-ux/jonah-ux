@@ -1,0 +1,169 @@
+{
+  "generated_at": "2026-10-03",
+  "limitations": [
+    "A current source head can advance after an audit receipt; rerun the matrix before treating it as verified.",
+    "Provider-side controls, deployment, production security, outside review response, and adoption are not established by this lock.",
+    "The lock records public source and artifact observations only; it contains no credentials, private paths, customer data, or transcripts."
+  ],
+  "owners": [
+    {
+      "artifact": {
+        "checksum_manifest_sha256": "412827ffb67d7ea6bb7dc674755d568fbf7be0f91972532782622a95a1e9c7cd",
+        "release": "v0.5.0",
+        "state": "verified"
+      },
+      "audit_schema": "forgeyard-public-audit/v1",
+      "audit_state": "needs-rerun",
+      "owner": "forgeyard",
+      "repository": "jonah-ux/forgeyard",
+      "source_head": "ebdb4f102e46f0de548b90d55585fb66e1de9004"
+    },
+    {
+      "artifact": {
+        "reason": "no distribution directory supplied in the current lock run",
+        "state": "unavailable"
+      },
+      "audit_schema": "agent-proof-public-audit/v1",
+      "audit_state": "needs-rerun",
+      "owner": "agent-proof",
+      "repository": "jonah-ux/agent-proof",
+      "source_head": "73dcf49abb892a002f938d3d5f5a5bfd247ccd33"
+    },
+    {
+      "artifact": {
+        "reason": "no distribution directory supplied in the current lock run",
+        "state": "unavailable"
+      },
+      "audit_schema": "chatlens-public-audit/v1",
+      "audit_state": "needs-rerun",
+      "owner": "chatlens",
+      "repository": "jonah-ux/chatlens",
+      "source_head": "d842b4cd10c284604505a77880bda03e8b2849d0"
+    },
+    {
+      "artifact": {
+        "reason": "no distribution directory supplied in the current lock run",
+        "state": "unavailable"
+      },
+      "audit_schema": "atlas-public-audit/v1",
+      "audit_state": "needs-rerun",
+      "owner": "atlas-agent-runtime",
+      "repository": "jonah-ux/atlas-agent-runtime",
+      "source_head": "164de985d67ec5b6fccc340b0c94d96511d05fdf"
+    },
+    {
+      "artifact": {
+        "reason": "no distribution directory supplied in the current lock run",
+        "state": "unavailable"
+      },
+      "audit_schema": "context-integrity-public-audit/v1",
+      "audit_state": "verified-at-head",
+      "owner": "context-integrity-lab",
+      "repository": "jonah-ux/context-integrity-lab",
+      "source_head": "6db7831cc70854ade5ff75daba957b432d8b5ea8"
+    },
+    {
+      "artifact": {
+        "reason": "no distribution directory supplied in the current lock run",
+        "state": "unavailable"
+      },
+      "audit_schema": "agent-policy-public-audit/v1",
+      "audit_state": "needs-rerun",
+      "owner": "agent-policy",
+      "repository": "jonah-ux/agent-policy",
+      "source_head": "daaeab061692cb3991d99a6b7a8f2f87d33706b3"
+    },
+    {
+      "artifact": {
+        "reason": "no distribution directory supplied in the current lock run",
+        "state": "unavailable"
+      },
+      "audit_schema": "agent-sandbox-public-audit/v1",
+      "audit_state": "verified-at-head",
+      "owner": "agent-sandbox-run",
+      "repository": "jonah-ux/agent-sandbox-run",
+      "source_head": "b29a28fdeb0f1517a48431365ed28277b4d6effd"
+    },
+    {
+      "artifact": {
+        "reason": "no distribution directory supplied in the current lock run",
+        "state": "unavailable"
+      },
+      "audit_schema": "agent-resume-public-audit/v1",
+      "audit_state": "verified-at-head",
+      "owner": "agent-resume",
+      "repository": "jonah-ux/agent-resume",
+      "source_head": "bd9a111e2354ba1eefb32dfbd1f228ce8f2cd9ae"
+    },
+    {
+      "artifact": {
+        "reason": "no distribution directory supplied in the current lock run",
+        "state": "unavailable"
+      },
+      "audit_schema": "agent-trace-public-audit/v1",
+      "audit_state": "verified-at-head",
+      "owner": "agent-trace-lite",
+      "repository": "jonah-ux/agent-trace-lite",
+      "source_head": "48b05ce74a9f2ac5367fa8a280b1676fceabfef9"
+    },
+    {
+      "artifact": {
+        "reason": "no distribution directory supplied in the current lock run",
+        "state": "unavailable"
+      },
+      "audit_schema": "sourcemark-public-audit/v1",
+      "audit_state": "needs-rerun",
+      "owner": "sourcemark",
+      "repository": "jonah-ux/sourcemark",
+      "source_head": "5eb0ce16e36639c2b3665671e35871cf92e75a37"
+    },
+    {
+      "artifact": {
+        "reason": "no distribution directory supplied in the current lock run",
+        "state": "unavailable"
+      },
+      "audit_schema": "mcp-doctor-public-audit/v1",
+      "audit_state": "verified-at-head",
+      "owner": "mcp-doctor",
+      "repository": "jonah-ux/mcp-doctor",
+      "source_head": "b1b4521e1acfbb1fd812f006f63c17b1f36c1a04"
+    },
+    {
+      "artifact": {
+        "reason": "no distribution directory supplied in the current lock run",
+        "state": "unavailable"
+      },
+      "audit_schema": "worktree-conservator-public-audit/v1",
+      "audit_state": "verified-at-head",
+      "owner": "worktree-conservator",
+      "repository": "jonah-ux/worktree-conservator",
+      "source_head": "8888726c12594610abb8c9c9322d00c9e2542a48"
+    },
+    {
+      "artifact": {
+        "local_packed_audit": "pass",
+        "release": "v0.2.0",
+        "state": "verified"
+      },
+      "audit_schema": "slipstream-public-audit/v1",
+      "audit_state": "verified-at-head",
+      "owner": "slipstream",
+      "repository": "jonah-ux/slipstream",
+      "source_head": "a910fda74b717cc6a7f034f611919bfe337559cf"
+    }
+  ],
+  "profile": {
+    "main_head": "3adc0f9fb15a7c63ae0dbeafee753f7edd5e8775",
+    "repository": "jonah-ux/jonah-ux"
+  },
+  "purpose": "Freeze a clean-machine review snapshot without implying deployment, adoption, or provider-side control.",
+  "review_route": {
+    "adoption": "unknown",
+    "artifact_rule": "unavailable is preserved unless a supplied artifact directory and checksum manifest verify",
+    "audit_matrix": "docs/AGENT-SYSTEMS-LAB-AUDIT-MATRIX.md",
+    "head_readback": "git ls-remote https://github.com/OWNER/REPO.git refs/heads/main",
+    "outside_review": "not_requested",
+    "walkthrough": "docs/EXTERNAL-REVIEW-PACKET.md"
+  },
+  "schema": "agent-systems-lab-review-lock/v1"
+}

@@ -92,5 +92,7 @@ I publish the source, runnable fixtures, release information, and engineering no
 
 Review the system like an outsider with the [threat model](docs/AGENT-SYSTEMS-LAB-THREAT-MODEL.md),
 [external review packet](docs/EXTERNAL-REVIEW-PACKET.md), and
-[maintainer runbook](docs/MAINTAINER-RUNBOOK.md). They link the public contracts, exact source
-heads, reproducible commands, and known evidence limits.
+[maintainer runbook](docs/MAINTAINER-RUNBOOK.md). The [review lock](docs/AGENT-SYSTEMS-LAB-REVIEW-LOCK.json),
+[audit matrix](docs/AGENT-SYSTEMS-LAB-AUDIT-MATRIX.md), [maintenance route](docs/AGENT-SYSTEMS-LAB-MAINTENANCE.md),
+and [external review request draft](docs/EXTERNAL-REVIEW-REQUEST.md) link the public contracts,
+exact source heads, reproducible commands, and known evidence limits.
