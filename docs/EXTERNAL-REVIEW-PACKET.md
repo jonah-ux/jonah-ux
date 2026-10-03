@@ -7,7 +7,7 @@ profile or to infer adoption from activity.
 
 ## Review target
 
-The public profile main was read back at `580fdfcfe5c3f2edbeedc6afb36fd107ed87dec5` on
+The public profile main was read back at `ce3fd144e3809fbcbafbef4a9e15803504ad236b` on
 2026-10-03. The owner heads below are source-identity observations from `refs/heads/main` made
 while preparing this packet; they are freshness anchors, not release claims:
 
@@ -18,7 +18,7 @@ while preparing this packet; they are freshness anchors, not release claims:
 | [ChatLens](https://github.com/jonah-ux/chatlens) | `e53c0f38806bb77624998755bd68dac8176205dd` | local trace discovery and redacted handoff |
 | [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) | `14fd14dd88c4bae979fef5d3a9c3448b0a15a456` | durable lifecycle and approval state |
 | [Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) | `78744b2e01ec5ce72bdde9ff85e9b83a9c88dc66` | scope, freshness, citations, admission/refusal |
-| [Agent Policy](https://github.com/jonah-ux/agent-policy) | `6c65bc9c9a889989fd24cd4ef3bba539c96e8e28` | capability decisions and policy receipts |
+| [Agent Policy](https://github.com/jonah-ux/agent-policy) | `b8b29029c9f89196c250ba413e499091848f2e26` | capability decisions and policy receipts |
 | [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | `0014550f43149b3186303a73706a92d8bf26c4c9` | bounded execution receipt |
 | [Agent Resume](https://github.com/jonah-ux/agent-resume) | `ba1372955c063aa6c8d02b5324946cc4809aa407` | continuation and handoff state |
 | [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) | `ad7065a61a42a9dfc12a7027047688f5bc660312` | bounded trace representation |
@@ -46,7 +46,9 @@ assert that every owner has completed the same public-audit milestone.
 7. Clone [ChatLens](https://github.com/jonah-ux/chatlens) and run
    `python scripts/audit_public_surface.py --json` plus
    `python -m unittest discover -s tests -v`.
-8. Change one graph edge or source byte, keep the old digest, and confirm the relevant verifier
+8. Clone [Agent Policy](https://github.com/jonah-ux/agent-policy) and run
+   `python scripts/audit_public_surface.py --json` plus `python -m agent_policy.cli --help`.
+9. Change one graph edge or source byte, keep the old digest, and confirm the relevant verifier
    refuses the mutation.
 
 The [cold-review checklist](COLD-REVIEW-CHECKLIST.md) contains the full commands and expected
@@ -60,7 +62,7 @@ states. Use a disposable checkout and synthetic fixtures only.
 | Installed reference flow | [Forgeyard contract](https://github.com/jonah-ux/forgeyard/blob/main/docs/contracts/forgeyard-reference-flow-v1.md) | A fresh local consumer can call the named installed CLIs and preserve passing, blocked, tampered, and unavailable states. | A hosted service, production workflow, or outside adoption. |
 | Semantic graph | [Agent Proof graph implementation](https://github.com/jonah-ux/agent-proof/blob/main/src/agent_proof/graph.py) | Bound graph and packet inputs can be verified and tampering/orphan edges can be refused. | Trust in an input before the verifier sees it. |
 | Evaluation lab | [Forgeyard evaluation script](https://github.com/jonah-ux/forgeyard/blob/main/scripts/evaluate_lab.py) | Fixed correctness/refusal fixtures, hashes, and local performance observations are rerunnable. | A universal performance ranking or model-quality claim. |
-| Public audits | [Forgeyard audit](https://github.com/jonah-ux/forgeyard/blob/main/scripts/audit_public_surface.py), [Agent Proof audit](https://github.com/jonah-ux/agent-proof/blob/main/scripts/audit_public_surface.py), [Atlas audit](https://github.com/jonah-ux/atlas-agent-runtime/blob/main/scripts/audit_public_surface.py), and [ChatLens audit](https://github.com/jonah-ux/chatlens/blob/main/scripts/audit_public_surface.py) | Dependency/license declarations, release markers, high-signal privacy scans, and optional checksums are inspectable across four flagship owners. | Complete DLP, security certification, reproducible builds, or provider controls. |
+| Public audits | [Forgeyard audit](https://github.com/jonah-ux/forgeyard/blob/main/scripts/audit_public_surface.py), [Agent Proof audit](https://github.com/jonah-ux/agent-proof/blob/main/scripts/audit_public_surface.py), [Atlas audit](https://github.com/jonah-ux/atlas-agent-runtime/blob/main/scripts/audit_public_surface.py), [ChatLens audit](https://github.com/jonah-ux/chatlens/blob/main/scripts/audit_public_surface.py), and [Agent Policy audit](https://github.com/jonah-ux/agent-policy/blob/main/scripts/audit_public_surface.py) | Dependency/license declarations, release markers, high-signal privacy scans, and optional checksums are inspectable across five flagship owners. | Complete DLP, security certification, reproducible builds, or provider controls. |
 
 ## Reviewer questions
 
