@@ -7,25 +7,25 @@ profile or to infer adoption from activity.
 
 ## Review target
 
-The review snapshot was generated from profile base head `3edd6896473fe7cfeaaacc234083fbee9c6be4a2` on
+The review snapshot was generated from profile base head `695fd4de6777f25e82e5912726ee98570c33c86f` on
 2026-10-03. The owner heads below are source-identity observations from `refs/heads/main` made
 while preparing this packet; they are freshness anchors, not release claims:
 
 | Owner | Main head | Native responsibility |
 | --- | --- | --- |
-| [Forgeyard](https://github.com/jonah-ux/forgeyard) | `4daf0ff01ebe8da99cc92867e9035ec2d93bd222` | review composition, packets, evaluation, public audit |
-| [Agent Proof](https://github.com/jonah-ux/agent-proof) | `73dcf49abb892a002f938d3d5f5a5bfd247ccd33` | tamper-evident ledger, graph, interop, public audit |
-| [ChatLens](https://github.com/jonah-ux/chatlens) | `d842b4cd10c284604505a77880bda03e8b2849d0` | local trace discovery and redacted handoff |
-| [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) | `164de985d67ec5b6fccc340b0c94d96511d05fdf` | durable lifecycle and approval state |
-| [Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) | `6db7831cc70854ade5ff75daba957b432d8b5ea8` | scope, freshness, citations, admission/refusal |
-| [Agent Policy](https://github.com/jonah-ux/agent-policy) | `daaeab061692cb3991d99a6b7a8f2f87d33706b3` | capability decisions and policy receipts |
-| [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | `b29a28fdeb0f1517a48431365ed28277b4d6effd` | bounded execution receipt |
-| [Agent Resume](https://github.com/jonah-ux/agent-resume) | `bd9a111e2354ba1eefb32dfbd1f228ce8f2cd9ae` | continuation and handoff state |
-| [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) | `48b05ce74a9f2ac5367fa8a280b1676fceabfef9` | bounded trace representation |
-| [Sourcemark](https://github.com/jonah-ux/sourcemark) | `5eb0ce16e36639c2b3665671e35871cf92e75a37` | citation checks and source-bound export |
-| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | `b1b4521e1acfbb1fd812f006f63c17b1f36c1a04` | tool-contract diagnostics |
-| [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | `8888726c12594610abb8c9c9322d00c9e2542a48` | preservation and recovery planning |
-| [Slipstream](https://github.com/jonah-ux/slipstream) | `a910fda74b717cc6a7f034f611919bfe337559cf` | local retrieval indexes |
+| [Forgeyard](https://github.com/jonah-ux/forgeyard) | `9d772f72e7af11e47e3762c3c97bbdebda595f72` | review composition, packets, evaluation, public audit |
+| [Agent Proof](https://github.com/jonah-ux/agent-proof) | `abb3631fea816a0832001acf75a32fd5d2e61ec0` | tamper-evident ledger, graph, interop, public audit |
+| [ChatLens](https://github.com/jonah-ux/chatlens) | `850cddffbb8b6b931c3a8a1c42d714c0afa68cb1` | local trace discovery and redacted handoff |
+| [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) | `f956f89b889aedebf44b7d7e660fa94bf4903633` | durable lifecycle and approval state |
+| [Context Integrity Lab](https://github.com/jonah-ux/context-integrity-lab) | `536a200f2397851e4d5d75e0801896886c236ea2` | scope, freshness, citations, admission/refusal |
+| [Agent Policy](https://github.com/jonah-ux/agent-policy) | `604694258453ad58590aba9101e833cc9d262bf7` | capability decisions and policy receipts |
+| [Agent Sandbox Run](https://github.com/jonah-ux/agent-sandbox-run) | `04eed9c288734ab42e9161d2bc2216ccd5a7bf20` | bounded execution receipt |
+| [Agent Resume](https://github.com/jonah-ux/agent-resume) | `2ccac304ef8845846181db233d718f79f3e18e3a` | continuation and handoff state |
+| [Agent Trace Lite](https://github.com/jonah-ux/agent-trace-lite) | `c610364486410a5a5141f0837361d7f5e7f94494` | bounded trace representation |
+| [Sourcemark](https://github.com/jonah-ux/sourcemark) | `59b79c8368862635d76aa099eb085920fdb02b70` | citation checks and source-bound export |
+| [MCP Doctor](https://github.com/jonah-ux/mcp-doctor) | `6f893998213e1cf3e38a43540d5f11445e471db4` | tool-contract diagnostics |
+| [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | `419f40f393e443673b998c8fa61b5eba9ef37556` | preservation and recovery planning |
+| [Slipstream](https://github.com/jonah-ux/slipstream) | `27bb2f6d51909e9752c087792a8e02af0e2c2998` | local retrieval indexes |
 
 The current clean-machine Forgeyard route was rerun at `4daf0ff01ebe8da99cc92867e9035ec2d93bd222`:
 `passing` reached `reviewable`, `blocked` preserved `reviewable=false`, `tampered` refused with exit 2,
@@ -33,7 +33,9 @@ the public audit returned `pass`, and the evaluation receipt returned `pass`; ar
 `unavailable` without a supplied distribution directory.
 
 The heads above are source-identity observations only; they do not assert deployment, adoption, or
-that every owner has published a downloadable artifact. The [owner-native audit matrix](AGENT-SYSTEMS-LAB-AUDIT-MATRIX.md) records
+that every owner has published a downloadable artifact. The Forgeyard installed reference-flow
+observation below was run at its separately recorded `4daf0ff01ebe8da99cc92867e9035ec2d93bd222`
+boundary; the current matrix head is newer and its static audit was rerun independently. The [owner-native audit matrix](AGENT-SYSTEMS-LAB-AUDIT-MATRIX.md) records
 which repositories expose `*-public-audit/v1`, which checks are rerunnable, and where artifact state
 remains `unavailable` without an explicit distribution directory.
 
@@ -47,15 +49,15 @@ remains `unavailable` without an explicit distribution directory.
 4. Run `scripts/evaluate_lab.py --iterations 2 --warmup 0 --json` and inspect dataset hashes,
    refusal states, machine-local timings, and `unavailable` artifact/install fields.
 5. Clone [Agent Proof](https://github.com/jonah-ux/agent-proof) and run
-   `python scripts/audit_public_surface.py --json` plus
-   `PYTHONPATH=src python -m unittest discover -s tests -v`.
+   `python3 scripts/audit_public_surface.py --json` plus
+   `PYTHONPATH=src python3 -m unittest discover -s tests -v`.
 6. Clone [Atlas Agent Runtime](https://github.com/jonah-ux/atlas-agent-runtime) and run
-   `python scripts/audit_public_surface.py --json` plus `python -m atlas.cli --version`.
+   `python3 scripts/audit_public_surface.py --json` plus `python3 -m atlas.cli --version`.
 7. Clone [ChatLens](https://github.com/jonah-ux/chatlens) and run
-   `python scripts/audit_public_surface.py --json` plus
-   `python -m unittest discover -s tests -v`.
+   `python3 scripts/audit_public_surface.py --json` plus
+   `python3 -m unittest discover -s tests -v`.
 8. Clone [Agent Policy](https://github.com/jonah-ux/agent-policy) and run
-   `python scripts/audit_public_surface.py --json` plus `python -m agent_policy.cli --help`.
+   `python3 scripts/audit_public_surface.py --json` plus `python3 -m agent_policy.cli --help`.
 9. Run the owner-native audit matrix for Agent Policy, Agent Sandbox Run, Sourcemark, Agent Resume,
    Agent Trace Lite, MCP Doctor, Worktree Conservator, and Context Integrity Lab. Keep each JSON receipt
    with the corresponding source head; `artifact_audit=unavailable` is expected when no `dist/` was
