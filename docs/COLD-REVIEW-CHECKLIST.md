@@ -97,3 +97,84 @@ the CLI and provenance contracts remain authoritative for real records.
 The public lab intentionally contains no Auto Shop Media source, customer data,
 credentials, private paths, transcripts, production logs, or proprietary operating
 policy.
+
+## 7. Run the supply-chain and privacy checks
+
+These checks are deliberately separate from the functional demos. A passing command proves only
+the named boundary; a missing tool or provider-side control stays `unavailable`.
+
+### Release and dependency provenance
+
+For each released package under review, read the tag, target commit, assets, and checksums from the
+repository release page, then verify the downloaded files before installation:
+
+```bash
+gh release view TAG --repo OWNER/REPO --json tagName,targetCommitish,assets
+sha256sum PACKAGE.whl PACKAGE.tar.gz
+python -m pip install --no-index --no-deps PACKAGE.whl
+python -m pip check
+```
+
+Record the package version, tag, target commit, asset names, and checksum as one observation. A
+successful local install does not prove that the package was built reproducibly or that a future
+release will carry the same dependencies.
+
+Check the source boundary directly:
+
+```bash
+test -f LICENSE
+test -f SECURITY.md
+python - <<'PY'
+import pathlib, tomllib
+data = tomllib.loads(pathlib.Path("pyproject.toml").read_text())
+print(data.get("project", {}).get("dependencies", []))
+PY
+```
+
+The current public Python owners use standard-library runtime dependencies in their reviewed
+packages. This command records the actual project metadata; it is not a substitute for a complete
+license audit or a platform-attested build provenance record.
+
+### Secret, private-path, and synthetic-data scan
+
+Run the scan from the repository root and inspect every match. The patterns are intentionally
+conservative; a fixture that contains a documented synthetic marker must be classified rather than
+silently ignored:
+
+```bash
+rg -n --hidden --glob '!.git/**' \
+  '-----BEGIN (RSA|OPENSSH|EC|PGP) PRIVATE KEY-----|sk-[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{20,}|/Users/|/home/|jonahsnorthstar|customer|EIN|api[_-]?key' .
+```
+
+The expected outcome for a public fixture tree is zero unclassified hits. A clean search is not a
+secret-scanning service and does not prove that a provider-side history is clean. Keep transcript
+text, credentials, customer records, private paths, and employer policy outside checked-in examples.
+
+### Hostile-input and confused-deputy review
+
+Use the existing owner tests and receipts rather than creating a second security harness:
+
+- Forgeyard `forgeyard-evaluation/v1` covers fifteen refusal mutations, including traversal,
+  symlink escape, prompt/secret leakage, schema drift, duplicate delivery, stale identity,
+  unbounded output, and false completion.
+- Agent Proof `verify-graph --input` must refuse a changed edge and a resealed orphan edge.
+- Agent Policy must preserve default-deny and its versioned `agent-policy/receipt/v1` boundary.
+- Agent Sandbox Run must keep `agent-sandbox/v2` backend and enforcement disclosure explicit; a
+  fallback receipt is evidence of fallback, not proof of isolation.
+- Worktree Conservator must leave real worktrees untouched during disposable conformance runs.
+
+Record the exact command, source head, receipt, and refusal result. A green fixture test proves the
+fixture boundary; it does not prove production security, deployment, adoption, or resistance to
+unseen inputs.
+
+### Adoption and maintenance boundary
+
+Read the public repository observations separately from functional proof:
+
+```bash
+gh api repos/OWNER/REPO --jq '{stars: .stargazers_count, forks: .forks_count, issues: .open_issues_count}'
+gh api repos/OWNER/REPO/contributors --jq 'length'
+```
+
+Stars, forks, downloads, a local install, and a hosted demo remain observations. Outside adoption
+requires a directly observed independent consumer or contributor; otherwise record `unknown`.
