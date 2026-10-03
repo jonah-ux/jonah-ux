@@ -28,8 +28,24 @@
     },
     {
       "artifact": {
-        "reason": "no distribution directory supplied in the final landed documentation-wave matrix run",
-        "state": "unavailable"
+        "artifacts": [
+          {
+            "name": "agent_proof-0.4.1-py3-none-any.whl",
+            "sha256": "779982df5d59f0105f308c9ae0212a5a3031be47961e8dc69f9afe415cef218e"
+          },
+          {
+            "name": "agent_proof-0.4.1.tar.gz",
+            "sha256": "5868daeb8522d965abc591d62d9971584bbe2cd4fb03bea45b69177bdb3ca073"
+          }
+        ],
+        "checksum_manifest_sha256": "a1e491bebb5429cff54f62393f1cf254d8bed1a1e11fd9f4c57f24908b09aad5",
+        "consumer_install": "pass",
+        "consumer_python": "3.14.6",
+        "consumer_version": "agent-proof 0.4.1",
+        "local_build": "pass",
+        "local_packed_audit": "pass",
+        "package_version": "0.4.1",
+        "state": "verified"
       },
       "audit_schema": "agent-proof-public-audit/v1",
       "audit_state": "verified-at-head",
@@ -166,9 +182,9 @@
     }
   ],
   "profile": {
-    "lock_published_head": "c935863ebef6f6a4837545fa3b9f5fde990a8cfd",
+    "lock_published_head": "9de2e4c29d6e802bc77c4cbb8f20408e5f7d0723",
     "repository": "jonah-ux/jonah-ux",
-    "snapshot_base_head": "c935863ebef6f6a4837545fa3b9f5fde990a8cfd"
+    "snapshot_base_head": "9de2e4c29d6e802bc77c4cbb8f20408e5f7d0723"
   },
   "purpose": "Freeze a clean-machine review snapshot from a known profile source baseline; the containing profile commit is recorded separately.",
   "review_route": {
