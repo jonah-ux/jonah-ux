@@ -196,9 +196,15 @@ text, credentials, customer records, private paths, and employer policy outside 
 
 Use the existing owner tests and receipts rather than creating a second security harness:
 
-- Forgeyard `forgeyard-evaluation/v1` covers fifteen refusal mutations, including traversal,
-  symlink escape, prompt/secret leakage, schema drift, duplicate delivery, stale identity,
-  unbounded output, and false completion.
+- Forgeyard 0.5.1 `forgeyard evaluate-refusals` executes nineteen native cases with a passing
+  control, including traversal, symlink escape, payload redaction, schema drift, duplicate
+  evidence, stale provenance, bounded summaries, and false completion. The pinned corpus
+  rejects empty or truncated success claims. The fifteen Workbench threat labels remain a
+  separate static catalogue; they do not execute every specialist owner's enforcement path.
+- Forgeyard `python3 scripts/evaluate_lab.py --dist-dir ./dist --install --json` makes supplied
+  artifact or installation failures block its result. Omitted optional inputs remain unavailable.
+  Latency, separate Python allocation peaks, artifact sizes, and installation timings are local
+  observations with explicit environment and protocol metadata.
 - Agent Proof `verify-graph --input` must refuse a changed edge and a resealed orphan edge.
 - Agent Policy must preserve default-deny and its versioned `agent-policy/receipt/v1` boundary.
 - Agent Sandbox Run must keep `agent-sandbox/v2` backend and enforcement disclosure explicit; a
