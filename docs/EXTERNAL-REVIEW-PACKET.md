@@ -166,6 +166,44 @@ The installed wheel also ran `forgeyard demo` successfully: it returned `reviewa
 `ac5a2d8801ef4de9594a28345b089238e0783979e2dceae437de68e2785ca2e2`. This is a disposable
 consumer observation at the same local artifact boundary.
 
+## Agent Proof release after the snapshot
+
+The lock above remains an immutable review snapshot. Agent Proof subsequently advanced through
+[PR #40](https://github.com/jonah-ux/agent-proof/pull/40) to source
+`9f378fedd8f9fae0e5fdb5650018c7af066b27a7` and published
+[v0.4.2 as a prerelease](https://github.com/jonah-ux/agent-proof/releases/tag/v0.4.2).
+This release refuses malformed graph/record field types and rechecks embedded run identity during
+ledger readback. The older 0.4.1 artifact observations above retain their original meaning and bytes.
+
+The reviewed head `a26a061ec5470b72e2341994b89187e1c873cc4a` returned `Ran 90 tests`, `OK`.
+[PR CI](https://github.com/jonah-ux/agent-proof/actions/runs/37163531939) and
+[landed CI](https://github.com/jonah-ux/agent-proof/actions/runs/37163648179) each passed the four
+Linux/macOS × Python 3.11/3.12 jobs, including fresh wheel and source consumers. The
+[release workflow](https://github.com/jonah-ux/agent-proof/actions/runs/37163840670) published these
+assets from the annotated tag at the landed source:
+
+| Asset | SHA-256 |
+| --- | --- |
+| `agent_proof-0.4.2-py3-none-any.whl` | `f150acaa08432e0481c2e648a04d19d0421b37d23795e75dc1044b23295bb11c` |
+| `agent_proof-0.4.2.tar.gz` | `2684ead4a162e247403351aeebb2220512630b9df5e8e75455d264da704fab6c` |
+| `SHA256SUMS` | `aba722369797784a41b1e5104e985bc96bad53098f6e86058cb10562807ca538` |
+
+Fresh downloads matched `SHA256SUMS` and passed the native `--require-dist` audit at the landed
+head. `gh attestation verify` succeeded for both distributions with the exact repository,
+`release.yml` signer, `refs/tags/v0.4.2`, source digest, and `--deny-self-hosted-runners` constraints.
+Each distribution installed in its own disposable Python 3.14.6 environment, outside the checkout
+with `PYTHONPATH` unset; package location and distribution/module versions read back as installed
+under the environment and `0.4.2`. Each consumer returned `OK` for 21 graph and 18 native-adapter
+tests and passed the native demo's graph, portable-bundle, interop, and tamper assertions.
+
+Both installed consumers reproduced the existing failure-walkthrough baseline graph byte-for-byte,
+including graph SHA-256 `37bcafc296832426dd6751be71372dc763dfe828a7a82f5eb7ab812bfdeecf11`,
+four nodes, three edges, and `input_state=bound`. This is a canonical synthetic-fixture and release
+consumer readback. It does not authenticate record authors, prove a described production operation,
+or establish outside review, deployment, or adoption. The frozen lock and four-owner reference
+release target continue to identify their original artifacts; they are not silently advanced by
+this subsequent owner release.
+
 ## Fifteen-minute first run
 
 1. Read the [architecture](AGENT-SYSTEMS-LAB-ARCHITECTURE.md) and
