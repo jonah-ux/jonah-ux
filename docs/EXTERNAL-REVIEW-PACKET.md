@@ -27,11 +27,16 @@ while preparing this packet; they are freshness anchors, not release claims:
 | [Worktree Conservator](https://github.com/jonah-ux/worktree-conservator) | `278e27fd335142d08288e5499e80ab01f140a455` | preservation and recovery planning |
 | [Slipstream](https://github.com/jonah-ux/slipstream) | `27bb2f6d51909e9752c087792a8e02af0e2c2998` | local retrieval indexes |
 
-The current clean-machine Forgeyard static route was rerun at `90bbc9685f320d4d1c8272f36483b91bdf8707ed`:
+The snapshot's clean-machine Forgeyard static route was rerun at `90bbc9685f320d4d1c8272f36483b91bdf8707ed`:
 `passing` reached `reviewable`, `blocked` preserved `reviewable=false`, `tampered` refused with exit 2,
 the public audit returned `pass`, and the evaluation receipt returned `pass`. That route omitted
 `--dist-dir`, so its artifact field is `unavailable`; the supplied same-head wheel/sdist receipt
 and disposable install are recorded separately below.
+
+That evaluation only counted stored refusal labels and did not gate its overall result on requested
+artifact/install failure. Its old `pass` is a historical receipt, not proof of executed refusal
+coverage. The subsequent Forgeyard 0.5.1 section records the runtime and gate repair; the frozen
+lock and source table retain their original bytes and meaning.
 
 The heads above are source-identity observations only; they do not assert deployment, adoption, or
 that every owner has published a downloadable artifact. The Forgeyard installed reference-flow
@@ -159,7 +164,7 @@ wheel SHA-256 `066d2f6bed399ec470a1bbabcce447c39f5e8e5ab408d10420225d693f7e992f`
 sdist SHA-256 `3a646d4439cfbff202900eeca79811d842285c36080b472f9ec59b46f1e1f873`, and
 `SHA256SUMS` SHA-256 `f2b85475bccb58a8c259bb59dbd8284c6e908bd635b9e52b6fcd03d956b5fd16`.
 The wheel installed in a disposable Python 3.14.6 environment and reported `forgeyard 0.5.0`;
-supported CLI help also read back. This is current-head local build/install evidence, not a
+supported CLI help also read back. This is snapshot-head local build/install evidence, not a
 published release, outside-adoption, deployment, or production claim.
 The installed wheel also ran `forgeyard demo` successfully: it returned `reviewable=true`,
 `status=ready_for_review`, two passing evidence entries, and record SHA-256
@@ -204,6 +209,51 @@ or establish outside review, deployment, or adoption. The frozen lock and four-o
 release target continue to identify their original artifacts; they are not silently advanced by
 this subsequent owner release.
 
+## Forgeyard release after the snapshot
+
+Forgeyard advanced through [PR #54](https://github.com/jonah-ux/forgeyard/pull/54) and
+[PR #55](https://github.com/jonah-ux/forgeyard/pull/55) to source
+`d8d225f961e550e9065f9f0cd6e446d7939e5ef9` and published
+[v0.5.1 as a prerelease](https://github.com/jonah-ux/forgeyard/releases/tag/v0.5.1).
+The final reviewed head `f0cafad5b90206e89b3dc445d1e4cbdc010571e3` returned seventy-four
+passing tests in each [hosted Linux/macOS Python 3.11/3.12 job](https://github.com/jonah-ux/forgeyard/actions/runs/37170850510).
+[Landed CI](https://github.com/jonah-ux/forgeyard/actions/runs/37171157605) and the
+[release workflow](https://github.com/jonah-ux/forgeyard/actions/runs/37171326034) passed at
+the tagged source. PyPI publication was skipped; the verified distribution channel is this
+GitHub prerelease.
+
+| Asset | SHA-256 |
+| --- | --- |
+| `forgeyard-0.5.1-py3-none-any.whl` | `296f29379b009d37bd21f54b22c4a75a2ee150283acba3e074af8c9824bd8801` |
+| `forgeyard-0.5.1.tar.gz` | `dd799738bf013be79e6dee392d495fc7d9a06d1ad8df47786af29306113d0bd1` |
+| `SHA256SUMS` | `194cd3befb4f8b521cf25683c5377edae48be994455fd52064f502dbaeabefeb` |
+
+Fresh public downloads matched the manifest and passed the native artifact audit. Both
+distributions passed `gh attestation verify` with this repository, `release.yml` signer,
+`refs/tags/v0.5.1`, exact source digest, and `--deny-self-hosted-runners` constraints. Each
+installed in a separate disposable Python 3.14.6 environment outside the checkout with
+`PYTHONPATH` unset. Import origin and version `0.5.1` read back, and each installed
+`forgeyard evaluate-refusals` executed all nineteen passing native cases with matching corpus,
+suite, core, and interop digests. The wheel install was offline; the source install fetched
+isolated build requirements.
+
+The [published evaluation receipt](https://github.com/jonah-ux/forgeyard/releases/download/v0.5.1/evaluation.json),
+[wheel receipt](https://github.com/jonah-ux/forgeyard/releases/download/v0.5.1/wheel-runtime.json), and
+[source receipt](https://github.com/jonah-ux/forgeyard/releases/download/v0.5.1/sdist-runtime.json)
+contain the executed outcomes. The native corpus digest is
+`5f70a79f2be8dc48ec26ec4f569951e342ea7717997b11084104cbfc63e0733e`.
+A fresh tagged-source evaluation reproduced the published correctness and Workbench dataset
+hashes, passed artifact/installed-consumer gates, and recorded machine-local latency, separate
+Python allocation peaks, byte sizes, and venv/install timings. Empty/truncated corpora, changed
+PASS/FAIL projection, wrong refusal reasons, and always-accepting or always-refusing packet
+verifiers are regression-tested failures. The fifteen static Workbench labels are catalogue
+metadata, not fifteen independently executed specialist enforcement paths.
+
+These are synthetic native contract and consumer observations. They do not claim specialist
+policy or sandbox enforcement, provider behavior, complete security, production outcomes,
+outside review, or adoption. The historical thirteen-owner lock and four-package reference
+release target remain their original snapshots.
+
 ## Fifteen-minute first run
 
 1. Read the [architecture](AGENT-SYSTEMS-LAB-ARCHITECTURE.md) and
@@ -212,8 +262,10 @@ this subsequent owner release.
    `forgeyard demo`.
 3. Run `python3 scripts/run_reference_flow.py --scenario passing`, then repeat with
    `--scenario blocked` and `--scenario tampered`.
-4. Run `python3 scripts/evaluate_lab.py --iterations 2 --warmup 0 --json` and inspect dataset hashes,
-   refusal states, machine-local timings, and `unavailable` artifact/install fields.
+4. Run `forgeyard evaluate-refusals`, then
+   `python3 scripts/evaluate_lab.py --iterations 2 --warmup 0 --json` and inspect executed cases,
+   dataset hashes, local timings/allocation observations, and unavailable optional artifact/install
+   fields. With 0.5.1 release assets, `--dist-dir ./dist --install` makes those checks required.
 5. From a clone of this profile, run `python3 scripts/validate_review_packet.py --json`. Confirm
    the source identity, owner table, recorded artifact metadata, and explicit evidence limits.
 6. Follow the compatibility, graph, and release-lock links in the evidence ledger below. The
@@ -258,7 +310,7 @@ states. Use a disposable checkout and synthetic fixtures only.
 | Compatibility charter | [Agent Proof compatibility manifest](https://github.com/jonah-ux/agent-proof/blob/main/conformance/compatibility-v1.json) | The reviewed adapter registry, refusal vocabulary, and immutable pins are structurally inspectable. | That every owner is currently deployed or mutually compatible outside the named pins. |
 | Installed reference flow | [Forgeyard contract](https://github.com/jonah-ux/forgeyard/blob/main/docs/contracts/forgeyard-reference-flow-v1.md) | A fresh local consumer can call the named installed CLIs and preserve passing, blocked, tampered, and unavailable states. | A hosted service, production workflow, or outside adoption. |
 | Semantic graph | [Agent Proof graph implementation](https://github.com/jonah-ux/agent-proof/blob/main/src/agent_proof/graph.py) | Bound graph and packet inputs can be verified and tampering/orphan edges can be refused. | Trust in an input before the verifier sees it. |
-| Evaluation lab | [Forgeyard evaluation script](https://github.com/jonah-ux/forgeyard/blob/main/scripts/evaluate_lab.py) | Fixed correctness/refusal fixtures, hashes, and local performance observations are rerunnable. | A universal performance ranking or model-quality claim. |
+| Evaluation lab | [Forgeyard evaluation script](https://github.com/jonah-ux/forgeyard/blob/v0.5.1/scripts/evaluate_lab.py) | Executed native cases, fixed dataset hashes, requested artifact/install gates, and local latency/allocation/install observations are rerunnable. | Every specialist's enforcement behavior, universal performance ranking, or model quality. |
 | Public audits | Owner-native `*-public-audit/v1` receipts across Forgeyard, Agent Proof, Atlas, ChatLens, Agent Policy, Agent Sandbox Run, Sourcemark, Slipstream, Worktree Conservator, Agent Resume, Agent Trace Lite, MCP Doctor, and Context Integrity Lab | Dependency/license declarations, release markers, high-signal privacy scans, checksum refusal behavior, and explicit artifact availability are inspectable from clean public clones. | Complete DLP, security certification, reproducible builds across machines, provider controls, or adoption. |
 
 ## Reviewer questions
