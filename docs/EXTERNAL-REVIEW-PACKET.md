@@ -254,6 +254,71 @@ policy or sandbox enforcement, provider behavior, complete security, production 
 outside review, or adoption. The historical thirteen-owner lock and four-package reference
 release target remain their original snapshots.
 
+## Agent Proof 0.5.0 offline compatibility foundation
+
+The additive [0.5.0 prerelease](https://github.com/jonah-ux/agent-proof/releases/tag/v0.5.0)
+was published from annotated tag `v0.5.0` at
+`681b34f1ac7189dcd4da26ad8b5c5ef0b3a07880` on 2026-10-04. Its
+[v2 charter](https://github.com/jonah-ux/agent-proof/blob/681b34f1ac7189dcd4da26ad8b5c5ef0b3a07880/conformance/compatibility-v2.json)
+has canonical digest `b2ed24c74250406b395b681a7d08ae9501161a6aea21a071dd93834fba53479b`.
+The frozen v1 charter, historical owner table and four-package release lock retain their
+original bytes and meaning.
+
+The checker verifies thirteen selected public JSON declarations, their source-field provenance,
+repository bindings and native schema versions. It also negotiates explicit peer declarations
+through every supplied registry. Byte-only checks, an omitted owner, missing source provenance,
+an ignored source repository and an unversioned capability name cannot produce full validation.
+Actual artifact reads share an aggregate byte limit, including reads that later refuse.
+The [contract](https://github.com/jonah-ux/agent-proof/blob/681b34f1ac7189dcd4da26ad8b5c5ef0b3a07880/docs/contracts/agent-systems-lab-compatibility-v2.md)
+defines the selectors, refusal vocabulary, trust assumptions and preserved v1 interface.
+
+Reviewed source head `24f71af76d1aefca288119989d27e71743648dc7` passed
+[push CI](https://github.com/jonah-ux/agent-proof/actions/runs/37192714651) and
+[PR CI](https://github.com/jonah-ux/agent-proof/actions/runs/37192717315), each with Linux/macOS
+Python 3.11/3.12 jobs and separate installed wheel/sdist CLI checks. The
+[release workflow](https://github.com/jonah-ux/agent-proof/actions/runs/37193113678)
+passed identity, installed consumers and build provenance at the published commit; PyPI publishing
+was skipped. Independent read-only agent review found six false-success paths before publication;
+their [public regressions](https://github.com/jonah-ux/agent-proof/blob/681b34f1ac7189dcd4da26ad8b5c5ef0b3a07880/tests/test_compatibility_v2.py)
+cover source provenance, actual-read budgets, registry bypass, duplicate codes, changed owner sets
+and repository selectors. The standalone source helper also preserves v1 refusal exit 1.
+
+Fresh downloaded wheel and source-archive consumers on Python 3.12.13 each ran the full 121-test
+suite outside the checkout, verified installed module origin/version, invoked the actual CLI
+over all thirteen declarations, selected native version 2 and refused a disjoint declaration.
+Both passed the synthetic proof/graph/bundle demo, strict release-asset audit and constrained
+GitHub attestations for the exact source, tag, release workflow and SLSA provenance predicate.
+
+| Published asset | SHA-256 |
+| --- | --- |
+| `agent_proof-0.5.0-py3-none-any.whl` | `56b3a1d8b81430b8bbbb6b3f886f770b38a6d962721581bd2a74fa720d85fc7a` |
+| `agent_proof-0.5.0.tar.gz` | `f9239738d414df0dbee818b837a68273ae5a99f2ea948adbf7dbe476ce39d7eb` |
+| `SHA256SUMS` | `f42d6be26755b6c30b77ac5bc20bfb12d2b16a7be87cabc2e36a144cddbb2fb6` |
+
+To rerun the installed declaration check from the reviewed source, use Git and Python 3.11
+or newer. If `python3` is older, set `PROOF_PYTHON` to a supported executable such as
+`python3.12`. The version check runs before creating the checkout or environment.
+
+```sh
+proof_python="${PROOF_PYTHON:-python3}"
+"$proof_python" -c 'import sys; raise SystemExit(0 if sys.version_info >= (3, 11) else "Python 3.11 or newer is required; set PROOF_PYTHON to a supported executable.")'
+git clone --depth 1 --branch v0.5.0 https://github.com/jonah-ux/agent-proof.git agent-proof-review
+proof_source="$PWD/agent-proof-review"
+test "$(git -C "$proof_source" rev-parse HEAD)" = 681b34f1ac7189dcd4da26ad8b5c5ef0b3a07880
+"$proof_python" -m venv "$proof_source/.venv"
+"$proof_source/.venv/bin/python" -m pip install "$proof_source"
+proof_review="$(mktemp -d)"
+cd "$proof_review"
+"$proof_source/.venv/bin/python" "$proof_source/scripts/check_installed_compatibility.py" --source-root "$proof_source"
+```
+
+This command is a source-install reproduction, not a downloaded-release artifact proof. The
+wheel still requires explicit caller-supplied manifests; the source distribution includes its
+conformance resources. These checks prove declaration agreement and Agent Proof's synthetic
+workflows. They do not invoke sibling runtimes or prove authentication, outside review, adoption,
+production behavior or complete security. File/source pins require caller trust; timestamps do
+not imply native observation.
+
 ## Fifteen-minute first run
 
 1. Read the [architecture](AGENT-SYSTEMS-LAB-ARCHITECTURE.md) and

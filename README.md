@@ -27,6 +27,14 @@ benchmark, the hosted 15-class refusal matrix, and the exact limits of each proo
 The [conformance matrix](docs/AGENT-SYSTEMS-LAB-CONFORMANCE.md) lists every current owner,
 native schema, public manifest, and refusal/readback boundary in one place.
 
+[Agent Proof 0.5.0](https://github.com/jonah-ux/agent-proof/releases/tag/v0.5.0) adds an
+offline check over thirteen pinned public declarations: exact bytes, source fields,
+repository identity, and explicitly admitted native versions. It refuses an
+unversioned capability name rather than treating a schema suffix as support.
+Read the [compatibility contract](https://github.com/jonah-ux/agent-proof/blob/681b34f1ac7189dcd4da26ad8b5c5ef0b3a07880/docs/contracts/agent-systems-lab-compatibility-v2.md)
+and [run the installed review check](docs/EXTERNAL-REVIEW-PACKET.md#agent-proof-050-offline-compatibility-foundation)
+before connecting outputs. Declaration agreement remains separate from native execution.
+
 ![Optional tool connections: recover context, bound decisions, prove outcomes](docs/toolkit-stack.svg)
 
 ## Choose your own 90-second proof

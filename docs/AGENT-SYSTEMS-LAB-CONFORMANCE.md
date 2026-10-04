@@ -27,10 +27,16 @@ external user has adopted the suite, or that a valid receipt proves a
 production outcome. For the reproducible install and review sequence, use the
 [cold-review checklist](COLD-REVIEW-CHECKLIST.md).
 
-The currently released compatibility checker validates charter structure and adapter-registry
-agreement. It does not yet consume pinned participant bytes or negotiate native supported versions.
-Those extensions remain in progress. The new Atlas/ChatLens/Forgeyard JSON declarations are public source
-metadata with producer-test coverage, not claims of a new native package release or runtime adoption.
+The [Agent Proof 0.5.0 prerelease](https://github.com/jonah-ux/agent-proof/releases/tag/v0.5.0)
+adds the [offline v2 charter](https://github.com/jonah-ux/agent-proof/blob/681b34f1ac7189dcd4da26ad8b5c5ef0b3a07880/conformance/compatibility-v2.json).
+It validates all thirteen selected declaration files, their exact byte pins, source-field roles,
+repository bindings and native versions. Native and capability negotiation use every supplied
+registry constraint; operation names without declared versions cannot negotiate support.
+The installed checker keeps `execution=not_attempted` and `remote_state=not_contacted`.
+This release establishes declaration and consumer behavior, not sibling runtime invocation,
+outside adoption or a new release of each producer. The
+[review packet](EXTERNAL-REVIEW-PACKET.md#agent-proof-050-offline-compatibility-foundation)
+records exact source, asset digests, hosted checks and a runnable installed-consumer command.
 
 Forgeyard's [producer checks](https://github.com/jonah-ux/forgeyard/blob/330285e2cc3203213687c14d0beae3a2db43f1ad/tests/test_lab_conformance.py)
 require the declared capability bindings to match actual command/file schemas, successful review
