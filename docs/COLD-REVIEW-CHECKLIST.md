@@ -61,6 +61,18 @@ Check for `forgeyard-lab-benchmark/v1`, nine reports, six operation names
 `packet_ok: true`, and `private_payloads_exported: false`. Timings are machine-local
 observations, not cross-machine rankings.
 
+With Forgeyard 0.5.1, run the native refusal evaluation separately:
+
+```bash
+forgeyard evaluate-refusals
+```
+
+The 0.5.1 release executes nineteen synthetic native contract cases and controls. Compare the
+package version and returned corpus identity with the
+[0.5.1 packet evidence](EXTERNAL-REVIEW-PACKET.md#forgeyard-release-after-the-snapshot).
+This is a native contract exercise; it does not establish specialist policy/sandbox enforcement
+or provider behavior.
+
 ## 4. Inspect the hosted refusal surface
 
 Open the [Forgeyard Workbench](https://jonah-ux.github.io/forgeyard/), choose
@@ -73,8 +85,15 @@ stale source identity, unbounded output, and false completion.
 The expected visible state is `15` specialists, `BLOCKED` decision, and `SEALED`
 integrity. The checked-in artifact is [adversarial.json](https://github.com/jonah-ux/forgeyard/blob/main/docs/workbench/fixtures/adversarial.json);
 the CLI and provenance contracts remain authoritative for real records.
+These fifteen rows are stored catalogue labels. The native evaluation above is the executed
+refusal evidence; neither boundary establishes production enforcement or outside adoption.
 
 ## 5. Follow the owner boundaries
+
+To check declarations before connecting the tools, use the
+[Agent Proof 0.5.0 installed review route](EXTERNAL-REVIEW-PACKET.md#agent-proof-050-offline-compatibility-foundation).
+It checks all thirteen selected declarations and explicit version constraints while reporting
+`execution=not_attempted`. Keep that result separate from the owner-native behavior below.
 
 | Question | Owner to inspect | Boundary to preserve |
 | --- | --- | --- |
