@@ -295,13 +295,17 @@ GitHub attestations for the exact source, tag, release workflow and SLSA provena
 | `agent_proof-0.5.0.tar.gz` | `f9239738d414df0dbee818b837a68273ae5a99f2ea948adbf7dbe476ce39d7eb` |
 | `SHA256SUMS` | `f42d6be26755b6c30b77ac5bc20bfb12d2b16a7be87cabc2e36a144cddbb2fb6` |
 
-To rerun the installed declaration check from the reviewed source:
+To rerun the installed declaration check from the reviewed source, use Git and Python 3.11
+or newer. If `python3` is older, set `PROOF_PYTHON` to a supported executable such as
+`python3.12`. The version check runs before creating the checkout or environment.
 
 ```sh
+proof_python="${PROOF_PYTHON:-python3}"
+"$proof_python" -c 'import sys; raise SystemExit(0 if sys.version_info >= (3, 11) else "Python 3.11 or newer is required; set PROOF_PYTHON to a supported executable.")'
 git clone --depth 1 --branch v0.5.0 https://github.com/jonah-ux/agent-proof.git agent-proof-review
 proof_source="$PWD/agent-proof-review"
 test "$(git -C "$proof_source" rev-parse HEAD)" = 681b34f1ac7189dcd4da26ad8b5c5ef0b3a07880
-python3 -m venv "$proof_source/.venv"
+"$proof_python" -m venv "$proof_source/.venv"
 "$proof_source/.venv/bin/python" -m pip install "$proof_source"
 proof_review="$(mktemp -d)"
 cd "$proof_review"
