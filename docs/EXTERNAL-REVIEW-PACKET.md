@@ -283,6 +283,18 @@ their [public regressions](https://github.com/jonah-ux/agent-proof/blob/681b34f1
 cover source provenance, actual-read budgets, registry bypass, duplicate codes, changed owner sets
 and repository selectors. The standalone source helper also preserves v1 refusal exit 1.
 
+The review history is inspectable. An independent acceptance review of the earlier PR #41 head
+`c993d3eb30d005589df69f4696216d818c659ea2` posted a public
+[REFUTED receipt](https://github.com/jonah-ux/agent-proof/pull/41#issuecomment-5979501605)
+after a complete diff inspection and adversarial probes. It found participant-set omission,
+non-UTF-8 acceptance, late aggregate-budget charging, installed-sdist validation against the
+source checkout, caller-path leakage in one CLI ordering, duplicate refusal vocabulary, weak v1
+type checks, and editable participant roles. The current `24f71af76d1aefca288119989d27e71743648dc7`
+source and `0.5.0` release
+are the repaired boundary: the published regressions and 121-test source/released-consumer
+evidence cover the repaired controls. The earlier receipt remains a historical critique, not an
+outside review or a claim that every possible input or deployment is secure.
+
 Fresh downloaded wheel and source-archive consumers on Python 3.12.13 each ran the full 121-test
 suite outside the checkout, verified installed module origin/version, invoked the actual CLI
 over all thirteen declarations, selected native version 2 and refused a disjoint declaration.
