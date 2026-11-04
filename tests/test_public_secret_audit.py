@@ -6,7 +6,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.public_secret_audit import scan_blob, scan_repository, select_repositories
+from scripts.public_secret_audit import public_summary, scan_blob, scan_repository, select_repositories
 
 
 class PublicSecretAuditTests(unittest.TestCase):
@@ -34,6 +34,20 @@ class PublicSecretAuditTests(unittest.TestCase):
             {"full_name": "jonah-ux/old", "private": False, "fork": False, "archived": True},
         ]
         self.assertEqual(select_repositories(entries), ["jonah-ux/one"])
+
+    def test_public_ci_summary_never_discloses_finding_file_locations(self):
+        report = {
+            "owner": "jonah-ux", "repositories_scanned": 1, "blobs_scanned": 2,
+            "skipped_large_blobs": 0, "errors": [],
+            "findings": [{"repository": "jonah-ux/example", "path": "config/private-creds.json",
+                          "line": 5, "blob": "a1b2c3d4e5f6", "kind": "github_token"}],
+        }
+        safe = public_summary(report)
+        self.assertEqual(safe["finding_counts_by_category"], {"github_token": 1})
+        self.assertEqual(safe["affected_repository_count"], 1)
+        self.assertNotIn("config/private-creds.json", json.dumps(safe))
+        self.assertNotIn("a1b2c3d4e5f6", json.dumps(safe))
+        self.assertNotIn("jonah-ux/example", json.dumps(safe))
 
     def test_scans_deleted_secrets_in_earlier_git_commits(self):
         with tempfile.TemporaryDirectory() as temp:

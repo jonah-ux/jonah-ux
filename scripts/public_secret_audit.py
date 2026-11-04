@@ -160,9 +160,24 @@ def mirror_repository(name: str, destination: Path) -> None:
                 "+refs/pull/*/head:refs/audit/pull/*")
 
 
+def public_summary(report: dict[str, object]) -> dict[str, object]:
+    """Safe for public CI logs: never reveal filenames, blob hashes or line numbers."""
+    findings = report["findings"]
+    return {
+        "owner": report["owner"],
+        "repositories_scanned": report["repositories_scanned"],
+        "blobs_scanned": report["blobs_scanned"],
+        "skipped_large_blobs": report["skipped_large_blobs"],
+        "finding_counts_by_category": dict(sorted(Counter(f["kind"] for f in findings).items())),
+        "affected_repository_count": len({f["repository"] for f in findings}),
+        "errors": report["errors"],
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--owner", default="jonah-ux")
+    parser.add_argument("--local-details", action="store_true", help="Show finding file locations locally; never enable in public CI")
     args = parser.parse_args()
     if not re.fullmatch(r"[A-Za-z0-9-]+", args.owner):
         parser.error("invalid owner")
@@ -187,7 +202,7 @@ def main() -> int:
     except (OSError, RuntimeError, ValueError) as exc:
         report["errors"].append({"repository": "discovery", "failure_class": type(exc).__name__})
     report["findings"].sort(key=lambda x: (x["repository"], x["path"], x["line"], x["kind"]))
-    print(json.dumps(report, indent=2))
+    print(json.dumps(report if args.local_details else public_summary(report), indent=2))
     if report["errors"] or report["findings"]:
         return 1
     if report["skipped_large_blobs"]:
